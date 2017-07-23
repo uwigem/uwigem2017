@@ -20,3 +20,13 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+Turbidostat/nbproject/remote-platform-impl.xml
+/Turbidostat/build/
+/Turbidostat/nbproject/private/
+/Turbidostat/dist/
+Turbidostat/nbproject/configs/RPi_j.properties
+Turbidostat/nbproject/remote-platform-impl.xml
+Turbidostat/nbproject/genfiles.properties
+Turbidostat/nbproject/build-impl.xml
+Turbidostat/build.xml
+Turbidostat/nbproject/project.properties

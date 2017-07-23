@@ -1,0 +1,1 @@
+sudo apt-get -y install python-smbus synaptic gnome-system-monitor git git-gui git-cola maven
