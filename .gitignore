@@ -12,11 +12,10 @@ nbdist/
 Tstat/nbproject/private/private.properties
 Tstat/nbproject/configs/Rasp_Pi_A.properties
 Tstat/nbproject/private/config.properties
-Tstat/nbproject/project.properties
-Tstat/nbproject/remote-platform-impl.xml
 Tstat/nbproject/project.xml
 Tstat/nbproject/genfiles.properties
 Tstat/nbproject/build-impl.xml
 Tstat/nbproject/genfiles.properties
-Tstat/nbproject/genfiles.properties
 Tstat/nbproject/build-impl.xml
+Tstat/nbproject/private/private.xml
+Tstat/nbproject/remote-platform-impl.xml

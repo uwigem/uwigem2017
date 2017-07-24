@@ -13,4 +13,8 @@ public class GuiTests {
     public static void main(String[] args) {
         
     }
+    
+    private void buttonPress(java.awt.event.ActionEvent evt) {
+        System.out.println(evt.toString());
+    }
 }
