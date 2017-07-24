@@ -22,3 +22,6 @@ Turbidostat/nbproject/genfiles.properties
 Turbidostat/nbproject/build-impl.xml
 Turbidostat/build.xml
 Turbidostat/nbproject/project.properties
+/Tstat/nbproject/private/
+/Tstat/build/
+/Tstat/dist/
