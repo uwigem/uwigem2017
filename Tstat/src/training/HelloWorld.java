@@ -21,7 +21,13 @@ package training;
  * @author Washington iGEM Team 2017 <uwigem@uw.edu>
  */
 public class HelloWorld {
+<<<<<<< HEAD
     public static void main(String[] args) {
 
+=======
+    public static void main(String[] args) 
+    {
+        
+>>>>>>> 0932e48b568d42e9e2807b0333b787fc38197292
     }
 }
