@@ -25,7 +25,9 @@ import com.pi4j.util.Console;
 
 
 /**
- *
+ * Turbidostat control application: controls all lab equipment attached to
+ * the turbidostat.
+ * 
  * @author Washington iGEM Team 2017
  */
 public class Tstat {

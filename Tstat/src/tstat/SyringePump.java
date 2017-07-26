@@ -20,8 +20,8 @@ import com.pi4j.io.gpio.GpioPinDigitalOutput;
 import com.pi4j.io.gpio.GpioPinInput;
 
 /**
- * 
- * @author Washington iGEM Team 2017 <uwigem@uw.edu>
+ * A single syringe pump controlled with a stepper motor
+ * @author Washington iGEM Team 2017
  */
 
 public class SyringePump {
@@ -67,7 +67,6 @@ public class SyringePump {
     
     /**
      * Calibrates pump by setting number of steps to move 1mL of fluid
-     * @param steps Number of steps for 1mL dispensed
      */
     public void calibrate() {
         // TODO: Add endstop calibration. 

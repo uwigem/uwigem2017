@@ -21,7 +21,7 @@ import java.util.ArrayList;
 /**
  * Controls fluid dispensation by syringe pumps
  * 
- * @author Washington iGEM Team 2017<uwigem@uw.edu>
+ * @author Washington iGEM Team 2017
  */
 public class Fluids {
     // TODO: "Fluids" is the thing that the main controlling application
@@ -46,6 +46,7 @@ public class Fluids {
      * Dispenses fluid from the specified pump
      * @param mL Volume of fluid to dispense
      * @param pump Which pump to dispense from
+     * @throws java.lang.InterruptedException
      */
     public void dispenseFrom(double mL, int pump) 
             throws InterruptedException {

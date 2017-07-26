@@ -25,6 +25,8 @@ public class NewJDialog extends javax.swing.JDialog {
 
     /**
      * Creates new form NewJDialog
+     * @param parent
+     * @param modal
      */
     public NewJDialog(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
