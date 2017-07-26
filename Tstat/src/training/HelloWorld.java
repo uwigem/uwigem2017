@@ -22,6 +22,11 @@ package training;
  */
 public class HelloWorld {
     public static void main(String[] args) {
+<<<<<<< HEAD
         System.out.println("Hello World Take 106 - Stephen");
+=======
+        System.out.println("text");
+        
+>>>>>>> be547c0f2667e29d7f2db335bb3b9b5912432cac
     }
 }
