@@ -29,7 +29,7 @@ import com.pi4j.util.Console;
 public class StepperControl {
     public static void main(String args[]) 
     throws InterruptedException {
-        System.out.println("Hello world! This is AcaiBerry!");
+        System.out.println("StepperControl is running...");
 
 	// Create a GPIO controller instance
 	final GpioController gpio = GpioFactory.getInstance();	
