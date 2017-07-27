@@ -54,11 +54,16 @@ Washington iGEM 2017 Project
 ~~~
 Unable to determine hardware version. I see: Hardware   : BCM2835
 ,
- - expecting BCM2708 or BCM2709
+ - expecting BCM2708 or BCM2709.
+If this is a genuine Raspberry Pi then please report this 
+to projects @drogon.net. If this is not a Raspberry Pi then you
+are on your own as wiringPi is designed to support the 
+Raspberry Pi ONLY.
 ~~~
 Work Arounds
  - downgrade firmware using shell script under the Raspbian folder of the old repo (uwigem2017-old)
  - change Pi4J source cdoe and recompile (already done by Jase, not sure if the recompiled version has been uploaded to this repo)
+
 # Code Structure
 
 The entire folder `Tstat` is a NetBeans project folder. Once you have cloned the repository onto your development computer, open NetBeans, and open Tstat as a new project.
