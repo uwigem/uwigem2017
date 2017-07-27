@@ -72,6 +72,7 @@ The entire folder `Tstat` is a NetBeans project folder. Once you have cloned the
 
 # TODO: 
 All Todo tasks are located at: https://trello.com/b/Mey7qSgL/drylab-turbidostat
+
 All following neede to be added to the README:
 - Add full Pi4J Hardware issue error code
 - Define mount in RPi Setup
