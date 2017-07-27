@@ -1,4 +1,5 @@
-# uwigem2017
+![UW IGEM Logo](https://andrewhu-uw.github.io/logo.png)
+
 Washington iGEM 2017 Project
 
 README Example: https://github.com/rg3/youtube-dl
