@@ -88,7 +88,7 @@ public class SyringePump {
     
     /**
      * Refills the syringe completely from wherever it is now.
-     * @throws InterruptedException 
+     * @throws InterruptedException Uses GPIO
      */
     public void refill() throws InterruptedException {
         takeSteps(maxPosition-currPosition, SyringePump.Direction.REFILL);        

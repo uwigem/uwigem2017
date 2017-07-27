@@ -46,7 +46,7 @@ public class Fluids {
      * Dispenses fluid from the specified pump
      * @param mL Volume of fluid to dispense
      * @param pump Which pump to dispense from
-     * @throws java.lang.InterruptedException
+     * @throws java.lang.InterruptedException Uses GPIO
      */
     public void dispenseFrom(double mL, int pump) 
             throws InterruptedException {

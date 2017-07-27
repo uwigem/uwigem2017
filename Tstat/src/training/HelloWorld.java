@@ -18,7 +18,7 @@ package training;
 
 /**
  *
- * @author Washington iGEM Team 2017 <uwigem@uw.edu>
+ * @author Washington iGEM Team 2017 
  */
 public class HelloWorld {
     public static void main(String[] args) {
