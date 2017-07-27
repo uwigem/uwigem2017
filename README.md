@@ -10,11 +10,10 @@ Washington iGEM 2017 Project
  - [Code Structure](#CodeStructure)
 
 # Setup
-## Raspberry Pi Setup
-1. [Download ISO](https://www.raspberrypi.org/downloads/raspbian/)
+1. [Download IMG File](https://www.raspberrypi.org/downloads/raspbian/)
 2. Unzip downloaded folder
-3. Mount onto a SD card (at least 16 GB)
-4. Insert Sd card into Raspberry Pi
+3. Mount onto a >16GB SD card (right click the .img and select mount)
+4. Insert SD card into Raspberry Pi
 5. Run Raspberry Pi setup (Monitor, Mouse, Keyboard required)
 6. [Setup SSH](##SetupSSH) 
 7. [Clone the uwigem2017 git repository](##GitRepoSetup)
