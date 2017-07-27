@@ -2,7 +2,6 @@
 
 Washington iGEM 2017 Project
 
-README Example: https://github.com/rg3/youtube-dl
 # Table Of Contents
 
  - [Setup](#setup)
@@ -65,10 +64,12 @@ Work Arounds
 The entire folder `Tstat` is a NetBeans project folder. Once you have cloned the repository onto your development computer, open NetBeans, and open Tstat as a new project.
 
 # TODO: 
-All Todo tasks are located at: 
+All Todo tasks are located at: https://trello.com/b/Mey7qSgL/drylab-turbidostat
 All following neede to be added to the README:
 - Add full Pi4J Hardware issue error code
 - Define mount in RPi Setup
 - Flesh out code structure
 - Add instructions to change the username for the main user as well as the system name for the different berries 
 - ^Ask Jase if this is necessary, if we were going to create a standard install 
+
+README Example: https://github.com/rg3/youtube-dl
