@@ -46,6 +46,8 @@ Washington iGEM 2017 Project
 1. [Download NetBeans IDE for Java SE](https://netbeans.org/downloads/start.html?platform=linux&lang=en&option=javase)
 2. [Refer to these instructions](https://netbeans.org/community/releases/36/install.html#unix)
 
+Tip: If you screw up creating a project and you get the wrong folder as a project, **do not** delete it. Instead, right click, `close`
+
 # Using SSH
 
 1. Download [PuTTy](www.putty.org "putty") (Under `Alternative binary files` select `putty.exe`)
@@ -68,7 +70,9 @@ Work Arounds
 
 # Code Structure
 
-The entire folder `Tstat` is a NetBeans project folder. Once you have cloned the repository onto your development computer, open NetBeans, and open Tstat as a new project.
+The entire folder `Tstat` is a NetBeans project folder. 
+
+Once you have cloned the repository onto your development computer, open NetBeans, and open Tstat as a new project.
 
 # TODO: 
 All Todo tasks are located at: https://trello.com/b/Mey7qSgL/drylab-turbidostat
