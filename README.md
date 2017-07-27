@@ -46,12 +46,16 @@ Washington iGEM 2017 Project
 1. [Download NetBeans IDE for Java SE](https://netbeans.org/downloads/start.html?platform=linux&lang=en&option=javase)
 2. [Refer to these instructions](https://netbeans.org/community/releases/36/install.html#unix)
 
-Tip: If you screw up creating a project and you get the wrong folder as a project, **do not** delete it. Instead, right click, `close`
-
 # Using SSH
 
 1. Download [PuTTy](www.putty.org "putty") (Under `Alternative binary files` select `putty.exe`)
 2. Open PuTTy
+3. Get the hostname and port number for our Raspberry Pis from Jase
+4. Type in the hostname and port number
+5. When you are prompted with a user, type in the appropriate main user for that pi
+6. Enter the password
+
+You can now remotely use the terminal on that Pi
 
 # Know Issues
 - Upon attempting to run Pi4J code following error occurs
@@ -74,13 +78,12 @@ The entire folder `Tstat` is a NetBeans project folder.
 
 Once you have cloned the repository onto your development computer, open NetBeans, and open Tstat as a new project.
 
+Tip: If you screw up creating a project and you get the wrong folder as a project, **do not** delete it. Instead, right click, `close`
+
 # TODO: 
 All Todo tasks are located at: https://trello.com/b/Mey7qSgL/drylab-turbidostat
 
 All following neede to be added to the README:
-- Add full Pi4J Hardware issue error code
-- Define mount in RPi Setup
-- Flesh out code structure
 - Add instructions to change the username for the main user as well as the system name for the different berries 
 - ^Ask Jase if this is necessary, if we were going to create a standard install 
 
