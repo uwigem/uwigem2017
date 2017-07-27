@@ -41,7 +41,10 @@ Washington iGEM 2017 Project
 2. Navigate into the folder `raspbian_scripts`
 3. Click on each of the scripts in the folder one by one
 
-## NetBeans
+## Installing NetBeans
+
+1. [Download NetBeans IDE for Java SE](https://netbeans.org/downloads/start.html?platform=linux&lang=en&option=javase)
+2. [Refer to these instructions](https://netbeans.org/community/releases/36/install.html#unix)
 
 # Using SSH
 
