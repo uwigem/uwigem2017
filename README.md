@@ -1,4 +1,4 @@
-![UW IGEM Logo](https://andrewhu-uw.github.io/img/logo.png)
+![UW IGEM Logo](logo.png)
 
 Washington iGEM 2017 Project
 
