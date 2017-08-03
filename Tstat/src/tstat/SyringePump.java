@@ -32,7 +32,7 @@ public class SyringePump {
     private GpioPinInput endLow;
     private double rate; // Steps per milliliter
     private enum Direction {DISPENSE, REFILL}
-    private int delay=1;
+    private int delay = 1;
     private int maxPosition = 100; // Max steps away from home that can be taken
     private int currPosition = 0; // Considered "home" position
     
