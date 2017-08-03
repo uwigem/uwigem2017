@@ -3,11 +3,9 @@
 // This program allows the user to control a single syringe pump
 
 package syringepump;
-import java.util.Scanner;
 import java.lang.*;
 import com.pi4j.io.gpio.*;
-import com.pi4j.util.CommandArgumentParser;
-import com.pi4j.util.Console;
+import com.pi4j.*;
 
 public class SyringePump {
 	private GpioController gpio;
