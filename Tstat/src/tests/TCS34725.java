@@ -104,10 +104,14 @@ public class TCS34725
     INTEGRATION_TIME_DELAY.put(TCS34725_INTEGRATIONTIME_24MS,  24_000L);   // 24ms  - 10 cycles  - Max Count: 10240
     INTEGRATION_TIME_DELAY.put(TCS34725_INTEGRATIONTIME_50MS,  50_000L);   // 50ms  - 20 cycles  - Max Count: 20480
     INTEGRATION_TIME_DELAY.put(TCS34725_INTEGRATIONTIME_101MS, 101_000L);   // 101ms - 42 cycles  - Max Count: 43008
-    INTEGRATION_TIME_DELAY.put(TCS34725_INTEGRATIONTIME_154MS, 154_
-  private I2CDevice tcs34725;000L);   // 154ms - 64 cycles  - Max Count: 65535
+    INTEGRATION_TIME_DELAY.put(TCS34725_INTEGRATIONTIME_154MS, 154_000L);
     INTEGRATION_TIME_DELAY.put(TCS34725_INTEGRATIONTIME_700MS, 700_000L);   // 700ms - 256 cycles - Max Count: 65535
   }
+  private I2CDevice tcs34725;   // 154ms - 64 cycles  - Max Count: 65535
+  
+  
+    
+  
 
   private static boolean verbose = false;
   
