@@ -18,6 +18,9 @@ import com.pi4j.util.Console;
  * 
  */
 public class PumpTest {
+    
+
+    
     public static void main(String[] args) throws InterruptedException {
         // TODO code application logic here
         System.out.println("<--Pi4J--> GPIO Control Example ... started.");
@@ -26,10 +29,17 @@ public class PumpTest {
 	// Try to create a software PWM pin output
 	GpioPinDigitalOutput pin12 = gpio.provisionDigitalOutputPin(RaspiPin.GPIO_26,"pin12");
 	GpioPinDigitalOutput pinDir = gpio.provisionDigitalOutputPin(RaspiPin.GPIO_06,"pinDir");
+        
+        GpioPinDigitalInput maxStop = gpio.provisionDigitalInputPin(RaspiPin.GPIO_04,"maxStop");
+        GpioPinDigitalInput minStop = gpio.provisionDigitalInputPin(RaspiPin.GPIO_01,"minStop");
 
         Scanner input = new Scanner(System.in);
+        
+        int currentPosition = 0;
+        int maxPosition = 0;
         int distance = 220;
         int speed = 1;
+        
         while(true) {
             System.out.println("=====================================");
             System.out.println("   Current distance: " + distance);
@@ -39,6 +49,7 @@ public class PumpTest {
             System.out.println("   2 for dispense");
             System.out.println("   3 to change sleep");
             System.out.println("   4 to change distance");
+            System.out.println("   5 to calibrate min/max");
             System.out.println("=====================================");
             int inputValue = input.nextInt();
             if(inputValue == 1) {
@@ -49,7 +60,9 @@ public class PumpTest {
                     pin12.high();
                     Thread.sleep(speed);
                     pin12.low();
+                    currentPosition++;
                 }
+                reportPosition(currentPosition);
             } else if (inputValue == 2) {
                 System.out.println("Dispensing");
                 pinDir.low();
@@ -58,7 +71,9 @@ public class PumpTest {
                     pin12.high();
                     Thread.sleep(speed);
                     pin12.low();
-                }
+                    currentPosition--;
+                }                
+                reportPosition(currentPosition);
             } else if(inputValue == 3) {
                 System.out.println("New sleep? (Current is " + speed + ")");
                 speed = input.nextInt();
@@ -67,12 +82,50 @@ public class PumpTest {
                 System.out.println("New distance? (Current is " + distance + ")");
                 distance = input.nextInt();
                 System.out.println("distance updated to " + distance);
+            }else if(inputValue == 5) {
+                
+                // Find the low end-stop by dispensing until it is reached
+                pinDir.low();
+                while(minStop.isLow())
+                {
+                    Thread.sleep(speed);
+                    pin12.high();
+                    Thread.sleep(speed);
+                    pin12.low();
+                }
+                
+                System.out.println("Minimum position found");
+                currentPosition = 0;
+                Thread.sleep(500); // Just a little pause between
+                
+                // Find the max end-stop by filling until it is reached
+                pinDir.high();
+                while(maxStop.isLow())
+                {
+                    Thread.sleep(speed);
+                    pin12.high();
+                    Thread.sleep(speed);
+                    pin12.low();
+                    currentPosition++;
+                }
+                System.out.println("Maximum position found");
+                
+                // Record the maximum position
+                maxPosition = currentPosition;
+                System.out.println("Maximum position =  " + maxPosition);
+                
             }
+            
+            
             else {
                 pin12.low();
                 pinDir.low();
                 break;
             } 
         }
+    }
+    
+    public static void reportPosition(int pos){
+        System.out.println("Current position =  " + pos);
     }
 }
