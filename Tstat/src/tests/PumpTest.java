@@ -23,7 +23,7 @@ public class PumpTest {
     
     public static void main(String[] args) throws InterruptedException {
         // TODO code application logic here
-        System.out.println("<--Pi4J--> GPIO Control Example ... started.");
+        System.out.println("<--Pi4J--> GPIO Control Example 1.0 ... started.");
         
         final GpioController gpio = GpioFactory.getInstance();	
 	// Try to create a software PWM pin output
@@ -35,19 +35,24 @@ public class PumpTest {
 
         Scanner input = new Scanner(System.in);
         
-        int currentPosition = 0;
-        int maxPosition = 0;
+        int currentPosition = -1;
+        int maxPosition = -1;
         int distance = 220;
         int speed = 1;
         
         while(true) {
             System.out.println("=====================================");
+            if (currentPosition == -1) {
+                System.out.println("   Current position: unknown" );
+            } else {
+                System.out.println("   Current position: " + currentPosition);
+            }
             System.out.println("   Current distance: " + distance);
-            System.out.println("   Current thread.sleep: " + speed);
+            System.out.println("   Current number of ms between steps: " + speed);
             System.out.println("   Options");
-            System.out.println("   1 for fill");
-            System.out.println("   2 for dispense");
-            System.out.println("   3 to change sleep");
+            System.out.println("   1 to fill " + distance + " steps");
+            System.out.println("   2 to dispense " + distance + " steps");
+            System.out.println("   3 to change milliseconds between steps");
             System.out.println("   4 to change distance");
             System.out.println("   5 to calibrate min/max");
             System.out.println("=====================================");
