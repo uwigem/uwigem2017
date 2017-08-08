@@ -22,7 +22,8 @@ public class PumpTest {
 
     
     public static void main(String[] args) throws InterruptedException {
-        // TODO code application logic here
+        new eric.Console();
+        
         System.out.println("<--Pi4J--> GPIO Control Example ... started.");
         
         final GpioController gpio = GpioFactory.getInstance();	
