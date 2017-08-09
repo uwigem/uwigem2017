@@ -15,15 +15,13 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 package tstat;
-
 import com.pi4j.io.gpio.GpioPinDigitalOutput;
 import com.pi4j.io.gpio.GpioPinInput;
-
+import java.util.*;
 /**
  * A single syringe pump controlled with a stepper motor
  * @author Washington iGEM Team 2017
  */
-
 public class SyringePump {
     private GpioPinDigitalOutput dirPin;
     private GpioPinDigitalOutput stepPin;
@@ -65,10 +63,14 @@ public class SyringePump {
         }
     }
     
+    public void setRate(int steps) {
+        this.rate = steps;
+    }
+    
     /**
      * Calibrates pump by setting number of steps to move 1mL of fluid
      */
-    public void calibrate() {
+    public void calibrate() throws InterruptedException{
         // TODO: Add endstop calibration. 
         // This will take care of setting the max/min positions automatically.
         // max and min will be set after this point.
@@ -79,6 +81,48 @@ public class SyringePump {
         // TODO:
         // Refill until endstop hit. Store location as max steps position
         this.maxPosition = currPosition;
+        Scanner input = new Scanner(System.in);
+        
+        double maxPosition = 0.0;
+        int maxSteps = 0;
+        
+        this.dirPin.high();
+        while(this.canMove()) {
+            // Take one step
+            this.stepPin.high();          
+            Thread.sleep(delay); // Technically shouldn't do this in loop
+            this.stepPin.low();
+            Thread.sleep(delay);
+        }
+        
+        System.out.println("What is the current syringe measurement in mL?");
+        
+        double measurementOne = input.nextDouble();
+        if(measurementOne > 0.0) {
+            maxPosition = measurementOne;
+        }
+        
+        this.dirPin.low();
+        while(this.canMove()) {
+            // Take one step
+            this.stepPin.high();          
+            Thread.sleep(delay); // Technically shouldn't do this in loop
+            this.stepPin.low();
+            Thread.sleep(delay);
+            maxSteps++;
+        }
+        
+        System.out.println("What is the current syringe measurement in mL?");
+        
+        double measurementTwo = input.nextDouble();
+        if(measurementTwo > 0.0) {
+            maxPosition = measurementTwo;
+        }
+        
+        int stepsPerMil = (int)(((double)maxSteps)/maxPosition);
+        this.rate = stepsPerMil;
+        this.maxPosition = maxSteps;
+        
     }
     
     public int dispense(double mL) throws InterruptedException {
