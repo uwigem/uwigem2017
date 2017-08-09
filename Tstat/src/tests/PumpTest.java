@@ -22,17 +22,9 @@ public class PumpTest {
 
     
     public static void main(String[] args) throws InterruptedException {
-<<<<<<< HEAD
-<<<<<<< HEAD
         // TODO code application logic here
         System.out.println("<--Pi4J--> GPIO Control Example 1.0 ... started.");
-=======
-=======
->>>>>>> 1f9f2d6ab7ea8d8467e5ca845757d990e2198286
-        new eric.Console();
         
-        System.out.println("<--Pi4J--> GPIO Control Example ... started.");
->>>>>>> 1f9f2d6ab7ea8d8467e5ca845757d990e2198286
         
         final GpioController gpio = GpioFactory.getInstance();	
 	// Try to create a software PWM pin output
