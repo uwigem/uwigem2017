@@ -124,7 +124,13 @@ public class SyringePump {
         this.maxPosition = maxSteps;
         
     }
-    
+    /**
+     * Dispenses desired amount of mLs of fluid by converting mLs to number of 
+     * steps to be taken
+     * @param mL Number of desired mLs of fluid to dispense
+     * @return Number of steps needed to dispense the specific amount of mLs
+     * @throws InterruptedException 
+     */
     public int dispense(double mL) throws InterruptedException {
         int steps = (int)(mL * this.rate);
         return takeSteps(steps, SyringePump.Direction.DISPENSE);        
@@ -139,7 +145,7 @@ public class SyringePump {
     }
     
     /**
-     * 
+     * Syringe moves specified number of steps in the specified direction
      * @param steps Number of steps to take
      * @param delay Delay in ms between steps
      * @return Number of steps that failed due to endstop. 0 if steps successful
