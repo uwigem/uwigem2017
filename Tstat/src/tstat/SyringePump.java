@@ -16,6 +16,7 @@
  */
 package tstat;
 import com.pi4j.io.gpio.GpioPinDigitalOutput;
+import com.pi4j.io.gpio.GpioPinDigitalInput;
 import com.pi4j.io.gpio.GpioPinInput;
 import java.util.*;
 /**
@@ -26,8 +27,8 @@ public class SyringePump {
     private GpioPinDigitalOutput dirPin;
     private GpioPinDigitalOutput stepPin;
     private GpioPinDigitalOutput enablePin;
-    private GpioPinInput endHigh;
-    private GpioPinInput endLow;
+    private GpioPinDigitalInput endHigh;
+    private GpioPinDigitalInput endLow;
     private double rate; // Steps per milliliter
     private enum Direction {DISPENSE, REFILL}
     private int delay = 1;
@@ -44,7 +45,7 @@ public class SyringePump {
     * @param rate Number of steps for 1 mL fluid moved
     */
     public SyringePump(GpioPinDigitalOutput dirPin, GpioPinDigitalOutput stepPin, GpioPinDigitalOutput enablePin, 
-            GpioPinInput endHigh, GpioPinInput endLow, double rate){
+            GpioPinDigitalInput endHigh, GpioPinDigitalInput endLow, double rate){
         this.rate = rate;
         this.dirPin = dirPin;
         this.stepPin = stepPin;
@@ -69,6 +70,7 @@ public class SyringePump {
     
     /**
      * Calibrates pump by setting number of steps to move 1mL of fluid
+     * @throws InterruptedException
      */
     public void calibrate() throws InterruptedException{
         // TODO: Add endstop calibration. 
@@ -119,6 +121,8 @@ public class SyringePump {
             maxPosition = measurementTwo;
         }
         
+        // Stores rate in steps per mL
+        // stores max position in steps
         int stepsPerMil = (int)(((double)maxSteps)/maxPosition);
         this.rate = stepsPerMil;
         this.maxPosition = maxSteps;
@@ -187,10 +191,6 @@ public class SyringePump {
      * @return True if neither endstop is being pressed, false otherwise
      */
     private Boolean canMove() {
-        // Get the value of the endstop input pin, high or low
-        // Return true if neither endstop switch is being pressed
-        
-        // For now, always move. Be careful!
-        return true;
+        return !(endHigh.isHigh() || endLow.isHigh());
     }
 }

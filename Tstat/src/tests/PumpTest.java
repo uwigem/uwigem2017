@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package tests;
+import tstat.SyringePump;
 import java.util.Scanner;
 import java.lang.*;
 import com.pi4j.io.gpio.*;
@@ -33,6 +34,8 @@ public class PumpTest {
         
         GpioPinDigitalInput maxStop = gpio.provisionDigitalInputPin(RaspiPin.GPIO_04,"maxStop");
         GpioPinDigitalInput minStop = gpio.provisionDigitalInputPin(RaspiPin.GPIO_01,"minStop");
+        
+        GpioPinDigitalOutput enable = gpio.provisionDigitalOutputPin(RaspiPin.GPIO_27, "enable");
 
         Scanner input = new Scanner(System.in);
         
@@ -40,6 +43,13 @@ public class PumpTest {
         int maxPosition = -1;
         int distance = 220;
         int speed = 1;
+        
+        SyringePump pump = new SyringePump(pinDir, pin12, enable, maxStop, minStop, 1.0);
+        
+       // pump.calibrate();
+        
+        
+        
         
         while(true) {
             System.out.println("=====================================");
