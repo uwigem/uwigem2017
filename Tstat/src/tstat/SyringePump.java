@@ -129,6 +129,14 @@ public class SyringePump {
         
     }
     /**
+     * Returns the rate for reference in PumpTest.java
+     * @return rate
+     */
+    public double getRate() {
+        return this.rate;
+    }
+    
+    /**
      * Dispenses desired amount of mLs of fluid by converting mLs to number of 
      * steps to be taken
      * @param mL Number of desired mLs of fluid to dispense

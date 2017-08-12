@@ -59,6 +59,7 @@ public class PumpTest {
                 System.out.println("   Current position: " + currentPosition);
             }
             System.out.println("   Current distance: " + distance);
+            System.out.println("   Current rate: " + pump.getRate());
             System.out.println("   Current number of ms between steps: " + speed);
             System.out.println("   Options");
             System.out.println("   1 to fill " + distance + " steps");
@@ -81,14 +82,31 @@ public class PumpTest {
                 reportPosition(currentPosition);
             } else if (inputValue == 2) {
                 System.out.println("Dispensing");
+                System.out.println("1 to update steps");
+                int newInputValue = input.nextInt();        
                 pinDir.low();
+                int startPosition = currentPosition;
                 for(int i = 0; i <  distance; i ++){
                     Thread.sleep(speed);
                     pin12.high();
                     Thread.sleep(speed);
                     pin12.low();
                     currentPosition--;
-                }                
+                }  
+                if (newInputValue == 1) {
+                    System.out.println("New value? (Current is " + distance + ")");
+                    newDistance = input.nextInt();
+                    int distanceDifference = distance - newDistance;
+                    int distanceRemaining = startPosition - currentPosition;
+                    int newDistanceToFill = distanceRemaining - distanceDifference;
+                    for (int i = 0; i < newDistanceToFill; i++) {
+                        Thread.sleep(speed);
+                        pin12.high();
+                        Thread.sleep(speed);
+                        pin12.low();
+                        currentPosition--;
+                    }
+                }
                 reportPosition(currentPosition);
             } else if(inputValue == 3) {
                 System.out.println("New sleep? (Current is " + speed + ")");
