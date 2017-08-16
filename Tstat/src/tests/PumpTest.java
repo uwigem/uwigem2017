@@ -95,7 +95,7 @@ public class PumpTest {
                 }  
                 if (newInputValue == 1) {
                     System.out.println("New value? (Current is " + distance + ")");
-                    newDistance = input.nextInt();
+                    int newDistance = input.nextInt();
                     int distanceDifference = distance - newDistance;
                     int distanceRemaining = startPosition - currentPosition;
                     int newDistanceToFill = distanceRemaining - distanceDifference;
