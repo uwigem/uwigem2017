@@ -45,6 +45,7 @@ public class PumpTest {
         int speed = 1;
         int lastDirection = 0;
         int halfCalibrationSteps = 10;
+        int waitBetweenCalibration = 1000;
         
         SyringePump pump = new SyringePump(pinDir, pin12, enable, maxStop, minStop, 1.0);
         
@@ -83,7 +84,7 @@ public class PumpTest {
                         pin12.low();
                         currentPosition--;
                     }
-                    Thread.sleep(1000);
+                    Thread.sleep(waitBetweenCalibration);
                     for(int i = 0; i <  halfCalibrationSteps; i++){
                         Thread.sleep(speed);
                         pin12.high();
@@ -116,7 +117,7 @@ public class PumpTest {
                         pin12.low();
                         currentPosition++;
                     }
-                    Thread.sleep(1000);
+                    Thread.sleep(waitBetweenCalibration);
                     for(int i = 0; i <  halfCalibrationSteps; i++){
                         Thread.sleep(speed);
                         pin12.high();
