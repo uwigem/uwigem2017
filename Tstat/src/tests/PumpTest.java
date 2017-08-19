@@ -70,11 +70,12 @@ public class PumpTest {
             System.out.println("   3 to change milliseconds between steps");
             System.out.println("   4 to change distance");
             System.out.println("   5 to calibrate min/max");
+            System.out.println("   6 to change halfCalibrationSteps");
+            System.out.println("   7 to change waitBetweenCalibration");
             System.out.println("=====================================");
             int inputValue = input.nextInt();
             if(inputValue == 1) {
                 System.out.println("Filling");
-                pinDir.high();
                 if(lastDirection != 1 || lastDirection != 0) {
                     pinDir.low();
                     for(int i = 0; i <  halfCalibrationSteps; i++){
@@ -94,6 +95,7 @@ public class PumpTest {
                     }
                     lastDirection = 1;
                 }
+                pinDir.high();
                 for(int i = 0; i <  distance; i ++){
                     Thread.sleep(speed);
                     pin12.high();
@@ -106,7 +108,6 @@ public class PumpTest {
                 System.out.println("Dispensing");
                 //System.out.println("1 to update steps");
                 //int newInputValue = input.nextInt();        
-                pinDir.low();
                 
                 if(lastDirection != 2 || lastDirection != 0) {
                     pinDir.high();
@@ -127,6 +128,7 @@ public class PumpTest {
                     }
                     lastDirection = 2;
                 }
+                pinDir.low();
                 int startPosition = currentPosition;
                 for(int i = 0; i <  distance; i ++){
                     Thread.sleep(speed);
@@ -191,6 +193,14 @@ public class PumpTest {
                 maxPosition = currentPosition;
                 System.out.println("Maximum position =  " + maxPosition);
                 
+            } else if(inputValue == 6) {
+                System.out.println("New halfCalibrationSteps? (Current is " + halfCalibrationSteps + ")");
+                halfCalibrationSteps = input.nextInt();
+                System.out.println("halfCalibrationSteps updated to " + halfCalibrationSteps);
+            } else if(inputValue == 7) {
+                System.out.println("New waitBetweenCalibration? (Current is " + waitBetweenCalibration + ")");
+                waitBetweenCalibration = input.nextInt();
+                System.out.println("halfCalibrationSteps updated to " + waitBetweenCalibration);
             }
             
             
