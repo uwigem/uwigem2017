@@ -186,7 +186,7 @@ public class SyringePump {
         }
         
         // If we reached the end of the syringe, then it's empty. Refill it.
-        if(currPosition == maxPosition) {
+        if(currPosition <= 100) {
             refill();
         }
         

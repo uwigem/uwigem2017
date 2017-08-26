@@ -107,7 +107,7 @@ public class PumpTest {
             } else if (inputValue == 2) {
                 System.out.println("Dispensing");
                 //System.out.println("1 to update steps");
-                //int newInputValue = input.nextInt();        
+                //int newInputValue = input.nextInt();                      
                 
                 if(lastDirection != 2 || lastDirection != 0) {
                     pinDir.high();
@@ -161,7 +161,7 @@ public class PumpTest {
                 System.out.println("New distance? (Current is " + distance + ")");
                 distance = input.nextInt();
                 System.out.println("distance updated to " + distance);
-            }else if(inputValue == 5) {
+            } else if(inputValue == 5) {
                 
                 // Find the low end-stop by dispensing until it is reached
                 pinDir.low();
