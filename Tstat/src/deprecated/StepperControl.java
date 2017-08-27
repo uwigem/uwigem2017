@@ -15,7 +15,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package tests;
+package deprecated;
 
 import java.util.Scanner;
 import java.lang.*;

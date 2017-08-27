@@ -1,4 +1,4 @@
-package tests;
+package deprecated;
 
 import com.pi4j.io.i2c.I2CBus;
 import com.pi4j.io.i2c.I2CDevice;
