@@ -43,6 +43,9 @@ public class PumpTest {
         int maxPosition = -1;
         int distance = 220;
         int speed = 1;
+        int lastDirection = 0;
+        int halfCalibrationSteps = 10;
+        int waitBetweenCalibration = 1000;
         
         SyringePump pump = new SyringePump(pinDir, pinStep, enable, maxStop, minStop, 1.0);
         
@@ -67,10 +70,31 @@ public class PumpTest {
             System.out.println("   3 to change milliseconds between steps");
             System.out.println("   4 to change distance");
             System.out.println("   5 to calibrate min/max");
+            System.out.println("   6 to change halfCalibrationSteps");
+            System.out.println("   7 to change waitBetweenCalibration");
             System.out.println("=====================================");
             int inputValue = input.nextInt();
             if(inputValue == 1) {
                 System.out.println("Filling");
+                if(lastDirection != 1 || lastDirection != 0) {
+                    pinDir.low();
+                    for(int i = 0; i <  halfCalibrationSteps; i++){
+                        Thread.sleep(speed);
+                        pin12.high();
+                        Thread.sleep(speed);
+                        pin12.low();
+                        currentPosition--;
+                    }
+                    Thread.sleep(waitBetweenCalibration);
+                    for(int i = 0; i <  halfCalibrationSteps; i++){
+                        Thread.sleep(speed);
+                        pin12.high();
+                        Thread.sleep(speed);
+                        pin12.low();
+                        currentPosition--;
+                    }
+                    lastDirection = 1;
+                }
                 pinDir.high();
                 for(int i = 0; i <  distance; i ++){
                     Thread.sleep(speed);
@@ -82,8 +106,28 @@ public class PumpTest {
                 reportPosition(currentPosition);
             } else if (inputValue == 2) {
                 System.out.println("Dispensing");
-                System.out.println("1 to update steps");
-                int newInputValue = input.nextInt();        
+                //System.out.println("1 to update steps");
+                //int newInputValue = input.nextInt();                      
+                
+                if(lastDirection != 2 || lastDirection != 0) {
+                    pinDir.high();
+                    for(int i = 0; i <  halfCalibrationSteps; i++){
+                        Thread.sleep(speed);
+                        pin12.high();
+                        Thread.sleep(speed);
+                        pin12.low();
+                        currentPosition++;
+                    }
+                    Thread.sleep(waitBetweenCalibration);
+                    for(int i = 0; i <  halfCalibrationSteps; i++){
+                        Thread.sleep(speed);
+                        pin12.high();
+                        Thread.sleep(speed);
+                        pin12.low();
+                        currentPosition++;
+                    }
+                    lastDirection = 2;
+                }
                 pinDir.low();
                 int startPosition = currentPosition;
                 for(int i = 0; i <  distance; i ++){
@@ -93,6 +137,7 @@ public class PumpTest {
                     pinStep.low();
                     currentPosition--;
                 }  
+                /*
                 if (newInputValue == 1) {
                     System.out.println("New value? (Current is " + distance + ")");
                     int newDistance = input.nextInt();
@@ -106,7 +151,7 @@ public class PumpTest {
                         pinStep.low();
                         currentPosition--;
                     }
-                }
+                }*/
                 reportPosition(currentPosition);
             } else if(inputValue == 3) {
                 System.out.println("New sleep? (Current is " + speed + ")");
@@ -116,7 +161,7 @@ public class PumpTest {
                 System.out.println("New distance? (Current is " + distance + ")");
                 distance = input.nextInt();
                 System.out.println("distance updated to " + distance);
-            }else if(inputValue == 5) {
+            } else if(inputValue == 5) {
                 
                 // Find the low end-stop by dispensing until it is reached
                 pinDir.low();
@@ -148,6 +193,14 @@ public class PumpTest {
                 maxPosition = currentPosition;
                 System.out.println("Maximum position =  " + maxPosition);
                 
+            } else if(inputValue == 6) {
+                System.out.println("New halfCalibrationSteps? (Current is " + halfCalibrationSteps + ")");
+                halfCalibrationSteps = input.nextInt();
+                System.out.println("halfCalibrationSteps updated to " + halfCalibrationSteps);
+            } else if(inputValue == 7) {
+                System.out.println("New waitBetweenCalibration? (Current is " + waitBetweenCalibration + ")");
+                waitBetweenCalibration = input.nextInt();
+                System.out.println("halfCalibrationSteps updated to " + waitBetweenCalibration);
             }
             
             
