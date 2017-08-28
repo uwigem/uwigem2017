@@ -29,7 +29,7 @@ public class PumpTest {
         
         final GpioController gpio = GpioFactory.getInstance();	
 	// Try to create a software PWM pin output
-	GpioPinDigitalOutput pinStep = gpio.provisionDigitalOutputPin(RaspiPin.GPIO_26,"pinStep");
+	GpioPinDigitalOutput pin12 = gpio.provisionDigitalOutputPin(RaspiPin.GPIO_26,"pin12");
 	GpioPinDigitalOutput pinDir = gpio.provisionDigitalOutputPin(RaspiPin.GPIO_06,"pinDir");
         
         GpioPinDigitalInput maxStop = gpio.provisionDigitalInputPin(RaspiPin.GPIO_04,"maxStop");
@@ -47,7 +47,7 @@ public class PumpTest {
         int halfCalibrationSteps = 10;
         int waitBetweenCalibration = 1000;
         
-        SyringePump pump = new SyringePump(pinDir, pinStep, enable, maxStop, minStop, 1.0);
+        SyringePump pump = new SyringePump(pinDir, pin12, enable, maxStop, minStop, 1.0);
         
        // pump.calibrate();
         
@@ -98,9 +98,9 @@ public class PumpTest {
                 pinDir.high();
                 for(int i = 0; i <  distance; i ++){
                     Thread.sleep(speed);
-                    pinStep.high();
+                    pin12.high();
                     Thread.sleep(speed);
-                    pinStep.low();
+                    pin12.low();
                     currentPosition++;
                 }
                 reportPosition(currentPosition);
@@ -132,9 +132,9 @@ public class PumpTest {
                 int startPosition = currentPosition;
                 for(int i = 0; i <  distance; i ++){
                     Thread.sleep(speed);
-                    pinStep.high();
+                    pin12.high();
                     Thread.sleep(speed);
-                    pinStep.low();
+                    pin12.low();
                     currentPosition--;
                 }  
                 /*
@@ -146,9 +146,9 @@ public class PumpTest {
                     int newDistanceToFill = distanceRemaining - distanceDifference;
                     for (int i = 0; i < newDistanceToFill; i++) {
                         Thread.sleep(speed);
-                        pinStep.high();
+                        pin12.high();
                         Thread.sleep(speed);
-                        pinStep.low();
+                        pin12.low();
                         currentPosition--;
                     }
                 }*/
@@ -168,9 +168,9 @@ public class PumpTest {
                 while(minStop.isLow())
                 {
                     Thread.sleep(speed);
-                    pinStep.high();
+                    pin12.high();
                     Thread.sleep(speed);
-                    pinStep.low();
+                    pin12.low();
                 }
                 
                 System.out.println("Minimum position found");
@@ -182,9 +182,9 @@ public class PumpTest {
                 while(maxStop.isLow())
                 {
                     Thread.sleep(speed);
-                    pinStep.high();
+                    pin12.high();
                     Thread.sleep(speed);
-                    pinStep.low();
+                    pin12.low();
                     currentPosition++;
                 }
                 System.out.println("Maximum position found");
@@ -205,7 +205,7 @@ public class PumpTest {
             
             
             else {
-                pinStep.low();
+                pin12.low();
                 pinDir.low();
                 break;
             } 
