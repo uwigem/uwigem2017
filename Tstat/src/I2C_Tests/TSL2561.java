@@ -28,7 +28,7 @@ import java.io.IOException;
 public class TSL2561 {
 
     // Verbose debug text
-    public static final boolean VERBOSE = true;
+    public static final boolean VERBOSE = false;
 
     public static final byte TSL2561_ADDR = (byte) 0x39;
     public static final byte COMMAND_BIT = 0x8;
@@ -48,14 +48,15 @@ public class TSL2561 {
     public static final byte TSL2561_REG_ID = (byte) 0x8A;
     public static final int TCS34725_COMMAND_BIT = 0x80;
     public static final byte TSL2561_REG_CONTROL = (byte) 0x80;
-    
+
     // TSL2561 power control values
     public static final byte TSL2561_POWER_UP = (byte) 0x03;
-    
+
     I2CBus I2C_BUS;
     I2CDevice TSL2561;
 
-    public TSL2561() throws IOException, I2CFactory.UnsupportedBusNumberException, InterruptedException {
+    public TSL2561(byte addr)
+            throws IOException, I2CFactory.UnsupportedBusNumberException, InterruptedException {
         // Get i2c I2C_BUS
         // Number depends on RasPI version
         I2C_BUS = I2CFactory.getInstance(I2CBus.BUS_1);
@@ -63,7 +64,7 @@ public class TSL2561 {
         System.out.println("Connected to bus. OK.");
 
         // Get device itself
-        TSL2561 = I2C_BUS.getDevice(TSL2561_ADDR);
+        TSL2561 = I2C_BUS.getDevice(addr);
         System.out.println("Connected to device.");
 
         System.out.println("Device ID: " + TSL2561.read(TSL2561_REG_ID));
@@ -72,24 +73,23 @@ public class TSL2561 {
         TSL2561.write(TSL2561_REG_CONTROL, TSL2561_POWER_UP);
 
     }
-    
-    public void read()
-            throws IOException,InterruptedException {
-        
-        
-            System.out.println("Waiting...");
-            Thread.sleep(500);
 
-            byte d0L = (byte) TSL2561.read((byte) (TCS34725_COMMAND_BIT | DATA_0_LOW));
-            byte d0H = (byte) TSL2561.read((byte) (TCS34725_COMMAND_BIT | DATA_0_HIGH));
-            byte d1L = (byte) TSL2561.read((byte) (TCS34725_COMMAND_BIT | DATA_1_LOW));
-            byte d1H = (byte) TSL2561.read((byte) (TCS34725_COMMAND_BIT | DATA_1_HIGH));
+    public Readings read()
+            throws IOException, InterruptedException {
 
-            if (VERBOSE) {
-                System.out.println("Data 0: " + bytesToInt(d0H, d0L));
-                System.out.println("Data 1: " + bytesToInt(d1H, d1L));
-            }
-        
+        System.out.println("Waiting...");
+
+        byte d0L = (byte) TSL2561.read((byte) (TCS34725_COMMAND_BIT | DATA_0_LOW));
+        byte d0H = (byte) TSL2561.read((byte) (TCS34725_COMMAND_BIT | DATA_0_HIGH));
+        byte d1L = (byte) TSL2561.read((byte) (TCS34725_COMMAND_BIT | DATA_1_LOW));
+        byte d1H = (byte) TSL2561.read((byte) (TCS34725_COMMAND_BIT | DATA_1_HIGH));
+
+        if (VERBOSE) {
+            System.out.println("Data 0: " + bytesToInt(d0H, d0L));
+            System.out.println("Data 1: " + bytesToInt(d1H, d1L));
+        }
+
+        return new Readings(bytesToInt(d0H, d0L), bytesToInt(d1H, d1L));
     }
 
     /**
@@ -100,6 +100,17 @@ public class TSL2561 {
      */
     public static int bytesToInt(byte high, byte low) {
         return ((high & 0xFF) << 8) | (low & 0xFF);
+    }
+
+    public class Readings {
+
+        public int infrared;
+        public int visible;
+
+        public Readings(int vis, int inf) {
+            this.infrared = inf;
+            this.visible = vis;
+        }
     }
 
 }
