@@ -80,17 +80,17 @@ public class PumpTest {
                     pinDir.low();
                     for(int i = 0; i <  halfCalibrationSteps; i++){
                         Thread.sleep(speed);
-                        pin12.high();
+                        pinStep.high();
                         Thread.sleep(speed);
-                        pin12.low();
+                        pinStep.low();
                         currentPosition--;
                     }
                     Thread.sleep(waitBetweenCalibration);
                     for(int i = 0; i <  halfCalibrationSteps; i++){
                         Thread.sleep(speed);
-                        pin12.high();
+                        pinStep.high();
                         Thread.sleep(speed);
-                        pin12.low();
+                        pinStep.low();
                         currentPosition--;
                     }
                     lastDirection = 1;
@@ -113,17 +113,17 @@ public class PumpTest {
                     pinDir.high();
                     for(int i = 0; i <  halfCalibrationSteps; i++){
                         Thread.sleep(speed);
-                        pin12.high();
+                        pinStep.high();
                         Thread.sleep(speed);
-                        pin12.low();
+                        pinStep.low();
                         currentPosition++;
                     }
                     Thread.sleep(waitBetweenCalibration);
                     for(int i = 0; i <  halfCalibrationSteps; i++){
                         Thread.sleep(speed);
-                        pin12.high();
+                        pinStep.high();
                         Thread.sleep(speed);
-                        pin12.low();
+                        pinStep.low();
                         currentPosition++;
                     }
                     lastDirection = 2;
