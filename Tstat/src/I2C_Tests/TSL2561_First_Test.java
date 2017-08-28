@@ -19,12 +19,8 @@ package I2C_Tests;
 import com.pi4j.io.i2c.I2CBus;
 import com.pi4j.io.i2c.I2CDevice;
 import com.pi4j.io.i2c.I2CFactory;
-import static deprecated.TCS34725.TCS34725_ADDRESS;
-import static deprecated.TCS34725.TCS34725_COMMAND_BIT;
+
 import java.io.IOException;
-import java.nio.ByteBuffer;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  *
@@ -44,12 +40,6 @@ public class TSL2561_First_Test {
     public static final byte CHIP_INFO = 0xA;
     public static final byte STARTUP = 0x3;
 
-    // Interrupt threshold registers
-    public static final byte THRESHOLD_LOW_LOWBYTE = 0x2; // Interrupt threshold
-    public static final byte THRESHOLD_LOW_HIGHBYTE = 0x2;
-    public static final byte THRESHOLD_HIGH_LOWBYTE = 0x2;
-    public static final byte THRESHOLD_HIGH_HIGHBYTE = 0x2;
-
     // Data Registers
     public static final byte DATA_0_LOW = 0xC;  // First half of 16-bit data0
     public static final byte DATA_0_HIGH = 0xD; // Second half of 16-bit data0
@@ -57,7 +47,7 @@ public class TSL2561_First_Test {
     public static final byte DATA_1_LOW = 0xE; // First half of 16-bit data1
     public static final byte DATA_1_HIGH = 0xF; //Second half of 16-bit data1
     public static final byte TSL2561_REG_ID = (byte) 0x8A;
-
+    public static final  int TCS34725_COMMAND_BIT      = 0x80;
     public static final byte TSL2561_REG_CONTROL = (byte) 0x80;
 
     // TSL2561 power control values
@@ -108,37 +98,7 @@ public class TSL2561_First_Test {
                 System.out.println("Data 0: " + bytesToInt(d0H, d0L));
                 System.out.println("Data 1: " + bytesToInt(d1H, d1L));
             }
-            // Output data value is expressed as a 16-bit value
-            // spread across two registers
-
-            // There are two data channels, because there are two sensors
-            // in the device, each with a different spectral sensitivity curve
         }
-    }
-
-    public static int readByte(I2CDevice device, byte addr)
-            throws IOException {
-        return device.read(addr);
-    }
-
-    public static void writeByte(I2CDevice device, byte addr, byte data)
-            throws IOException {
-        device.write((int) addr, data);
-    }
-
-    /**
-     * Converts a short integer into two bytes
-     *
-     * @param s
-     * @return An array of exactly 2 bytes representing the number, with the
-     * most significant bytes in index [0] and the least significant bytes in
-     * index [1]
-     */
-    public static byte[] shortToBytes(short s) {
-        byte result[] = new byte[2];
-        result[1] = (byte) (s & 0xff); // Least significant 8 bits
-        result[0] = (byte) ((s >> 8) & 0xff); // Most significant 8 bits
-        return result;
     }
 
     /**

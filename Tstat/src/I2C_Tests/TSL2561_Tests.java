@@ -16,11 +16,24 @@
  */
 package I2C_Tests;
 
+import com.pi4j.io.i2c.I2CFactory;
+import java.io.IOException;
+
 /**
  *
  * @author Washington iGEM Team 2017
  */
 public class TSL2561_Tests {
-    TSL2561 sensor1 = new TSL2561(TSL2561.ADDR_PIN_STATE.FLOATING);
-    
+
+    public static void main(String[] args)
+            throws InterruptedException, IOException, I2CFactory.UnsupportedBusNumberException {
+
+        System.out.println("<-----  STARTING TSL2651 UNIT TESTS  ----->");
+
+        TSL2561 sensor1 = new TSL2561();
+        while (System.in.available() == 0) {
+            sensor1.read();
+        }
+    }
+
 }
