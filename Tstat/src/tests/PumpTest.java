@@ -76,8 +76,8 @@ public class PumpTest {
             int inputValue = input.nextInt();
             if(inputValue == 1) {
                 System.out.println("Filling");
+                pinDir.high();
                 if(lastDirection != 1 || lastDirection != 0) {
-                    pinDir.low();
                     for(int i = 0; i <  halfCalibrationSteps; i++){
                         Thread.sleep(speed);
                         pinStep.high();
@@ -95,7 +95,6 @@ public class PumpTest {
                     }
                     lastDirection = 1;
                 }
-                pinDir.high();
                 for(int i = 0; i <  distance; i ++){
                     Thread.sleep(speed);
                     pinStep.high();
@@ -108,9 +107,8 @@ public class PumpTest {
                 System.out.println("Dispensing");
                 //System.out.println("1 to update steps");
                 //int newInputValue = input.nextInt();                      
-                
+                pinDir.low();
                 if(lastDirection != 2 || lastDirection != 0) {
-                    pinDir.high();
                     for(int i = 0; i <  halfCalibrationSteps; i++){
                         Thread.sleep(speed);
                         pinStep.high();
@@ -128,7 +126,6 @@ public class PumpTest {
                     }
                     lastDirection = 2;
                 }
-                pinDir.low();
                 int startPosition = currentPosition;
                 for(int i = 0; i <  distance; i ++){
                     Thread.sleep(speed);

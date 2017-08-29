@@ -31,9 +31,13 @@ public class SyringePump {
     private GpioPinDigitalInput endLow;
     private double rate; // Steps per milliliter
     private enum Direction {DISPENSE, REFILL}
+    private boolean justFilled = false;
     private int delay = 1;
     private int maxPosition = 100; // Max steps away from home that can be taken
     private int currPosition = 0; // Considered "home" position
+    private int stepsToTake = 0;
+    private static final int HALF_CALIBRATION_STEPS = 10;
+    private static final int WAIT_BETWEEN_CALIBRATION = 1000;
     
     /**
     * 
@@ -73,19 +77,11 @@ public class SyringePump {
      * @throws InterruptedException
      */
     public void calibrate() throws InterruptedException{
-        // TODO: Add endstop calibration. 
-        // This will take care of setting the max/min positions automatically.
-        // max and min will be set after this point.
-        
-        // Dispense until endstop hit. Store location as home (0);
         this.currPosition = 0;
-        
-        // TODO:
-        // Refill until endstop hit. Store location as max steps position
         this.maxPosition = currPosition;
         Scanner input = new Scanner(System.in);
         
-        double maxPosition = 0.0;
+        double maxML = 0.0;
         int maxSteps = 0;
         
         this.dirPin.high();
@@ -101,7 +97,7 @@ public class SyringePump {
         
         double measurementOne = input.nextDouble();
         if(measurementOne > 0.0) {
-            maxPosition = measurementOne;
+            maxML = measurementOne;
         }
         
         this.dirPin.low();
@@ -118,12 +114,12 @@ public class SyringePump {
         
         double measurementTwo = input.nextDouble();
         if(measurementTwo > 0.0) {
-            maxPosition = measurementTwo;
+            maxML = measurementTwo;
         }
         
         // Stores rate in steps per mL
         // stores max position in steps
-        int stepsPerMil = (int)(((double)maxSteps)/maxPosition);
+        int stepsPerMil = (int)(((double)maxSteps)/maxML);
         this.rate = stepsPerMil;
         this.maxPosition = maxSteps;
         
@@ -158,7 +154,7 @@ public class SyringePump {
     
     /**
      * Syringe moves specified number of steps in the specified direction
-     * @param steps Number of steps to take
+     * @param steps Number of steps to take, can be updated with updateSteps();
      * @param delay Delay in ms between steps
      * @return Number of steps that failed due to endstop. 0 if steps successful
      */
@@ -166,32 +162,67 @@ public class SyringePump {
             throws InterruptedException {
         
         int addStep;
+        this.stepsToTake = steps;
         
         if(dir == SyringePump.Direction.DISPENSE) {
-            // TODO: Set the dir pin to the correct level (lo/hi) for dispense
+            this.dirPin.low();
             addStep = 1;
+            if(this.justFilled) {
+                for(int i = 0; i <  HALF_CALIBRATION_STEPS; i++){
+                    Thread.sleep(this.delay);
+                    this.stepPin.high();
+                    Thread.sleep(this.delay);
+                    this.stepPin.low();
+                    this.currPosition += addStep;
+                }
+                Thread.sleep(WAIT_BETWEEN_CALIBRATION);
+                for(int i = 0; i < HALF_CALIBRATION_STEPS; i++){
+                    Thread.sleep(this.delay);
+                    this.stepPin.high();
+                    Thread.sleep(this.delay);
+                    this.stepPin.low();
+                    this.currPosition += addStep;
+                }
+            }
+            this.justFilled = false;
         }
+        
         else {
-            // TODO: Set the dir pin to the correct level (lo/hi) for refill
+            this.dirPin.high();
+            this.justFilled = true;
             addStep = -1;
         }
         
-        while(steps > 0 && this.canMove()) {
+        while(this.stepsToTake > 0 && this.canMove()) {
             // Take one step
-            this.stepPin.high();          
-            Thread.sleep(delay); // Technically shouldn't do this in loop
+            this.stepPin.high(); 
+            Thread.sleep(this.delay); // Technically shouldn't do this in loop
             this.stepPin.low();
+            Thread.sleep(this.delay);
             this.currPosition += addStep; // Update current position
-            steps--;
-        }
-        
-        // If we reached the end of the syringe, then it's empty. Refill it.
-        if(currPosition <= 100) {
-            refill();
+            this.stepsToTake--;
+            if(dir == SyringePump.Direction.DISPENSE) {
+                this.checkNeedRefill();
+            }
         }
         
         return steps;
         
+    }
+    
+    /**
+     * @param steps updates the current amount of steps by this amount (Cannot make the steps below 0)
+     */
+    public void updateStepsToTake(int steps) {
+        if(this.stepsToTake + steps >= 0) {
+            this.stepsToTake += steps;
+        }
+    }
+    
+    private void checkNeedRefill() throws InterruptedException {
+        if(this.currPosition <= 100) {
+            this.refill();
+        }
     }
     
     /**
