@@ -164,7 +164,8 @@ public class SyringePump {
         int addStep;
         this.stepsToTake = steps;
         
-        if(dir == SyringePump.Direction.DISPENSE) {
+        if(dir == SyringePump.Direction.DISPENSE && this.canMove()) {
+            this.checkNeedRefill();
             this.dirPin.low();
             addStep = 1;
             if(this.justFilled) {
@@ -203,6 +204,7 @@ public class SyringePump {
             this.stepsToTake--;
             if(dir == SyringePump.Direction.DISPENSE) {
                 this.checkNeedRefill();
+                this.dirPin.low();          // This is called because when refill() is called, dirPin is set to high.
             }
         }
         
@@ -219,6 +221,10 @@ public class SyringePump {
         }
     }
     
+    /**
+     * Checks if the position is less than or equal to 100 steps left, and if it is, then calls refill()
+     * @throws InterruptedException 
+     */
     private void checkNeedRefill() throws InterruptedException {
         if(this.currPosition <= 100) {
             this.refill();
