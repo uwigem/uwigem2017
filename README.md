@@ -57,7 +57,7 @@ Washington iGEM 2017 Project
 
 You can now remotely use the terminal on that Pi
 
-# Know Issues
+# Known Issues
 - Upon attempting to run Pi4J code following error occurs
 ~~~
 Unable to determine hardware version. I see: Hardware   : BCM2835
@@ -79,6 +79,8 @@ The entire folder `Tstat` is a NetBeans project folder.
 Once you have cloned the repository onto your development computer, open NetBeans, and open Tstat as a new project.
 
 Tip: If you screw up creating a project and you get the wrong folder as a project, **do not** delete it. Instead, right click, `close`
+
+The `tests` folder is only being occasionally updated and mainly just for Fluids to do tests
 
 # TODO: 
 All Todo tasks are located at: https://trello.com/b/Mey7qSgL/drylab-turbidostat
