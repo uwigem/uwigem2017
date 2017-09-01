@@ -154,16 +154,17 @@ public class SyringePump {
     
     /**
      * Syringe moves specified number of steps in the specified direction
-     * @param steps Number of steps to take, can be updated with updateSteps();
+     * @param steps Number of steps to take, can be updated with updateStepsToTake();
      * @param delay Delay in ms between steps
      * @return Number of steps that failed due to endstop. 0 if steps successful
      */
     private int takeSteps(int steps, SyringePump.Direction dir) 
             throws InterruptedException {
         
-        int addStep;
-        this.stepsToTake = steps;
+        int addStep; // what the heck is this?
+        this.stepsToTake = steps; //why is there a global variable for this?
         
+        // Set up the direction to move the motor
         if(dir == SyringePump.Direction.DISPENSE && this.canMove()) {
             this.checkNeedRefill();
             this.dirPin.low();
@@ -186,14 +187,13 @@ public class SyringePump {
                 }
             }
             this.justFilled = false;
-        }
-        
-        else {
+        } else {
             this.dirPin.high();
             this.justFilled = true;
             addStep = -1;
         }
         
+        // loop to move the decided amount of steps
         while(this.stepsToTake > 0 && this.canMove()) {
             // Take one step
             this.stepPin.high(); 
@@ -201,7 +201,7 @@ public class SyringePump {
             this.stepPin.low();
             Thread.sleep(this.delay);
             this.currPosition += addStep; // Update current position
-            this.stepsToTake--;
+            this.updateStepsToTake(-1); // Use this method so that it doesn't go below zero
             if(dir == SyringePump.Direction.DISPENSE) {
                 this.checkNeedRefill();
                 this.dirPin.low();          // This is called because when refill() is called, dirPin is set to high.
