@@ -141,6 +141,8 @@ public class SyringePump {
      */
     public int dispense(double mL) throws InterruptedException {
         int steps = (int)(mL * this.rate);
+        //take the appropriate number of steps
+        //returns number of steps taken
         return takeSteps(steps, SyringePump.Direction.DISPENSE);        
     }
     
@@ -161,8 +163,8 @@ public class SyringePump {
     private int takeSteps(int steps, SyringePump.Direction dir) 
             throws InterruptedException {
         
-        int addStep; // what the heck is this?
-        this.stepsToTake = steps; //why is there a global variable for this?
+        int addStep; // variable representing direction change in position of syringe (pos if dispense, neg if refill)
+        this.stepsToTake = steps; //This sets a global variable so that it can be modified by updateStepsToTake()
         
         // Set up the direction to move the motor
         if(dir == SyringePump.Direction.DISPENSE && this.canMove()) {
@@ -207,9 +209,8 @@ public class SyringePump {
                 this.dirPin.low();          // This is called because when refill() is called, dirPin is set to high.
             }
         }
-        
+        // return number of steps taken
         return steps;
-        
     }
     
     /**
