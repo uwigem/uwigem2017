@@ -22,15 +22,20 @@ import com.pi4j.io.i2c.I2CFactory;
 import java.io.IOException;
 
 /**
- *
+ * A class which allows readings from a TSL2561
+ * lux sensor connected to the Raspberry Pi
+ * I2C data pins.
+ * 
  * @author Washington iGEM Team 2017
  */
 public class TSL2561 {
 
     // Verbose debug text
-    public static final boolean VERBOSE = true;
+    public static final boolean VERBOSE = false;
 
-    public static final byte TSL2561_ADDR         = 0x39;
+    public static final byte ADDR_DEFAULT         = 0x39; 
+    public static final byte ADDR_PIN_HIGH        = 0x49; 
+    public static final byte ADDR_PIN_LOW         = 0x29; 
     public static final byte COMMAND_BIT          = 0x8;
 
     public static final byte CONTROL              = 0x0;
@@ -52,22 +57,17 @@ public class TSL2561 {
     // TSL2561 power control values
     public static final byte TSL2561_POWER_UP = (byte) 0x03;
 
-    I2CBus I2C_BUS;
+    I2CBus i2cBus;
     I2CDevice TSL2561;
 
     public TSL2561(byte addr)
             throws IOException, I2CFactory.UnsupportedBusNumberException, InterruptedException {
-        // Get i2c I2C_BUS
+        // Get i2c i2cBus
         // Number depends on RasPI version
-        I2C_BUS = I2CFactory.getInstance(I2CBus.BUS_1);
-
-        System.out.println("Connected to bus. OK.");
+        i2cBus = I2CFactory.getInstance(I2CBus.BUS_1);
 
         // Get device itself
-        TSL2561 = I2C_BUS.getDevice(addr);
-        System.out.println("Connected to device.");
-
-        System.out.println("Device ID: " + TSL2561.read(TSL2561_REG_ID));
+        TSL2561 = i2cBus.getDevice(addr);
 
         // Initialize device by issuing command with data value 0x03        
         TSL2561.write(TSL2561_REG_CONTROL, TSL2561_POWER_UP);
@@ -76,8 +76,6 @@ public class TSL2561 {
 
     public double read()
             throws IOException, InterruptedException {
-
-        System.out.println("Waiting...");
 
         byte d0L = (byte) TSL2561.read((byte) (TCS34725_COMMAND_BIT | DATA_0_LOW));
         byte d0H = (byte) TSL2561.read((byte) (TCS34725_COMMAND_BIT | DATA_0_HIGH));
