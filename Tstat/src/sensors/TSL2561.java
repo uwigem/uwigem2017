@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package I2C_Tests;
+package sensors;
 
 import com.pi4j.io.i2c.I2CBus;
 import com.pi4j.io.i2c.I2CDevice;
@@ -30,24 +30,24 @@ public class TSL2561 {
     // Verbose debug text
     public static final boolean VERBOSE = true;
 
-    public static final byte TSL2561_ADDR = (byte) 0x39;
-    public static final byte COMMAND_BIT = 0x8;
+    public static final byte TSL2561_ADDR         = 0x39;
+    public static final byte COMMAND_BIT          = 0x8;
 
-    public static final byte CONTROL = 0x0;
-    public static final byte TIMING = 0x1;
-    public static final byte INTERRUPT = 0x6;
-    public static final byte CHIP_INFO = 0xA;
-    public static final byte STARTUP = 0x3;
+    public static final byte CONTROL              = 0x0;
+    public static final byte TIMING               = 0x1;
+    public static final byte INTERRUPT            = 0x6;
+    public static final byte CHIP_INFO            = 0xA;
+    public static final byte STARTUP              = 0x3;
 
     // Data Registers
-    public static final byte DATA_0_LOW = 0xC;  // First half of 16-bit data0
-    public static final byte DATA_0_HIGH = 0xD; // Second half of 16-bit data0
+    public static final byte DATA_0_LOW           = 0xC; // First half of 16-bit data0
+    public static final byte DATA_0_HIGH          = 0xD; // Second half of 16-bit data0
 
-    public static final byte DATA_1_LOW = 0xE; // First half of 16-bit data1
-    public static final byte DATA_1_HIGH = 0xF; //Second half of 16-bit data1
-    public static final byte TSL2561_REG_ID = (byte) 0x8A;
-    public static final int TCS34725_COMMAND_BIT = 0x80;
-    public static final byte TSL2561_REG_CONTROL = (byte) 0x80;
+    public static final byte DATA_1_LOW           = 0xE; // First half of 16-bit data1
+    public static final byte DATA_1_HIGH          = 0xF; //Second half of 16-bit data1
+    public static final byte TSL2561_REG_ID       = (byte) 0x8A;
+    public static final byte TCS34725_COMMAND_BIT = (byte) 0x80;
+    public static final byte TSL2561_REG_CONTROL  = (byte) 0x80;
 
     // TSL2561 power control values
     public static final byte TSL2561_POWER_UP = (byte) 0x03;
