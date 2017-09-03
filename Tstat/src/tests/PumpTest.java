@@ -27,7 +27,7 @@ public class PumpTest {
         System.out.println("<--Pi4J--> GPIO Control Example 1.0 ... started.");
         
         
-        final GpioController gpio = GpioFactory.getInstance();	
+        final GpioController gpio = GpioFactory.getInstance();	//get the reference to pin numbers
 	// Try to create a software PWM pin output
 	GpioPinDigitalOutput pinStep = gpio.provisionDigitalOutputPin(RaspiPin.GPIO_26,"pinStep");
 	GpioPinDigitalOutput pinDir = gpio.provisionDigitalOutputPin(RaspiPin.GPIO_06,"pinDir");
@@ -47,9 +47,11 @@ public class PumpTest {
         int halfCalibrationSteps = 10;
         int waitBetweenCalibration = 1000;
         
+        //create an instance of a SyringePump object (under tstat folder) to control the pump
         SyringePump pump = new SyringePump(pinDir, pinStep, enable, maxStop, minStop, 1.0);
         
-       // pump.calibrate();
+        // Question: Why is pump.calibrate not called here?
+        // pump.calibrate();
         
         
         
@@ -73,11 +75,12 @@ public class PumpTest {
             System.out.println("   6 to change halfCalibrationSteps");
             System.out.println("   7 to change waitBetweenCalibration");
             System.out.println("=====================================");
-            int inputValue = input.nextInt();
+            //Wait for an option to be chosen
+            int inputValue = input.nextInt(); 
             if(inputValue == 1) {
                 System.out.println("Filling");
+                pinDir.high();
                 if(lastDirection != 1 || lastDirection != 0) {
-                    pinDir.low();
                     for(int i = 0; i <  halfCalibrationSteps; i++){
                         Thread.sleep(speed);
                         pinStep.high();
@@ -95,7 +98,6 @@ public class PumpTest {
                     }
                     lastDirection = 1;
                 }
-                pinDir.high();
                 for(int i = 0; i <  distance; i ++){
                     Thread.sleep(speed);
                     pinStep.high();
@@ -108,9 +110,8 @@ public class PumpTest {
                 System.out.println("Dispensing");
                 //System.out.println("1 to update steps");
                 //int newInputValue = input.nextInt();                      
-                
+                pinDir.low();
                 if(lastDirection != 2 || lastDirection != 0) {
-                    pinDir.high();
                     for(int i = 0; i <  halfCalibrationSteps; i++){
                         Thread.sleep(speed);
                         pinStep.high();
@@ -128,7 +129,6 @@ public class PumpTest {
                     }
                     lastDirection = 2;
                 }
-                pinDir.low();
                 int startPosition = currentPosition;
                 for(int i = 0; i <  distance; i ++){
                     Thread.sleep(speed);
