@@ -28,7 +28,7 @@ import java.io.IOException;
 public class TSL2561 {
 
     // Verbose debug text
-    public static final boolean VERBOSE = false;
+    public static final boolean VERBOSE = true;
 
     public static final byte TSL2561_ADDR = (byte) 0x39;
     public static final byte COMMAND_BIT = 0x8;
@@ -74,7 +74,7 @@ public class TSL2561 {
 
     }
 
-    public Readings read()
+    public double read()
             throws IOException, InterruptedException {
 
         System.out.println("Waiting...");
@@ -88,8 +88,41 @@ public class TSL2561 {
             System.out.println("Data 0: " + bytesToInt(d0H, d0L));
             System.out.println("Data 1: " + bytesToInt(d1H, d1L));
         }
+        
+        return rawToLux(bytesToInt(d0H, d0L), bytesToInt(d1H, d1L));
+    }
 
-        return new Readings(bytesToInt(d0H, d0L), bytesToInt(d1H, d1L));
+    /**
+     * Calculates lux measurement based on both diodes
+     *
+     * @return Lux value for the sensor
+     */
+    private double rawToLux(int vis, int IR) {
+        if (vis <= 0) {
+            return 0;
+        }
+        double ratio = IR / vis;
+        double exp = 0;
+        double ch0Coeff = 0;
+        double ch1Coeff = 0;
+
+        if (0 < ratio && ratio < 0.5) {
+            ch0Coeff = .0304;
+            ch1Coeff = .062;
+            exp = 1.4;
+        } else if (ratio <= 0.61) {
+            ch0Coeff = .0224;
+            ch1Coeff = .031;
+        } else if (ratio <= 0.80) {
+            ch0Coeff = .0128;
+            ch1Coeff = .0153;
+        } else if (ratio <= 1.30) {
+            ch0Coeff = .00146;
+            ch1Coeff = .00112;
+        }
+
+        // If ratio > 1.3, the return value is 0.
+        return ch0Coeff * vis - ch1Coeff * IR * (Math.pow(ratio, exp));
     }
 
     /**
@@ -98,19 +131,7 @@ public class TSL2561 {
      * @param low Least significant byte (smallest; under 256)
      * @return Short integer having the value represented by the adjoined bytes
      */
-    public static int bytesToInt(byte high, byte low) {
+    private static int bytesToInt(byte high, byte low) {
         return ((high & 0xFF) << 8) | (low & 0xFF);
     }
-
-    public class Readings {
-
-        public int infrared;
-        public int visible;
-
-        public Readings(int vis, int inf) {
-            this.infrared = inf;
-            this.visible = vis;
-        }
-    }
-
 }

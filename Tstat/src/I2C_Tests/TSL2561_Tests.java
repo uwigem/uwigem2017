@@ -33,19 +33,16 @@ public class TSL2561_Tests {
         TSL2561 sensor1 = new TSL2561((byte) 0x39);
         TSL2561 sensor2 = new TSL2561((byte) 0x49);
 
-        TSL2561.Readings r1;
-        TSL2561.Readings r2;
 
         while (System.in.available() == 0) {
             Thread.sleep(400);
-            r1 = sensor1.read();
-            r2 = sensor2.read();
+            double r1 = sensor1.read();
+            double r2 = sensor2.read();
 
-            System.out.println("Sensor 1: " + r1.visible
-                    + " visible, " + r1.infrared + " infrared");
-
-            System.out.println("Sensor 2: " + r2.visible
-                    + " visible, " + r2.infrared + " infrared");
+            
+            
+            System.out.println("Sensor 1: " + r1 + " lux");
+            System.out.println("Sensor 2: " + r2 + " lux");
         }
     }
 
