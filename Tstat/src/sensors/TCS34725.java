@@ -19,7 +19,9 @@ package sensors;
 import com.pi4j.io.i2c.I2CBus;
 import com.pi4j.io.i2c.I2CDevice;
 import com.pi4j.io.i2c.I2CFactory;
+import java.awt.Color;
 import java.io.IOException;
+import javax.naming.OperationNotSupportedException;
 
 /**
  *
@@ -48,7 +50,10 @@ public class TCS34725 {
 
     private final I2CDevice device;
     private final I2CBus i2cBus;
-    private int integrationTime;
+    private double mRed;
+    private double mGreen;
+    private double mBlue;
+    private double mClear;
 
     public TCS34725()
             throws IOException, I2CFactory.UnsupportedBusNumberException {
@@ -73,17 +78,50 @@ public class TCS34725 {
         int b = this.readU16(TCS34725_BDATAL);
         int g = this.readU16(TCS34725_GDATAL);
         int c = this.readU16(TCS34725_CDATAL);
-        waitfor(10);
+
         return new ColorReading(r, b, g, c);
+    }
+
+    public ColorReading getNormalizedReading() throws Exception {
+        ColorReading result = getReading();
+
+        result.red = (int) ((double) result.red * mRed);
+        result.green = (int) ((double) result.green * mGreen);
+        result.blue = (int) ((double) result.blue * mBlue);
+        result.clear = (int) ((double) result.clear * mClear);
+
+        return result;
+    }
+    
+    public Color readingToHue(ColorReading cr){
+        double mult = (double)max(cr.blue,cr.green,cr.red);
+        mult = 255.0 / mult;
+        
+        int red = (int)(cr.red * mult);
+        int green = (int)(cr.green * mult);
+        int blue = (int)(cr.blue * mult);
+        int clear = red + green + blue;
+        
+        return new Color(red, green, blue);
+
+    }
+
+    /**
+     * Takes a reading and sets that to the color point 255,255,255. Raw
+     * readings will not be altered, but normalized readings will be scaled
+     * assuming the current white point.
+     */
+    public void setWhitePoint() throws Exception {
+        ColorReading cRead = getReading();
+        this.mRed = 255 / (double) cRead.red;
+        this.mGreen = 255 / (double) cRead.green;
+        this.mBlue = 255 / (double) cRead.blue;
+        this.mClear = 765 / (double) cRead.clear;
+
     }
 
     public void setGain(int gain) throws IOException {
         this.write8(TCS34725_CONTROL, (byte) gain);
-    }
-
-    public void setIntegrationTime(int integrationTime) throws IOException {
-        this.integrationTime = integrationTime;
-        this.write8(TCS34725_ATIME, (byte) integrationTime);
     }
 
     // Standard read/write functions
@@ -95,11 +133,20 @@ public class TCS34725 {
         int dataLow = this.readU8(COMMAND_BIT | reg);
         int dataHigh = this.readU8(COMMAND_BIT | reg + 1);
         return (dataHigh << 8) + dataLow;
-
     }
 
     private void write8(int register, int value) throws IOException {
         this.device.write(COMMAND_BIT | register, (byte) (value & 0xff));
+    }
+
+    private int max(int a, int b, int c) {
+        if (a >= b && a >= c) {
+            return a;
+        } else if (b >= a && b >= c) {
+            return b;
+        }
+
+        return c;
     }
 
     @SuppressWarnings("CallToPrintStackTrace")
