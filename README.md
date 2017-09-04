@@ -45,6 +45,7 @@ Washington iGEM 2017 Project
 
 1. [Download NetBeans IDE for Java SE](https://netbeans.org/downloads/start.html?platform=linux&lang=en&option=javase)
 2. [Refer to these instructions](https://netbeans.org/community/releases/36/install.html#unix)
+3. See explanation of [code structure](#code-structure)
 
 # Using SSH
 
@@ -74,13 +75,29 @@ Work Arounds
 
 # Code Structure
 
-The entire folder `Tstat` is a NetBeans project folder. 
-
 Once you have cloned the repository onto your development computer, open NetBeans, and open Tstat as a new project.
 
-Tip: If you screw up creating a project and you get the wrong folder as a project, **do not** delete it. Instead, right click, `close`
+**Tip**: If you screw up creating a project and you get the wrong folder as a project, **do not** delete it. Instead, right click, `close`
 
-The `tests` folder is only being occasionally updated and mainly just for Fluids to do tests
+```
+Tstat (Netbeans project folder containing java code that will be run on the RPi)
+│
+└src (All of the code to be edited)
+ │
+ ├deprecated (Not being used anymore)
+ │
+ ├guiTests (Graphical User Interface)
+ │
+ ├I2C_Tests (I Squared C interface between the pi and other chips)
+ │
+ ├sensors
+ │
+ ├syringePump
+ │
+ ├tests (Only occasionally used by fluids to do tests on the syringe)
+ │
+ └tstat
+```
 
 # TODO: 
 All Todo tasks are located at: https://trello.com/b/Mey7qSgL/drylab-turbidostat
