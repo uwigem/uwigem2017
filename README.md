@@ -4,10 +4,10 @@ Washington iGEM 2017 Project
 
 # Table Of Contents
 
- - [Setup](#setup)
- - [Using SSH](#UsingSSH)
- - [Known Issues](#KnownIssues)
- - [Code Structure](#CodeStructure)
+ - [Setup](#Setup)
+ - [Using SSH](#Using-SSH)
+ - [Known Issues](#Known-Issues)
+ - [Code Structure](#Code-Structure)
 
 # Setup
 1. [Download IMG File](https://www.raspberrypi.org/downloads/raspbian/)
