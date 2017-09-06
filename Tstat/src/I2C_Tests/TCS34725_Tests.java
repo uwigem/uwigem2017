@@ -16,11 +16,30 @@
  */
 package I2C_Tests;
 
+import sensors.TCS34725;
+import com.pi4j.io.i2c.I2CFactory;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author Washington iGEM Team 2017
  */
-public class TSL2561_Tests {
-    TSL2561 sensor1 = new TSL2561(TSL2561.ADDR_PIN_STATE.FLOATING);
-    
+public class TCS34725_Tests {
+
+    public static void main(String[] args)
+            throws IOException, I2CFactory.UnsupportedBusNumberException, Exception {
+
+        TCS34725 sensor;
+        sensor = new sensors.TCS34725();
+
+        while (System.in.available() == 0) {
+            TCS34725.ColorReading color = sensor.getReading();
+
+            System.out.println(color.toString());
+            Thread.sleep(500);
+        }
+    }
+
 }
