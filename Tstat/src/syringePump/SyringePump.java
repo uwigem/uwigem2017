@@ -8,6 +8,8 @@ import com.pi4j.io.gpio.*;
 import com.pi4j.*;
 
 public class SyringePump {
+        // IMPORTANT NOTE: !!! UNUSED -- See SyringePump.java in tstat package instead. !!!
+        /*
 	private GpioController gpio;
 	private GpioPinDigitalOutput motor;
 	private GpioPinDigitalOutput direction;
@@ -39,13 +41,13 @@ public class SyringePump {
 		this.outputSpeed = DEFAULT_SPEED;
 		this.direction.high();
 		this.fluidLevel = FLUID_EMPTY;
-		/*for(int i = 0; i < FLUID_FULL; i++) {
+		for(int i = 0; i < FLUID_FULL; i++) {
 			Thread.sleep(this.outputSpeed);
 			motor.high();
 			fluidLevel+= 1;
 			Thread.sleep(this.outputSpeed);
 			motor.low();
-		}*/
+		}
 		System.out.println("Pump [" + this.identity + "] completed initialization");
 	}
 
@@ -77,13 +79,13 @@ public class SyringePump {
 				}
 			}
 			this.currentlyDispensing = false;
-		}*/
+		}
 	}
 
-        /*
+        
 	private boolean checkLegal() {
             
-	}*/
+	}
 
 	public boolean isCurrentlyDispensing() {
 		return this.currentlyDispensing;
@@ -124,12 +126,12 @@ public class SyringePump {
 	}
 
 	private void refill() { // if requriedamt greater, then Error
-		/*for(int i = fluidLevel; i < FLUID_FULL; i++) {
+		for(int i = fluidLevel; i < FLUID_FULL; i++) {
 			Thread.sleep(this.outputSpeed);
 			motor.high();
 			fluidLevel+= 1;
 			Thread.sleep(this.outputSpeed);
 			motor.low();
-		}*/
-	}
+		}
+	}*/
 }

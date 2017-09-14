@@ -214,7 +214,9 @@ public class SyringePump {
     }
     
     /**
-     * @param steps updates the current amount of steps by this amount (Cannot make the steps below 0)
+     * @param steps updates the current amount of steps by this amount 
+     * This amount is additive and will do nothing if current amount of steps
+     * taken + steps is less than or equal to 0
      */
     public void updateStepsToTake(int steps) {
         if(this.stepsToTake + steps >= 0) {
@@ -227,6 +229,8 @@ public class SyringePump {
      * @throws InterruptedException 
      */
     private void checkNeedRefill() throws InterruptedException {
+        // 100 is an arbitrary value as of now, mainly because getting too close to the end results
+        // in iffy behavior by the pump.
         if(this.currPosition <= 100) {
             this.refill();
         }
