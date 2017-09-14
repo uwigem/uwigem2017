@@ -59,6 +59,7 @@ public class Tstat {
                                                     gpio.provisionDigitalInputPin(MAX_STOP_PINS[i]), 
                                                     gpio.provisionDigitalInputPin(MIN_STOP_PINS[i]), 
                                                     DEFAULT_RATE);
+            fluids.addPump(addPump);
         }
         
         System.out.println("Calibrating pumps");
