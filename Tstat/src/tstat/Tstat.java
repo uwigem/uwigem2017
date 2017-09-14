@@ -64,7 +64,7 @@ public class Tstat {
         System.out.println("Calibrating pumps");
         
         for(int i = 0; i < 3; i++) {
-            System.out.println("Calibrating pump 1");
+            System.out.println("Calibrating pump #" + i);
             fluids.calibrateFrom(i);
         }
         
