@@ -68,6 +68,10 @@ public class SyringePump {
         }
     }
     
+    /**
+     * Sets rate of pump. Default is from calibration
+     * @param steps rate in steps per milliliter
+     */
     public void setRate(int steps) {
         this.rate = steps;
     }

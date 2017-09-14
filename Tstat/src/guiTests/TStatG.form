@@ -190,6 +190,9 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="jTextField11"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField11ActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JTextField" name="jTextField12">
               <Properties>
