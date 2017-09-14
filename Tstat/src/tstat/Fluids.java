@@ -99,5 +99,14 @@ public class Fluids {
         pumps.get(pump).updateStepsToTake(steps);
     }
     
+    /**
+     * Returns current position of pump in steps
+     * @param pump Which pump is being analyzed
+     * @return current position of specified pump in steps
+     * @throws InterruptedException 
+     */
+    public int getCurrentPositionFrom(int pump) throws InterruptedException {
+        return pumps.get(pump).getCurrentPosition();
+    }
     
 }

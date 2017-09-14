@@ -229,6 +229,13 @@ public class SyringePump {
     }
     
     /**
+     * @return current position of pump in steps
+     */
+    public int getCurrentPosition() {
+        return this.currPosition;
+    }
+    
+    /**
      * Checks if the position is less than or equal to 100 steps left, and if it is, then calls refill()
      * @throws InterruptedException 
      */
