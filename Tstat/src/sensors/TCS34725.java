@@ -100,7 +100,6 @@ public class TCS34725 {
         int red = (int)(cr.red * mult);
         int green = (int)(cr.green * mult);
         int blue = (int)(cr.blue * mult);
-        int clear = red + green + blue;
         
         return new Color(red, green, blue);
 

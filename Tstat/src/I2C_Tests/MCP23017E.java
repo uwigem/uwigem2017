@@ -1,6 +1,4 @@
-package deprecated;
-
-
+package I2C_Tests;
 
 /*
  * #%L
@@ -111,14 +109,16 @@ public class MCP23017E {
             gpio.provisionDigitalOutputPin(provider, MCP23017Pin.GPIO_B6, "MyOutput-B6", PinState.LOW),
             gpio.provisionDigitalOutputPin(provider, MCP23017Pin.GPIO_B7, "MyOutput-B7", PinState.LOW)
           };
+        
+        
 
         // keep program running for 20 seconds
-        for (int count = 0; count < 10; count++) {
+       /* for (int count = 0; count < 10; count++) {
             gpio.setState(true, myOutputs);
             Thread.sleep(1000);
             gpio.setState(false, myOutputs);
             Thread.sleep(1000);
-        }
+        }*/
 
         // stop all GPIO activity/threads by shutting down the GPIO controller
         // (this method will forcefully shutdown all GPIO monitoring threads and scheduled tasks)
