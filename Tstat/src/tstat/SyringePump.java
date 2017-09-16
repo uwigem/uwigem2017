@@ -68,6 +68,10 @@ public class SyringePump {
         }
     }
     
+    /**
+     * Sets rate of pump. Default is from calibration
+     * @param steps rate in steps per milliliter
+     */
     public void setRate(int steps) {
         this.rate = steps;
     }
@@ -214,7 +218,9 @@ public class SyringePump {
     }
     
     /**
-     * @param steps updates the current amount of steps by this amount (Cannot make the steps below 0)
+     * @param steps updates the current amount of steps by this amount 
+     * This amount is additive and will do nothing if current amount of steps
+     * taken + steps is less than or equal to 0
      */
     public void updateStepsToTake(int steps) {
         if(this.stepsToTake + steps >= 0) {
@@ -223,10 +229,19 @@ public class SyringePump {
     }
     
     /**
+     * @return current position of pump in steps
+     */
+    public int getCurrentPosition() {
+        return this.currPosition;
+    }
+    
+    /**
      * Checks if the position is less than or equal to 100 steps left, and if it is, then calls refill()
      * @throws InterruptedException 
      */
     private void checkNeedRefill() throws InterruptedException {
+        // 100 is an arbitrary value as of now, mainly because getting too close to the end results
+        // in iffy behavior by the pump.
         if(this.currPosition <= 100) {
             this.refill();
         }
