@@ -17,7 +17,7 @@
 package I2C_Tests;
 
 /**
- *
+ * MCP23017 control. Allows user to read and write from requested pins
  * @author Washington iGEM Team 2017
  */
 
@@ -39,12 +39,22 @@ public class MCP23017_Control {
         this.provider = new MCP23017GpioProvider(I2CBus.BUS_1, 0x21);
     }
     
+    /**
+     * @param pin Pin from MCP23017Pin.java
+     * @return GpioPinDigitalInput of requested pin
+     */
     public GpioPinDigitalInput provisionInput(Pin pin) {
         return gpio.provisionDigitalInputPin(provider, pin, PinPullResistance.PULL_UP);
     }
     
+    /**
+     * Sets requested pin to specified pinState
+     * @param pin Pin from MCP23017Pin.java
+     * @param pinState LOW or HIGH
+     * @return GpioPinDigitalOutput of requested pin
+     * TODO: Unsure if works as intended.
+     */
     public GpioPinDigitalOutput provisionOutput(Pin pin, PinState pinState){
         return gpio.provisionDigitalOutputPin(provider, pin, pinState);
     }
-
 }
