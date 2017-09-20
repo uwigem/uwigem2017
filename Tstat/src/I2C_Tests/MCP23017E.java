@@ -128,7 +128,7 @@ public class MCP23017E {
         // (this method will forcefully shutdown all GPIO monitoring threads and scheduled tasks)
         gpio.shutdown();
 
-        System.out.println("Exiting MCP23017GpioExample");*/
+        System.out.println("Exiting MCP23017GpioExample");
     }
 }
 
