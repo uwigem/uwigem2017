@@ -43,7 +43,7 @@ public class Blink {
 	    System.out.print("On...");
 	    ledPin.high();
 	    Thread.sleep(1000);
-            System.out.print("juice");
+           
 	}
 
 	System.out.println("\n\nBlink program terminated.");
