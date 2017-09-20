@@ -74,8 +74,12 @@ public class MCP23017E {
         final GpioController gpio = GpioFactory.getInstance();
 
         // create custom MCP23017 GPIO provider
-        final MCP23017GpioProvider provider = new MCP23017GpioProvider(I2CBus.BUS_1, 0x21);
-
+        final MCP23017GpioProvider provider = new MCP23017GpioProvider(I2CBus.BUS_1, 0x20);
+        
+        
+        
+        
+/*
         // provision gpio input pins from MCP23017
         GpioPinDigitalInput myInputs[] = {
                 gpio.provisionDigitalInputPin(provider, MCP23017Pin.GPIO_A0, "MyInput-A0", PinPullResistance.PULL_UP),
@@ -124,7 +128,7 @@ public class MCP23017E {
         // (this method will forcefully shutdown all GPIO monitoring threads and scheduled tasks)
         gpio.shutdown();
 
-        System.out.println("Exiting MCP23017GpioExample");
+        System.out.println("Exiting MCP23017GpioExample");*/
     }
 }
 
