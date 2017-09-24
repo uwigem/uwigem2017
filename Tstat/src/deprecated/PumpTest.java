@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package tests;
+package deprecated;
 import tstat.SyringePump;
 import java.util.Scanner;
 import java.lang.*;
@@ -18,7 +18,7 @@ import com.pi4j.util.Console;
  * This file is a very rough test file and not optimized at all
  * 
  */
-public class PumpTest {
+public class PumpTest implements java.io.Serializable{
     
 
     

@@ -16,6 +16,8 @@
  */
 package sensors;
 
+import iGEM2017.TSL2561;
+import iGEM2017.TCS34725;
 import com.pi4j.io.gpio.GpioPinPwmOutput;
 import com.pi4j.io.gpio.RaspiPin;
 import com.pi4j.io.i2c.I2CFactory;
@@ -29,7 +31,7 @@ import javax.swing.Timer;
 import com.pi4j.io.gpio.*;
 import com.pi4j.util.CommandArgumentParser;
 import java.text.NumberFormat;
-import sensors.TCS34725.ColorReading;
+import iGEM2017.TCS34725.ColorReading;
 
 /**
  *

@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package guiTests;
+package deprecated;
 
 /**
  *
@@ -179,7 +179,6 @@ public class TStatG extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Turbidostat Control");
-        setMaximumSize(new java.awt.Dimension(800, 480));
         setMinimumSize(new java.awt.Dimension(800, 480));
         setResizable(false);
 
