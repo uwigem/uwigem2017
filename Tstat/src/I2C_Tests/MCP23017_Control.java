@@ -34,9 +34,9 @@ public class MCP23017_Control {
     private GpioController gpio;
     private MCP23017GpioProvider provider;
     
-    public MCP23017_Control() throws UnsupportedBusNumberException, IOException {
+    public MCP23017_Control(int address) throws UnsupportedBusNumberException, IOException {
         this.gpio = GpioFactory.getInstance();
-        this.provider = new MCP23017GpioProvider(I2CBus.BUS_1, 0x21);
+        this.provider = new MCP23017GpioProvider(I2CBus.BUS_1, address);
     }
     
     /**
