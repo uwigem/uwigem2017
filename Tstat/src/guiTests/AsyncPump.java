@@ -18,9 +18,15 @@ package guiTests;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.LinkedList;
+import java.util.concurrent.Executor;
+import java.util.concurrent.LinkedBlockingQueue;
+import java.util.concurrent.ThreadPoolExecutor;
+import java.util.concurrent.TimeUnit;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javafx.scene.paint.Color;
+import javax.swing.JTextField;
 import javax.swing.Timer;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
@@ -76,14 +82,26 @@ public class AsyncPump extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         buttonDispense2 = new javax.swing.JButton();
         labelVolumeDispensed2 = new javax.swing.JLabel();
+        labelTest = new javax.swing.JLabel();
+        labelTest2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         textFieldVolume1.setText("500");
+        textFieldVolume1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                textFieldKeyReleased(evt);
+            }
+        });
 
         jLabel2.setText("mL");
 
         textFieldSpeed1.setText("15");
+        textFieldSpeed1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                textFieldKeyReleased(evt);
+            }
+        });
 
         progressBarDispense1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         progressBarDispense1.setToolTipText("");
@@ -143,10 +161,20 @@ public class AsyncPump extends javax.swing.JFrame {
         );
 
         textFieldVolume2.setText("400");
+        textFieldVolume2.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                textFieldKeyReleased(evt);
+            }
+        });
 
         jLabel3.setText("mL");
 
         textFieldSpeed2.setText("40");
+        textFieldSpeed2.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                textFieldKeyReleased(evt);
+            }
+        });
 
         progressBarDispense2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         progressBarDispense2.setToolTipText("");
@@ -204,6 +232,10 @@ public class AsyncPump extends javax.swing.JFrame {
                 .addContainerGap(14, Short.MAX_VALUE))
         );
 
+        labelTest.setText("jLabel5");
+
+        labelTest2.setText("jLabel5");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -211,18 +243,36 @@ public class AsyncPump extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(25, 25, 25)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(81, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(labelTest2)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(labelTest, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(62, 62, 62))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(30, 30, 30)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(31, 31, 31)
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(54, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(30, 30, 30)
+                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(labelTest2)
+                        .addGap(28, 28, 28)))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(37, 37, 37)
+                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(labelTest, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(48, Short.MAX_VALUE))
         );
 
         pack();
@@ -230,20 +280,22 @@ public class AsyncPump extends javax.swing.JFrame {
 
     private void buttonDispense1Pressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonDispense1Pressed
 
-        // Disable controls while dispensing is in progress
-        buttonDispense1.setEnabled(false);
+        int vol;
+        int speed;
 
-        // Get the volume to dispense
-        int vol = Integer.parseInt(textFieldVolume1.getText());
-
-        // Get the speed
-        int speed = Integer.parseInt(textFieldSpeed1.getText());
-        
+        // Get the volume and speed
+        try {
+            vol = Integer.parseInt(textFieldVolume1.getText());
+            speed = Integer.parseInt(textFieldSpeed1.getText());
+        } catch (NumberFormatException ex) {
+            return;
+        }
         // Reset the progress bar
         progressBarDispense1.setValue(0);
         progressBarDispense1.setMaximum(vol);
-        
-        
+
+        // Disable controls while dispensing is in progress
+        buttonDispense1.setEnabled(false);
 
         // Set the timer up with the correct speed and volume
         pumpTimer1 = new Timer(speed, new ActionListener() {
@@ -251,9 +303,9 @@ public class AsyncPump extends javax.swing.JFrame {
             public void actionPerformed(ActionEvent evt) {
 
                 int current = progressBarDispense1.getValue();
-                progressBarDispense1.setValue(current+1);
+                progressBarDispense1.setValue(current + 1);
                 progressBarDispense1.updateUI();
-                
+
                 labelVolumeDispensed1.setText(current + " / " + vol + " mL");
                 System.out.println("Current: " + current);
                 System.out.println("Vol: " + vol);
@@ -275,6 +327,46 @@ public class AsyncPump extends javax.swing.JFrame {
 
     private void buttonDispense2Pressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonDispense2Pressed
 
+        labelTest2.setText(Thread.currentThread().getId() + "" );
+        
+        ThreadPoolExecutor tpe = new ThreadPoolExecutor(4, 4, 5000, TimeUnit.MILLISECONDS, new LinkedBlockingQueue<>());
+        
+        tpe.execute(new Runnable() {
+            @Override
+            public void run(){
+                labelTest.setText(Thread.currentThread().getId() + "" );
+            } 
+        });
+        
+        LinkedList<Integer> ll = new LinkedList<>();
+
+        /*
+        // Asynchronous executor runs code other thread
+        Executor executor = new Executor(){
+            @Override
+            public void execute(Runnable command) {                
+                labelTest.setText("execute test");
+                command.run();
+            }
+        };
+        
+        
+        
+        
+        
+        
+       executor.execute(new Runnable(){
+            @Override
+            public void run(){
+                labelTest2.setText("runnable is ran");
+            }
+        
+        });*/
+       
+       
+       
+       
+       
         // Disable controls while dispensing is in progress
         buttonDispense2.setEnabled(false);
 
@@ -282,33 +374,30 @@ public class AsyncPump extends javax.swing.JFrame {
         int vol = Integer.parseInt(textFieldVolume2.getText());
 
         // Get the speed
-        int speed = Integer.parseInt(textFieldSpeed2.getText());
-        
+        int delay = Integer.parseInt(textFieldSpeed2.getText());
+
         // Reset the progress bar
         progressBarDispense2.setValue(0);
         progressBarDispense2.setMaximum(vol);
-        
-        
 
         // Set the timer up with the correct speed and volume
-        pumpTimer2 = new Timer(speed, new ActionListener() {
+        pumpTimer2 = new Timer(delay, new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent evt) {
 
+                // Advance motor                 
                 int current = progressBarDispense2.getValue();
-                progressBarDispense2.setValue(current+1);
+                progressBarDispense2.setValue(current + 1);
                 progressBarDispense2.updateUI();
-                
+
                 labelVolumeDispensed2.setText(current + " / " + vol + " mL");
-                System.out.println("Current: " + current);
-                System.out.println("Vol: " + vol);
-                System.out.println("Speed: " + speed);
 
                 if (progressBarDispense2.getValue() >= vol) {
                     System.out.println("Done");
                     pumpTimer2.stop();
                     labelVolumeDispensed2.setText("");
-                    buttonDispense1.setEnabled(true);
+                    buttonDispense2.setEnabled(true);
+                    
                 }
             }
         });
@@ -317,6 +406,22 @@ public class AsyncPump extends javax.swing.JFrame {
         pumpTimer2.start();
 
     }//GEN-LAST:event_buttonDispense2Pressed
+
+    private void textFieldKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_textFieldKeyReleased
+
+        JTextField field = (JTextField) evt.getSource();
+        
+        try {
+            Integer.parseInt(field.getText());
+            field.setBackground(java.awt.Color.white);
+            buttonDispense1.setEnabled(true);
+            buttonDispense2.setEnabled(true);
+        } catch (NumberFormatException ex) {
+            field.setBackground(java.awt.Color.red);
+            buttonDispense1.setEnabled(false);
+            buttonDispense2.setEnabled(false);
+        }   
+    }//GEN-LAST:event_textFieldKeyReleased
 
     /**
      * @param args the command line arguments
@@ -362,6 +467,8 @@ public class AsyncPump extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JLabel labelTest;
+    private javax.swing.JLabel labelTest2;
     private javax.swing.JLabel labelVolumeDispensed1;
     private javax.swing.JLabel labelVolumeDispensed2;
     private javax.swing.JProgressBar progressBarDispense1;
