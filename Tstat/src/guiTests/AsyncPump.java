@@ -311,6 +311,7 @@ public class AsyncPump extends javax.swing.JFrame {
                 System.out.println("Vol: " + vol);
                 System.out.println("Speed: " + speed);
 
+                
                 if (progressBarDispense1.getValue() >= vol) {
                     System.out.println("Done");
                     pumpTimer1.stop();
