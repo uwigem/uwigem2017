@@ -14,9 +14,9 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package I2C_Tests;
+package deprecated;
 
-import sensors.TCS34725;
+import iGEM2017.TCS34725;
 import com.pi4j.io.i2c.I2CFactory;
 import java.io.IOException;
 import java.util.logging.Level;
@@ -32,7 +32,7 @@ public class TCS34725_Tests {
             throws IOException, I2CFactory.UnsupportedBusNumberException, Exception {
 
         TCS34725 sensor;
-        sensor = new sensors.TCS34725();
+        sensor = new iGEM2017.TCS34725();
 
         while (System.in.available() == 0) {
             TCS34725.ColorReading color = sensor.getReading();

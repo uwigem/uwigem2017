@@ -80,10 +80,13 @@ public class SyringePump {
      * Calibrates pump by setting number of steps to move 1mL of fluid
      * @throws InterruptedException
      */
-    public void calibrate() throws InterruptedException{
+    public void calibrate(int identity) throws InterruptedException{
         this.currPosition = 0;
         this.maxPosition = currPosition;
         Scanner input = new Scanner(System.in);
+        
+        int id = identity + 1;
+        System.out.println("Now calibrating pump #" + id);
         
         double maxML = 0.0;
         int maxSteps = 0;

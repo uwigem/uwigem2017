@@ -2,7 +2,7 @@
 // SyringePump controller
 // This program allows the user to control a single syringe pump
 
-package syringepump;
+
 import java.lang.*;
 import com.pi4j.io.gpio.*;
 import com.pi4j.*;

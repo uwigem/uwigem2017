@@ -16,7 +16,7 @@
  */
 package deprecated;
 
-import sensors.TSL2561;
+import iGEM2017.TSL2561;
 import com.pi4j.io.i2c.I2CFactory;
 import java.io.IOException;
 

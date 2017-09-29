@@ -75,7 +75,7 @@ public class Fluids {
      * @throws InterruptedException 
      */
     public void calibrateFrom(int pump) throws InterruptedException {
-        pumps.get(pump).calibrate();
+        pumps.get(pump).calibrate(pump);
     }
     
     /**
