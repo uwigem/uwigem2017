@@ -16,6 +16,9 @@
  */
 package I2C_Tests;
 
+import com.pi4j.gpio.extension.mcp.MCP23017Pin;
+import com.pi4j.io.gpio.Pin;
+import com.pi4j.io.gpio.PinState;
 import com.pi4j.io.i2c.I2CFactory;
 import java.io.IOException;
 import java.util.Scanner;
@@ -29,20 +32,34 @@ public class MCP_Diag {
         MCP23017_Control controller = new MCP23017_Control(0x21);
         
         Scanner scan = new Scanner(System.in);
-        int pin;
+        int pinInt;
         int onOff;
         int inOut;
+        
+        
         while(true){
             
             System.out.println("Select a pin");
-            pin = scan.nextInt();
+            pinInt = scan.nextInt();
             System.out.println("Set input(0) or output(1)");
             
             inOut = scan.nextInt();
             
-            if(inOut == 0 && pin >= 0 && pin <=7){
-                controller.provisionInput(pin);                
+            if(inOut == 0 && pinInt >= 0 && pinInt <=7){
+                controller.provisionInput(intToPin(pinInt));                
+            } else {
+                System.out.println("Set pin output state to 0 or 1?");
+                onOff = scan.nextInt();
+                if(onOff == 0) {
+                controller.provisionOutput(intToPin(pinInt), PinState.HIGH); }
+                else if(onOff == 1){
+                    controller.provisionOutput(intToPin(pinInt), PinState.LOW);
+                }
             }
         }
+    }
+    
+    public static Pin intToPin(int i){
+        return MCP23017Pin.ALL[i];
     }
 }

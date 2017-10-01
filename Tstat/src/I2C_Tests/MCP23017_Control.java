@@ -44,6 +44,7 @@ public class MCP23017_Control {
      */
     public GpioPinDigitalInput provisionInput(Pin pin) {
         return gpio.provisionDigitalInputPin(provider, pin, PinPullResistance.PULL_UP);
+        
     }
     
     /**
