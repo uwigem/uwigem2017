@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package I2C_Tests;
+package deprecated;
 
 /**
  * MCP23017 control. Allows user to read and write from requested pins
@@ -36,6 +36,7 @@ public class MCP23017_Control {
     public MCP23017_Control(int address) throws UnsupportedBusNumberException, IOException {
         this.gpio = GpioFactory.getInstance();
         this.provider = new MCP23017GpioProvider(I2CBus.BUS_1, address);
+        
     }
     
     /**
@@ -44,7 +45,6 @@ public class MCP23017_Control {
      */
     public GpioPinDigitalInput provisionInput(Pin pin) {
         return gpio.provisionDigitalInputPin(provider, pin, PinPullResistance.PULL_UP);
-        
     }
     
     /**
@@ -56,5 +56,6 @@ public class MCP23017_Control {
      */
     public GpioPinDigitalOutput provisionOutput(Pin pin, PinState pinState){
         return gpio.provisionDigitalOutputPin(provider, pin, pinState);
+       
     }
 }

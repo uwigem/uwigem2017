@@ -79,17 +79,17 @@ public class MCP23017E {
         
         
         
-/*
+
         // provision gpio input pins from MCP23017
         GpioPinDigitalInput myInputs[] = {
-                gpio.provisionDigitalInputPin(provider, MCP23017Pin.GPIO_A0, "MyInput-A0", PinPullResistance.PULL_UP),
-                gpio.provisionDigitalInputPin(provider, MCP23017Pin.GPIO_A1, "MyInput-A1", PinPullResistance.PULL_UP),
-                gpio.provisionDigitalInputPin(provider, MCP23017Pin.GPIO_A2, "MyInput-A2", PinPullResistance.PULL_UP),
-                gpio.provisionDigitalInputPin(provider, MCP23017Pin.GPIO_A3, "MyInput-A3", PinPullResistance.PULL_UP),
-                gpio.provisionDigitalInputPin(provider, MCP23017Pin.GPIO_A4, "MyInput-A4", PinPullResistance.PULL_UP),
-                gpio.provisionDigitalInputPin(provider, MCP23017Pin.GPIO_A5, "MyInput-A5", PinPullResistance.PULL_UP),
-                gpio.provisionDigitalInputPin(provider, MCP23017Pin.GPIO_A6, "MyInput-A6", PinPullResistance.PULL_UP),
-                gpio.provisionDigitalInputPin(provider, MCP23017Pin.GPIO_A7, "MyInput-A7", PinPullResistance.PULL_UP),
+                gpio.provisionDigitalInputPin(provider, MCP23017Pin.GPIO_A0, "MyInput-A0", PinPullResistance.OFF),
+                gpio.provisionDigitalInputPin(provider, MCP23017Pin.GPIO_A1, "MyInput-A1", PinPullResistance.OFF),
+                gpio.provisionDigitalInputPin(provider, MCP23017Pin.GPIO_A2, "MyInput-A2", PinPullResistance.OFF),
+                gpio.provisionDigitalInputPin(provider, MCP23017Pin.GPIO_A3, "MyInput-A3", PinPullResistance.OFF),
+                gpio.provisionDigitalInputPin(provider, MCP23017Pin.GPIO_A4, "MyInput-A4", PinPullResistance.OFF),
+                gpio.provisionDigitalInputPin(provider, MCP23017Pin.GPIO_A5, "MyInput-A5", PinPullResistance.OFF),
+                gpio.provisionDigitalInputPin(provider, MCP23017Pin.GPIO_A6, "MyInput-A6", PinPullResistance.OFF),
+                gpio.provisionDigitalInputPin(provider, MCP23017Pin.GPIO_A7, "MyInput-A7", PinPullResistance.OFF),
             };
 
         // create and register gpio pin listener
@@ -117,12 +117,12 @@ public class MCP23017E {
         
 
         // keep program running for 20 seconds
-       /* for (int count = 0; count < 10; count++) {
+        for (int count = 0; count < 1000; count++) {
             gpio.setState(true, myOutputs);
             Thread.sleep(1000);
             gpio.setState(false, myOutputs);
             Thread.sleep(1000);
-        }*/
+        }
 
         // stop all GPIO activity/threads by shutting down the GPIO controller
         // (this method will forcefully shutdown all GPIO monitoring threads and scheduled tasks)

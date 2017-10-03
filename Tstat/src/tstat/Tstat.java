@@ -17,7 +17,7 @@
 
 package tstat;
 
-import I2C_Tests.MCP23017_Control;
+import deprecated.MCP23017_Control;
 import java.util.*;
 import java.lang.*;
 import com.pi4j.io.gpio.*;
