@@ -17,8 +17,8 @@
 package deprecated;
 
 import com.pi4j.io.i2c.I2CFactory;
-import iGEM2017.TCS34725;
-import iGEM2017.TSL2561;
+import iGEM2017.RgbSensor;
+import iGEM2017.LuxSensor;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
@@ -35,8 +35,8 @@ public class MainWindow_01 extends javax.swing.JFrame {
     // How many milliseconds between sensor updates?
     private final int SENSOR_UPDATE_DELAY = 300;
 
-    private TCS34725 colorSensor;
-    private TSL2561 luxSensor;
+    private RgbSensor colorSensor;
+    private LuxSensor luxSensor;
     // TODO: Add temp/humidity sensor
     private Timer timer;
 
@@ -584,8 +584,8 @@ public class MainWindow_01 extends javax.swing.JFrame {
 
     public void initializeSensors() {
         try {
-            this.colorSensor = new TCS34725();
-            this.luxSensor = new TSL2561((byte) 0x39);
+            this.colorSensor = new RgbSensor();
+            this.luxSensor = new LuxSensor((byte) 0x39);
         } catch (IOException ex) {
             Logger.getLogger(MainWindow_01.class.getName()).log(Level.SEVERE, null, ex);
         } catch (I2CFactory.UnsupportedBusNumberException ex) {

@@ -16,8 +16,8 @@
  */
 package sensors;
 
-import iGEM2017.TSL2561;
-import iGEM2017.TCS34725;
+import iGEM2017.LuxSensor;
+import iGEM2017.RgbSensor;
 import com.pi4j.io.gpio.GpioPinPwmOutput;
 import com.pi4j.io.gpio.RaspiPin;
 import com.pi4j.io.i2c.I2CFactory;
@@ -31,7 +31,7 @@ import javax.swing.Timer;
 import com.pi4j.io.gpio.*;
 import com.pi4j.util.CommandArgumentParser;
 import java.text.NumberFormat;
-import iGEM2017.TCS34725.ColorReading;
+import iGEM2017.RgbSensor.ColorReading;
 
 /**
  *
@@ -39,8 +39,8 @@ import iGEM2017.TCS34725.ColorReading;
  */
 public class SensorGui extends javax.swing.JFrame {
 
-    private TCS34725 rgbSensor;
-    private TSL2561 luxSensor;
+    private RgbSensor rgbSensor;
+    private LuxSensor luxSensor;
     private Timer timer;
 
     /**
@@ -51,14 +51,14 @@ public class SensorGui extends javax.swing.JFrame {
             I2CFactory.UnsupportedBusNumberException, 
             InterruptedException {
         
-        rgbSensor = new TCS34725();
-        luxSensor = new TSL2561((byte)0x39);
+        rgbSensor = new RgbSensor();
+        luxSensor = new LuxSensor((byte)0x39);
         initComponents();
 
         this.timer = new Timer(250, new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent evt) {
-                TCS34725.ColorReading cr;
+                RgbSensor.ColorReading cr;
                 try {
                     cr = rgbSensor.getNormalizedReading();
 

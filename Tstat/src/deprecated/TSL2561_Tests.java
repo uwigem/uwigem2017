@@ -16,7 +16,7 @@
  */
 package deprecated;
 
-import iGEM2017.TSL2561;
+import iGEM2017.LuxSensor;
 import com.pi4j.io.i2c.I2CFactory;
 import java.io.IOException;
 
@@ -31,8 +31,8 @@ public class TSL2561_Tests {
 
         System.out.println("<-----  STARTING TSL2651 UNIT TESTS  ----->");
 
-        TSL2561 sensor1 = new TSL2561((byte) 0x39);
-        TSL2561 sensor2 = new TSL2561((byte) 0x49);
+        LuxSensor sensor1 = new LuxSensor((byte) 0x39);
+        LuxSensor sensor2 = new LuxSensor((byte) 0x49);
 
 
         while (System.in.available() == 0) {

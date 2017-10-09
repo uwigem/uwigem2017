@@ -16,7 +16,7 @@
  */
 package deprecated;
 
-import iGEM2017.TCS34725;
+import iGEM2017.RgbSensor;
 import com.pi4j.io.i2c.I2CFactory;
 import java.io.IOException;
 import java.util.logging.Level;
@@ -31,11 +31,11 @@ public class TCS34725_Tests {
     public static void main(String[] args)
             throws IOException, I2CFactory.UnsupportedBusNumberException, Exception {
 
-        TCS34725 sensor;
-        sensor = new iGEM2017.TCS34725();
+        RgbSensor sensor;
+        sensor = new iGEM2017.RgbSensor();
 
         while (System.in.available() == 0) {
-            TCS34725.ColorReading color = sensor.getReading();
+            RgbSensor.ColorReading color = sensor.getReading();
 
             System.out.println(color.toString());
             Thread.sleep(500);
