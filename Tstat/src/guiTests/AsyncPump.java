@@ -16,6 +16,7 @@
  */
 package guiTests;
 
+import java.awt.EventQueue;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.LinkedList;
@@ -302,6 +303,7 @@ public class AsyncPump extends javax.swing.JFrame {
             @Override
             public void actionPerformed(ActionEvent evt) {
 
+                // Advance motor 
                 int current = progressBarDispense1.getValue();
                 progressBarDispense1.setValue(current + 1);
                 progressBarDispense1.updateUI();
@@ -311,7 +313,6 @@ public class AsyncPump extends javax.swing.JFrame {
                 System.out.println("Vol: " + vol);
                 System.out.println("Speed: " + speed);
 
-                
                 if (progressBarDispense1.getValue() >= vol) {
                     System.out.println("Done");
                     pumpTimer1.stop();
@@ -328,47 +329,6 @@ public class AsyncPump extends javax.swing.JFrame {
 
     private void buttonDispense2Pressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonDispense2Pressed
 
-        labelTest2.setText(Thread.currentThread().getId() + "" );
-        
-        ThreadPoolExecutor tpe = new ThreadPoolExecutor(4, 4, 5000, TimeUnit.MILLISECONDS, new LinkedBlockingQueue<>());
-        
-        tpe.execute(new Runnable() {
-            @Override
-            public void run(){
-                labelTest.setText(Thread.currentThread().getId() + "" );
-            } 
-        });
-        
-        LinkedList<Integer> ll = new LinkedList<>();
-
-        /*
-        // Asynchronous executor runs code other thread
-        Executor executor = new Executor(){
-            @Override
-            public void execute(Runnable command) {                
-                labelTest.setText("execute test");
-                command.run();
-            }
-        };
-        
-        
-        
-        
-        
-        
-       executor.execute(new Runnable(){
-            @Override
-            public void run(){
-                labelTest2.setText("runnable is ran");
-            }
-        
-        });*/
-       
-       
-       
-       
-       
-        // Disable controls while dispensing is in progress
         buttonDispense2.setEnabled(false);
 
         // Get the volume to dispense
@@ -381,37 +341,43 @@ public class AsyncPump extends javax.swing.JFrame {
         progressBarDispense2.setValue(0);
         progressBarDispense2.setMaximum(vol);
 
-        // Set the timer up with the correct speed and volume
-        pumpTimer2 = new Timer(delay, new ActionListener() {
+        // Use Executor
+        ThreadPoolExecutor tpe = new ThreadPoolExecutor(4, 4, 5000, TimeUnit.MILLISECONDS, new LinkedBlockingQueue<Runnable>());
+
+        tpe.execute(new Runnable() {
             @Override
-            public void actionPerformed(ActionEvent evt) {
+            public void run() {
 
-                // Advance motor                 
-                int current = progressBarDispense2.getValue();
-                progressBarDispense2.setValue(current + 1);
-                progressBarDispense2.updateUI();
+                // Advance motor 
+                while (progressBarDispense2.getValue() <= vol) {
+                    int current = progressBarDispense2.getValue();
 
-                labelVolumeDispensed2.setText(current + " / " + vol + " mL");
+                    System.out.println("current = " + current);
 
-                if (progressBarDispense2.getValue() >= vol) {
-                    System.out.println("Done");
-                    pumpTimer2.stop();
-                    labelVolumeDispensed2.setText("");
-                    buttonDispense2.setEnabled(true);
-                    
+                    progressBarDispense2.setValue(current + 1);
+                    progressBarDispense2.updateUI();
+
+                    labelVolumeDispensed2.setText(current + " / " + vol + " mL");
+                    try {
+                        Thread.sleep(10);
+                    } catch (InterruptedException ex) {
+                        Logger.getLogger(AsyncPump.class.getName()).log(Level.SEVERE, null, ex);
+                    }
                 }
+                System.out.println("Done");
+                pumpTimer2.stop();
+                labelVolumeDispensed2.setText("");
+                buttonDispense2.setEnabled(true);
+                
             }
         });
-
-        // Start the timer
-        pumpTimer2.start();
 
     }//GEN-LAST:event_buttonDispense2Pressed
 
     private void textFieldKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_textFieldKeyReleased
 
         JTextField field = (JTextField) evt.getSource();
-        
+
         try {
             Integer.parseInt(field.getText());
             field.setBackground(java.awt.Color.white);
@@ -421,7 +387,8 @@ public class AsyncPump extends javax.swing.JFrame {
             field.setBackground(java.awt.Color.red);
             buttonDispense1.setEnabled(false);
             buttonDispense2.setEnabled(false);
-        }   
+        }
+
     }//GEN-LAST:event_textFieldKeyReleased
 
     /**

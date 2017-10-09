@@ -44,13 +44,10 @@ public class MainWindow extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("\"Exit?\"");
         setBounds(new java.awt.Rectangle(0, 0, 800, 480));
-        setMaximumSize(new java.awt.Dimension(800, 480));
         setMinimumSize(new java.awt.Dimension(800, 480));
         setName("mainWindowFrame"); // NOI18N
         setUndecorated(true);
-        setPreferredSize(new java.awt.Dimension(800, 480));
         setResizable(false);
-        setSize(new java.awt.Dimension(800, 480));
 
         buttonExit.setText("Exit");
         buttonExit.addActionListener(new java.awt.event.ActionListener() {
@@ -70,10 +67,10 @@ public class MainWindow extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(450, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
                 .addComponent(buttonExit)
-                .addContainerGap())
+                .addContainerGap(450, Short.MAX_VALUE))
         );
 
         pack();

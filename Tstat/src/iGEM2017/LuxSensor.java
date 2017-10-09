@@ -22,13 +22,13 @@ import com.pi4j.io.i2c.I2CFactory;
 import java.io.IOException;
 
 /**
- * A class which allows readings from a TSL2561
- * lux sensor connected to the Raspberry Pi
- * I2C data pins.
+ * A class which allows readings from a LuxSensor
+ lux sensor connected to the Raspberry Pi
+ I2C data pins.
  * 
  * @author Washington iGEM Team 2017
  */
-public class TSL2561 {
+public class LuxSensor {
 
     // Verbose debug text
     public static final boolean VERBOSE = false;
@@ -54,13 +54,13 @@ public class TSL2561 {
     public static final byte TCS34725_COMMAND_BIT = (byte) 0x80;
     public static final byte TSL2561_REG_CONTROL  = (byte) 0x80;
 
-    // TSL2561 power control values
+    // LuxSensor power control values
     public static final byte TSL2561_POWER_UP = (byte) 0x03;
 
     I2CBus i2cBus;
     I2CDevice TSL2561;
 
-    public TSL2561(byte addr)
+    public LuxSensor(byte addr)
             throws IOException, I2CFactory.UnsupportedBusNumberException, InterruptedException {
         // Get i2c i2cBus
         // Number depends on RasPI version

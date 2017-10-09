@@ -25,6 +25,8 @@ import javax.swing.JTextField;
 public class JTextFieldValidated extends JTextField{
     private boolean isInputValid = true;
     
+    // I want to make this change permanent, but only for me
+    
     public boolean isInputValid(){
         return this.isInputValid;
     }

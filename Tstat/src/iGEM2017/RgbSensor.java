@@ -27,7 +27,7 @@ import javax.naming.OperationNotSupportedException;
  *
  * @author Washington iGEM Team 2017
  */
-public class TCS34725 {
+public class RgbSensor {
 
     // Command/settings Registers
     public final static byte COMMAND_BIT = (byte) 0x80;
@@ -55,7 +55,7 @@ public class TCS34725 {
     private double mBlue;
     private double mClear;
 
-    public TCS34725()
+    public RgbSensor()
             throws IOException, I2CFactory.UnsupportedBusNumberException {
 
         // Get the I2C Bus 

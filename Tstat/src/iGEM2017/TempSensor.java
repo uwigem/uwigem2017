@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package I2C_Tests;
+package iGEM2017;
 
 import com.pi4j.io.i2c.*;
 import java.io.IOException;
@@ -28,28 +28,28 @@ import java.util.logging.Logger;
  *
  * @author Washington iGEM Team 2017
  */
-public class SI7021 {
+public class TempSensor {
     
     public enum MEASURE{CELSIUS,FAHRENHEIT}
     
     private I2CBus bus;
     private I2CDevice device;
     
-    public SI7021(){
+    public TempSensor(){
         try {
             this.bus = I2CFactory.getInstance(I2CBus.BUS_1);
             this.device = bus.getDevice(0x40);
         } catch (I2CFactory.UnsupportedBusNumberException ex) {
             System.out.println("Temp/Humidity sensor error: Couldn't access the I2C bus.");
-            Logger.getLogger(SI7021.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(TempSensor.class.getName()).log(Level.SEVERE, null, ex);
         } catch (IOException ex) {
-            Logger.getLogger(SI7021.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(TempSensor.class.getName()).log(Level.SEVERE, null, ex);
             System.out.println("Temp/Humidity sensor error: General I/O error");
         }
 		
     }
     
-   public double getTemp(SI7021.MEASURE measure){
+   public double getTemp(TempSensor.MEASURE measure){
        byte[] data = new byte[2];
        
         try {
@@ -57,7 +57,7 @@ public class SI7021 {
             device.write((byte)0xF3);
         } catch (IOException ex) {
             System.out.println("Error getting temperature data: couldn't issue command");
-            Logger.getLogger(SI7021.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(TempSensor.class.getName()).log(Level.SEVERE, null, ex);
         }
 
         try {
@@ -65,7 +65,7 @@ public class SI7021 {
             Thread.sleep(250);
         } catch (InterruptedException ex) {
             System.out.println("Error while sleeping thread. Can't get temp data.");
-            Logger.getLogger(SI7021.class.getName()).log(Level.SEVERE, null, ex);            
+            Logger.getLogger(TempSensor.class.getName()).log(Level.SEVERE, null, ex);            
         }
 
         
@@ -74,7 +74,7 @@ public class SI7021 {
         try {
             device.read(data, 0, 2);
         } catch (IOException ex) {
-            Logger.getLogger(SI7021.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(TempSensor.class.getName()).log(Level.SEVERE, null, ex);
             System.out.println("Error getting temp data: general I/O problem.");
         }
 
@@ -105,7 +105,7 @@ public class SI7021 {
             // Convert humidity data
             result = (((((data[0] & 0xFF) * 256) + (data[1] & 0xFF)) * 125.0) / 65536.0) - 6;
         } catch (IOException | InterruptedException ex) {
-            Logger.getLogger(SI7021.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(TempSensor.class.getName()).log(Level.SEVERE, null, ex);
         }
         return result;        
    }

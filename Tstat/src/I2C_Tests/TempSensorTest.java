@@ -16,6 +16,7 @@
  */
 package I2C_Tests;
 
+import iGEM2017.TempSensor;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.Timer;
@@ -27,7 +28,7 @@ import javax.swing.Timer;
 public class TempSensorTest extends javax.swing.JFrame {
 
     private final Timer timer;
-    private SI7021 tempSensor;
+    private TempSensor tempSensor;
     
     /**
      * Creates new form TempSensorTest
@@ -35,15 +36,15 @@ public class TempSensorTest extends javax.swing.JFrame {
     public TempSensorTest() {
         initComponents();
         
-        tempSensor = new SI7021();
+        tempSensor = new TempSensor();
         
         this.timer = new Timer(250, new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent evt) {
                // Handler here
                labelHumidity.setText(Double.toString(tempSensor.getHumidity()));
-               labelTempF.setText(Double.toString(tempSensor.getTemp(SI7021.MEASURE.FAHRENHEIT)));
-               labelTempC.setText(Double.toString(tempSensor.getTemp(SI7021.MEASURE.CELSIUS)));
+               labelTempF.setText(Double.toString(tempSensor.getTemp(TempSensor.MEASURE.FAHRENHEIT)));
+               labelTempC.setText(Double.toString(tempSensor.getTemp(TempSensor.MEASURE.CELSIUS)));
             }
         });
         
