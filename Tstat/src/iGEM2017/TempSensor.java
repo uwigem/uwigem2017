@@ -49,7 +49,12 @@ public class TempSensor {
 		
     }
     
-   public double getTemp(TempSensor.MEASURE measure){
+    /**
+     * Description of method in plain language
+     * @param measure Meaning of parameter
+     * @return What it returns
+     */
+   public double getReading(TempSensor.MEASURE measure){
        byte[] data = new byte[2];
        
         try {

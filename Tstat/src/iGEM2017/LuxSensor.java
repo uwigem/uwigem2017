@@ -59,7 +59,19 @@ public class LuxSensor {
 
     I2CBus i2cBus;
     I2CDevice TSL2561;
+    
+    public LuxSensor() throws 
+            IOException, I2CFactory.UnsupportedBusNumberException, InterruptedException{
+        this((byte)0x39);
+    }
 
+    /**
+     * 
+     * @param addr I2C hardware address of the device. For us that's 0x39
+     * @throws IOException
+     * @throws com.pi4j.io.i2c.I2CFactory.UnsupportedBusNumberException
+     * @throws InterruptedException 
+     */
     public LuxSensor(byte addr)
             throws IOException, I2CFactory.UnsupportedBusNumberException, InterruptedException {
         // Get i2c i2cBus
@@ -72,9 +84,15 @@ public class LuxSensor {
         // Initialize device by issuing command with data value 0x03        
         TSL2561.write(TSL2561_REG_CONTROL, TSL2561_POWER_UP);
 
-    }
+    } 
 
-    public double read()
+    /**
+     * 
+     * @return
+     * @throws IOException
+     * @throws InterruptedException 
+     */
+    public double getReading()
             throws IOException, InterruptedException {
 
         byte d0L = (byte) TSL2561.read((byte) (TCS34725_COMMAND_BIT | DATA_0_LOW));
