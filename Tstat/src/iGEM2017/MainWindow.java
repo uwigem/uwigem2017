@@ -49,14 +49,14 @@ public class MainWindow extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
-        jRadioButton3 = new javax.swing.JRadioButton();
-        jRadioButton4 = new javax.swing.JRadioButton();
-        jRadioButton5 = new javax.swing.JRadioButton();
-        jRadioButton6 = new javax.swing.JRadioButton();
-        jRadioButton7 = new javax.swing.JRadioButton();
-        jRadioButton8 = new javax.swing.JRadioButton();
+        StirrerOnRB = new javax.swing.JRadioButton();
+        StirrerOffRB = new javax.swing.JRadioButton();
+        LightingOnRB = new javax.swing.JRadioButton();
+        LightingOffRB = new javax.swing.JRadioButton();
+        BubblerOnRB = new javax.swing.JRadioButton();
+        BubblerOffRB = new javax.swing.JRadioButton();
+        LaserOnRB = new javax.swing.JRadioButton();
+        LaserOffRB = new javax.swing.JRadioButton();
         jPanel4 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -113,21 +113,26 @@ public class MainWindow extends javax.swing.JFrame {
 
         jLabel5.setText("Laser:");
 
-        jRadioButton1.setText("On");
+        StirrerOnRB.setText("On");
 
-        jRadioButton2.setText("Off");
+        StirrerOffRB.setText("Off");
 
-        jRadioButton3.setText("On");
+        LightingOnRB.setText("On");
 
-        jRadioButton4.setText("Off");
+        LightingOffRB.setText("Off");
+        LightingOffRB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                LightingOffRBActionPerformed(evt);
+            }
+        });
 
-        jRadioButton5.setText("On");
+        BubblerOnRB.setText("On");
 
-        jRadioButton6.setText("Off");
+        BubblerOffRB.setText("Off");
 
-        jRadioButton7.setText("On");
+        LaserOnRB.setText("On");
 
-        jRadioButton8.setText("Off");
+        LaserOffRB.setText("Off");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -148,24 +153,24 @@ public class MainWindow extends javax.swing.JFrame {
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel3Layout.createSequentialGroup()
                                 .addGap(19, 19, 19)
-                                .addComponent(jRadioButton1)
+                                .addComponent(StirrerOnRB)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jRadioButton2))
+                                .addComponent(StirrerOffRB))
                             .addGroup(jPanel3Layout.createSequentialGroup()
                                 .addGap(18, 18, 18)
                                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(jPanel3Layout.createSequentialGroup()
-                                        .addComponent(jRadioButton5)
+                                        .addComponent(BubblerOnRB)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jRadioButton6))
+                                        .addComponent(BubblerOffRB))
                                     .addGroup(jPanel3Layout.createSequentialGroup()
-                                        .addComponent(jRadioButton3)
+                                        .addComponent(LightingOnRB)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jRadioButton4))
+                                        .addComponent(LightingOffRB))
                                     .addGroup(jPanel3Layout.createSequentialGroup()
-                                        .addComponent(jRadioButton7)
+                                        .addComponent(LaserOnRB)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jRadioButton8)))))))
+                                        .addComponent(LaserOffRB)))))))
                 .addContainerGap(557, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
@@ -176,23 +181,23 @@ public class MainWindow extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
-                    .addComponent(jRadioButton1)
-                    .addComponent(jRadioButton2))
+                    .addComponent(StirrerOnRB)
+                    .addComponent(StirrerOffRB))
                 .addGap(3, 3, 3)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
-                    .addComponent(jRadioButton3)
-                    .addComponent(jRadioButton4))
+                    .addComponent(LightingOnRB)
+                    .addComponent(LightingOffRB))
                 .addGap(2, 2, 2)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
-                    .addComponent(jRadioButton5)
-                    .addComponent(jRadioButton6))
+                    .addComponent(BubblerOnRB)
+                    .addComponent(BubblerOffRB))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
-                    .addComponent(jRadioButton7)
-                    .addComponent(jRadioButton8))
+                    .addComponent(LaserOnRB)
+                    .addComponent(LaserOffRB))
                 .addContainerGap(452, Short.MAX_VALUE))
         );
 
@@ -234,6 +239,10 @@ public class MainWindow extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_buttonExitActionPerformed
 
+    private void LightingOffRBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LightingOffRBActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_LightingOffRBActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -270,6 +279,14 @@ public class MainWindow extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JRadioButton BubblerOffRB;
+    private javax.swing.JRadioButton BubblerOnRB;
+    private javax.swing.JRadioButton LaserOffRB;
+    private javax.swing.JRadioButton LaserOnRB;
+    private javax.swing.JRadioButton LightingOffRB;
+    private javax.swing.JRadioButton LightingOnRB;
+    private javax.swing.JRadioButton StirrerOffRB;
+    private javax.swing.JRadioButton StirrerOnRB;
     private javax.swing.JButton buttonExit;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -279,14 +296,6 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
-    private javax.swing.JRadioButton jRadioButton3;
-    private javax.swing.JRadioButton jRadioButton4;
-    private javax.swing.JRadioButton jRadioButton5;
-    private javax.swing.JRadioButton jRadioButton6;
-    private javax.swing.JRadioButton jRadioButton7;
-    private javax.swing.JRadioButton jRadioButton8;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JLabel sensorTitleLabel;
     // End of variables declaration//GEN-END:variables
