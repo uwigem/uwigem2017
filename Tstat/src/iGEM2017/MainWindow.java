@@ -42,6 +42,8 @@ public class MainWindow extends javax.swing.JFrame {
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel1 = new javax.swing.JPanel();
         buttonExit = new javax.swing.JButton();
+        jTabbedPane2 = new javax.swing.JTabbedPane();
+        jTabbedPane3 = new javax.swing.JTabbedPane();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("\"Exit?\"");
@@ -77,7 +79,9 @@ public class MainWindow extends javax.swing.JFrame {
                 .addContainerGap(450, Short.MAX_VALUE))
         );
 
-        jTabbedPane1.addTab("tab1", jPanel1);
+        jTabbedPane1.addTab("Sensors", jPanel1);
+        jTabbedPane1.addTab("Edit Values", jTabbedPane2);
+        jTabbedPane1.addTab("Callibrate", jTabbedPane3);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -141,6 +145,8 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JButton buttonExit;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JTabbedPane jTabbedPane2;
+    private javax.swing.JTabbedPane jTabbedPane3;
     // End of variables declaration//GEN-END:variables
 
 }
