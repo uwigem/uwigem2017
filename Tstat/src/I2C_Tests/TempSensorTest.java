@@ -43,8 +43,8 @@ public class TempSensorTest extends javax.swing.JFrame {
             public void actionPerformed(ActionEvent evt) {
                // Handler here
                labelHumidity.setText(Double.toString(tempSensor.getHumidity()));
-               labelTempF.setText(Double.toString(tempSensor.getTemp(TempSensor.MEASURE.FAHRENHEIT)));
-               labelTempC.setText(Double.toString(tempSensor.getTemp(TempSensor.MEASURE.CELSIUS)));
+               labelTempF.setText(Double.toString(tempSensor.getReading(TempSensor.MEASURE.FAHRENHEIT)));
+               labelTempC.setText(Double.toString(tempSensor.getReading(TempSensor.MEASURE.CELSIUS)));
             }
         });
         

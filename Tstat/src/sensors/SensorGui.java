@@ -81,7 +81,7 @@ public class SensorGui extends javax.swing.JFrame {
                     textGreenValue.setText(Integer.toString(green) + " / " + Integer.toString(hue.getGreen()));
                     textBlueValue.setText(Integer.toString(blue) + " / " + Integer.toString(hue.getBlue()));
                     textClearValue.setText(Integer.toString((red + blue + green)/3) + " / " + " - ");
-                    textLaserValue.setText(Double.toString(luxSensor.read()).substring(0,6));
+                    textLaserValue.setText(Double.toString(luxSensor.getReading()).substring(0,6));
                     
 
                 } catch (Exception ex) {

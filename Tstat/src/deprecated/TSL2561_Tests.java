@@ -37,8 +37,8 @@ public class TSL2561_Tests {
 
         while (System.in.available() == 0) {
             Thread.sleep(400);
-            double r1 = sensor1.read();
-            double r2 = sensor2.read();
+            double r1 = sensor1.getReading();
+            double r2 = sensor2.getReading();
 
             
             
