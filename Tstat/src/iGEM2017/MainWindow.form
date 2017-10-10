@@ -65,7 +65,7 @@
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace pref="615" max="32767" attributes="0"/>
+                      <EmptySpace pref="640" max="32767" attributes="0"/>
                       <Component id="buttonExit" min="-2" pref="79" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="103" max="-2" attributes="0"/>
                   </Group>
@@ -119,48 +119,81 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                          <Component id="toggleTitle" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="bubblerLabel" min="-2" max="-2" attributes="0"/>
+                          <Component id="laserLabel" min="-2" max="-2" attributes="0"/>
                           <Group type="102" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" attributes="0">
-                                      <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                                      <Component id="stirrerLabel" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
                                   </Group>
-                                  <Component id="jLabel3" alignment="1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="interiorLightingLabel" alignment="1" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" attributes="0">
                                       <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
-                                      <Component id="StirrerOnRB" min="-2" max="-2" attributes="0"/>
+                                      <Component id="stirrerOnRB" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="StirrerOffRB" min="-2" max="-2" attributes="0"/>
+                                      <Component id="stirrerOffRB" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" attributes="0">
-                                              <Component id="BubblerOnRB" min="-2" max="-2" attributes="0"/>
+                                              <Component id="bubblerOnRB" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="BubblerOffRB" min="-2" max="-2" attributes="0"/>
+                                              <Component id="bubblerOffRB" min="-2" max="-2" attributes="0"/>
                                           </Group>
                                           <Group type="102" attributes="0">
-                                              <Component id="LightingOnRB" min="-2" max="-2" attributes="0"/>
+                                              <Component id="lightingOnRB" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="LightingOffRB" min="-2" max="-2" attributes="0"/>
+                                              <Component id="lightingOffRB" min="-2" max="-2" attributes="0"/>
                                           </Group>
                                           <Group type="102" alignment="0" attributes="0">
-                                              <Component id="LaserOnRB" min="-2" max="-2" attributes="0"/>
+                                              <Component id="laserOnRB" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="LaserOffRB" min="-2" max="-2" attributes="0"/>
+                                              <Component id="laserOffRB" min="-2" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
                                   </Group>
                               </Group>
                           </Group>
                       </Group>
-                      <EmptySpace pref="557" max="32767" attributes="0"/>
+                      <EmptySpace min="-2" pref="297" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="targetValuesTitle" min="-2" max="-2" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="targetTempLabel" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="targetTempField" min="-2" pref="30" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jRadioButton1" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jRadioButton2" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jTextField1" min="-2" pref="30" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jTextField2" min="-2" pref="30" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jTextField3" min="-2" pref="30" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" attributes="0">
+                              <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jTextField4" min="-2" pref="30" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace pref="51" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -168,104 +201,175 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
-                      <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="toggleTitle" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="targetValuesTitle" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="StirrerOnRB" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="StirrerOffRB" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="stirrerLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="stirrerOnRB" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="stirrerOffRB" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="targetTempLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="targetTempField" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jRadioButton1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jRadioButton2" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="interiorLightingLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lightingOnRB" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lightingOffRB" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTextField1" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="LightingOnRB" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="LightingOffRB" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTextField2" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTextField3" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="BubblerOnRB" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="BubblerOffRB" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="bubblerLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="bubblerOnRB" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="bubblerOffRB" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTextField4" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="LaserOnRB" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="LaserOffRB" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="laserLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="laserOnRB" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="laserOffRB" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="452" max="32767" attributes="0"/>
+                      <EmptySpace pref="451" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JLabel" name="jLabel1">
+            <Component class="javax.swing.JLabel" name="toggleTitle">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Toggle"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel2">
+            <Component class="javax.swing.JLabel" name="stirrerLabel">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Stirrer:"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel3">
+            <Component class="javax.swing.JLabel" name="interiorLightingLabel">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Interior Lighting:"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel4">
+            <Component class="javax.swing.JLabel" name="bubblerLabel">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Bubbler:"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel5">
+            <Component class="javax.swing.JLabel" name="laserLabel">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Laser:"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JRadioButton" name="StirrerOnRB">
+            <Component class="javax.swing.JRadioButton" name="stirrerOnRB">
               <Properties>
                 <Property name="text" type="java.lang.String" value="On"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JRadioButton" name="StirrerOffRB">
+            <Component class="javax.swing.JRadioButton" name="stirrerOffRB">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Off"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JRadioButton" name="LightingOnRB">
+            <Component class="javax.swing.JRadioButton" name="lightingOnRB">
               <Properties>
                 <Property name="text" type="java.lang.String" value="On"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JRadioButton" name="LightingOffRB">
+            <Component class="javax.swing.JRadioButton" name="lightingOffRB">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Off"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="LightingOffRBActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="lightingOffRBActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JRadioButton" name="BubblerOnRB">
+            <Component class="javax.swing.JRadioButton" name="bubblerOnRB">
               <Properties>
                 <Property name="text" type="java.lang.String" value="On"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JRadioButton" name="BubblerOffRB">
+            <Component class="javax.swing.JRadioButton" name="bubblerOffRB">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Off"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JRadioButton" name="LaserOnRB">
+            <Component class="javax.swing.JRadioButton" name="laserOnRB">
               <Properties>
                 <Property name="text" type="java.lang.String" value="On"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JRadioButton" name="LaserOffRB">
+            <Component class="javax.swing.JRadioButton" name="laserOffRB">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Off"/>
               </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="targetValuesTitle">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Target Values"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="targetTempLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Temperature:"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="targetTempField">
+            </Component>
+            <Component class="javax.swing.JRadioButton" name="jRadioButton1">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="C"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JRadioButton" name="jRadioButton2">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="F"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel1">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Color:"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel2">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Red"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="jTextField1">
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel3">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Green"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="jTextField2">
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel4">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Blue"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="jTextField3">
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel5">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Turbidity:"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="jTextField4">
             </Component>
           </SubComponents>
         </Container>
@@ -281,7 +385,7 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="794" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="822" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
