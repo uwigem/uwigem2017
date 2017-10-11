@@ -43,6 +43,19 @@ public class MainWindow extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         buttonExit = new javax.swing.JButton();
         sensorTitleLabel = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        lightNumLabel = new javax.swing.JLabel();
+        colorStringLabel = new javax.swing.JLabel();
+        turbidityNumLabel = new javax.swing.JLabel();
+        tempNumLabel = new javax.swing.JLabel();
+        colorPanel = new javax.swing.JPanel();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         toggleTitle = new javax.swing.JLabel();
         stirrerLabel = new javax.swing.JLabel();
@@ -92,27 +105,128 @@ public class MainWindow extends javax.swing.JFrame {
 
         sensorTitleLabel.setText("Sensors:");
 
+        jLabel6.setText("light:");
+
+        jLabel7.setText("color:");
+
+        jLabel8.setText("temperature:");
+
+        jLabel9.setText("turbidiy");
+
+        lightNumLabel.setText("lightNum");
+
+        colorStringLabel.setText("colorString");
+
+        turbidityNumLabel.setText("turbidityNum");
+
+        tempNumLabel.setText("tempNum");
+
+        colorPanel.setBackground(new java.awt.Color(255, 0, 51));
+        colorPanel.setForeground(new java.awt.Color(255, 0, 51));
+        colorPanel.setPreferredSize(new java.awt.Dimension(50, 50));
+
+        javax.swing.GroupLayout colorPanelLayout = new javax.swing.GroupLayout(colorPanel);
+        colorPanel.setLayout(colorPanelLayout);
+        colorPanelLayout.setHorizontalGroup(
+            colorPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 50, Short.MAX_VALUE)
+        );
+        colorPanelLayout.setVerticalGroup(
+            colorPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 50, Short.MAX_VALUE)
+        );
+
+        jLabel14.setText("Pumps:");
+
+        jLabel15.setText("pump 1:");
+
+        jLabel16.setText("pump 2:");
+
+        jLabel17.setText("pump 3:");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(640, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(buttonExit, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(103, 103, 103))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(sensorTitleLabel)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(sensorTitleLabel)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                .addComponent(jLabel8)
+                                .addGap(18, 18, 18)
+                                .addComponent(tempNumLabel)
+                                .addGap(16, 16, 16))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jLabel6)
+                                .addGap(64, 64, 64)
+                                .addComponent(lightNumLabel))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jLabel7)
+                                .addGap(59, 59, 59)
+                                .addComponent(colorStringLabel)
+                                .addGap(9, 9, 9))
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                    .addComponent(jLabel9)
+                                    .addGap(121, 121, 121))
+                                .addGroup(jPanel1Layout.createSequentialGroup()
+                                    .addGap(91, 91, 91)
+                                    .addComponent(turbidityNumLabel))))
+                        .addGap(18, 18, 18)
+                        .addComponent(colorPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel14)
+                    .addComponent(jLabel15)
+                    .addComponent(jLabel16)
+                    .addComponent(jLabel17))
+                .addContainerGap(560, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(sensorTitleLabel)
-                .addGap(119, 119, 119)
-                .addComponent(buttonExit)
-                .addContainerGap(450, Short.MAX_VALUE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(86, 86, 86)
+                        .addComponent(buttonExit))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel6)
+                            .addComponent(lightNumLabel))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(28, 28, 28)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel7)
+                                    .addComponent(colorStringLabel)))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(11, 11, 11)
+                                .addComponent(colorPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(16, 16, 16)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel8)
+                            .addComponent(tempNumLabel))))
+                .addGap(40, 40, 40)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel9)
+                    .addComponent(turbidityNumLabel))
+                .addGap(51, 51, 51)
+                .addComponent(jLabel14)
+                .addGap(41, 41, 41)
+                .addComponent(jLabel15)
+                .addGap(34, 34, 34)
+                .addComponent(jLabel16)
+                .addGap(36, 36, 36)
+                .addComponent(jLabel17)
+                .addContainerGap(195, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Sensors", jPanel1);
@@ -359,12 +473,22 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JRadioButton bubblerOffRB;
     private javax.swing.JRadioButton bubblerOnRB;
     private javax.swing.JButton buttonExit;
+    private javax.swing.JPanel colorPanel;
+    private javax.swing.JLabel colorStringLabel;
     private javax.swing.JLabel interiorLightingLabel;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
@@ -378,6 +502,7 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JLabel laserLabel;
     private javax.swing.JRadioButton laserOffRB;
     private javax.swing.JRadioButton laserOnRB;
+    private javax.swing.JLabel lightNumLabel;
     private javax.swing.JRadioButton lightingOffRB;
     private javax.swing.JRadioButton lightingOnRB;
     private javax.swing.JLabel sensorTitleLabel;
@@ -387,7 +512,9 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JTextField targetTempField;
     private javax.swing.JLabel targetTempLabel;
     private javax.swing.JLabel targetValuesTitle;
+    private javax.swing.JLabel tempNumLabel;
     private javax.swing.JLabel toggleTitle;
+    private javax.swing.JLabel turbidityNumLabel;
     // End of variables declaration//GEN-END:variables
 
 }
