@@ -56,6 +56,15 @@ public class MainWindow extends javax.swing.JFrame {
         jLabel15 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
+        fluid1Label = new javax.swing.JLabel();
+        fluid2Label = new javax.swing.JLabel();
+        fluid3Label = new javax.swing.JLabel();
+        volume1Label = new javax.swing.JLabel();
+        volume2Label = new javax.swing.JLabel();
+        volume3Label = new javax.swing.JLabel();
+        pumpBar1 = new javax.swing.JProgressBar();
+        pumpbar2 = new javax.swing.JProgressBar();
+        pumpBar3 = new javax.swing.JProgressBar();
         jPanel3 = new javax.swing.JPanel();
         toggleTitle = new javax.swing.JLabel();
         stirrerLabel = new javax.swing.JLabel();
@@ -144,6 +153,18 @@ public class MainWindow extends javax.swing.JFrame {
 
         jLabel17.setText("pump 3:");
 
+        fluid1Label.setText("fluid1");
+
+        fluid2Label.setText("fluid2");
+
+        fluid3Label.setText("fluid3");
+
+        volume1Label.setText("volume 1");
+
+        volume2Label.setText("volume 2");
+
+        volume3Label.setText("volume 3");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -182,10 +203,27 @@ public class MainWindow extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(colorPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jLabel14)
-                    .addComponent(jLabel15)
-                    .addComponent(jLabel16)
-                    .addComponent(jLabel17))
-                .addContainerGap(560, Short.MAX_VALUE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel15)
+                            .addComponent(jLabel16)
+                            .addComponent(jLabel17))
+                        .addGap(27, 27, 27)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(fluid1Label)
+                            .addComponent(fluid2Label)
+                            .addComponent(fluid3Label))
+                        .addGap(32, 32, 32)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(volume1Label)
+                            .addComponent(volume2Label)
+                            .addComponent(volume3Label))
+                        .addGap(33, 33, 33)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(pumpBar3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(pumpbar2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(pumpBar1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(426, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -221,11 +259,26 @@ public class MainWindow extends javax.swing.JFrame {
                 .addGap(51, 51, 51)
                 .addComponent(jLabel14)
                 .addGap(41, 41, 41)
-                .addComponent(jLabel15)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel15)
+                        .addComponent(fluid1Label)
+                        .addComponent(volume1Label))
+                    .addComponent(pumpBar1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(34, 34, 34)
-                .addComponent(jLabel16)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel16)
+                    .addComponent(fluid2Label)
+                    .addComponent(volume2Label)
+                    .addComponent(pumpbar2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(36, 36, 36)
-                .addComponent(jLabel17)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel17)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(pumpBar3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(fluid3Label)
+                            .addComponent(volume3Label))))
                 .addContainerGap(195, Short.MAX_VALUE))
         );
 
@@ -475,6 +528,9 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JButton buttonExit;
     private javax.swing.JPanel colorPanel;
     private javax.swing.JLabel colorStringLabel;
+    private javax.swing.JLabel fluid1Label;
+    private javax.swing.JLabel fluid2Label;
+    private javax.swing.JLabel fluid3Label;
     private javax.swing.JLabel interiorLightingLabel;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel14;
@@ -505,6 +561,9 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JLabel lightNumLabel;
     private javax.swing.JRadioButton lightingOffRB;
     private javax.swing.JRadioButton lightingOnRB;
+    private javax.swing.JProgressBar pumpBar1;
+    private javax.swing.JProgressBar pumpBar3;
+    private javax.swing.JProgressBar pumpbar2;
     private javax.swing.JLabel sensorTitleLabel;
     private javax.swing.JLabel stirrerLabel;
     private javax.swing.JRadioButton stirrerOffRB;
@@ -515,6 +574,9 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JLabel tempNumLabel;
     private javax.swing.JLabel toggleTitle;
     private javax.swing.JLabel turbidityNumLabel;
+    private javax.swing.JLabel volume1Label;
+    private javax.swing.JLabel volume2Label;
+    private javax.swing.JLabel volume3Label;
     // End of variables declaration//GEN-END:variables
 
 }

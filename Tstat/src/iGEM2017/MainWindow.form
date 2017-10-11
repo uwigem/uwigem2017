@@ -107,11 +107,33 @@
                               <Component id="colorPanel" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Component id="jLabel14" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel15" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel16" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel17" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="jLabel15" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel16" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel17" alignment="0" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="fluid1Label" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="fluid2Label" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="fluid3Label" alignment="0" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="volume1Label" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="volume2Label" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="volume3Label" alignment="0" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="pumpBar3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="pumpbar2" min="-2" max="-2" attributes="0"/>
+                                  <Component id="pumpBar1" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
                       </Group>
-                      <EmptySpace pref="560" max="32767" attributes="0"/>
+                      <EmptySpace pref="426" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -159,11 +181,32 @@
                       <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
                       <Component id="jLabel14" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
-                      <Component id="jLabel15" min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jLabel15" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="fluid1Label" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="volume1Label" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="pumpBar1" min="-2" max="-2" attributes="0"/>
+                      </Group>
                       <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
-                      <Component id="jLabel16" min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jLabel16" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="fluid2Label" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="volume2Label" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="pumpbar2" min="-2" max="-2" attributes="0"/>
+                      </Group>
                       <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
-                      <Component id="jLabel17" min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jLabel17" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="1" attributes="0">
+                              <Component id="pumpBar3" min="-2" max="-2" attributes="0"/>
+                              <Group type="103" alignment="1" groupAlignment="3" attributes="0">
+                                  <Component id="fluid3Label" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="volume3Label" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
                       <EmptySpace pref="195" max="32767" attributes="0"/>
                   </Group>
               </Group>
@@ -268,6 +311,42 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="pump 3:"/>
               </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="fluid1Label">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="fluid1"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="fluid2Label">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="fluid2"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="fluid3Label">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="fluid3"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="volume1Label">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="volume 1"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="volume2Label">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="volume 2"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="volume3Label">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="volume 3"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JProgressBar" name="pumpBar1">
+            </Component>
+            <Component class="javax.swing.JProgressBar" name="pumpbar2">
+            </Component>
+            <Component class="javax.swing.JProgressBar" name="pumpBar3">
             </Component>
           </SubComponents>
         </Container>
