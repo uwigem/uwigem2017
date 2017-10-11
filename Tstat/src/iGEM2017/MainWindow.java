@@ -40,22 +40,22 @@ public class MainWindow extends javax.swing.JFrame {
     private void initComponents() {
 
         jTabbedPane1 = new javax.swing.JTabbedPane();
-        jPanel1 = new javax.swing.JPanel();
+        lightSensorTitleLabel = new javax.swing.JPanel();
         buttonExit = new javax.swing.JButton();
         sensorTitleLabel = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
+        colorSensorTIlteLabel = new javax.swing.JLabel();
+        tempSensorTitleLabel = new javax.swing.JLabel();
+        turbiditySensorTitleLabel = new javax.swing.JLabel();
         lightNumLabel = new javax.swing.JLabel();
         colorStringLabel = new javax.swing.JLabel();
         turbidityNumLabel = new javax.swing.JLabel();
         tempNumLabel = new javax.swing.JLabel();
         colorPanel = new javax.swing.JPanel();
-        jLabel14 = new javax.swing.JLabel();
-        jLabel15 = new javax.swing.JLabel();
-        jLabel16 = new javax.swing.JLabel();
-        jLabel17 = new javax.swing.JLabel();
+        pumpsAllTitleLabel = new javax.swing.JLabel();
+        pump1TitleLabel = new javax.swing.JLabel();
+        pump2TitleLabel = new javax.swing.JLabel();
+        pump3TitleLabel = new javax.swing.JLabel();
         fluid1Label = new javax.swing.JLabel();
         fluid2Label = new javax.swing.JLabel();
         fluid3Label = new javax.swing.JLabel();
@@ -63,7 +63,7 @@ public class MainWindow extends javax.swing.JFrame {
         volume2Label = new javax.swing.JLabel();
         volume3Label = new javax.swing.JLabel();
         pumpBar1 = new javax.swing.JProgressBar();
-        pumpbar2 = new javax.swing.JProgressBar();
+        pumpBar2 = new javax.swing.JProgressBar();
         pumpBar3 = new javax.swing.JProgressBar();
         jPanel3 = new javax.swing.JPanel();
         toggleTitle = new javax.swing.JLabel();
@@ -116,11 +116,11 @@ public class MainWindow extends javax.swing.JFrame {
 
         jLabel6.setText("light:");
 
-        jLabel7.setText("color:");
+        colorSensorTIlteLabel.setText("color:");
 
-        jLabel8.setText("temperature:");
+        tempSensorTitleLabel.setText("temperature:");
 
-        jLabel9.setText("turbidiy");
+        turbiditySensorTitleLabel.setText("turbidiy");
 
         lightNumLabel.setText("lightNum");
 
@@ -145,13 +145,13 @@ public class MainWindow extends javax.swing.JFrame {
             .addGap(0, 50, Short.MAX_VALUE)
         );
 
-        jLabel14.setText("Pumps:");
+        pumpsAllTitleLabel.setText("Pumps:");
 
-        jLabel15.setText("pump 1:");
+        pump1TitleLabel.setText("pump 1:");
 
-        jLabel16.setText("pump 2:");
+        pump2TitleLabel.setText("pump 2:");
 
-        jLabel17.setText("pump 3:");
+        pump3TitleLabel.setText("pump 3:");
 
         fluid1Label.setText("fluid1");
 
@@ -165,124 +165,125 @@ public class MainWindow extends javax.swing.JFrame {
 
         volume3Label.setText("volume 3");
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+        javax.swing.GroupLayout lightSensorTitleLabelLayout = new javax.swing.GroupLayout(lightSensorTitleLabel);
+        lightSensorTitleLabel.setLayout(lightSensorTitleLabelLayout);
+        lightSensorTitleLabelLayout.setHorizontalGroup(
+            lightSensorTitleLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, lightSensorTitleLabelLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(buttonExit, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(103, 103, 103))
-            .addGroup(jPanel1Layout.createSequentialGroup()
+            .addGroup(lightSensorTitleLabelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(lightSensorTitleLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(sensorTitleLabel)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel8)
+                    .addGroup(lightSensorTitleLabelLayout.createSequentialGroup()
+                        .addGroup(lightSensorTitleLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, lightSensorTitleLabelLayout.createSequentialGroup()
+                                .addComponent(tempSensorTitleLabel)
                                 .addGap(18, 18, 18)
                                 .addComponent(tempNumLabel)
                                 .addGap(16, 16, 16))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel6)
-                                .addGap(64, 64, 64)
-                                .addComponent(lightNumLabel))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel7)
-                                .addGap(59, 59, 59)
-                                .addComponent(colorStringLabel)
-                                .addGap(9, 9, 9))
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                    .addComponent(jLabel9)
+                            .addGroup(lightSensorTitleLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, lightSensorTitleLabelLayout.createSequentialGroup()
+                                    .addComponent(turbiditySensorTitleLabel)
                                     .addGap(121, 121, 121))
-                                .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGroup(lightSensorTitleLabelLayout.createSequentialGroup()
                                     .addGap(91, 91, 91)
-                                    .addComponent(turbidityNumLabel))))
-                        .addGap(18, 18, 18)
+                                    .addComponent(turbidityNumLabel)))
+                            .addGroup(lightSensorTitleLabelLayout.createSequentialGroup()
+                                .addGroup(lightSensorTitleLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(lightSensorTitleLabelLayout.createSequentialGroup()
+                                        .addComponent(jLabel6)
+                                        .addGap(64, 64, 64)
+                                        .addComponent(lightNumLabel))
+                                    .addGroup(lightSensorTitleLabelLayout.createSequentialGroup()
+                                        .addComponent(colorSensorTIlteLabel)
+                                        .addGap(59, 59, 59)
+                                        .addComponent(colorStringLabel)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
                         .addComponent(colorPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jLabel14)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel15)
-                            .addComponent(jLabel16)
-                            .addComponent(jLabel17))
+                    .addComponent(pumpsAllTitleLabel)
+                    .addGroup(lightSensorTitleLabelLayout.createSequentialGroup()
+                        .addGroup(lightSensorTitleLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(pump1TitleLabel)
+                            .addComponent(pump2TitleLabel)
+                            .addComponent(pump3TitleLabel))
                         .addGap(27, 27, 27)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(lightSensorTitleLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(fluid1Label)
                             .addComponent(fluid2Label)
                             .addComponent(fluid3Label))
                         .addGap(32, 32, 32)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(lightSensorTitleLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(volume1Label)
                             .addComponent(volume2Label)
                             .addComponent(volume3Label))
                         .addGap(33, 33, 33)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(lightSensorTitleLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(pumpBar3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(pumpbar2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(pumpBar2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(pumpBar1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(426, Short.MAX_VALUE))
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+        lightSensorTitleLabelLayout.setVerticalGroup(
+            lightSensorTitleLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(lightSensorTitleLabelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(sensorTitleLabel)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(lightSensorTitleLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(lightSensorTitleLabelLayout.createSequentialGroup()
                         .addGap(86, 86, 86)
                         .addComponent(buttonExit))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addGroup(lightSensorTitleLabelLayout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGroup(lightSensorTitleLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel6)
                             .addComponent(lightNumLabel))
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(lightSensorTitleLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(lightSensorTitleLabelLayout.createSequentialGroup()
                                 .addGap(28, 28, 28)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jLabel7)
+                                .addGroup(lightSensorTitleLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(colorSensorTIlteLabel)
                                     .addComponent(colorStringLabel)))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addGroup(lightSensorTitleLabelLayout.createSequentialGroup()
                                 .addGap(11, 11, 11)
                                 .addComponent(colorPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(16, 16, 16)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel8)
+                        .addGroup(lightSensorTitleLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(tempSensorTitleLabel)
                             .addComponent(tempNumLabel))))
                 .addGap(40, 40, 40)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel9)
+                .addGroup(lightSensorTitleLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(turbiditySensorTitleLabel)
                     .addComponent(turbidityNumLabel))
                 .addGap(51, 51, 51)
-                .addComponent(jLabel14)
+                .addComponent(pumpsAllTitleLabel)
                 .addGap(41, 41, 41)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel15)
+                .addGroup(lightSensorTitleLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(lightSensorTitleLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(pump1TitleLabel)
                         .addComponent(fluid1Label)
                         .addComponent(volume1Label))
                     .addComponent(pumpBar1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(34, 34, 34)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel16)
+                .addGroup(lightSensorTitleLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(pump2TitleLabel)
                     .addComponent(fluid2Label)
                     .addComponent(volume2Label)
-                    .addComponent(pumpbar2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(pumpBar2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(36, 36, 36)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel17)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGroup(lightSensorTitleLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(pump3TitleLabel)
+                    .addGroup(lightSensorTitleLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                         .addComponent(pumpBar3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGroup(lightSensorTitleLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(fluid3Label)
                             .addComponent(volume3Label))))
                 .addContainerGap(195, Short.MAX_VALUE))
         );
 
-        jTabbedPane1.addTab("Sensors", jPanel1);
+        jTabbedPane1.addTab("Sensors", lightSensorTitleLabel);
 
         toggleTitle.setText("Toggle");
 
@@ -527,25 +528,18 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JRadioButton bubblerOnRB;
     private javax.swing.JButton buttonExit;
     private javax.swing.JPanel colorPanel;
+    private javax.swing.JLabel colorSensorTIlteLabel;
     private javax.swing.JLabel colorStringLabel;
     private javax.swing.JLabel fluid1Label;
     private javax.swing.JLabel fluid2Label;
     private javax.swing.JLabel fluid3Label;
     private javax.swing.JLabel interiorLightingLabel;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JRadioButton jRadioButton1;
@@ -559,11 +553,16 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JRadioButton laserOffRB;
     private javax.swing.JRadioButton laserOnRB;
     private javax.swing.JLabel lightNumLabel;
+    private javax.swing.JPanel lightSensorTitleLabel;
     private javax.swing.JRadioButton lightingOffRB;
     private javax.swing.JRadioButton lightingOnRB;
+    private javax.swing.JLabel pump1TitleLabel;
+    private javax.swing.JLabel pump2TitleLabel;
+    private javax.swing.JLabel pump3TitleLabel;
     private javax.swing.JProgressBar pumpBar1;
+    private javax.swing.JProgressBar pumpBar2;
     private javax.swing.JProgressBar pumpBar3;
-    private javax.swing.JProgressBar pumpbar2;
+    private javax.swing.JLabel pumpsAllTitleLabel;
     private javax.swing.JLabel sensorTitleLabel;
     private javax.swing.JLabel stirrerLabel;
     private javax.swing.JRadioButton stirrerOffRB;
@@ -572,8 +571,10 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JLabel targetTempLabel;
     private javax.swing.JLabel targetValuesTitle;
     private javax.swing.JLabel tempNumLabel;
+    private javax.swing.JLabel tempSensorTitleLabel;
     private javax.swing.JLabel toggleTitle;
     private javax.swing.JLabel turbidityNumLabel;
+    private javax.swing.JLabel turbiditySensorTitleLabel;
     private javax.swing.JLabel volume1Label;
     private javax.swing.JLabel volume2Label;
     private javax.swing.JLabel volume3Label;

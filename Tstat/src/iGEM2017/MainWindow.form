@@ -52,7 +52,7 @@
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout"/>
       <SubComponents>
-        <Container class="javax.swing.JPanel" name="jPanel1">
+        <Container class="javax.swing.JPanel" name="lightSensorTitleLabel">
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
               <JTabbedPaneConstraints tabName="Sensors">
@@ -76,25 +76,14 @@
                           <Group type="102" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="1" attributes="0">
-                                      <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
+                                      <Component id="tempSensorTitleLabel" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
                                       <Component id="tempNumLabel" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace min="16" pref="16" max="-2" attributes="0"/>
                                   </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="64" max="-2" attributes="0"/>
-                                      <Component id="lightNumLabel" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="59" max="-2" attributes="0"/>
-                                      <Component id="colorStringLabel" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="9" pref="9" max="-2" attributes="0"/>
-                                  </Group>
                                   <Group type="103" alignment="0" groupAlignment="0" attributes="0">
                                       <Group type="102" alignment="1" attributes="0">
-                                          <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
+                                          <Component id="turbiditySensorTitleLabel" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace min="121" pref="121" max="-2" attributes="0"/>
                                       </Group>
                                       <Group type="102" alignment="0" attributes="0">
@@ -102,16 +91,30 @@
                                           <Component id="turbidityNumLabel" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
+                                  <Group type="102" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace min="-2" pref="64" max="-2" attributes="0"/>
+                                              <Component id="lightNumLabel" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Component id="colorSensorTIlteLabel" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace min="-2" pref="59" max="-2" attributes="0"/>
+                                              <Component id="colorStringLabel" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                  </Group>
                               </Group>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Component id="colorPanel" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <Component id="jLabel14" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="pumpsAllTitleLabel" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jLabel15" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabel16" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabel17" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="pump1TitleLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="pump2TitleLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="pump3TitleLabel" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
@@ -128,7 +131,7 @@
                               <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="pumpBar3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="pumpbar2" min="-2" max="-2" attributes="0"/>
+                                  <Component id="pumpBar2" min="-2" max="-2" attributes="0"/>
                                   <Component id="pumpBar1" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
@@ -157,7 +160,7 @@
                                   <Group type="102" attributes="0">
                                       <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
-                                          <Component id="jLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="colorSensorTIlteLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                                           <Component id="colorStringLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
@@ -168,22 +171,22 @@
                               </Group>
                               <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="jLabel8" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="tempSensorTitleLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="tempNumLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
                       <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabel9" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="turbiditySensorTitleLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="turbidityNumLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
-                      <Component id="jLabel14" min="-2" max="-2" attributes="0"/>
+                      <Component id="pumpsAllTitleLabel" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="1" attributes="0">
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jLabel15" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="pump1TitleLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="fluid1Label" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="volume1Label" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
@@ -191,14 +194,14 @@
                       </Group>
                       <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabel16" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="pump2TitleLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="fluid2Label" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="volume2Label" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="pumpbar2" min="-2" max="-2" attributes="0"/>
+                          <Component id="pumpBar2" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jLabel17" min="-2" max="-2" attributes="0"/>
+                          <Component id="pump3TitleLabel" min="-2" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="1" attributes="0">
                               <Component id="pumpBar3" min="-2" max="-2" attributes="0"/>
                               <Group type="103" alignment="1" groupAlignment="3" attributes="0">
@@ -231,17 +234,17 @@
                 <Property name="text" type="java.lang.String" value="light:"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel7">
+            <Component class="javax.swing.JLabel" name="colorSensorTIlteLabel">
               <Properties>
                 <Property name="text" type="java.lang.String" value="color:"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel8">
+            <Component class="javax.swing.JLabel" name="tempSensorTitleLabel">
               <Properties>
                 <Property name="text" type="java.lang.String" value="temperature:"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel9">
+            <Component class="javax.swing.JLabel" name="turbiditySensorTitleLabel">
               <Properties>
                 <Property name="text" type="java.lang.String" value="turbidiy"/>
               </Properties>
@@ -292,22 +295,22 @@
                 </DimensionLayout>
               </Layout>
             </Container>
-            <Component class="javax.swing.JLabel" name="jLabel14">
+            <Component class="javax.swing.JLabel" name="pumpsAllTitleLabel">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Pumps:"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel15">
+            <Component class="javax.swing.JLabel" name="pump1TitleLabel">
               <Properties>
                 <Property name="text" type="java.lang.String" value="pump 1:"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel16">
+            <Component class="javax.swing.JLabel" name="pump2TitleLabel">
               <Properties>
                 <Property name="text" type="java.lang.String" value="pump 2:"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel17">
+            <Component class="javax.swing.JLabel" name="pump3TitleLabel">
               <Properties>
                 <Property name="text" type="java.lang.String" value="pump 3:"/>
               </Properties>
@@ -344,7 +347,7 @@
             </Component>
             <Component class="javax.swing.JProgressBar" name="pumpBar1">
             </Component>
-            <Component class="javax.swing.JProgressBar" name="pumpbar2">
+            <Component class="javax.swing.JProgressBar" name="pumpBar2">
             </Component>
             <Component class="javax.swing.JProgressBar" name="pumpBar3">
             </Component>
