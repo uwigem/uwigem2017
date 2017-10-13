@@ -39,6 +39,11 @@ public class MainWindow extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroup1 = new javax.swing.ButtonGroup();
+        buttonGroup3 = new javax.swing.ButtonGroup();
+        buttonGroup4 = new javax.swing.ButtonGroup();
+        buttonGroup5 = new javax.swing.ButtonGroup();
+        buttonGroup6 = new javax.swing.ButtonGroup();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         lightSensorTitleLabel = new javax.swing.JPanel();
         buttonExit = new javax.swing.JButton();
@@ -82,8 +87,8 @@ public class MainWindow extends javax.swing.JFrame {
         targetValuesTitle = new javax.swing.JLabel();
         targetTempLabel = new javax.swing.JLabel();
         targetTempField = new javax.swing.JTextField();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
+        celciusRB = new javax.swing.JRadioButton();
+        fahrenheitRB = new javax.swing.JRadioButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
@@ -295,12 +300,16 @@ public class MainWindow extends javax.swing.JFrame {
 
         laserLabel.setText("Laser:");
 
+        buttonGroup3.add(stirrerOnRB);
         stirrerOnRB.setText("On");
 
+        buttonGroup3.add(stirrerOffRB);
         stirrerOffRB.setText("Off");
 
+        buttonGroup4.add(lightingOnRB);
         lightingOnRB.setText("On");
 
+        buttonGroup4.add(lightingOffRB);
         lightingOffRB.setText("Off");
         lightingOffRB.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -308,21 +317,27 @@ public class MainWindow extends javax.swing.JFrame {
             }
         });
 
+        buttonGroup5.add(bubblerOnRB);
         bubblerOnRB.setText("On");
 
+        buttonGroup5.add(bubblerOffRB);
         bubblerOffRB.setText("Off");
 
+        buttonGroup6.add(laserOnRB);
         laserOnRB.setText("On");
 
+        buttonGroup6.add(laserOffRB);
         laserOffRB.setText("Off");
 
         targetValuesTitle.setText("Target Values");
 
         targetTempLabel.setText("Temperature:");
 
-        jRadioButton1.setText("C");
+        buttonGroup1.add(celciusRB);
+        celciusRB.setText("C");
 
-        jRadioButton2.setText("F");
+        buttonGroup1.add(fahrenheitRB);
+        fahrenheitRB.setText("F");
 
         jLabel1.setText("Color:");
 
@@ -379,9 +394,9 @@ public class MainWindow extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(targetTempField, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jRadioButton1)
+                        .addComponent(celciusRB)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jRadioButton2))
+                        .addComponent(fahrenheitRB))
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addComponent(jLabel1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -400,7 +415,7 @@ public class MainWindow extends javax.swing.JFrame {
                         .addComponent(jLabel5)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(51, Short.MAX_VALUE))
+                .addContainerGap(23, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -416,8 +431,8 @@ public class MainWindow extends javax.swing.JFrame {
                     .addComponent(stirrerOffRB)
                     .addComponent(targetTempLabel)
                     .addComponent(targetTempField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jRadioButton1)
-                    .addComponent(jRadioButton2))
+                    .addComponent(celciusRB)
+                    .addComponent(fahrenheitRB))
                 .addGap(3, 3, 3)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(interiorLightingLabel)
@@ -527,9 +542,16 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JRadioButton bubblerOffRB;
     private javax.swing.JRadioButton bubblerOnRB;
     private javax.swing.JButton buttonExit;
+    private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.ButtonGroup buttonGroup3;
+    private javax.swing.ButtonGroup buttonGroup4;
+    private javax.swing.ButtonGroup buttonGroup5;
+    private javax.swing.ButtonGroup buttonGroup6;
+    private javax.swing.JRadioButton celciusRB;
     private javax.swing.JPanel colorPanel;
     private javax.swing.JLabel colorSensorTIlteLabel;
     private javax.swing.JLabel colorStringLabel;
+    private javax.swing.JRadioButton fahrenheitRB;
     private javax.swing.JLabel fluid1Label;
     private javax.swing.JLabel fluid2Label;
     private javax.swing.JLabel fluid3Label;
@@ -542,8 +564,6 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
@@ -579,5 +599,5 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JLabel volume2Label;
     private javax.swing.JLabel volume3Label;
     // End of variables declaration//GEN-END:variables
-
+       
 }
