@@ -98,6 +98,26 @@ public class MainWindow extends javax.swing.JFrame {
         jTextField3 = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
         jTextField4 = new javax.swing.JTextField();
+        pumpsLabel = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        dispenseLabel1 = new javax.swing.JLabel();
+        dispenseLabel2 = new javax.swing.JLabel();
+        dispenseLabel3 = new javax.swing.JLabel();
+        dispenseField1 = new javax.swing.JTextField();
+        dispenseField2 = new javax.swing.JTextField();
+        dispenseField3 = new javax.swing.JTextField();
+        mlLabel1 = new javax.swing.JLabel();
+        mlLabel2 = new javax.swing.JLabel();
+        mlLabel3 = new javax.swing.JLabel();
+        abortButton1 = new javax.swing.JButton();
+        abortButton2 = new javax.swing.JButton();
+        abortButton3 = new javax.swing.JButton();
+        refillButton1 = new javax.swing.JButton();
+        refillButton2 = new javax.swing.JButton();
+        refillButton3 = new javax.swing.JButton();
+        submitButton = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -349,6 +369,41 @@ public class MainWindow extends javax.swing.JFrame {
 
         jLabel5.setText("Turbidity:");
 
+        pumpsLabel.setText("Pumps");
+
+        jLabel7.setText("Pump 1:");
+
+        jLabel8.setText("Pump 2:");
+
+        jLabel9.setText("Pump 3:");
+        jLabel9.setToolTipText("");
+
+        dispenseLabel1.setText("Dispense:");
+
+        dispenseLabel2.setText("Dispense:");
+
+        dispenseLabel3.setText("Dispense:");
+
+        mlLabel1.setText("ml");
+
+        mlLabel2.setText("ml");
+
+        mlLabel3.setText("ml");
+
+        abortButton1.setText("Abort");
+
+        abortButton2.setText("Abort");
+
+        abortButton3.setText("Abort");
+
+        refillButton1.setText("Refill");
+
+        refillButton2.setText("Refill");
+
+        refillButton3.setText("Refill");
+
+        submitButton.setText("Submit");
+
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
@@ -356,65 +411,114 @@ public class MainWindow extends javax.swing.JFrame {
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGap(33, 33, 33)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(toggleTitle)
-                    .addComponent(bubblerLabel)
-                    .addComponent(laserLabel)
+                    .addComponent(pumpsLabel)
                     .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(jPanel3Layout.createSequentialGroup()
-                                .addComponent(stirrerLabel)
-                                .addGap(53, 53, 53))
-                            .addComponent(interiorLightingLabel, javax.swing.GroupLayout.Alignment.TRAILING))
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel3Layout.createSequentialGroup()
-                                .addGap(19, 19, 19)
-                                .addComponent(stirrerOnRB)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(stirrerOffRB))
-                            .addGroup(jPanel3Layout.createSequentialGroup()
-                                .addGap(18, 18, 18)
                                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(toggleTitle)
+                                    .addComponent(bubblerLabel)
+                                    .addComponent(laserLabel)
                                     .addGroup(jPanel3Layout.createSequentialGroup()
-                                        .addComponent(bubblerOnRB)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(bubblerOffRB))
+                                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(jPanel3Layout.createSequentialGroup()
+                                                .addComponent(stirrerLabel)
+                                                .addGap(53, 53, 53))
+                                            .addComponent(interiorLightingLabel, javax.swing.GroupLayout.Alignment.TRAILING))
+                                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(jPanel3Layout.createSequentialGroup()
+                                                .addGap(19, 19, 19)
+                                                .addComponent(stirrerOnRB)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(stirrerOffRB))
+                                            .addGroup(jPanel3Layout.createSequentialGroup()
+                                                .addGap(18, 18, 18)
+                                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addGroup(jPanel3Layout.createSequentialGroup()
+                                                        .addComponent(bubblerOnRB)
+                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                        .addComponent(bubblerOffRB))
+                                                    .addGroup(jPanel3Layout.createSequentialGroup()
+                                                        .addComponent(lightingOnRB)
+                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                        .addComponent(lightingOffRB))
+                                                    .addGroup(jPanel3Layout.createSequentialGroup()
+                                                        .addComponent(laserOnRB)
+                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                        .addComponent(laserOffRB)))))))
+                                .addGap(297, 297, 297))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel7)
                                     .addGroup(jPanel3Layout.createSequentialGroup()
-                                        .addComponent(lightingOnRB)
+                                        .addComponent(dispenseLabel1)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(lightingOffRB))
+                                        .addComponent(dispenseField1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(mlLabel1)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel8)
                                     .addGroup(jPanel3Layout.createSequentialGroup()
-                                        .addComponent(laserOnRB)
+                                        .addComponent(dispenseLabel2)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(laserOffRB)))))))
-                .addGap(297, 297, 297)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(targetValuesTitle)
+                                        .addComponent(dispenseField2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(mlLabel2)))
+                                .addGap(79, 79, 79)))
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel9)
+                            .addComponent(targetValuesTitle)
+                            .addGroup(jPanel3Layout.createSequentialGroup()
+                                .addComponent(targetTempLabel)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(targetTempField, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(celciusRB)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(fahrenheitRB))
+                            .addGroup(jPanel3Layout.createSequentialGroup()
+                                .addComponent(jLabel1)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel2)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel3)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel4)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel3Layout.createSequentialGroup()
+                                .addComponent(jLabel5)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel3Layout.createSequentialGroup()
+                                .addComponent(dispenseLabel3)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(dispenseField3, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(mlLabel3))))
                     .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addComponent(targetTempLabel)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(targetTempField, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(celciusRB)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(fahrenheitRB))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel3)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel4)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addComponent(jLabel5)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(30, 30, 30)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(jPanel3Layout.createSequentialGroup()
+                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(abortButton1)
+                                    .addComponent(refillButton1))
+                                .addGap(235, 235, 235)
+                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(abortButton2)
+                                    .addComponent(refillButton2)))
+                            .addGroup(jPanel3Layout.createSequentialGroup()
+                                .addComponent(submitButton)
+                                .addGap(2, 2, 2)))
+                        .addGap(144, 144, 144)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(refillButton3)
+                            .addComponent(abortButton3))))
                 .addContainerGap(23, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
@@ -457,7 +561,37 @@ public class MainWindow extends javax.swing.JFrame {
                     .addComponent(laserLabel)
                     .addComponent(laserOnRB)
                     .addComponent(laserOffRB))
-                .addContainerGap(451, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(pumpsLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel7)
+                    .addComponent(jLabel8)
+                    .addComponent(jLabel9))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(dispenseLabel1)
+                    .addComponent(dispenseLabel2)
+                    .addComponent(dispenseLabel3)
+                    .addComponent(dispenseField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(dispenseField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(dispenseField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(mlLabel1)
+                    .addComponent(mlLabel2)
+                    .addComponent(mlLabel3))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(abortButton1)
+                    .addComponent(abortButton2)
+                    .addComponent(abortButton3))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(refillButton1)
+                    .addComponent(refillButton2)
+                    .addComponent(refillButton3))
+                .addGap(31, 31, 31)
+                .addComponent(submitButton)
+                .addContainerGap(245, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Edit Values", jPanel3);
@@ -538,6 +672,9 @@ public class MainWindow extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton abortButton1;
+    private javax.swing.JButton abortButton2;
+    private javax.swing.JButton abortButton3;
     private javax.swing.JLabel bubblerLabel;
     private javax.swing.JRadioButton bubblerOffRB;
     private javax.swing.JRadioButton bubblerOnRB;
@@ -551,6 +688,12 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JPanel colorPanel;
     private javax.swing.JLabel colorSensorTIlteLabel;
     private javax.swing.JLabel colorStringLabel;
+    private javax.swing.JTextField dispenseField1;
+    private javax.swing.JTextField dispenseField2;
+    private javax.swing.JTextField dispenseField3;
+    private javax.swing.JLabel dispenseLabel1;
+    private javax.swing.JLabel dispenseLabel2;
+    private javax.swing.JLabel dispenseLabel3;
     private javax.swing.JRadioButton fahrenheitRB;
     private javax.swing.JLabel fluid1Label;
     private javax.swing.JLabel fluid2Label;
@@ -562,6 +705,9 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JTabbedPane jTabbedPane1;
@@ -576,6 +722,9 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JPanel lightSensorTitleLabel;
     private javax.swing.JRadioButton lightingOffRB;
     private javax.swing.JRadioButton lightingOnRB;
+    private javax.swing.JLabel mlLabel1;
+    private javax.swing.JLabel mlLabel2;
+    private javax.swing.JLabel mlLabel3;
     private javax.swing.JLabel pump1TitleLabel;
     private javax.swing.JLabel pump2TitleLabel;
     private javax.swing.JLabel pump3TitleLabel;
@@ -583,10 +732,15 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JProgressBar pumpBar2;
     private javax.swing.JProgressBar pumpBar3;
     private javax.swing.JLabel pumpsAllTitleLabel;
+    private javax.swing.JLabel pumpsLabel;
+    private javax.swing.JButton refillButton1;
+    private javax.swing.JButton refillButton2;
+    private javax.swing.JButton refillButton3;
     private javax.swing.JLabel sensorTitleLabel;
     private javax.swing.JLabel stirrerLabel;
     private javax.swing.JRadioButton stirrerOffRB;
     private javax.swing.JRadioButton stirrerOnRB;
+    private javax.swing.JButton submitButton;
     private javax.swing.JTextField targetTempField;
     private javax.swing.JLabel targetTempLabel;
     private javax.swing.JLabel targetValuesTitle;
