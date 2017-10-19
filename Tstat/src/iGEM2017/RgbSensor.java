@@ -109,6 +109,7 @@ public class RgbSensor {
      * Takes a reading and sets that to the color point 255,255,255. Raw
      * readings will not be altered, but normalized readings will be scaled
      * assuming the current white point.
+     * @throws Exception 
      */
     public void setWhitePoint() throws Exception {
         ColorReading cRead = getReading();
@@ -119,25 +120,54 @@ public class RgbSensor {
 
     }
 
+    /**
+     * Sets the gain (hardware amplification) of readings.
+     * @param gain amount of amplification
+     * @throws IOException 
+     */
     public void setGain(int gain) throws IOException {
         this.write8(TCS34725_CONTROL, (byte) gain);
     }
 
-    // Standard read/write functions
+    /**
+     * Standard read for I2C device (one byte)
+     * @param reg location of register to read from
+     * @return int value read from device
+     * @throws IOException 
+     */
     private int readU8(int reg) throws IOException {
         return this.device.read(COMMAND_BIT | reg);
     }
 
+    /**
+     * Standard read for two consecutive I2C device registers
+     * @param reg location of first register in a consecutive pair to read from
+     * @return value taken from both registers interpreted as one integer
+     * @throws Exception 
+     */
     private int readU16(int reg) throws Exception {
         int dataLow = this.readU8(COMMAND_BIT | reg);
         int dataHigh = this.readU8(COMMAND_BIT | reg + 1);
         return (dataHigh << 8) + dataLow;
     }
 
+    /**
+     * Writes one byte to an I2C device register
+     * @param register Location of register
+     * @param value Value to write
+     * @throws IOException 
+     */
     private void write8(int register, int value) throws IOException {
         this.device.write(COMMAND_BIT | register, (byte) (value & 0xff));
     }
 
+    /**
+     * Returns the max of three integers
+     * @param a Integer to compare
+     * @param b Integer to compare
+     * @param c Integer to compare
+     * @return value of largest compared integer
+     */
     private int max(int a, int b, int c) {
         if (a >= b && a >= c) {
             return a;
@@ -157,6 +187,9 @@ public class RgbSensor {
         }
     }
 
+    /**
+     * Simple subclass containing numerical color reading information
+     */
     public class ColorReading {
 
         private int red, blue, green, clear;
