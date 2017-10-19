@@ -41,6 +41,8 @@ public class SyringePump {
     private int stepDelay = 1;    // Milliseconds between motor steps
     private double minVolume = -1; // Volume reading of syringe at max position
     private double maxVolume = -1; // Volume reading of syringe at min position
+    private double minSyringeVolume = -1;
+    private double maxSyringeVolume = -1;
 
     // Motor steps per mL dispensed as calculated from calibration information
     private double stepsPerMil = -1;
@@ -89,17 +91,32 @@ public class SyringePump {
         this.stopMax = gpioFactory.provisionDigitalInputPin(min, "min");
     }
 
-    /**
-     * Uses the end-stop switches to find the minimum and maximum positions of
-     * the stepper motor, and also determines which direction is fill and which
-     * direction is dispense.
-     */
-    public void calibratePosition() {
-        while (stopMin.isLow()) {
-            // TODO - move pump until lowest, call that 0, move to highest,
-            // count steps and record as max.
-        }
+    public void dispenseCompletely(){
+        //TODO dispense until endstop is reached
     }
+    
+    public void fillCompletely(){
+        // TODO fill until endstop is reached
+    }
+    
+    public void setMinSyringeVolume(double reading){
+        //TODO maxSyringeVolume gets set by user passed value
+    }
+    
+    public void setMaxSyringeVolume(double reading){
+        // TODO maxSyringeVolume gets set by user passed value
+    }
+    
+    /**
+     * Sets whether or not the current minimum and maximum positions
+     * and volumes should be used to calculate steps per mL
+     * @param b 
+     */
+    public void setIsVolumeCalibrated(boolean b){
+        // TODO make sure the appropriate measurements have been 
+        // taken. If so, then calculate steps/mL
+    }
+    
 
     /**
      * Stores the syringe volume measurement when pump is in max (full)
@@ -224,9 +241,20 @@ public class SyringePump {
         // Current location must be established (relies on having max position)
         return (this.maxVolume != -1 &&
                 this.minVolume != -1 &&
-                this.currentPosition != -1);
+                this.currentPosition != -1 &&
+                this.minSyringeVolume != -1 &&
+                this.maxSyringeVolume != -1);
         
         
+    }
+    
+    /**
+     * Get the current fill level of the syringe. Requires calibration.
+     * @return Current volume of syringe in mL.
+     */
+    public double currentVolume(){
+        // TODO
+        return 0;
     }
 
     public enum Direction {

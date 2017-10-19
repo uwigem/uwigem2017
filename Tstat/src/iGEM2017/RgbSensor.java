@@ -50,6 +50,8 @@ public class RgbSensor {
 
     private final I2CDevice device;
     private final I2CBus i2cBus;
+    
+    // Scaling multipliers for each channel, configured by setting a white point
     private double mRed;
     private double mGreen;
     private double mBlue;
@@ -82,6 +84,13 @@ public class RgbSensor {
         return new ColorReading(r, b, g, c);
     }
 
+    /**
+     * Returns a color reading which takes into account the offset
+     * created by setting a white point. Behavior undefined if white point
+     * has not been set.
+     * @return
+     * @throws Exception 
+     */
     public ColorReading getNormalizedReading() throws Exception {
         ColorReading result = getReading();
 
@@ -93,6 +102,11 @@ public class RgbSensor {
         return result;
     }
     
+    /**
+     * Extracts a hue from a color reading.
+     * @param cr Color reading to convert
+     * @return A color with only hue information remaining.
+     */
     public Color readingToHue(ColorReading cr){
         double mult = (double)max(cr.blue,cr.green,cr.red);
         mult = 255.0 / mult;

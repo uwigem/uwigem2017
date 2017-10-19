@@ -50,7 +50,7 @@ public class TempSensor {
     }
     
     /**
-     * Description of method in plain language
+     * Gets a temperature and humidity reading from the sensor
      * @param measure Meaning of parameter
      * @return What it returns
      */
