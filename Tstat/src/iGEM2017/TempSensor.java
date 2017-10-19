@@ -24,7 +24,7 @@ import java.util.logging.Logger;
 
 
 /**
- * 
+ * Controls a temperature and humidity sensor
  *
  * @author Washington iGEM Team 2017
  */

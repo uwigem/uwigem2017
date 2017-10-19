@@ -22,9 +22,9 @@ import com.pi4j.io.i2c.I2CFactory;
 import java.io.IOException;
 
 /**
- * A class which allows readings from a LuxSensor
- lux sensor connected to the Raspberry Pi
- I2C data pins.
+ * A class which allows readings from a TCS34725
+ * lux (light) sensor connected to the Raspberry Pi
+ * I2C data pins.
  * 
  * @author Washington iGEM Team 2017
  */
@@ -68,9 +68,9 @@ public class LuxSensor {
     /**
      * 
      * @param addr I2C hardware address of the device. For us that's 0x39
-     * @throws IOException
-     * @throws com.pi4j.io.i2c.I2CFactory.UnsupportedBusNumberException
-     * @throws InterruptedException 
+     * @throws IOException If there is a hardware I/O error
+     * @throws com.pi4j.io.i2c.I2CFactory.UnsupportedBusNumberException If bus number is invalid
+     * @throws InterruptedException If thread fails to sleep.
      */
     public LuxSensor(byte addr)
             throws IOException, I2CFactory.UnsupportedBusNumberException, InterruptedException {
@@ -88,9 +88,9 @@ public class LuxSensor {
 
     /**
      * 
-     * @return
-     * @throws IOException
-     * @throws InterruptedException 
+     * @return Reading as a double (unitless)
+     * @throws IOException if device isn't ready for I/O
+     * @throws InterruptedException Can happen during thread sleep
      */
     public double getReading()
             throws IOException, InterruptedException {

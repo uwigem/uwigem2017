@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package sensors;
+package sensorGui;
 
 import iGEM2017.LuxSensor;
 import iGEM2017.RgbSensor;
@@ -45,6 +45,9 @@ public class SensorGui extends javax.swing.JFrame {
 
     /**
      * Creates new form SensorGui
+     * @throws java.io.IOException If there is a hardware I/O error
+     * @throws com.pi4j.io.i2c.I2CFactory.UnsupportedBusNumberException If I2C bus number is wrong
+     * @throws java.lang.InterruptedException If there is a problem when thread sleeps.
      */
     public SensorGui()
             throws IOException, 
@@ -126,9 +129,7 @@ public class SensorGui extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximizedBounds(new java.awt.Rectangle(0, 0, 800, 480));
-        setMaximumSize(new java.awt.Dimension(800, 480));
         setMinimumSize(new java.awt.Dimension(800, 480));
-        setPreferredSize(new java.awt.Dimension(800, 400));
         setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(239, 232, 210));

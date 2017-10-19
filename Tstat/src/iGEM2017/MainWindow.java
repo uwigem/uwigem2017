@@ -20,7 +20,9 @@ package iGEM2017;
 import javax.swing.JOptionPane;
 
 /**
- *
+ * Constitutes the main graphical interface for the chromastat. The UI
+ * is build on Java Swing for use on an ARM32 device (the Raspberry Pi).
+ * 
  * @author Washington iGEM Team 2017 
  */
 public class MainWindow extends javax.swing.JFrame {

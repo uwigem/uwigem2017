@@ -24,7 +24,7 @@ import java.io.IOException;
 import javax.naming.OperationNotSupportedException;
 
 /**
- *
+ * Controls a color (RGB) sensor
  * @author Washington iGEM Team 2017
  */
 public class RgbSensor {
@@ -109,7 +109,7 @@ public class RgbSensor {
      * Takes a reading and sets that to the color point 255,255,255. Raw
      * readings will not be altered, but normalized readings will be scaled
      * assuming the current white point.
-     * @throws Exception 
+     * @throws Exception If hardware failure during reading process
      */
     public void setWhitePoint() throws Exception {
         ColorReading cRead = getReading();
@@ -123,7 +123,7 @@ public class RgbSensor {
     /**
      * Sets the gain (hardware amplification) of readings.
      * @param gain amount of amplification
-     * @throws IOException 
+     * @throws IOException If there is a hardware I/O error
      */
     public void setGain(int gain) throws IOException {
         this.write8(TCS34725_CONTROL, (byte) gain);
