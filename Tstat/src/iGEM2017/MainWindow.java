@@ -121,30 +121,30 @@ public class MainWindow extends javax.swing.JFrame {
         refillButton3 = new javax.swing.JButton();
         submitButton = new javax.swing.JButton();
         callibratePanel = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
-        jTextField5 = new javax.swing.JTextField();
-        jLabel6 = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
-        jTextField6 = new javax.swing.JTextField();
-        jLabel10 = new javax.swing.JLabel();
-        jButton3 = new javax.swing.JButton();
-        jLabel11 = new javax.swing.JLabel();
-        jTextField7 = new javax.swing.JTextField();
-        jLabel12 = new javax.swing.JLabel();
-        jButton4 = new javax.swing.JButton();
-        jLabel13 = new javax.swing.JLabel();
-        jButton5 = new javax.swing.JButton();
-        jTextField8 = new javax.swing.JTextField();
-        jLabel14 = new javax.swing.JLabel();
-        jButton6 = new javax.swing.JButton();
-        jTextField9 = new javax.swing.JTextField();
-        jLabel15 = new javax.swing.JLabel();
-        jButton7 = new javax.swing.JButton();
-        jLabel16 = new javax.swing.JLabel();
-        jButton8 = new javax.swing.JButton();
-        jTextField10 = new javax.swing.JTextField();
-        jLabel17 = new javax.swing.JLabel();
-        jButton9 = new javax.swing.JButton();
+        motor1DispenseButton = new javax.swing.JButton();
+        motor1EmptyVolField = new javax.swing.JTextField();
+        motor1EmptyVolLabel = new javax.swing.JLabel();
+        motor1FillButton = new javax.swing.JButton();
+        motor1FullVolField = new javax.swing.JTextField();
+        motor1FullVolLabel = new javax.swing.JLabel();
+        motor1CallibrateButton = new javax.swing.JButton();
+        motor1WorkingDoneLabel = new javax.swing.JLabel();
+        motor2EmptyVolField = new javax.swing.JTextField();
+        motor2EmptyVolLabel = new javax.swing.JLabel();
+        motor2CallibrateButton = new javax.swing.JButton();
+        motor2WorkingDoneLabel = new javax.swing.JLabel();
+        motor2FillButton = new javax.swing.JButton();
+        motor2FullVolField = new javax.swing.JTextField();
+        motor2FullVolLabel = new javax.swing.JLabel();
+        motor2DispenseButton = new javax.swing.JButton();
+        motor3EmptyVolField = new javax.swing.JTextField();
+        motor3EmptyVolLabel = new javax.swing.JLabel();
+        motor3CallibrateButton = new javax.swing.JButton();
+        motor3WorkingDoneLabel = new javax.swing.JLabel();
+        motor3FillButton = new javax.swing.JButton();
+        motor3FullVolField = new javax.swing.JTextField();
+        motor3FullVolLabel = new javax.swing.JLabel();
+        motor3DispenseButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("\"Exit?\"");
@@ -623,41 +623,41 @@ public class MainWindow extends javax.swing.JFrame {
 
         tabPane.addTab("Edit Values", editValuesPanel);
 
-        jButton1.setText("Dispense Completely");
+        motor1DispenseButton.setText("Dispense Completely");
 
-        jLabel6.setText("Volume at completion (ml)");
+        motor1EmptyVolLabel.setText("Volume at completion (ml)");
 
-        jButton2.setText("Fill Completely");
+        motor1FillButton.setText("Fill Completely");
 
-        jLabel10.setText("Volume at full (ml)");
+        motor1FullVolLabel.setText("Volume at full (ml)");
 
-        jButton3.setText("Callibrate Motor 1");
+        motor1CallibrateButton.setText("Callibrate Motor 1");
 
-        jLabel11.setText("Working...");
+        motor1WorkingDoneLabel.setText("Working...");
 
-        jLabel12.setText("Volume at completion (ml)");
+        motor2EmptyVolLabel.setText("Volume at completion (ml)");
 
-        jButton4.setText("Callibrate Motor 2");
+        motor2CallibrateButton.setText("Callibrate Motor 2");
 
-        jLabel13.setText("Working...");
+        motor2WorkingDoneLabel.setText("Working...");
 
-        jButton5.setText("Fill Completely");
+        motor2FillButton.setText("Fill Completely");
 
-        jLabel14.setText("Volume at full (ml)");
+        motor2FullVolLabel.setText("Volume at full (ml)");
 
-        jButton6.setText("Dispense Completely");
+        motor2DispenseButton.setText("Dispense Completely");
 
-        jLabel15.setText("Volume at completion (ml)");
+        motor3EmptyVolLabel.setText("Volume at completion (ml)");
 
-        jButton7.setText("Callibrate Motor 3");
+        motor3CallibrateButton.setText("Callibrate Motor 3");
 
-        jLabel16.setText("Working...");
+        motor3WorkingDoneLabel.setText("Working...");
 
-        jButton8.setText("Fill Completely");
+        motor3FillButton.setText("Fill Completely");
 
-        jLabel17.setText("Volume at full (ml)");
+        motor3FullVolLabel.setText("Volume at full (ml)");
 
-        jButton9.setText("Dispense Completely");
+        motor3DispenseButton.setText("Dispense Completely");
 
         javax.swing.GroupLayout callibratePanelLayout = new javax.swing.GroupLayout(callibratePanel);
         callibratePanel.setLayout(callibratePanelLayout);
@@ -667,51 +667,51 @@ public class MainWindow extends javax.swing.JFrame {
                 .addGap(32, 32, 32)
                 .addGroup(callibratePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(callibratePanelLayout.createSequentialGroup()
-                        .addComponent(jButton3)
+                        .addComponent(motor1CallibrateButton)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel11))
-                    .addComponent(jButton2)
-                    .addComponent(jButton1)
+                        .addComponent(motor1WorkingDoneLabel))
+                    .addComponent(motor1FillButton)
+                    .addComponent(motor1DispenseButton)
                     .addGroup(callibratePanelLayout.createSequentialGroup()
-                        .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(motor1EmptyVolField, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel6))
+                        .addComponent(motor1EmptyVolLabel))
                     .addGroup(callibratePanelLayout.createSequentialGroup()
-                        .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(motor1FullVolField, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel10)))
+                        .addComponent(motor1FullVolLabel)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(callibratePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(callibratePanelLayout.createSequentialGroup()
-                        .addComponent(jButton4)
+                        .addComponent(motor2CallibrateButton)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel13))
-                    .addComponent(jButton5)
-                    .addComponent(jButton6)
+                        .addComponent(motor2WorkingDoneLabel))
+                    .addComponent(motor2FillButton)
+                    .addComponent(motor2DispenseButton)
                     .addGroup(callibratePanelLayout.createSequentialGroup()
-                        .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(motor2EmptyVolField, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel12))
+                        .addComponent(motor2EmptyVolLabel))
                     .addGroup(callibratePanelLayout.createSequentialGroup()
-                        .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(motor2FullVolField, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel14)))
+                        .addComponent(motor2FullVolLabel)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(callibratePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(callibratePanelLayout.createSequentialGroup()
-                        .addComponent(jButton7)
+                        .addComponent(motor3CallibrateButton)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel16))
-                    .addComponent(jButton8)
-                    .addComponent(jButton9)
+                        .addComponent(motor3WorkingDoneLabel))
+                    .addComponent(motor3FillButton)
+                    .addComponent(motor3DispenseButton)
                     .addGroup(callibratePanelLayout.createSequentialGroup()
-                        .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(motor3EmptyVolField, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel15))
+                        .addComponent(motor3EmptyVolLabel))
                     .addGroup(callibratePanelLayout.createSequentialGroup()
-                        .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(motor3FullVolField, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel17)))
+                        .addComponent(motor3FullVolLabel)))
                 .addContainerGap(14, Short.MAX_VALUE))
         );
         callibratePanelLayout.setVerticalGroup(
@@ -720,53 +720,53 @@ public class MainWindow extends javax.swing.JFrame {
                 .addGap(26, 26, 26)
                 .addGroup(callibratePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(callibratePanelLayout.createSequentialGroup()
-                        .addComponent(jButton9)
+                        .addComponent(motor3DispenseButton)
                         .addGap(18, 18, 18)
                         .addGroup(callibratePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel15))
+                            .addComponent(motor3EmptyVolField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(motor3EmptyVolLabel))
                         .addGap(18, 18, 18)
-                        .addComponent(jButton8)
-                        .addGap(18, 18, 18)
-                        .addGroup(callibratePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel17))
+                        .addComponent(motor3FillButton)
                         .addGap(18, 18, 18)
                         .addGroup(callibratePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jButton7)
-                            .addComponent(jLabel16)))
+                            .addComponent(motor3FullVolField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(motor3FullVolLabel))
+                        .addGap(18, 18, 18)
+                        .addGroup(callibratePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(motor3CallibrateButton)
+                            .addComponent(motor3WorkingDoneLabel)))
                     .addGroup(callibratePanelLayout.createSequentialGroup()
-                        .addComponent(jButton6)
+                        .addComponent(motor2DispenseButton)
                         .addGap(18, 18, 18)
                         .addGroup(callibratePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel12))
+                            .addComponent(motor2EmptyVolField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(motor2EmptyVolLabel))
                         .addGap(18, 18, 18)
-                        .addComponent(jButton5)
-                        .addGap(18, 18, 18)
-                        .addGroup(callibratePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel14))
+                        .addComponent(motor2FillButton)
                         .addGap(18, 18, 18)
                         .addGroup(callibratePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jButton4)
-                            .addComponent(jLabel13)))
+                            .addComponent(motor2FullVolField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(motor2FullVolLabel))
+                        .addGap(18, 18, 18)
+                        .addGroup(callibratePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(motor2CallibrateButton)
+                            .addComponent(motor2WorkingDoneLabel)))
                     .addGroup(callibratePanelLayout.createSequentialGroup()
-                        .addComponent(jButton1)
+                        .addComponent(motor1DispenseButton)
                         .addGap(18, 18, 18)
                         .addGroup(callibratePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel6))
+                            .addComponent(motor1EmptyVolField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(motor1EmptyVolLabel))
                         .addGap(18, 18, 18)
-                        .addComponent(jButton2)
-                        .addGap(18, 18, 18)
-                        .addGroup(callibratePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel10))
+                        .addComponent(motor1FillButton)
                         .addGap(18, 18, 18)
                         .addGroup(callibratePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jButton3)
-                            .addComponent(jLabel11))))
+                            .addComponent(motor1FullVolField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(motor1FullVolLabel))
+                        .addGap(18, 18, 18)
+                        .addGroup(callibratePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(motor1CallibrateButton)
+                            .addComponent(motor1WorkingDoneLabel))))
                 .addContainerGap(399, Short.MAX_VALUE))
         );
 
@@ -864,42 +864,18 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JLabel fluid2Label;
     private javax.swing.JLabel fluid3Label;
     private javax.swing.JLabel interiorLightingLabel;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
-    private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField10;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
-    private javax.swing.JTextField jTextField8;
-    private javax.swing.JTextField jTextField9;
     private javax.swing.JLabel laserLabel;
     private javax.swing.JRadioButton laserOffRB;
     private javax.swing.JRadioButton laserOnRB;
@@ -910,6 +886,30 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JLabel mlLabel1;
     private javax.swing.JLabel mlLabel2;
     private javax.swing.JLabel mlLabel3;
+    private javax.swing.JButton motor1CallibrateButton;
+    private javax.swing.JButton motor1DispenseButton;
+    private javax.swing.JTextField motor1EmptyVolField;
+    private javax.swing.JLabel motor1EmptyVolLabel;
+    private javax.swing.JButton motor1FillButton;
+    private javax.swing.JTextField motor1FullVolField;
+    private javax.swing.JLabel motor1FullVolLabel;
+    private javax.swing.JLabel motor1WorkingDoneLabel;
+    private javax.swing.JButton motor2CallibrateButton;
+    private javax.swing.JButton motor2DispenseButton;
+    private javax.swing.JTextField motor2EmptyVolField;
+    private javax.swing.JLabel motor2EmptyVolLabel;
+    private javax.swing.JButton motor2FillButton;
+    private javax.swing.JTextField motor2FullVolField;
+    private javax.swing.JLabel motor2FullVolLabel;
+    private javax.swing.JLabel motor2WorkingDoneLabel;
+    private javax.swing.JButton motor3CallibrateButton;
+    private javax.swing.JButton motor3DispenseButton;
+    private javax.swing.JTextField motor3EmptyVolField;
+    private javax.swing.JLabel motor3EmptyVolLabel;
+    private javax.swing.JButton motor3FillButton;
+    private javax.swing.JTextField motor3FullVolField;
+    private javax.swing.JLabel motor3FullVolLabel;
+    private javax.swing.JLabel motor3WorkingDoneLabel;
     private javax.swing.JLabel pump1TitleLabel;
     private javax.swing.JLabel pump2TitleLabel;
     private javax.swing.JLabel pump3TitleLabel;
