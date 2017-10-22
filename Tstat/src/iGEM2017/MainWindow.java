@@ -814,7 +814,7 @@ public class MainWindow extends javax.swing.JFrame {
                 .addContainerGap(399, Short.MAX_VALUE))
         );
 
-        tabPane.addTab("Callibrate", callibratePanel);
+        tabPane.addTab("Calibrate", callibratePanel);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

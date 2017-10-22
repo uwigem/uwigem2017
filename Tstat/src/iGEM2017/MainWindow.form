@@ -876,8 +876,8 @@
         <Container class="javax.swing.JPanel" name="callibratePanel">
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-              <JTabbedPaneConstraints tabName="Callibrate">
-                <Property name="tabTitle" type="java.lang.String" value="Callibrate"/>
+              <JTabbedPaneConstraints tabName="Calibrate">
+                <Property name="tabTitle" type="java.lang.String" value="Calibrate"/>
               </JTabbedPaneConstraints>
             </Constraint>
           </Constraints>
