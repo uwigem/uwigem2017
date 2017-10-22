@@ -873,7 +873,11 @@ public class MainWindow extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new MainWindow().setVisible(true);
+                try {
+                    new MainWindow().setVisible(true);
+                } catch (IOException | I2CFactory.UnsupportedBusNumberException | InterruptedException ex) {
+                    Logger.getLogger(MainWindow.class.getName()).log(Level.SEVERE, null, ex);
+                }
             }
         });
     }
