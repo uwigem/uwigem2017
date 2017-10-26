@@ -52,7 +52,7 @@ public class MainWindow extends javax.swing.JFrame {
                     colorPanel.setBackground(colorRead.readingToHue(colorRead.getNormalizedReading()));
                     tempNumLabel.setText(tempRead.getReading(TempSensor.MEASURE.CELSIUS) + "");
                     humidityNumLabel.setText(tempRead.getHumidity() + "");
-                    if (lightRead.getReading() == .00034) {
+                    if (lightRead.getReading() < .00035) {
                         lightNumLabel.setText("0");
                     } else {
                         lightNumLabel.setText(lightRead.getReading() + "");
