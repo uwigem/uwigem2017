@@ -49,7 +49,7 @@ public class MainWindow extends javax.swing.JFrame {
             public void actionPerformed(ActionEvent ae) {
                 try {
                     colorStringLabel.setText(colorRead.getNormalizedReading().getRed() + "," + colorRead.getNormalizedReading().getGreen() + "," + colorRead.getNormalizedReading().getBlue());
-                    colorPanel.setBackground(colorRead.readingToHue(colorRead.getReading()));
+                    colorPanel.setBackground(colorRead.readingToHue(colorRead.getNormalizedReading()));
                     tempNumLabel.setText(tempRead.getReading(TempSensor.MEASURE.CELSIUS) + "");
                     humidityNumLabel.setText(tempRead.getHumidity() + "");
                     if (lightRead.getReading() == .00034) {
