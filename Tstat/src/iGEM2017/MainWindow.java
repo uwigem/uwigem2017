@@ -218,8 +218,7 @@ public class MainWindow extends javax.swing.JFrame {
 
         tempNumLabel.setText("tempNum");
 
-        colorPanel.setBackground(new java.awt.Color(255, 0, 51));
-        colorPanel.setForeground(new java.awt.Color(255, 0, 51));
+        colorPanel.setBackground(new java.awt.Color(255, 204, 255));
         colorPanel.setPreferredSize(new java.awt.Dimension(50, 50));
 
         javax.swing.GroupLayout colorPanelLayout = new javax.swing.GroupLayout(colorPanel);
