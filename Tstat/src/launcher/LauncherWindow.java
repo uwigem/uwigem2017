@@ -91,9 +91,20 @@ public class LauncherWindow extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void launchCstat(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_launchCstat
-        MainWindow mainWindow = new MainWindow();
-        mainWindow.setVisible(true);
-        this.setVisible(false);
+        MainWindow mainWindow;
+        try {
+            mainWindow = new MainWindow();
+            mainWindow.setVisible(true);
+            this.setVisible(false);
+        } catch (IOException ex) {
+            Logger.getLogger(LauncherWindow.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (I2CFactory.UnsupportedBusNumberException ex) {
+            Logger.getLogger(LauncherWindow.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (InterruptedException ex) {
+            Logger.getLogger(LauncherWindow.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        
     }//GEN-LAST:event_launchCstat
 
     private void launchSensorGui(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_launchSensorGui

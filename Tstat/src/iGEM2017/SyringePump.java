@@ -61,12 +61,12 @@ public class SyringePump {
 
         // Provision output pins
         this.pinStep = gpioFactory.provisionDigitalOutputPin(provider, step, "step");
-        this.pinDir = gpioFactory.provisionDigitalOutputPin(provider, step, "direction");
-        this.pinEnable = gpioFactory.provisionDigitalOutputPin(provider, step, "enable");
+        this.pinDir = gpioFactory.provisionDigitalOutputPin(provider, direction, "direction");
+        this.pinEnable = gpioFactory.provisionDigitalOutputPin(provider, enable, "enable");
 
         // Provision input pins
-        this.stopMax = gpioFactory.provisionDigitalInputPin(provider, max, "max");
-        this.stopMax = gpioFactory.provisionDigitalInputPin(provider, min, "min");
+        this.stopMax = gpioFactory.provisionDigitalInputPin(provider, max, "max",PinPullResistance.PULL_UP);
+        this.stopMin = gpioFactory.provisionDigitalInputPin(provider, min, "min",PinPullResistance.PULL_UP);
     }
     
 /**
@@ -89,6 +89,9 @@ public class SyringePump {
         // Provision input pins
         this.stopMax = gpioFactory.provisionDigitalInputPin(max, "max");
         this.stopMax = gpioFactory.provisionDigitalInputPin(min, "min");
+        
+        // Enable the pump
+        this.pinEnable.setState(true);
     }
 
     public void dispenseCompletely(){
@@ -259,5 +262,10 @@ public class SyringePump {
 
     public enum Direction {
         FILL, DISPENSE
+    }
+    
+    public void stopReport(){
+        System.out.println("Max Stop: " + this.stopMax.isHigh());
+        System.out.println("Min Stop: " + this.stopMin.isHigh());
     }
 }
