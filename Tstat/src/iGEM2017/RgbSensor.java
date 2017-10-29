@@ -24,7 +24,12 @@ import java.io.IOException;
 import javax.naming.OperationNotSupportedException;
 
 /**
- * Controls a color (RGB) sensor
+ * Configures, controls, and takes readings from
+ * a single Taos TCS34725 RGB (color) sensor
+ * 
+ * Note that this sensor's I2C address is fixed
+ * at 0x29 in the hardware and cannot be changed.
+ * 
  * @author Washington iGEM Team 2017
  */
 public class RgbSensor {

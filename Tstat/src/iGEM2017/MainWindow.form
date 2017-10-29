@@ -1045,7 +1045,7 @@
             </Component>
             <Component class="javax.swing.JButton" name="motor1CallibrateButton">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Callibrate Motor 1"/>
+                <Property name="text" type="java.lang.String" value="Calibrate Motor 1"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="motor1WorkingDoneLabel">
@@ -1062,7 +1062,7 @@
             </Component>
             <Component class="javax.swing.JButton" name="motor2CallibrateButton">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Callibrate Motor 2"/>
+                <Property name="text" type="java.lang.String" value="Calibrate Motor 2"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="motor2WorkingDoneLabel">
@@ -1096,7 +1096,7 @@
             </Component>
             <Component class="javax.swing.JButton" name="motor3CallibrateButton">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Callibrate Motor 3"/>
+                <Property name="text" type="java.lang.String" value="Calibrate Motor 3"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="motor3WorkingDoneLabel">

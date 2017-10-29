@@ -676,13 +676,13 @@ public class MainWindow extends javax.swing.JFrame {
 
         motor1FullVolLabel.setText("Volume at full (ml)");
 
-        motor1CallibrateButton.setText("Callibrate Motor 1");
+        motor1CallibrateButton.setText("Calibrate Motor 1");
 
         motor1WorkingDoneLabel.setText("Working...");
 
         motor2EmptyVolLabel.setText("Volume at completion (ml)");
 
-        motor2CallibrateButton.setText("Callibrate Motor 2");
+        motor2CallibrateButton.setText("Calibrate Motor 2");
 
         motor2WorkingDoneLabel.setText("Working...");
 
@@ -694,7 +694,7 @@ public class MainWindow extends javax.swing.JFrame {
 
         motor3EmptyVolLabel.setText("Volume at completion (ml)");
 
-        motor3CallibrateButton.setText("Callibrate Motor 3");
+        motor3CallibrateButton.setText("Calibrate Motor 3");
 
         motor3WorkingDoneLabel.setText("Working...");
 
