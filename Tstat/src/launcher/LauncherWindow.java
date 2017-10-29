@@ -91,14 +91,9 @@ public class LauncherWindow extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void launchCstat(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_launchCstat
-<<<<<<< HEAD
-        MainWindow mainWindow;
-        try {
-            mainWindow = new MainWindow();
-=======
+
         try {
             MainWindow mainWindow = new MainWindow();
->>>>>>> cbeb4bf0a21d7d3dce912b91cbb2400cfdf018bb
             mainWindow.setVisible(true);
             this.setVisible(false);
         } catch (IOException ex) {
@@ -108,11 +103,6 @@ public class LauncherWindow extends javax.swing.JFrame {
         } catch (InterruptedException ex) {
             Logger.getLogger(LauncherWindow.class.getName()).log(Level.SEVERE, null, ex);
         }
-<<<<<<< HEAD
-        
-        
-=======
->>>>>>> cbeb4bf0a21d7d3dce912b91cbb2400cfdf018bb
     }//GEN-LAST:event_launchCstat
 
     private void launchSensorGui(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_launchSensorGui
