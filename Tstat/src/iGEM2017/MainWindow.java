@@ -22,6 +22,7 @@ import java.awt.Insets;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
+import java.text.DecimalFormat;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
@@ -44,6 +45,7 @@ public class MainWindow extends javax.swing.JFrame {
         RgbSensor colorRead = new RgbSensor();
         TempSensor tempRead = new TempSensor();
         LuxSensor lightRead = new LuxSensor();
+        DecimalFormat d = new DecimalFormat ("#.#######");
         //initialize syringe pumps
 
         Timer actionTime = new Timer(300, new ActionListener() {
@@ -52,12 +54,12 @@ public class MainWindow extends javax.swing.JFrame {
                 try {
                     colorStringLabel.setText(colorRead.getNormalizedReading().getRed() + "," + colorRead.getNormalizedReading().getGreen() + "," + colorRead.getNormalizedReading().getBlue());
                     colorPanel.setBackground(colorRead.readingToHue(colorRead.getNormalizedReading()));
-                    tempNumLabel.setText(tempRead.getReading(TempSensor.MEASURE.CELSIUS) + "");
-                    humidityNumLabel.setText(tempRead.getHumidity() + "");
+                    tempNumLabel.setText(d.format(tempRead.getReading(TempSensor.MEASURE.CELSIUS)) + "");
+                    humidityNumLabel.setText(d.format(tempRead.getHumidity()) + "");
                     if (lightRead.getReading() < .00035) {
                         lightNumLabel.setText("0");
                     } else {
-                        lightNumLabel.setText(lightRead.getReading() + "");
+                        lightNumLabel.setText(d.format(lightRead.getReading()) + "");
                     }
 
                 } catch (Exception ex) {
