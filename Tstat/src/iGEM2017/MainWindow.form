@@ -147,7 +147,7 @@
                               <Component id="tempNumLabel" min="-2" pref="54" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace pref="414" max="32767" attributes="0"/>
+                      <EmptySpace pref="416" max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace max="32767" attributes="0"/>
@@ -221,7 +221,7 @@
                               </Group>
                           </Group>
                       </Group>
-                      <EmptySpace pref="25" max="32767" attributes="0"/>
+                      <EmptySpace pref="8" max="32767" attributes="0"/>
                       <Component id="buttonExit" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
@@ -544,7 +544,7 @@
                               </Group>
                           </Group>
                       </Group>
-                      <EmptySpace pref="258" max="32767" attributes="0"/>
+                      <EmptySpace pref="241" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -702,7 +702,7 @@
                                   </Group>
                                   <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace pref="108" max="32767" attributes="0"/>
+                              <EmptySpace pref="109" max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
                                   <Group type="103" alignment="0" groupAlignment="1" attributes="0">
@@ -717,7 +717,7 @@
                                       <Component id="refillButton3" alignment="1" min="-2" pref="102" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
-                              <EmptySpace pref="163" max="32767" attributes="0"/>
+                              <EmptySpace pref="164" max="32767" attributes="0"/>
                           </Group>
                           <Group type="102" attributes="0">
                               <Component id="pumpsLabel" min="-2" max="-2" attributes="0"/>
@@ -756,7 +756,15 @@
                               </Group>
                               <EmptySpace max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="targetTempLabel" min="-2" max="-2" attributes="0"/>
+                                  <Group type="102" attributes="0">
+                                      <Component id="targetTempLabel" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="targetTempField" min="-2" pref="30" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="celciusRB" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="fahrenheitRB" min="-2" max="-2" attributes="0"/>
+                                  </Group>
                                   <Component id="targetValuesTitle" min="-2" pref="94" max="-2" attributes="0"/>
                                   <Group type="102" alignment="0" attributes="0">
                                       <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
@@ -777,14 +785,6 @@
                                       <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Component id="jTextField4" min="-2" pref="30" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="-2" pref="85" max="-2" attributes="0"/>
-                                      <Component id="targetTempField" min="-2" pref="30" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="celciusRB" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="fahrenheitRB" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <EmptySpace max="32767" attributes="0"/>
@@ -834,14 +834,13 @@
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="targetValuesTitle" min="-2" pref="34" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="targetTempLabel" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="targetTempLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="targetTempField" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="celciusRB" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="fahrenheitRB" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" min="-2" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
