@@ -45,7 +45,7 @@ public class MainWindow extends javax.swing.JFrame {
         RgbSensor colorRead = new RgbSensor();
         TempSensor tempRead = new TempSensor();
         LuxSensor lightRead = new LuxSensor();
-        DecimalFormat d = new DecimalFormat ("#.#######");
+        DecimalFormat d = new DecimalFormat ("#.00000");
         //initialize syringe pumps
 
         Timer actionTime = new Timer(300, new ActionListener() {
