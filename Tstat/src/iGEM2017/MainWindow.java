@@ -376,7 +376,7 @@ public class MainWindow extends javax.swing.JFrame {
                         .addGroup(sensorsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(fluid3Label)
                             .addComponent(volume3Label))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 8, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
                 .addComponent(buttonExit)
                 .addContainerGap())
         );
@@ -527,7 +527,7 @@ public class MainWindow extends javax.swing.JFrame {
                         .addGroup(callibratePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(motor1CallibrateButton)
                             .addComponent(motor1WorkingDoneLabel))))
-                .addContainerGap(241, Short.MAX_VALUE))
+                .addContainerGap(258, Short.MAX_VALUE))
         );
 
         tabPane.addTab("Calibration", callibratePanel);
