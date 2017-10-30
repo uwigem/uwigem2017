@@ -118,14 +118,6 @@ public class MainWindow extends javax.swing.JFrame {
         interiorLightingLabel = new javax.swing.JLabel();
         bubblerLabel = new javax.swing.JLabel();
         laserLabel = new javax.swing.JLabel();
-        stirrerOnRB = new javax.swing.JRadioButton();
-        stirrerOffRB = new javax.swing.JRadioButton();
-        lightingOnRB = new javax.swing.JRadioButton();
-        lightingOffRB = new javax.swing.JRadioButton();
-        bubblerOnRB = new javax.swing.JRadioButton();
-        bubblerOffRB = new javax.swing.JRadioButton();
-        laserOnRB = new javax.swing.JRadioButton();
-        laserOffRB = new javax.swing.JRadioButton();
         targetValuesTitle = new javax.swing.JLabel();
         targetTempLabel = new javax.swing.JLabel();
         targetTempField = new javax.swing.JTextField();
@@ -160,6 +152,10 @@ public class MainWindow extends javax.swing.JFrame {
         refillButton2 = new javax.swing.JButton();
         refillButton3 = new javax.swing.JButton();
         submitButton = new javax.swing.JButton();
+        stirrerToggle = new javax.swing.JToggleButton();
+        interiorLightingToggle = new javax.swing.JToggleButton();
+        bubblerToggle = new javax.swing.JToggleButton();
+        laserToggle = new javax.swing.JToggleButton();
         callibratePanel = new javax.swing.JPanel();
         motor1DispenseButton = new javax.swing.JButton();
         motor1EmptyVolField = new javax.swing.JTextField();
@@ -323,7 +319,7 @@ public class MainWindow extends javax.swing.JFrame {
                         .addComponent(tempSensorTitleLabel)
                         .addGap(18, 18, 18)
                         .addComponent(tempNumLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(433, Short.MAX_VALUE))
+                .addContainerGap(417, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, sensorsPanelLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(buttonExit, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -397,35 +393,6 @@ public class MainWindow extends javax.swing.JFrame {
 
         laserLabel.setText("Laser:");
 
-        buttonGroup3.add(stirrerOnRB);
-        stirrerOnRB.setText("On");
-
-        buttonGroup3.add(stirrerOffRB);
-        stirrerOffRB.setText("Off");
-
-        buttonGroup4.add(lightingOnRB);
-        lightingOnRB.setText("On");
-
-        buttonGroup4.add(lightingOffRB);
-        lightingOffRB.setText("Off");
-        lightingOffRB.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                lightingOffRBActionPerformed(evt);
-            }
-        });
-
-        buttonGroup5.add(bubblerOnRB);
-        bubblerOnRB.setText("On");
-
-        buttonGroup5.add(bubblerOffRB);
-        bubblerOffRB.setText("Off");
-
-        buttonGroup6.add(laserOnRB);
-        laserOnRB.setText("On");
-
-        buttonGroup6.add(laserOffRB);
-        laserOffRB.setText("Off");
-
         targetValuesTitle.setText("Target Values");
 
         targetTempLabel.setText("Temperature:");
@@ -481,6 +448,14 @@ public class MainWindow extends javax.swing.JFrame {
 
         submitButton.setText("Submit");
 
+        stirrerToggle.setText("On");
+
+        interiorLightingToggle.setText("On");
+
+        bubblerToggle.setText("On");
+
+        laserToggle.setText("On");
+
         javax.swing.GroupLayout editValuesPanelLayout = new javax.swing.GroupLayout(editValuesPanel);
         editValuesPanel.setLayout(editValuesPanelLayout);
         editValuesPanelLayout.setHorizontalGroup(
@@ -491,39 +466,6 @@ public class MainWindow extends javax.swing.JFrame {
                     .addComponent(pumpsLabel)
                     .addGroup(editValuesPanelLayout.createSequentialGroup()
                         .addGroup(editValuesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(editValuesPanelLayout.createSequentialGroup()
-                                .addGroup(editValuesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(toggleTitle)
-                                    .addComponent(bubblerLabel)
-                                    .addComponent(laserLabel)
-                                    .addGroup(editValuesPanelLayout.createSequentialGroup()
-                                        .addGroup(editValuesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addGroup(editValuesPanelLayout.createSequentialGroup()
-                                                .addComponent(stirrerLabel)
-                                                .addGap(53, 53, 53))
-                                            .addComponent(interiorLightingLabel, javax.swing.GroupLayout.Alignment.TRAILING))
-                                        .addGroup(editValuesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addGroup(editValuesPanelLayout.createSequentialGroup()
-                                                .addGap(19, 19, 19)
-                                                .addComponent(stirrerOnRB)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(stirrerOffRB))
-                                            .addGroup(editValuesPanelLayout.createSequentialGroup()
-                                                .addGap(18, 18, 18)
-                                                .addGroup(editValuesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                    .addGroup(editValuesPanelLayout.createSequentialGroup()
-                                                        .addComponent(bubblerOnRB)
-                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                        .addComponent(bubblerOffRB))
-                                                    .addGroup(editValuesPanelLayout.createSequentialGroup()
-                                                        .addComponent(lightingOnRB)
-                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                        .addComponent(lightingOffRB))
-                                                    .addGroup(editValuesPanelLayout.createSequentialGroup()
-                                                        .addComponent(laserOnRB)
-                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                        .addComponent(laserOffRB)))))))
-                                .addGap(297, 297, 297))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, editValuesPanelLayout.createSequentialGroup()
                                 .addGroup(editValuesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel7)
@@ -542,7 +484,26 @@ public class MainWindow extends javax.swing.JFrame {
                                         .addComponent(dispenseField2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(mlLabel2)))
-                                .addGap(79, 79, 79)))
+                                .addGap(79, 79, 79))
+                            .addGroup(editValuesPanelLayout.createSequentialGroup()
+                                .addGroup(editValuesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(toggleTitle)
+                                    .addGroup(editValuesPanelLayout.createSequentialGroup()
+                                        .addGroup(editValuesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(editValuesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addGroup(editValuesPanelLayout.createSequentialGroup()
+                                                    .addComponent(stirrerLabel)
+                                                    .addGap(53, 53, 53))
+                                                .addComponent(interiorLightingLabel, javax.swing.GroupLayout.Alignment.TRAILING))
+                                            .addComponent(bubblerLabel)
+                                            .addComponent(laserLabel))
+                                        .addGap(18, 18, 18)
+                                        .addGroup(editValuesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(laserToggle)
+                                            .addComponent(bubblerToggle)
+                                            .addComponent(stirrerToggle)
+                                            .addComponent(interiorLightingToggle))))
+                                .addGap(310, 310, 310)))
                         .addGroup(editValuesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel9)
                             .addComponent(targetValuesTitle)
@@ -596,7 +557,7 @@ public class MainWindow extends javax.swing.JFrame {
                         .addGroup(editValuesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(refillButton3)
                             .addComponent(abortButton3))))
-                .addContainerGap(66, Short.MAX_VALUE))
+                .addContainerGap(53, Short.MAX_VALUE))
         );
         editValuesPanelLayout.setVerticalGroup(
             editValuesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -608,36 +569,32 @@ public class MainWindow extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(editValuesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(stirrerLabel)
-                    .addComponent(stirrerOnRB)
-                    .addComponent(stirrerOffRB)
                     .addComponent(targetTempLabel)
                     .addComponent(targetTempField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(celciusRB)
-                    .addComponent(fahrenheitRB))
+                    .addComponent(fahrenheitRB)
+                    .addComponent(stirrerToggle))
                 .addGap(3, 3, 3)
                 .addGroup(editValuesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(interiorLightingLabel)
-                    .addComponent(lightingOnRB)
-                    .addComponent(lightingOffRB)
                     .addComponent(jLabel1)
                     .addComponent(jLabel2)
                     .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel3)
                     .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel4)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(interiorLightingToggle))
                 .addGap(2, 2, 2)
                 .addGroup(editValuesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(bubblerLabel)
-                    .addComponent(bubblerOnRB)
-                    .addComponent(bubblerOffRB)
                     .addComponent(jLabel5)
-                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(bubblerToggle))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(editValuesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(laserLabel)
-                    .addComponent(laserOnRB)
-                    .addComponent(laserOffRB))
+                    .addComponent(laserToggle))
                 .addGap(18, 18, 18)
                 .addComponent(pumpsLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -668,7 +625,7 @@ public class MainWindow extends javax.swing.JFrame {
                     .addComponent(refillButton3))
                 .addGap(31, 31, 31)
                 .addComponent(submitButton)
-                .addContainerGap(116, Short.MAX_VALUE))
+                .addContainerGap(81, Short.MAX_VALUE))
         );
 
         tabPane.addTab("Control", editValuesPanel);
@@ -762,7 +719,7 @@ public class MainWindow extends javax.swing.JFrame {
                         .addComponent(motor3FullVolField, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(motor3FullVolLabel)))
-                .addContainerGap(110, Short.MAX_VALUE))
+                .addContainerGap(15, Short.MAX_VALUE))
         );
         callibratePanelLayout.setVerticalGroup(
             callibratePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -836,10 +793,6 @@ public class MainWindow extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void lightingOffRBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lightingOffRBActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_lightingOffRBActionPerformed
-
     private void buttonExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonExitActionPerformed
         int response = -1;
         response = JOptionPane.showConfirmDialog(this, "Exit Chromastat Control Software?", "Confirm Exit", JOptionPane.YES_NO_OPTION);
@@ -894,8 +847,7 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JButton abortButton2;
     private javax.swing.JButton abortButton3;
     private javax.swing.JLabel bubblerLabel;
-    private javax.swing.JRadioButton bubblerOffRB;
-    private javax.swing.JRadioButton bubblerOnRB;
+    private javax.swing.JToggleButton bubblerToggle;
     private javax.swing.JButton buttonExit;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.ButtonGroup buttonGroup3;
@@ -921,6 +873,7 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JLabel humidityNumLabel;
     private javax.swing.JLabel humidityTilteLabel;
     private javax.swing.JLabel interiorLightingLabel;
+    private javax.swing.JToggleButton interiorLightingToggle;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -934,12 +887,9 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
     private javax.swing.JLabel laserLabel;
-    private javax.swing.JRadioButton laserOffRB;
-    private javax.swing.JRadioButton laserOnRB;
+    private javax.swing.JToggleButton laserToggle;
     private javax.swing.JLabel lightNumLabel;
     private javax.swing.JLabel lightSensorTitleLabel;
-    private javax.swing.JRadioButton lightingOffRB;
-    private javax.swing.JRadioButton lightingOnRB;
     private javax.swing.JLabel mlLabel1;
     private javax.swing.JLabel mlLabel2;
     private javax.swing.JLabel mlLabel3;
@@ -980,8 +930,7 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JButton refillButton3;
     private javax.swing.JPanel sensorsPanel;
     private javax.swing.JLabel stirrerLabel;
-    private javax.swing.JRadioButton stirrerOffRB;
-    private javax.swing.JRadioButton stirrerOnRB;
+    private javax.swing.JToggleButton stirrerToggle;
     private javax.swing.JButton submitButton;
     private javax.swing.JTabbedPane tabPane;
     private javax.swing.JTextField targetTempField;
