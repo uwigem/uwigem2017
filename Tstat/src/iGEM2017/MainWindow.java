@@ -21,6 +21,8 @@ import java.awt.Color;
 import java.awt.Insets;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.text.DecimalFormat;
 import java.util.logging.Level;
@@ -47,6 +49,9 @@ public class MainWindow extends javax.swing.JFrame {
         LuxSensor lightRead = new LuxSensor();
         DecimalFormat d = new DecimalFormat ("#.#######");
         //initialize syringe pumps
+        BufferedWriter csvFile = new BufferedWriter(new FileWriter("file.csv"));
+        csvFile.write("Color, Lux, Temp, Humidity");
+        csvFile.newLine();
         
         Timer actionTime = new Timer(300, new ActionListener() {
             @Override
@@ -77,7 +82,8 @@ public class MainWindow extends javax.swing.JFrame {
                         lightNum = lightRead.getReading();
                         lightNumLabel.setText(d.format(lightNum));
                     }
-
+                   csvFile.write(color.getRed()+"."+color.getGreen()+"."+color.getBlue()+","+lightNum+","+tempNum+","+humidityNum);
+                   csvFile.newLine();
                 } catch (Exception ex) {
                     Logger.getLogger(MainWindow.class.getName()).log(Level.SEVERE, null, ex);
                 }
