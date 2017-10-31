@@ -177,11 +177,11 @@ public class MainWindow extends javax.swing.JFrame {
         mlLabel1 = new javax.swing.JLabel();
         mlLabel2 = new javax.swing.JLabel();
         mlLabel3 = new javax.swing.JLabel();
-        abortButton1 = new javax.swing.JButton();
+        goButton1 = new javax.swing.JButton();
         abortButton2 = new javax.swing.JButton();
         abortButton3 = new javax.swing.JButton();
-        refillButton1 = new javax.swing.JButton();
         refillButton2 = new javax.swing.JButton();
+        refillButton1 = new javax.swing.JButton();
         refillButton3 = new javax.swing.JButton();
         submitButton = new javax.swing.JButton();
         stirrerToggle = new javax.swing.JToggleButton();
@@ -197,9 +197,9 @@ public class MainWindow extends javax.swing.JFrame {
         jLabel14 = new javax.swing.JLabel();
         jTextField7 = new javax.swing.JTextField();
         jLabel15 = new javax.swing.JLabel();
-        abortButton4 = new javax.swing.JButton();
-        abortButton5 = new javax.swing.JButton();
-        refillButton4 = new javax.swing.JButton();
+        abortButton1 = new javax.swing.JButton();
+        goButton2 = new javax.swing.JButton();
+        goButton3 = new javax.swing.JButton();
         callibratePanel = new javax.swing.JPanel();
         motor1DispenseButton = new javax.swing.JButton();
         motor1EmptyVolField = new javax.swing.JTextField();
@@ -585,19 +585,34 @@ public class MainWindow extends javax.swing.JFrame {
 
         mlLabel3.setText("ml");
 
-        abortButton1.setText("Go");
+        goButton1.setText("Go");
 
         abortButton2.setText("Abort");
 
         abortButton3.setText("Abort");
 
-        refillButton1.setText("Refill");
-
         refillButton2.setText("Refill");
+        refillButton2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                refillButton2MousePressed(evt);
+            }
+        });
+
+        refillButton1.setText("Refill");
+        refillButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                refillButton1MousePressed(evt);
+            }
+        });
 
         refillButton3.setText("Refill");
         refillButton3.setMaximumSize(new java.awt.Dimension(63, 25));
         refillButton3.setMinimumSize(new java.awt.Dimension(63, 25));
+        refillButton3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                refillButton3MousePressed(evt);
+            }
+        });
 
         submitButton.setText("Submit");
 
@@ -621,13 +636,13 @@ public class MainWindow extends javax.swing.JFrame {
 
         jLabel15.setText("seconds");
 
-        abortButton4.setText("Abort");
+        abortButton1.setText("Abort");
 
-        abortButton5.setText("Go");
+        goButton2.setText("Go");
 
-        refillButton4.setText("Go");
-        refillButton4.setMaximumSize(new java.awt.Dimension(63, 25));
-        refillButton4.setMinimumSize(new java.awt.Dimension(63, 25));
+        goButton3.setText("Go");
+        goButton3.setMaximumSize(new java.awt.Dimension(63, 25));
+        goButton3.setMinimumSize(new java.awt.Dimension(63, 25));
 
         javax.swing.GroupLayout editValuesPanelLayout = new javax.swing.GroupLayout(editValuesPanel);
         editValuesPanel.setLayout(editValuesPanelLayout);
@@ -695,7 +710,7 @@ public class MainWindow extends javax.swing.JFrame {
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(jLabel15))
                                     .addComponent(refillButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(refillButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(goButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(65, 65, 65))))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, editValuesPanelLayout.createSequentialGroup()
                         .addGroup(editValuesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -759,14 +774,14 @@ public class MainWindow extends javax.swing.JFrame {
             .addGroup(editValuesPanelLayout.createSequentialGroup()
                 .addGap(69, 69, 69)
                 .addGroup(editValuesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(abortButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(abortButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(refillButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(goButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(refillButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(179, 179, 179)
                 .addGroup(editValuesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(abortButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(goButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(abortButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(refillButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(refillButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         editValuesPanelLayout.setVerticalGroup(
@@ -846,8 +861,8 @@ public class MainWindow extends javax.swing.JFrame {
                             .addComponent(jLabel13))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(editValuesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(abortButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(abortButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(goButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(goButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
                     .addGroup(editValuesPanelLayout.createSequentialGroup()
                         .addComponent(jLabel9)
@@ -862,10 +877,10 @@ public class MainWindow extends javax.swing.JFrame {
                             .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel15))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(refillButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(goButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(4, 4, 4)))
                 .addGroup(editValuesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(abortButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(abortButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(abortButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(abortButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(7, 7, 7)
@@ -873,8 +888,8 @@ public class MainWindow extends javax.swing.JFrame {
                     .addComponent(refillButton3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(editValuesPanelLayout.createSequentialGroup()
                         .addGroup(editValuesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(refillButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(refillButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(refillButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(refillButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(55, 55, 55)))
                 .addGap(0, 0, 0))
         );
@@ -1067,6 +1082,18 @@ public class MainWindow extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_recordingButtonMouseClicked
 
+    private void refillButton1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_refillButton1MousePressed
+        //pump1.fillCompletely();
+    }//GEN-LAST:event_refillButton1MousePressed
+
+    private void refillButton2MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_refillButton2MousePressed
+        //pump2.fillCompletely();
+    }//GEN-LAST:event_refillButton2MousePressed
+
+    private void refillButton3MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_refillButton3MousePressed
+        //pump3.fillCompletely();
+    }//GEN-LAST:event_refillButton3MousePressed
+
     /**
      * @param args the command line arguments
      */
@@ -1111,8 +1138,6 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JButton abortButton1;
     private javax.swing.JButton abortButton2;
     private javax.swing.JButton abortButton3;
-    private javax.swing.JButton abortButton4;
-    private javax.swing.JButton abortButton5;
     private javax.swing.JLabel brightnessLabel;
     private javax.swing.JPanel brightnessPanel;
     private javax.swing.JLabel bubblerLabel;
@@ -1140,6 +1165,9 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JLabel fluid1Label;
     private javax.swing.JLabel fluid2Label;
     private javax.swing.JLabel fluid3Label;
+    private javax.swing.JButton goButton1;
+    private javax.swing.JButton goButton2;
+    private javax.swing.JButton goButton3;
     private javax.swing.JLabel hueLabel;
     private javax.swing.JPanel huePanel;
     private javax.swing.JLabel humidityNumLabel;
@@ -1211,7 +1239,6 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JButton refillButton1;
     private javax.swing.JButton refillButton2;
     private javax.swing.JButton refillButton3;
-    private javax.swing.JButton refillButton4;
     private javax.swing.JLabel sensorTitle;
     private javax.swing.JLabel stirrerLabel;
     private javax.swing.JToggleButton stirrerToggle;

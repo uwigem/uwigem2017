@@ -685,7 +685,7 @@
                                               <Component id="jLabel15" min="-2" max="-2" attributes="0"/>
                                           </Group>
                                           <Component id="refillButton3" alignment="0" min="-2" pref="102" max="-2" attributes="0"/>
-                                          <Component id="refillButton4" alignment="0" min="-2" pref="102" max="-2" attributes="0"/>
+                                          <Component id="goButton3" alignment="0" min="-2" pref="102" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace min="-2" pref="65" max="-2" attributes="0"/>
                                   </Group>
@@ -772,15 +772,15 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="69" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="abortButton4" min="-2" pref="102" max="-2" attributes="0"/>
                           <Component id="abortButton1" min="-2" pref="102" max="-2" attributes="0"/>
-                          <Component id="refillButton2" alignment="1" min="-2" pref="102" max="-2" attributes="0"/>
+                          <Component id="goButton1" min="-2" pref="102" max="-2" attributes="0"/>
+                          <Component id="refillButton1" alignment="1" min="-2" pref="102" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="179" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="abortButton5" min="-2" pref="102" max="-2" attributes="0"/>
+                          <Component id="goButton2" min="-2" pref="102" max="-2" attributes="0"/>
                           <Component id="abortButton2" min="-2" pref="102" max="-2" attributes="0"/>
-                          <Component id="refillButton1" alignment="0" min="-2" pref="102" max="-2" attributes="0"/>
+                          <Component id="refillButton2" alignment="0" min="-2" pref="102" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                   </Group>
@@ -881,8 +881,8 @@
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="abortButton1" alignment="3" min="-2" pref="41" max="-2" attributes="0"/>
-                                  <Component id="abortButton5" alignment="3" min="-2" pref="41" max="-2" attributes="0"/>
+                                  <Component id="goButton1" alignment="3" min="-2" pref="41" max="-2" attributes="0"/>
+                                  <Component id="goButton2" alignment="3" min="-2" pref="41" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                           </Group>
@@ -901,12 +901,12 @@
                                   <Component id="jLabel15" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="refillButton4" min="-2" pref="41" max="-2" attributes="0"/>
+                              <Component id="goButton3" min="-2" pref="41" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="abortButton4" alignment="3" min="-2" pref="41" max="-2" attributes="0"/>
+                          <Component id="abortButton1" alignment="3" min="-2" pref="41" max="-2" attributes="0"/>
                           <Component id="abortButton2" alignment="3" min="-2" pref="41" max="-2" attributes="0"/>
                           <Component id="abortButton3" alignment="3" min="-2" pref="41" max="-2" attributes="0"/>
                       </Group>
@@ -915,8 +915,8 @@
                           <Component id="refillButton3" alignment="0" min="-2" pref="41" max="-2" attributes="0"/>
                           <Group type="102" attributes="0">
                               <Group type="103" groupAlignment="1" attributes="0">
-                                  <Component id="refillButton1" alignment="1" min="-2" pref="41" max="-2" attributes="0"/>
                                   <Component id="refillButton2" alignment="1" min="-2" pref="41" max="-2" attributes="0"/>
+                                  <Component id="refillButton1" alignment="1" min="-2" pref="41" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="55" max="-2" attributes="0"/>
                           </Group>
@@ -1070,7 +1070,7 @@
                 <Property name="text" type="java.lang.String" value="ml"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="abortButton1">
+            <Component class="javax.swing.JButton" name="goButton1">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Go"/>
               </Properties>
@@ -1085,15 +1085,21 @@
                 <Property name="text" type="java.lang.String" value="Abort"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="refillButton1">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Refill"/>
-              </Properties>
-            </Component>
             <Component class="javax.swing.JButton" name="refillButton2">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Refill"/>
               </Properties>
+              <Events>
+                <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="refillButton2MousePressed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JButton" name="refillButton1">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Refill"/>
+              </Properties>
+              <Events>
+                <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="refillButton1MousePressed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="refillButton3">
               <Properties>
@@ -1105,6 +1111,9 @@
                   <Dimension value="[63, 25]"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="refillButton3MousePressed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="submitButton">
               <Properties>
@@ -1167,17 +1176,17 @@
                 <Property name="text" type="java.lang.String" value="seconds"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="abortButton4">
+            <Component class="javax.swing.JButton" name="abortButton1">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Abort"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="abortButton5">
+            <Component class="javax.swing.JButton" name="goButton2">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Go"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="refillButton4">
+            <Component class="javax.swing.JButton" name="goButton3">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Go"/>
                 <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
