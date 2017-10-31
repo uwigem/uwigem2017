@@ -103,69 +103,75 @@
                               </Group>
                               <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="pumpBar3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="pumpBar2" min="-2" max="-2" attributes="0"/>
-                                  <Component id="pumpBar1" min="-2" max="-2" attributes="0"/>
+                                  <Group type="102" attributes="0">
+                                      <Component id="pumpBar1" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <Component id="pumpBar2" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="32767" attributes="0"/>
+                                      <Component id="recordingButton" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <Component id="pumpBar3" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="32767" attributes="0"/>
+                                      <Component id="buttonExit" min="-2" pref="79" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="59" max="-2" attributes="0"/>
+                                  </Group>
                               </Group>
                           </Group>
-                          <Component id="pumpsAllTitleLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <Component id="pumpsAllTitleLabel" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                          </Group>
                       </Group>
-                      <EmptySpace max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                              <Component id="buttonExit" min="-2" pref="79" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="humidityTilteLabel" pref="78" max="32767" attributes="0"/>
+                              <EmptySpace min="24" pref="24" max="-2" attributes="0"/>
                           </Group>
-                          <Group type="102" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="humidityTilteLabel" pref="73" max="32767" attributes="0"/>
-                                      <EmptySpace min="24" pref="24" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="turbiditySensorTitleLabel" max="32767" attributes="0"/>
-                                      <EmptySpace min="27" pref="27" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Component id="tempSensorTitleLabel" alignment="0" max="32767" attributes="0"/>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="colorSensorTitleLabel" max="32767" attributes="0"/>
-                                      <EmptySpace min="46" pref="46" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="lightSensorTitleLabel" max="32767" attributes="0"/>
-                                      <EmptySpace min="47" pref="47" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="colorStringLabel" min="-2" pref="67" max="-2" attributes="0"/>
-                                  <Component id="lightNumLabel" min="-2" pref="79" max="-2" attributes="0"/>
-                                  <Component id="tempNumLabel" alignment="0" min="-2" pref="54" max="-2" attributes="0"/>
-                                  <Component id="turbidityNumLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="humidityNumLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="colorPanel" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabel6" alignment="0" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" pref="84" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="huePanel" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="hueLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" pref="84" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="brightnessLabel" min="-2" max="-2" attributes="0"/>
-                                  <Component id="brightnessPanel" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="0" pref="231" max="32767" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="turbiditySensorTitleLabel" max="32767" attributes="0"/>
+                              <EmptySpace min="27" pref="27" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="tempSensorTitleLabel" alignment="0" max="32767" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="colorSensorTitleLabel" max="32767" attributes="0"/>
+                              <EmptySpace min="46" pref="46" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="lightSensorTitleLabel" max="32767" attributes="0"/>
+                              <EmptySpace min="47" pref="47" max="-2" attributes="0"/>
                           </Group>
                       </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="colorStringLabel" min="-2" pref="67" max="-2" attributes="0"/>
+                          <Component id="lightNumLabel" min="-2" pref="79" max="-2" attributes="0"/>
+                          <Component id="tempNumLabel" alignment="0" min="-2" pref="54" max="-2" attributes="0"/>
+                          <Component id="turbidityNumLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="humidityNumLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="colorPanel" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel6" alignment="0" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="84" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="huePanel" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="hueLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="84" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="brightnessLabel" min="-2" max="-2" attributes="0"/>
+                          <Component id="brightnessPanel" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="0" pref="235" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -194,25 +200,25 @@
                                   <Component id="colorPanel" min="-2" max="-2" attributes="0"/>
                                   <Component id="brightnessPanel" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                              <EmptySpace min="0" pref="15" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="tempSensorTitleLabel" alignment="3" pref="41" max="32767" attributes="0"/>
+                          <Component id="tempSensorTitleLabel" alignment="3" pref="42" max="32767" attributes="0"/>
                           <Component id="tempNumLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="turbiditySensorTitleLabel" alignment="3" pref="41" max="32767" attributes="0"/>
+                          <Component id="turbiditySensorTitleLabel" alignment="3" pref="42" max="32767" attributes="0"/>
                           <Component id="turbidityNumLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="humidityTilteLabel" alignment="3" pref="39" max="32767" attributes="0"/>
+                          <Component id="humidityTilteLabel" alignment="3" pref="40" max="32767" attributes="0"/>
                           <Component id="humidityNumLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="38" max="32767" attributes="0"/>
+                      <EmptySpace pref="42" max="32767" attributes="0"/>
                       <Component id="pumpsAllTitleLabel" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="1" attributes="0">
@@ -223,27 +229,35 @@
                           </Group>
                           <Component id="pumpBar1" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="pump2TitleLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="fluid2Label" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="volume2Label" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="pumpBar2" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="pump3TitleLabel" min="-2" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="1" attributes="0">
-                              <Component id="pumpBar3" min="-2" max="-2" attributes="0"/>
-                              <Group type="103" alignment="1" groupAlignment="3" attributes="0">
-                                  <Component id="fluid3Label" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="volume3Label" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Group type="102" alignment="1" attributes="0">
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="pump2TitleLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="fluid2Label" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="volume2Label" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="pumpBar2" min="-2" max="-2" attributes="0"/>
                               </Group>
+                              <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="pump3TitleLabel" min="-2" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="1" attributes="0">
+                                      <Component id="pumpBar3" min="-2" max="-2" attributes="0"/>
+                                      <Group type="103" alignment="1" groupAlignment="3" attributes="0">
+                                          <Component id="fluid3Label" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="volume3Label" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                              </Group>
+                              <EmptySpace min="-2" pref="77" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <Component id="recordingButton" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="buttonExit" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="69" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
-                      <Component id="buttonExit" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -559,6 +573,14 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Brightness:"/>
               </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="recordingButton">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Start Recording"/>
+              </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="recordingButtonMouseClicked"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>
