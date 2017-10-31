@@ -21,7 +21,6 @@ import com.pi4j.io.i2c.I2CDevice;
 import com.pi4j.io.i2c.I2CFactory;
 import java.awt.Color;
 import java.io.IOException;
-import javax.naming.OperationNotSupportedException;
 
 /**
  * Configures, controls, and takes readings from

@@ -48,78 +48,51 @@ public class SyringePump {
     private double stepsPerMil = -1;
 
     /**
-     * Create a new syringe pump controller with specified I/O pins
+     * Create a new syringe pump controller with no I/O pins specified.
      *
-     * @param provider Pin provider, if the pin isn't a standard RPi GPIO pin
-     * @param step Pin used to instruct pump's motor to take one step
-     * @param direction Pin used to choose the pump's direction
-     * @param enable Pin used to enable or disable the pump motor
-     * @param max Pin which indicates when the pump is at its max position
-     * @param min Pin which indicates when the pump is at its min position
-     */
-    public SyringePump(GpioProvider provider, Pin step, Pin direction, Pin enable, Pin max, Pin min) {
-
-        // Provision output pins
-        this.pinStep = gpioFactory.provisionDigitalOutputPin(provider, step, "step");
-        this.pinDir = gpioFactory.provisionDigitalOutputPin(provider, direction, "direction");
-        this.pinEnable = gpioFactory.provisionDigitalOutputPin(provider, enable, "enable");
-
-        // Provision input pins
-        this.stopMax = gpioFactory.provisionDigitalInputPin(provider, max, "max",PinPullResistance.PULL_UP);
-        this.stopMin = gpioFactory.provisionDigitalInputPin(provider, min, "min",PinPullResistance.PULL_UP);
-    }
-    
-/**
-     * Create a new syringe pump controller with specified I/O pins using only
-     * standard Raspberry Pi GPIO pins
      *
-     * @param step Pin used to instruct pump's motor to take one step
-     * @param direction Pin used to choose the pump's direction
-     * @param enable Pin used to enable or disable the pump motor
-     * @param max Pin which indicates when the pump is at its max position
-     * @param min Pin which indicates when the pump is at its min position
      */
-    public SyringePump(Pin step, Pin direction, Pin enable, Pin max, Pin min) {
+    public SyringePump() {
 
-        // Provision output pins
-        this.pinStep = gpioFactory.provisionDigitalOutputPin(step, "step");
-        this.pinDir = gpioFactory.provisionDigitalOutputPin(step, "direction");
-        this.pinEnable = gpioFactory.provisionDigitalOutputPin(step, "enable");
-
-        // Provision input pins
-        this.stopMax = gpioFactory.provisionDigitalInputPin(max, "max");
-        this.stopMax = gpioFactory.provisionDigitalInputPin(min, "min");
-        
-        // Enable the pump
-        this.pinEnable.setState(true);
     }
 
-    public void dispenseCompletely(){
+    public SyringePump(GpioPinDigitalOutput step,
+            GpioPinDigitalOutput dir, GpioPinDigitalOutput en,
+            GpioPinDigitalInput min, GpioPinDigitalInput max) {
+
+        this.pinStep = step;
+        this.pinDir = dir;
+        this.pinEnable = en;
+        this.stopMax = max;
+        this.stopMin = min;
+    }
+
+    public void dispenseCompletely() {
         //TODO dispense until endstop is reached
     }
-    
-    public void fillCompletely(){
+
+    public void fillCompletely() {
         // TODO fill until endstop is reached
     }
-    
-    public void setMinSyringeVolume(double reading){
+
+    public void setMinSyringeVolume(double reading) {
         //TODO maxSyringeVolume gets set by user passed value
     }
-    
-    public void setMaxSyringeVolume(double reading){
+
+    public void setMaxSyringeVolume(double reading) {
         // TODO maxSyringeVolume gets set by user passed value
     }
-    
+
     /**
-     * Sets whether or not the current minimum and maximum positions
-     * and volumes should be used to calculate steps per mL
-     * @param b 
+     * Sets whether or not the current minimum and maximum positions and volumes
+     * should be used to calculate steps per mL
+     *
+     * @param b
      */
-    public void setIsVolumeCalibrated(boolean b){
+    public void setIsVolumeCalibrated(boolean b) {
         // TODO make sure the appropriate measurements have been 
         // taken. If so, then calculate steps/mL
     }
-    
 
     /**
      * Stores the syringe volume measurement when pump is in max (full)
@@ -153,7 +126,8 @@ public class SyringePump {
      * @param direction Which direction to move the pump
      * @return How many steps were actually taken. Will be less than steps
      * requested if the pump hits an end-stop.
-     * @throws java.lang.InterruptedException If there is a problem when thread sleeps.
+     * @throws java.lang.InterruptedException If there is a problem when thread
+     * sleeps.
      */
     public int takeSteps(int numSteps, SyringePump.Direction direction)
             throws InterruptedException {
@@ -181,7 +155,7 @@ public class SyringePump {
         } else if (direction == SyringePump.Direction.DISPENSE && this.stopMin.isLow()) {
             return true;
         }
-        
+
         return false;
     }
 
@@ -216,46 +190,47 @@ public class SyringePump {
         Thread.sleep(this.stepDelay);
         pinStep.low();
     }
-  
+
     /**
-     * Dispenses the specified volume in mL from the pump.
-     * Note that if the pump isn't calibrated completely, this will do nothing.
-     * If the pump needs to refill in order to fulfill the requested volume, it 
-     * will.
+     * Dispenses the specified volume in mL from the pump. Note that if the pump
+     * isn't calibrated completely, this will do nothing. If the pump needs to
+     * refill in order to fulfill the requested volume, it will.
+     *
      * @param mL Volume in milliliters to dispense
      */
-    public void dispenseVolume(double mL){
+    public void dispenseVolume(double mL) {
         // TODO: dispense specified volume if possible. Refill if necessary
         // to meet requested amount
-        
+
         // Check isFullyCalibrated() first
     }
-    
-    /** 
+
+    /**
      * Reports whether all calibrations are complete for this pump
+     *
      * @return TRUE if and only if the pump's calibrations are complete
      */
-    private boolean isFullyCalibrated(){
+    private boolean isFullyCalibrated() {
         // Set step per mL based on current calibration
-        this.stepsPerMil = ((double) this.maxPosition)/(this.maxVolume - this.minVolume);
-        
+        this.stepsPerMil = ((double) this.maxPosition) / (this.maxVolume - this.minVolume);
+
         // Max position must be established
         // Min and max volume must be established
         // Current location must be established (relies on having max position)
-        return (this.maxVolume != -1 &&
-                this.minVolume != -1 &&
-                this.currentPosition != -1 &&
-                this.minSyringeVolume != -1 &&
-                this.maxSyringeVolume != -1);
-        
-        
+        return (this.maxVolume != -1
+                && this.minVolume != -1
+                && this.currentPosition != -1
+                && this.minSyringeVolume != -1
+                && this.maxSyringeVolume != -1);
+
     }
-    
+
     /**
      * Get the current fill level of the syringe. Requires calibration.
+     *
      * @return Current volume of syringe in mL.
      */
-    public double currentVolume(){
+    public double currentVolume() {
         // TODO
         return 0;
     }
@@ -263,8 +238,8 @@ public class SyringePump {
     public enum Direction {
         FILL, DISPENSE
     }
-    
-    public void stopReport(){
+
+    public void stopReport() {
         System.out.println("Max Stop: " + this.stopMax.isHigh());
         System.out.println("Min Stop: " + this.stopMin.isHigh());
     }

@@ -22,7 +22,7 @@ import com.pi4j.io.i2c.I2CFactory;
 import java.io.IOException;
 
 /**
- * A class which allows readings from a TCS34725
+ * Configures and controls a TCS34725
  * lux (light) sensor connected to the Raspberry Pi
  * I2C data pins.
  * 
