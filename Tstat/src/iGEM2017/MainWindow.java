@@ -45,21 +45,31 @@ public class MainWindow extends javax.swing.JFrame {
         RgbSensor colorRead = new RgbSensor();
         TempSensor tempRead = new TempSensor();
         LuxSensor lightRead = new LuxSensor();
-        DecimalFormat d = new DecimalFormat ("#.00000");
+        DecimalFormat d = new DecimalFormat ("#.#######");
         //initialize syringe pumps
-
+        
         Timer actionTime = new Timer(300, new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent ae) {
+                double tempNum;
+                double humidityNum;
+                double lightNum;
                 try {
                     colorStringLabel.setText(colorRead.getNormalizedReading().getRed() + "," + colorRead.getNormalizedReading().getGreen() + "," + colorRead.getNormalizedReading().getBlue());
-                    colorPanel.setBackground(colorRead.readingToHue(colorRead.getNormalizedReading()));
-                    tempNumLabel.setText(d.format(tempRead.getReading(TempSensor.MEASURE.CELSIUS)) + "");
-                    humidityNumLabel.setText(d.format(tempRead.getHumidity()) + "");
+                    huePanel.setBackground(colorRead.readingToHue(colorRead.getNormalizedReading()));
+                    
+                    tempNum = tempRead.getReading(TempSensor.MEASURE.CELSIUS);
+                    tempNumLabel.setText(d.format(tempNum));
+                    
+                    humidityNum = tempRead.getHumidity();
+                    humidityNumLabel.setText(d.format(humidityNum));
+                    
                     if (lightRead.getReading() < .00035) {
+                        lightNum = lightRead.getReading();
                         lightNumLabel.setText("0");
                     } else {
-                        lightNumLabel.setText(d.format(lightRead.getReading()) + "");
+                        lightNum = lightRead.getReading();
+                        lightNumLabel.setText(d.format(lightNum));
                     }
 
                 } catch (Exception ex) {
@@ -86,32 +96,6 @@ public class MainWindow extends javax.swing.JFrame {
         buttonGroup5 = new javax.swing.ButtonGroup();
         buttonGroup6 = new javax.swing.ButtonGroup();
         tabPane = new javax.swing.JTabbedPane();
-        sensorsPanel = new javax.swing.JPanel();
-        buttonExit = new javax.swing.JButton();
-        lightSensorTitleLabel = new javax.swing.JLabel();
-        colorSensorTitleLabel = new javax.swing.JLabel();
-        tempSensorTitleLabel = new javax.swing.JLabel();
-        turbiditySensorTitleLabel = new javax.swing.JLabel();
-        lightNumLabel = new javax.swing.JLabel();
-        colorStringLabel = new javax.swing.JLabel();
-        turbidityNumLabel = new javax.swing.JLabel();
-        tempNumLabel = new javax.swing.JLabel();
-        colorPanel = new javax.swing.JPanel();
-        pumpsAllTitleLabel = new javax.swing.JLabel();
-        pump1TitleLabel = new javax.swing.JLabel();
-        pump2TitleLabel = new javax.swing.JLabel();
-        pump3TitleLabel = new javax.swing.JLabel();
-        fluid1Label = new javax.swing.JLabel();
-        fluid2Label = new javax.swing.JLabel();
-        fluid3Label = new javax.swing.JLabel();
-        volume1Label = new javax.swing.JLabel();
-        volume2Label = new javax.swing.JLabel();
-        volume3Label = new javax.swing.JLabel();
-        pumpBar1 = new javax.swing.JProgressBar();
-        pumpBar2 = new javax.swing.JProgressBar();
-        pumpBar3 = new javax.swing.JProgressBar();
-        humidityTilteLabel = new javax.swing.JLabel();
-        humidityNumLabel = new javax.swing.JLabel();
         callibratePanel = new javax.swing.JPanel();
         motor1DispenseButton = new javax.swing.JButton();
         motor1EmptyVolField = new javax.swing.JTextField();
@@ -181,6 +165,37 @@ public class MainWindow extends javax.swing.JFrame {
         interiorLightingToggle = new javax.swing.JToggleButton();
         bubblerToggle = new javax.swing.JToggleButton();
         laserToggle = new javax.swing.JToggleButton();
+        colorLabel = new javax.swing.JPanel();
+        buttonExit = new javax.swing.JButton();
+        lightSensorTitleLabel = new javax.swing.JLabel();
+        colorSensorTitleLabel = new javax.swing.JLabel();
+        tempSensorTitleLabel = new javax.swing.JLabel();
+        turbiditySensorTitleLabel = new javax.swing.JLabel();
+        lightNumLabel = new javax.swing.JLabel();
+        colorStringLabel = new javax.swing.JLabel();
+        turbidityNumLabel = new javax.swing.JLabel();
+        tempNumLabel = new javax.swing.JLabel();
+        brightnessPanel = new javax.swing.JPanel();
+        pumpsAllTitleLabel = new javax.swing.JLabel();
+        pump1TitleLabel = new javax.swing.JLabel();
+        pump2TitleLabel = new javax.swing.JLabel();
+        pump3TitleLabel = new javax.swing.JLabel();
+        fluid1Label = new javax.swing.JLabel();
+        fluid2Label = new javax.swing.JLabel();
+        fluid3Label = new javax.swing.JLabel();
+        volume1Label = new javax.swing.JLabel();
+        volume2Label = new javax.swing.JLabel();
+        volume3Label = new javax.swing.JLabel();
+        pumpBar1 = new javax.swing.JProgressBar();
+        pumpBar2 = new javax.swing.JProgressBar();
+        pumpBar3 = new javax.swing.JProgressBar();
+        humidityTilteLabel = new javax.swing.JLabel();
+        humidityNumLabel = new javax.swing.JLabel();
+        huePanel = new javax.swing.JPanel();
+        colorPanel = new javax.swing.JPanel();
+        jLabel6 = new javax.swing.JLabel();
+        hueLabel = new javax.swing.JLabel();
+        brightnessLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("\"Exit?\"");
@@ -191,197 +206,6 @@ public class MainWindow extends javax.swing.JFrame {
         setResizable(false);
 
         tabPane.setPreferredSize(new java.awt.Dimension(799, 488));
-
-        buttonExit.setText("Exit");
-        buttonExit.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buttonExitActionPerformed(evt);
-            }
-        });
-
-        lightSensorTitleLabel.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        lightSensorTitleLabel.setText("Light:");
-
-        colorSensorTitleLabel.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        colorSensorTitleLabel.setText("Color:");
-
-        tempSensorTitleLabel.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        tempSensorTitleLabel.setText("Temperature:");
-
-        turbiditySensorTitleLabel.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        turbiditySensorTitleLabel.setText("Turbidity");
-
-        lightNumLabel.setText("lightNum");
-
-        colorStringLabel.setText("colorString");
-
-        turbidityNumLabel.setText("turbidityNum");
-
-        tempNumLabel.setText("tempNum");
-
-        colorPanel.setBackground(new java.awt.Color(255, 204, 255));
-        colorPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        colorPanel.setPreferredSize(new java.awt.Dimension(50, 50));
-
-        javax.swing.GroupLayout colorPanelLayout = new javax.swing.GroupLayout(colorPanel);
-        colorPanel.setLayout(colorPanelLayout);
-        colorPanelLayout.setHorizontalGroup(
-            colorPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 48, Short.MAX_VALUE)
-        );
-        colorPanelLayout.setVerticalGroup(
-            colorPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 48, Short.MAX_VALUE)
-        );
-
-        pumpsAllTitleLabel.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        pumpsAllTitleLabel.setText("Pumps:");
-
-        pump1TitleLabel.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        pump1TitleLabel.setText("Pump 1:");
-        pump1TitleLabel.setToolTipText("");
-
-        pump2TitleLabel.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        pump2TitleLabel.setText("Pump 2:");
-
-        pump3TitleLabel.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        pump3TitleLabel.setText("Pump 3:");
-
-        fluid1Label.setText("fluid1");
-
-        fluid2Label.setText("fluid2");
-
-        fluid3Label.setText("fluid3");
-
-        volume1Label.setText("volume 1");
-
-        volume2Label.setText("volume 2");
-
-        volume3Label.setText("volume 3");
-
-        humidityTilteLabel.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        humidityTilteLabel.setText("Humidity:");
-
-        humidityNumLabel.setText("humidityNum");
-
-        javax.swing.GroupLayout sensorsPanelLayout = new javax.swing.GroupLayout(sensorsPanel);
-        sensorsPanel.setLayout(sensorsPanelLayout);
-        sensorsPanelLayout.setHorizontalGroup(
-            sensorsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(sensorsPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(sensorsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(sensorsPanelLayout.createSequentialGroup()
-                        .addGroup(sensorsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(sensorsPanelLayout.createSequentialGroup()
-                                .addComponent(lightSensorTitleLabel)
-                                .addGap(64, 64, 64)
-                                .addComponent(lightNumLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addGroup(sensorsPanelLayout.createSequentialGroup()
-                                .addComponent(colorSensorTitleLabel)
-                                .addGap(59, 59, 59)
-                                .addComponent(colorStringLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(colorPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(pumpsAllTitleLabel)
-                    .addGroup(sensorsPanelLayout.createSequentialGroup()
-                        .addGroup(sensorsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(pump1TitleLabel)
-                            .addComponent(pump2TitleLabel)
-                            .addComponent(pump3TitleLabel))
-                        .addGap(27, 27, 27)
-                        .addGroup(sensorsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(fluid1Label)
-                            .addComponent(fluid2Label)
-                            .addComponent(fluid3Label))
-                        .addGap(32, 32, 32)
-                        .addGroup(sensorsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(volume1Label)
-                            .addComponent(volume2Label)
-                            .addComponent(volume3Label))
-                        .addGap(33, 33, 33)
-                        .addGroup(sensorsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(pumpBar3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(pumpBar2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(pumpBar1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(sensorsPanelLayout.createSequentialGroup()
-                        .addGroup(sensorsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(turbiditySensorTitleLabel)
-                            .addComponent(humidityTilteLabel))
-                        .addGroup(sensorsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(sensorsPanelLayout.createSequentialGroup()
-                                .addGap(35, 35, 35)
-                                .addComponent(turbidityNumLabel))
-                            .addGroup(sensorsPanelLayout.createSequentialGroup()
-                                .addGap(43, 43, 43)
-                                .addComponent(humidityNumLabel))))
-                    .addGroup(sensorsPanelLayout.createSequentialGroup()
-                        .addComponent(tempSensorTitleLabel)
-                        .addGap(18, 18, 18)
-                        .addComponent(tempNumLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(416, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, sensorsPanelLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(buttonExit, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
-        sensorsPanelLayout.setVerticalGroup(
-            sensorsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(sensorsPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(sensorsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lightSensorTitleLabel)
-                    .addComponent(lightNumLabel))
-                .addGroup(sensorsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(sensorsPanelLayout.createSequentialGroup()
-                        .addGap(28, 28, 28)
-                        .addGroup(sensorsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(colorSensorTitleLabel)
-                            .addComponent(colorStringLabel)))
-                    .addGroup(sensorsPanelLayout.createSequentialGroup()
-                        .addGap(4, 4, 4)
-                        .addComponent(colorPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(23, 23, 23)
-                .addGroup(sensorsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(tempSensorTitleLabel)
-                    .addComponent(tempNumLabel))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(sensorsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(turbidityNumLabel)
-                    .addComponent(turbiditySensorTitleLabel))
-                .addGap(27, 27, 27)
-                .addGroup(sensorsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(humidityTilteLabel)
-                    .addComponent(humidityNumLabel))
-                .addGap(45, 45, 45)
-                .addComponent(pumpsAllTitleLabel)
-                .addGap(41, 41, 41)
-                .addGroup(sensorsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(sensorsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(pump1TitleLabel)
-                        .addComponent(fluid1Label)
-                        .addComponent(volume1Label))
-                    .addComponent(pumpBar1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(34, 34, 34)
-                .addGroup(sensorsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(pump2TitleLabel)
-                    .addComponent(fluid2Label)
-                    .addComponent(volume2Label)
-                    .addComponent(pumpBar2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(36, 36, 36)
-                .addGroup(sensorsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(pump3TitleLabel)
-                    .addGroup(sensorsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(pumpBar3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(sensorsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(fluid3Label)
-                            .addComponent(volume3Label))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
-                .addComponent(buttonExit)
-                .addContainerGap())
-        );
-
-        tabPane.addTab("Sensors", sensorsPanel);
 
         motor1DispenseButton.setText("Dispense Completely");
 
@@ -527,7 +351,7 @@ public class MainWindow extends javax.swing.JFrame {
                         .addGroup(callibratePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(motor1CallibrateButton)
                             .addComponent(motor1WorkingDoneLabel))))
-                .addContainerGap(260, Short.MAX_VALUE))
+                .addContainerGap(348, Short.MAX_VALUE))
         );
 
         tabPane.addTab("Calibration", callibratePanel);
@@ -712,7 +536,7 @@ public class MainWindow extends javax.swing.JFrame {
             .addGroup(editValuesPanelLayout.createSequentialGroup()
                 .addGap(353, 353, 353)
                 .addComponent(submitButton, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 354, Short.MAX_VALUE))
+                .addGap(0, 370, Short.MAX_VALUE))
         );
         editValuesPanelLayout.setVerticalGroup(
             editValuesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -798,12 +622,286 @@ public class MainWindow extends javax.swing.JFrame {
                         .addComponent(abortButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(refillButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 21, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 142, Short.MAX_VALUE)
                 .addComponent(submitButton, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
         tabPane.addTab("Control", editValuesPanel);
+
+        buttonExit.setText("Exit");
+        buttonExit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonExitActionPerformed(evt);
+            }
+        });
+
+        lightSensorTitleLabel.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        lightSensorTitleLabel.setText("Light:");
+        lightSensorTitleLabel.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        lightSensorTitleLabel.setMaximumSize(new java.awt.Dimension(50, 20));
+        lightSensorTitleLabel.setMinimumSize(new java.awt.Dimension(50, 20));
+
+        colorSensorTitleLabel.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        colorSensorTitleLabel.setText("Color:");
+        colorSensorTitleLabel.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        colorSensorTitleLabel.setMaximumSize(new java.awt.Dimension(50, 20));
+        colorSensorTitleLabel.setMinimumSize(new java.awt.Dimension(50, 20));
+
+        tempSensorTitleLabel.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        tempSensorTitleLabel.setText("Temperature:");
+        tempSensorTitleLabel.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        tempSensorTitleLabel.setMaximumSize(new java.awt.Dimension(50, 20));
+        tempSensorTitleLabel.setMinimumSize(new java.awt.Dimension(50, 20));
+
+        turbiditySensorTitleLabel.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        turbiditySensorTitleLabel.setText("Turbidity");
+        turbiditySensorTitleLabel.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        turbiditySensorTitleLabel.setMaximumSize(new java.awt.Dimension(50, 20));
+        turbiditySensorTitleLabel.setMinimumSize(new java.awt.Dimension(50, 20));
+
+        lightNumLabel.setText("lightNum");
+        lightNumLabel.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        lightNumLabel.setMaximumSize(new java.awt.Dimension(50, 20));
+        lightNumLabel.setMinimumSize(new java.awt.Dimension(50, 20));
+
+        colorStringLabel.setText("colorString");
+        colorStringLabel.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        colorStringLabel.setMaximumSize(new java.awt.Dimension(50, 20));
+        colorStringLabel.setMinimumSize(new java.awt.Dimension(50, 20));
+
+        turbidityNumLabel.setText("turbidityNum");
+        turbidityNumLabel.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        turbidityNumLabel.setMaximumSize(new java.awt.Dimension(50, 20));
+        turbidityNumLabel.setMinimumSize(new java.awt.Dimension(50, 20));
+
+        tempNumLabel.setText("tempNum");
+        tempNumLabel.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        tempNumLabel.setMaximumSize(new java.awt.Dimension(50, 20));
+        tempNumLabel.setMinimumSize(new java.awt.Dimension(50, 20));
+
+        brightnessPanel.setBackground(new java.awt.Color(255, 204, 255));
+        brightnessPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        brightnessPanel.setPreferredSize(new java.awt.Dimension(50, 50));
+
+        javax.swing.GroupLayout brightnessPanelLayout = new javax.swing.GroupLayout(brightnessPanel);
+        brightnessPanel.setLayout(brightnessPanelLayout);
+        brightnessPanelLayout.setHorizontalGroup(
+            brightnessPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 48, Short.MAX_VALUE)
+        );
+        brightnessPanelLayout.setVerticalGroup(
+            brightnessPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 48, Short.MAX_VALUE)
+        );
+
+        pumpsAllTitleLabel.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        pumpsAllTitleLabel.setText("Pumps:");
+
+        pump1TitleLabel.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        pump1TitleLabel.setText("Pump 1:");
+        pump1TitleLabel.setToolTipText("");
+
+        pump2TitleLabel.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        pump2TitleLabel.setText("Pump 2:");
+
+        pump3TitleLabel.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        pump3TitleLabel.setText("Pump 3:");
+
+        fluid1Label.setText("fluid1");
+
+        fluid2Label.setText("fluid2");
+
+        fluid3Label.setText("fluid3");
+
+        volume1Label.setText("volume 1");
+
+        volume2Label.setText("volume 2");
+
+        volume3Label.setText("volume 3");
+
+        humidityTilteLabel.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        humidityTilteLabel.setText("Humidity:");
+        humidityTilteLabel.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        humidityTilteLabel.setMaximumSize(new java.awt.Dimension(50, 20));
+        humidityTilteLabel.setMinimumSize(new java.awt.Dimension(50, 20));
+
+        humidityNumLabel.setText("humidityNum");
+        humidityNumLabel.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        humidityNumLabel.setMaximumSize(new java.awt.Dimension(50, 20));
+        humidityNumLabel.setMinimumSize(new java.awt.Dimension(50, 20));
+
+        huePanel.setBackground(new java.awt.Color(255, 204, 255));
+        huePanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        huePanel.setPreferredSize(new java.awt.Dimension(50, 50));
+
+        javax.swing.GroupLayout huePanelLayout = new javax.swing.GroupLayout(huePanel);
+        huePanel.setLayout(huePanelLayout);
+        huePanelLayout.setHorizontalGroup(
+            huePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 48, Short.MAX_VALUE)
+        );
+        huePanelLayout.setVerticalGroup(
+            huePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 48, Short.MAX_VALUE)
+        );
+
+        colorPanel.setBackground(new java.awt.Color(255, 204, 255));
+        colorPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        colorPanel.setPreferredSize(new java.awt.Dimension(50, 50));
+
+        javax.swing.GroupLayout colorPanelLayout = new javax.swing.GroupLayout(colorPanel);
+        colorPanel.setLayout(colorPanelLayout);
+        colorPanelLayout.setHorizontalGroup(
+            colorPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 48, Short.MAX_VALUE)
+        );
+        colorPanelLayout.setVerticalGroup(
+            colorPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 48, Short.MAX_VALUE)
+        );
+
+        jLabel6.setText("Color:");
+
+        hueLabel.setText("Hue:");
+
+        brightnessLabel.setText("Brightness:");
+
+        javax.swing.GroupLayout colorLabelLayout = new javax.swing.GroupLayout(colorLabel);
+        colorLabel.setLayout(colorLabelLayout);
+        colorLabelLayout.setHorizontalGroup(
+            colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(colorLabelLayout.createSequentialGroup()
+                .addGap(6, 6, 6)
+                .addGroup(colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(colorLabelLayout.createSequentialGroup()
+                        .addGroup(colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(pump1TitleLabel)
+                            .addComponent(pump2TitleLabel)
+                            .addComponent(pump3TitleLabel))
+                        .addGap(27, 27, 27)
+                        .addGroup(colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(fluid1Label)
+                            .addComponent(fluid2Label)
+                            .addComponent(fluid3Label))
+                        .addGap(32, 32, 32)
+                        .addGroup(colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(volume1Label)
+                            .addComponent(volume2Label)
+                            .addComponent(volume3Label))
+                        .addGap(33, 33, 33)
+                        .addGroup(colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(pumpBar3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(pumpBar2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(pumpBar1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(pumpsAllTitleLabel))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, colorLabelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(colorLabelLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(buttonExit, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap())
+                    .addGroup(colorLabelLayout.createSequentialGroup()
+                        .addGroup(colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(colorLabelLayout.createSequentialGroup()
+                                .addComponent(humidityTilteLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 73, Short.MAX_VALUE)
+                                .addGap(24, 24, 24))
+                            .addGroup(colorLabelLayout.createSequentialGroup()
+                                .addComponent(turbiditySensorTitleLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGap(27, 27, 27))
+                            .addComponent(tempSensorTitleLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(colorLabelLayout.createSequentialGroup()
+                                .addComponent(colorSensorTitleLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGap(46, 46, 46))
+                            .addGroup(colorLabelLayout.createSequentialGroup()
+                                .addComponent(lightSensorTitleLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGap(47, 47, 47)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(colorStringLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lightNumLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(tempNumLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(turbidityNumLabel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(humidityNumLabel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(47, 47, 47)
+                        .addGroup(colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(colorPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel6))
+                        .addGap(84, 84, 84)
+                        .addGroup(colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(huePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(hueLabel))
+                        .addGap(84, 84, 84)
+                        .addGroup(colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(brightnessLabel)
+                            .addComponent(brightnessPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 240, Short.MAX_VALUE))))
+        );
+        colorLabelLayout.setVerticalGroup(
+            colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(colorLabelLayout.createSequentialGroup()
+                .addGroup(colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(colorLabelLayout.createSequentialGroup()
+                        .addComponent(lightSensorTitleLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 51, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(colorSensorTitleLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 51, Short.MAX_VALUE)
+                            .addComponent(colorStringLabel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(colorLabelLayout.createSequentialGroup()
+                        .addGroup(colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(lightNumLabel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel6)
+                            .addComponent(hueLabel)
+                            .addComponent(brightnessLabel))
+                        .addGap(18, 18, 18)
+                        .addGroup(colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(huePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(colorPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(brightnessPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(tempSensorTitleLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+                    .addComponent(tempNumLabel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(turbiditySensorTitleLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+                    .addComponent(turbidityNumLabel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(humidityTilteLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+                    .addComponent(humidityNumLabel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 56, Short.MAX_VALUE)
+                .addComponent(pumpsAllTitleLabel)
+                .addGap(41, 41, 41)
+                .addGroup(colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(pump1TitleLabel)
+                        .addComponent(fluid1Label)
+                        .addComponent(volume1Label))
+                    .addComponent(pumpBar1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(34, 34, 34)
+                .addGroup(colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(pump2TitleLabel)
+                    .addComponent(fluid2Label)
+                    .addComponent(volume2Label)
+                    .addComponent(pumpBar2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(36, 36, 36)
+                .addGroup(colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(pump3TitleLabel)
+                    .addGroup(colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(pumpBar3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(fluid3Label)
+                            .addComponent(volume3Label))))
+                .addGap(39, 39, 39)
+                .addComponent(buttonExit)
+                .addContainerGap())
+        );
+
+        tabPane.addTab("Sensors", colorLabel);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -811,12 +909,12 @@ public class MainWindow extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(tabPane, javax.swing.GroupLayout.DEFAULT_SIZE, 797, Short.MAX_VALUE)
+                .addComponent(tabPane, javax.swing.GroupLayout.DEFAULT_SIZE, 810, Short.MAX_VALUE)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(tabPane, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 507, Short.MAX_VALUE)
+            .addComponent(tabPane, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 616, Short.MAX_VALUE)
         );
 
         pack();
@@ -875,6 +973,8 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JButton abortButton1;
     private javax.swing.JButton abortButton2;
     private javax.swing.JButton abortButton3;
+    private javax.swing.JLabel brightnessLabel;
+    private javax.swing.JPanel brightnessPanel;
     private javax.swing.JLabel bubblerLabel;
     private javax.swing.JToggleButton bubblerToggle;
     private javax.swing.JButton buttonExit;
@@ -885,6 +985,7 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.ButtonGroup buttonGroup6;
     private javax.swing.JPanel callibratePanel;
     private javax.swing.JRadioButton celciusRB;
+    private javax.swing.JPanel colorLabel;
     private javax.swing.JPanel colorPanel;
     private javax.swing.JLabel colorSensorTitleLabel;
     private javax.swing.JLabel colorStringLabel;
@@ -899,6 +1000,8 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JLabel fluid1Label;
     private javax.swing.JLabel fluid2Label;
     private javax.swing.JLabel fluid3Label;
+    private javax.swing.JLabel hueLabel;
+    private javax.swing.JPanel huePanel;
     private javax.swing.JLabel humidityNumLabel;
     private javax.swing.JLabel humidityTilteLabel;
     private javax.swing.JLabel interiorLightingLabel;
@@ -908,6 +1011,7 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
@@ -957,7 +1061,6 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JButton refillButton1;
     private javax.swing.JButton refillButton2;
     private javax.swing.JButton refillButton3;
-    private javax.swing.JPanel sensorsPanel;
     private javax.swing.JLabel stirrerLabel;
     private javax.swing.JToggleButton stirrerToggle;
     private javax.swing.JButton submitButton;
