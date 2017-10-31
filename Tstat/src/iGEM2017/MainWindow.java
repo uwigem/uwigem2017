@@ -897,10 +897,20 @@ public class MainWindow extends javax.swing.JFrame {
         tabPane.addTab("Control", editValuesPanel);
 
         motor1DispenseButton.setText("Dispense Completely");
+        motor1DispenseButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                motor1DispenseButtonMousePressed(evt);
+            }
+        });
 
         motor1EmptyVolLabel.setText("Volume at completion (ml)");
 
         motor1FillButton.setText("Fill Completely");
+        motor1FillButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                motor1FillButtonMousePressed(evt);
+            }
+        });
 
         motor1FullVolLabel.setText("Volume at full (ml)");
 
@@ -915,10 +925,20 @@ public class MainWindow extends javax.swing.JFrame {
         motor2WorkingDoneLabel.setText("Working...");
 
         motor2FillButton.setText("Fill Completely");
+        motor2FillButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                motor2FillButtonMousePressed(evt);
+            }
+        });
 
         motor2FullVolLabel.setText("Volume at full (ml)");
 
         motor2DispenseButton.setText("Dispense Completely");
+        motor2DispenseButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                motor2DispenseButtonMousePressed(evt);
+            }
+        });
 
         motor3EmptyVolLabel.setText("Volume at completion (ml)");
 
@@ -927,10 +947,20 @@ public class MainWindow extends javax.swing.JFrame {
         motor3WorkingDoneLabel.setText("Working...");
 
         motor3FillButton.setText("Fill Completely");
+        motor3FillButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                motor3FillButtonMousePressed(evt);
+            }
+        });
 
         motor3FullVolLabel.setText("Volume at full (ml)");
 
         motor3DispenseButton.setText("Dispense Completely");
+        motor3DispenseButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                motor3DispenseButtonMousePressed(evt);
+            }
+        });
 
         javax.swing.GroupLayout callibratePanelLayout = new javax.swing.GroupLayout(callibratePanel);
         callibratePanel.setLayout(callibratePanelLayout);
@@ -1093,6 +1123,30 @@ public class MainWindow extends javax.swing.JFrame {
     private void refillButton3MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_refillButton3MousePressed
         //pump3.fillCompletely();
     }//GEN-LAST:event_refillButton3MousePressed
+
+    private void motor1DispenseButtonMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_motor1DispenseButtonMousePressed
+        //pump1.dispenseCompletely();
+    }//GEN-LAST:event_motor1DispenseButtonMousePressed
+
+    private void motor2DispenseButtonMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_motor2DispenseButtonMousePressed
+        //pump2.dispenseCompletely();
+    }//GEN-LAST:event_motor2DispenseButtonMousePressed
+
+    private void motor3DispenseButtonMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_motor3DispenseButtonMousePressed
+        //pump3.dispenseCompletely();
+    }//GEN-LAST:event_motor3DispenseButtonMousePressed
+
+    private void motor1FillButtonMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_motor1FillButtonMousePressed
+        //pump1.fillCompletely();
+    }//GEN-LAST:event_motor1FillButtonMousePressed
+
+    private void motor2FillButtonMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_motor2FillButtonMousePressed
+        //pump2.fillCompletely();
+    }//GEN-LAST:event_motor2FillButtonMousePressed
+
+    private void motor3FillButtonMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_motor3FillButtonMousePressed
+        //pump3.fillCompletely();
+    }//GEN-LAST:event_motor3FillButtonMousePressed
 
     /**
      * @param args the command line arguments

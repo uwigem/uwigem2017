@@ -1352,6 +1352,9 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Dispense Completely"/>
               </Properties>
+              <Events>
+                <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="motor1DispenseButtonMousePressed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JTextField" name="motor1EmptyVolField">
             </Component>
@@ -1364,6 +1367,9 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Fill Completely"/>
               </Properties>
+              <Events>
+                <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="motor1FillButtonMousePressed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JTextField" name="motor1FullVolField">
             </Component>
@@ -1403,6 +1409,9 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Fill Completely"/>
               </Properties>
+              <Events>
+                <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="motor2FillButtonMousePressed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JTextField" name="motor2FullVolField">
             </Component>
@@ -1415,6 +1424,9 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Dispense Completely"/>
               </Properties>
+              <Events>
+                <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="motor2DispenseButtonMousePressed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JTextField" name="motor3EmptyVolField">
             </Component>
@@ -1437,6 +1449,9 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Fill Completely"/>
               </Properties>
+              <Events>
+                <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="motor3FillButtonMousePressed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JTextField" name="motor3FullVolField">
             </Component>
@@ -1449,6 +1464,9 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Dispense Completely"/>
               </Properties>
+              <Events>
+                <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="motor3DispenseButtonMousePressed"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>
