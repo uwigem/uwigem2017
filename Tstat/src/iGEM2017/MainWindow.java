@@ -55,8 +55,14 @@ public class MainWindow extends javax.swing.JFrame {
                 double humidityNum;
                 double lightNum;
                 try {
-                    colorStringLabel.setText(colorRead.getNormalizedReading().getRed() + "," + colorRead.getNormalizedReading().getGreen() + "," + colorRead.getNormalizedReading().getBlue());
-                    huePanel.setBackground(colorRead.readingToHue(colorRead.getNormalizedReading()));
+                    RgbSensor.ColorReading color;
+                    color = colorRead.getNormalizedReading();
+                    Color colorPanelBackground = new Color (color.getRed(), color.getGreen(), color.getBlue());
+                    colorPanel.setBackground(colorPanelBackground);
+                    colorStringLabel.setText(color.getRed() + "," + color.getGreen() + "," + color.getBlue());
+                    huePanel.setBackground(colorRead.readingToHue(color));
+                    Color brightnessPanelColor = new Color (color.getClear(), color.getClear(), color.getClear());
+                    brightnessPanel.setBackground(brightnessPanelColor);               
                     
                     tempNum = tempRead.getReading(TempSensor.MEASURE.CELSIUS);
                     tempNumLabel.setText(d.format(tempNum));
