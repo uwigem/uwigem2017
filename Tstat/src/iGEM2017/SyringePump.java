@@ -157,7 +157,7 @@ public class SyringePump {
         }
 
         return false;
-    }
+    }    
 
     /**
      * Instructs the motor to take one step in the positive or negative
