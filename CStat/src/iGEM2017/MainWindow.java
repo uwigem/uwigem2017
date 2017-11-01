@@ -71,7 +71,7 @@ public class MainWindow extends javax.swing.JFrame {
         initComponents();
         gpio = GpioFactory.getInstance(); // Singleton instance
         mcpProviderOne = new MCP23017GpioProvider(I2CBus.BUS_1, 0x27);
-        mcpProviderTwo = new MCP23017GpioProvider(I2CBus.BUS_2, 0x26);
+        mcpProviderTwo = new MCP23017GpioProvider(I2CBus.BUS_1, 0x26);
         // Initialize syringe pumps
         initPumps();
 
