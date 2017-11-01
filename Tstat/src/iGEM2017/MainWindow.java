@@ -16,7 +16,17 @@
  */
 package iGEM2017;
 
+import com.pi4j.gpio.extension.mcp.MCP23017GpioProvider;
+import com.pi4j.gpio.extension.mcp.MCP23017Pin;
+import com.pi4j.io.gpio.GpioController;
+import com.pi4j.io.gpio.GpioFactory;
+import com.pi4j.io.gpio.GpioPinDigitalInput;
+import com.pi4j.io.gpio.GpioPinDigitalOutput;
+import com.pi4j.io.gpio.PinPullResistance;
+import com.pi4j.io.gpio.PinState;
+import com.pi4j.io.i2c.I2CBus;
 import com.pi4j.io.i2c.I2CFactory;
+
 import java.awt.Color;
 import java.awt.Insets;
 import java.awt.event.ActionEvent;
@@ -42,18 +52,37 @@ public class MainWindow extends javax.swing.JFrame {
     /**
      * Creates new form MainWindow
      */
-    boolean isRecording = false;
+    private boolean isRecording = false;
+    private SyringePump pump1, pump2, pump3;
+
+    // GPIO Controller for Raspberry Pi pins
+    private final GpioController gpio;
+
+    // GPIO expander chips
+    private final MCP23017GpioProvider mcpProviderOne;
+    private final MCP23017GpioProvider mcpProviderTwo;
+
+    // Sensor controllers
+    private final RgbSensor colorRead;
+    private final TempSensor tempRead;
+    private final LuxSensor lightRead;
+
     public MainWindow() throws IOException, I2CFactory.UnsupportedBusNumberException, InterruptedException {
         initComponents();
-        RgbSensor colorRead = new RgbSensor();
-        TempSensor tempRead = new TempSensor();
-        LuxSensor lightRead = new LuxSensor();
-        DecimalFormat d = new DecimalFormat ("#.#######");
-        //initialize syringe pumps
+        gpio = GpioFactory.getInstance(); // Singleton instance
+        mcpProviderOne = new MCP23017GpioProvider(I2CBus.BUS_1, 0x27);
+        mcpProviderTwo = new MCP23017GpioProvider(I2CBus.BUS_2, 0x26);
+        // Initialize syringe pumps
+        initPumps();
+
+        colorRead = new RgbSensor();
+        tempRead = new TempSensor();
+        lightRead = new LuxSensor();
+        DecimalFormat d = new DecimalFormat("#.#######");
         BufferedWriter csvFile = new BufferedWriter(new FileWriter("file.csv"));
         csvFile.write("Color, Lux, Temp, Humidity");
         csvFile.newLine();
-        
+
         Timer actionTime = new Timer(300, new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent ae) {
@@ -63,19 +92,19 @@ public class MainWindow extends javax.swing.JFrame {
                 try {
                     RgbSensor.ColorReading color;
                     color = colorRead.getNormalizedReading();
-                    Color colorPanelBackground = new Color (color.getRed(), color.getGreen(), color.getBlue());
+                    Color colorPanelBackground = new Color(color.getRed(), color.getGreen(), color.getBlue());
                     colorPanel.setBackground(colorPanelBackground);
                     colorStringLabel.setText(color.getRed() + "," + color.getGreen() + "," + color.getBlue());
                     huePanel.setBackground(colorRead.readingToHue(color));
-                    Color brightnessPanelColor = new Color (color.getClear(), color.getClear(), color.getClear());
-                    brightnessPanel.setBackground(brightnessPanelColor);               
-                    
+                    Color brightnessPanelColor = new Color(color.getClear(), color.getClear(), color.getClear());
+                    brightnessPanel.setBackground(brightnessPanelColor);
+
                     tempNum = tempRead.getReading(TempSensor.MEASURE.CELSIUS);
                     tempNumLabel.setText(d.format(tempNum));
-                    
+
                     humidityNum = tempRead.getHumidity();
                     humidityNumLabel.setText(d.format(humidityNum));
-                    
+
                     if (lightRead.getReading() < .00035) {
                         lightNum = lightRead.getReading();
                         lightNumLabel.setText("0");
@@ -83,9 +112,9 @@ public class MainWindow extends javax.swing.JFrame {
                         lightNum = lightRead.getReading();
                         lightNumLabel.setText(d.format(lightNum));
                     }
-                    if (isRecording == true){
-                   csvFile.write(color.getRed()+"."+color.getGreen()+"."+color.getBlue()+","+lightNum+","+tempNum+","+humidityNum);
-                   csvFile.newLine();
+                    if (isRecording == true) {
+                        csvFile.write(color.getRed() + "." + color.getGreen() + "." + color.getBlue() + "," + lightNum + "," + tempNum + "," + humidityNum);
+                        csvFile.newLine();
                     }
                 } catch (Exception ex) {
                     Logger.getLogger(MainWindow.class.getName()).log(Level.SEVERE, null, ex);
@@ -94,6 +123,44 @@ public class MainWindow extends javax.swing.JFrame {
         });
         actionTime.start();
 
+    }
+
+    private void initPumps() {
+
+        // Provision direction control pins as outputs
+        GpioPinDigitalOutput dir1 = gpio.provisionDigitalOutputPin(mcpProviderOne, MCP23017Pin.GPIO_A7, "Pump 1 Direction", PinState.LOW);
+        GpioPinDigitalOutput dir2 = gpio.provisionDigitalOutputPin(mcpProviderOne, MCP23017Pin.GPIO_B0, "Pump 2 Direction", PinState.LOW);
+        GpioPinDigitalOutput dir3 = gpio.provisionDigitalOutputPin(mcpProviderOne, MCP23017Pin.GPIO_A4, "Pump 3 Direction", PinState.LOW);
+
+        // Provision step control pins as outputs
+        GpioPinDigitalOutput step1 = gpio.provisionDigitalOutputPin(mcpProviderOne, MCP23017Pin.GPIO_A6, "Pump 1 Step", PinState.LOW);
+        GpioPinDigitalOutput step2 = gpio.provisionDigitalOutputPin(mcpProviderOne, MCP23017Pin.GPIO_B1, "Pump 2 Step", PinState.LOW);
+        GpioPinDigitalOutput step3 = gpio.provisionDigitalOutputPin(mcpProviderOne, MCP23017Pin.GPIO_A3, "Pump 3 Step", PinState.LOW);
+
+        // Provision enable pins as outputs. 
+        // Note that the pin state "high" means the pump is disabled;
+        // the enable pump on the chip is inverted.
+        GpioPinDigitalOutput enable1 = gpio.provisionDigitalOutputPin(mcpProviderOne, MCP23017Pin.GPIO_A5, "Pump 1 ~Enable", PinState.HIGH);
+        GpioPinDigitalOutput enable2 = gpio.provisionDigitalOutputPin(mcpProviderOne, MCP23017Pin.GPIO_B7, "Pump 2 ~Enable", PinState.HIGH);
+        GpioPinDigitalOutput enable3 = gpio.provisionDigitalOutputPin(mcpProviderOne, MCP23017Pin.GPIO_A2, "Pump 3 ~Enable", PinState.HIGH);
+
+        // Provision end-stop pins as inputs. 
+        // These pins tell the pump when the syringe
+        // is in its MINIMUM possible position (empty).
+        GpioPinDigitalInput min1 = gpio.provisionDigitalInputPin(this.mcpProviderTwo, MCP23017Pin.GPIO_A0, "Pump 1 Min", PinPullResistance.PULL_UP);
+        GpioPinDigitalInput min2 = gpio.provisionDigitalInputPin(this.mcpProviderTwo, MCP23017Pin.GPIO_A0, "Pump 2 Min", PinPullResistance.PULL_UP);
+        GpioPinDigitalInput min3 = gpio.provisionDigitalInputPin(this.mcpProviderTwo, MCP23017Pin.GPIO_A0, "Pump 3 Min", PinPullResistance.PULL_UP);
+
+        // Provision end-stop pins as inputs.
+        // These pins tell the pump when the syringe
+        // is in its MAXIMUM possible position (full).
+        GpioPinDigitalInput max1 = gpio.provisionDigitalInputPin(this.mcpProviderTwo, MCP23017Pin.GPIO_A0, "Pump 1 Min", PinPullResistance.PULL_UP);
+        GpioPinDigitalInput max2 = gpio.provisionDigitalInputPin(this.mcpProviderTwo, MCP23017Pin.GPIO_A0, "Pump 2 Min", PinPullResistance.PULL_UP);
+        GpioPinDigitalInput max3 = gpio.provisionDigitalInputPin(this.mcpProviderTwo, MCP23017Pin.GPIO_A0, "Pump 3 Min", PinPullResistance.PULL_UP);
+
+        pump1 = new SyringePump(step1, dir1, enable1, min1, max1);
+        pump2 = new SyringePump(step2, dir2, enable2, min2, max2);
+        pump3 = new SyringePump(step3, dir3, enable3, min3, max3);
     }
 
     /**
@@ -1108,10 +1175,11 @@ public class MainWindow extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(goButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(4, 4, 4)))
-                .addGroup(editValuesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(abortButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(editValuesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(abortButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(abortButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(editValuesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(abortButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(abortButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(7, 7, 7)
                 .addGroup(editValuesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(refillButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1150,26 +1218,25 @@ public class MainWindow extends javax.swing.JFrame {
     }//GEN-LAST:event_buttonExitActionPerformed
 
     private void recordingButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_recordingButtonMouseClicked
-         if (isRecording == false){
+        if (isRecording == false) {
             isRecording = true;
             recordingButton.setText("Stop Recording");
-        }
-        else{
+        } else {
             recordingButton.setText("Start Recording");
             isRecording = false;
         }
     }//GEN-LAST:event_recordingButtonMouseClicked
 
     private void refillButton1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_refillButton1MousePressed
-        //pump1.fillCompletely();
+        pump1.fillCompletely();
     }//GEN-LAST:event_refillButton1MousePressed
 
     private void refillButton2MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_refillButton2MousePressed
-        //pump2.fillCompletely();
+        pump2.fillCompletely();
     }//GEN-LAST:event_refillButton2MousePressed
 
     private void refillButton3MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_refillButton3MousePressed
-        //pump3.fillCompletely();
+        pump3.fillCompletely();
     }//GEN-LAST:event_refillButton3MousePressed
 
     private void motor1DispenseButtonMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_motor1DispenseButtonMousePressed
@@ -1201,7 +1268,7 @@ public class MainWindow extends javax.swing.JFrame {
      */
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
-       
+
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
