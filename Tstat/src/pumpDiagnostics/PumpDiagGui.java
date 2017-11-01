@@ -52,7 +52,7 @@ public class PumpDiagGui extends javax.swing.JFrame {
     public PumpDiagGui() throws I2CFactory.UnsupportedBusNumberException, IOException, IOException {
         gpio = GpioFactory.getInstance(); // Singleton instance
         mcpProviderOne = new MCP23017GpioProvider(I2CBus.BUS_1, 0x27);
-        mcpProviderTwo = new MCP23017GpioProvider(I2CBus.BUS_2, 0x26);
+        mcpProviderTwo = new MCP23017GpioProvider(I2CBus.BUS_1, 0x26);
 
         // Provision direction control pins as outputs
         GpioPinDigitalOutput dir1 = gpio.provisionDigitalOutputPin(mcpProviderOne, MCP23017Pin.GPIO_A7, "Pump 1 Direction", PinState.LOW);
