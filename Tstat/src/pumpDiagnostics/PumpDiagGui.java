@@ -74,16 +74,16 @@ public class PumpDiagGui extends javax.swing.JFrame {
         // Provision end-stop pins as inputs. 
         // These pins tell the pump when the syringe
         // is in its MINIMUM possible position (empty).
-        GpioPinDigitalInput min1 = gpio.provisionDigitalInputPin(this.mcpProviderTwo, MCP23017Pin.GPIO_A0, "Pump 1 Min", PinPullResistance.PULL_UP);
-        GpioPinDigitalInput min2 = gpio.provisionDigitalInputPin(this.mcpProviderTwo, MCP23017Pin.GPIO_A0, "Pump 2 Min", PinPullResistance.PULL_UP);
-        GpioPinDigitalInput min3 = gpio.provisionDigitalInputPin(this.mcpProviderTwo, MCP23017Pin.GPIO_A0, "Pump 3 Min", PinPullResistance.PULL_UP);
+        GpioPinDigitalInput min1 = gpio.provisionDigitalInputPin(this.mcpProviderTwo, MCP23017Pin.GPIO_B5, "Pump 1 Min", PinPullResistance.PULL_UP);
+        GpioPinDigitalInput min2 = gpio.provisionDigitalInputPin(this.mcpProviderTwo, MCP23017Pin.GPIO_B4, "Pump 2 Min", PinPullResistance.PULL_UP);
+        GpioPinDigitalInput min3 = gpio.provisionDigitalInputPin(this.mcpProviderTwo, MCP23017Pin.GPIO_B3, "Pump 3 Min", PinPullResistance.PULL_UP);
 
         // Provision end-stop pins as inputs.
         // These pins tell the pump when the syringe
         // is in its MAXIMUM possible position (full).
-        GpioPinDigitalInput max1 = gpio.provisionDigitalInputPin(this.mcpProviderTwo, MCP23017Pin.GPIO_A0, "Pump 1 Min", PinPullResistance.PULL_UP);
-        GpioPinDigitalInput max2 = gpio.provisionDigitalInputPin(this.mcpProviderTwo, MCP23017Pin.GPIO_A0, "Pump 2 Min", PinPullResistance.PULL_UP);
-        GpioPinDigitalInput max3 = gpio.provisionDigitalInputPin(this.mcpProviderTwo, MCP23017Pin.GPIO_A0, "Pump 3 Min", PinPullResistance.PULL_UP);
+        GpioPinDigitalInput max1 = gpio.provisionDigitalInputPin(this.mcpProviderTwo, MCP23017Pin.GPIO_B1, "Pump 1 Min", PinPullResistance.PULL_UP);
+        GpioPinDigitalInput max2 = gpio.provisionDigitalInputPin(this.mcpProviderTwo, MCP23017Pin.GPIO_B2, "Pump 2 Min", PinPullResistance.PULL_UP);
+        GpioPinDigitalInput max3 = gpio.provisionDigitalInputPin(this.mcpProviderTwo, MCP23017Pin.GPIO_B6, "Pump 3 Min", PinPullResistance.PULL_UP);
 
         pump1 = new SyringePump(step1, dir1, enable1, min1, max1);
         pump2 = new SyringePump(step2, dir2, enable2, min2, max2);
