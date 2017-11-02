@@ -32,6 +32,7 @@ import java.awt.Insets;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.BufferedWriter;
+import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.text.DecimalFormat;
@@ -66,7 +67,9 @@ public class MainWindow extends javax.swing.JFrame {
     private final RgbSensor colorRead;
     private final TempSensor tempRead;
     private final LuxSensor lightRead;
-
+    private static FileWriter csvFileWrite;
+    private static int fileNumber = 1;
+    private static File csvFile;
     public MainWindow() throws IOException, I2CFactory.UnsupportedBusNumberException, InterruptedException {
         initComponents();
         gpio = GpioFactory.getInstance(); // Singleton instance
@@ -78,14 +81,14 @@ public class MainWindow extends javax.swing.JFrame {
         // mcpProviderTwo = new MCP23017GpioProvider(I2CBus.BUS_1, 0x26);
         // Initialize syringe pumps
         // initPumps();
-
+        
         colorRead = new RgbSensor();
         tempRead = new TempSensor();
         lightRead = new LuxSensor();
         DecimalFormat d = new DecimalFormat("#.#######");
-        BufferedWriter csvFile = new BufferedWriter(new FileWriter("file.csv"));
-        csvFile.write("Color, Lux, Temp, Humidity");
-        csvFile.newLine();
+       
+        
+        
 
         Timer actionTime = new Timer(300, new ActionListener() {
             @Override
@@ -117,8 +120,8 @@ public class MainWindow extends javax.swing.JFrame {
                         lightNumLabel.setText(d.format(lightNum));
                     }
                     if (isRecording == true) {
-                        csvFile.write(color.getRed() + "." + color.getGreen() + "." + color.getBlue() + "," + lightNum + "," + tempNum + "," + humidityNum);
-                        csvFile.newLine();
+                        csvFileWrite.write(color.getRed() + "." + color.getGreen() + "." + color.getBlue() + "," + lightNum + "," + tempNum + "," + humidityNum);
+                        csvFileWrite.write("\r\n");
                     }
                 } catch (Exception ex) {
                     Logger.getLogger(MainWindow.class.getName()).log(Level.SEVERE, null, ex);
@@ -307,6 +310,7 @@ public class MainWindow extends javax.swing.JFrame {
 
         tabPane.setPreferredSize(new java.awt.Dimension(799, 488));
 
+        buttonExit.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         buttonExit.setText("Exit");
         buttonExit.setPreferredSize(new java.awt.Dimension(119, 32));
         buttonExit.addActionListener(new java.awt.event.ActionListener() {
@@ -460,6 +464,7 @@ public class MainWindow extends javax.swing.JFrame {
         brightnessLabel.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         brightnessLabel.setText("Brightness:");
 
+        recordingButton.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         recordingButton.setText("Start Recording");
         recordingButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -519,34 +524,33 @@ public class MainWindow extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 115, Short.MAX_VALUE)
                         .addGroup(colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(pumpsAllTitleLabel1)
-                            .addGroup(colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addGroup(colorLabelLayout.createSequentialGroup()
-                                    .addGroup(colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addGroup(colorLabelLayout.createSequentialGroup()
-                                            .addComponent(pump1TitleLabel)
-                                            .addGap(27, 27, 27)
-                                            .addComponent(fluid1Label)
-                                            .addGap(32, 32, 32)
-                                            .addComponent(volume1Label))
-                                        .addGroup(colorLabelLayout.createSequentialGroup()
-                                            .addComponent(pump2TitleLabel)
-                                            .addGap(27, 27, 27)
-                                            .addComponent(fluid2Label)
-                                            .addGap(32, 32, 32)
-                                            .addComponent(volume2Label))
-                                        .addComponent(pump3TitleLabel)
-                                        .addGroup(colorLabelLayout.createSequentialGroup()
-                                            .addGap(102, 102, 102)
-                                            .addComponent(fluid3Label)
-                                            .addGap(32, 32, 32)
-                                            .addComponent(volume3Label)))
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addGroup(colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addComponent(pumpBar3, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(pumpBar2, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(pumpBar1, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addComponent(recordingButton, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(buttonExit, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                            .addGroup(colorLabelLayout.createSequentialGroup()
+                                .addGroup(colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(colorLabelLayout.createSequentialGroup()
+                                        .addComponent(pump1TitleLabel)
+                                        .addGap(27, 27, 27)
+                                        .addComponent(fluid1Label)
+                                        .addGap(32, 32, 32)
+                                        .addComponent(volume1Label))
+                                    .addGroup(colorLabelLayout.createSequentialGroup()
+                                        .addComponent(pump2TitleLabel)
+                                        .addGap(27, 27, 27)
+                                        .addComponent(fluid2Label)
+                                        .addGap(32, 32, 32)
+                                        .addComponent(volume2Label))
+                                    .addComponent(pump3TitleLabel)
+                                    .addGroup(colorLabelLayout.createSequentialGroup()
+                                        .addGap(102, 102, 102)
+                                        .addComponent(fluid3Label)
+                                        .addGap(32, 32, 32)
+                                        .addComponent(volume3Label)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(buttonExit, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(recordingButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 214, Short.MAX_VALUE)
+                                    .addComponent(pumpBar3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(pumpBar2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(pumpBar1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))))
                 .addGap(169, 169, 169))
         );
 
@@ -1245,10 +1249,26 @@ public class MainWindow extends javax.swing.JFrame {
     private void recordingButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_recordingButtonMouseClicked
         if (isRecording == false) {
             isRecording = true;
+            
+            try {
+                csvFile = new File ("csv"+fileNumber+".csv");
+                csvFileWrite = new FileWriter (csvFile);
+                csvFileWrite.write("Color , Light , Temp , Humidity");
+                csvFileWrite.write("\r\n");
+            } catch (IOException ex) {
+                Logger.getLogger(MainWindow.class.getName()).log(Level.SEVERE, null, ex);
+            }
             recordingButton.setText("Stop Recording");
         } else {
-            recordingButton.setText("Start Recording");
             isRecording = false;
+            try {
+                csvFileWrite.close();
+            } catch (IOException ex) {
+                Logger.getLogger(MainWindow.class.getName()).log(Level.SEVERE, null, ex);
+            }
+                fileNumber++;
+            recordingButton.setText("Start Recording");
+            
         }
     }//GEN-LAST:event_recordingButtonMouseClicked
 
