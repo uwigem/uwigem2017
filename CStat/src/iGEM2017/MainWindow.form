@@ -45,16 +45,16 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="1" attributes="0">
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="tabPane" pref="852" max="32767" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
-          </Group>
+          <Component id="tabPane" alignment="1" pref="1169" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="tabPane" alignment="1" pref="566" max="32767" attributes="0"/>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="tabPane" pref="663" max="32767" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+          </Group>
       </Group>
     </DimensionLayout>
   </Layout>
@@ -80,188 +80,196 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
+                  <Group type="102" alignment="1" attributes="0">
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Group type="102" alignment="1" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="pump1TitleLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="pump2TitleLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="pump3TitleLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="humidityTilteLabel" linkSize="1" min="-2" pref="108" max="-2" attributes="0"/>
+                                  <Component id="turbiditySensorTitleLabel" linkSize="1" alignment="0" min="-2" pref="108" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="tempSensorTitleLabel" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="turbidityNumLabel" min="-2" max="-2" attributes="0"/>
+                                          <Component id="tempNumLabel" min="-2" pref="114" max="-2" attributes="0"/>
+                                          <Component id="humidityNumLabel" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
                               </Group>
-                              <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="fluid1Label" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="fluid2Label" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="fluid3Label" alignment="0" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="volume1Label" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="volume2Label" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="volume3Label" alignment="0" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="pumpBar1" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="pumpBar2" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="pumpBar3" alignment="0" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace max="32767" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="recordingButton" min="-2" pref="130" max="-2" attributes="0"/>
-                                  <Component id="buttonExit" min="-2" pref="130" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" pref="63" max="-2" attributes="0"/>
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           </Group>
                           <Group type="102" attributes="0">
-                              <Component id="sensorTitle" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                                      <Component id="sensorTitle" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Component id="colorSensorTitleLabel" alignment="0" min="-2" pref="102" max="-2" attributes="0"/>
+                                                  <Component id="lightSensorTitleLabel" alignment="0" min="-2" pref="102" max="-2" attributes="0"/>
+                                              </Group>
+                                              <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Component id="lightNumLabel" min="-2" pref="79" max="-2" attributes="0"/>
+                                                  <Component id="colorStringLabel" min="-2" pref="67" max="-2" attributes="0"/>
+                                              </Group>
+                                          </Group>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <EmptySpace min="143" pref="143" max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Component id="huePanel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="hueLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                              <EmptySpace min="-2" pref="98" max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Component id="brightnessLabel" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="brightnessPanel" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                          </Group>
+                                          <Component id="colorPanel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabel6" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                              </Group>
+                              <EmptySpace pref="115" max="32767" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="pumpsAllTitleLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Group type="103" alignment="0" groupAlignment="1" attributes="0">
+                                      <Group type="102" alignment="1" attributes="0">
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <Component id="pump1TitleLabel" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                                                  <Component id="fluid1Label" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
+                                                  <Component id="volume1Label" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <Component id="pump2TitleLabel" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                                                  <Component id="fluid2Label" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
+                                                  <Component id="volume2Label" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Component id="pump3TitleLabel" min="-2" max="-2" attributes="0"/>
+                                              <Group type="102" attributes="0">
+                                                  <EmptySpace min="102" pref="102" max="-2" attributes="0"/>
+                                                  <Component id="fluid3Label" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
+                                                  <Component id="volume3Label" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                          </Group>
+                                          <EmptySpace min="-2" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                              <Component id="pumpBar3" min="-2" pref="214" max="-2" attributes="0"/>
+                                              <Component id="pumpBar2" min="-2" pref="214" max="-2" attributes="0"/>
+                                              <Component id="pumpBar1" min="-2" pref="214" max="-2" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                      <Component id="recordingButton" alignment="1" min="-2" pref="146" max="-2" attributes="0"/>
+                                      <Component id="buttonExit" alignment="1" min="-2" pref="146" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
                           </Group>
                       </Group>
-                  </Group>
-                  <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="humidityTilteLabel" pref="96" max="32767" attributes="0"/>
-                              <EmptySpace min="24" pref="24" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="turbiditySensorTitleLabel" max="32767" attributes="0"/>
-                              <EmptySpace min="27" pref="27" max="-2" attributes="0"/>
-                          </Group>
-                          <Component id="tempSensorTitleLabel" alignment="0" max="32767" attributes="0"/>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="colorSensorTitleLabel" max="32767" attributes="0"/>
-                              <EmptySpace min="46" pref="46" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="lightSensorTitleLabel" max="32767" attributes="0"/>
-                              <EmptySpace min="47" pref="47" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="colorStringLabel" min="-2" pref="67" max="-2" attributes="0"/>
-                          <Component id="lightNumLabel" min="-2" pref="79" max="-2" attributes="0"/>
-                          <Component id="humidityNumLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                              <Component id="tempNumLabel" alignment="0" max="32767" attributes="0"/>
-                              <Component id="turbidityNumLabel" alignment="0" max="32767" attributes="0"/>
-                          </Group>
-                      </Group>
-                      <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="colorPanel" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel6" alignment="0" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="-2" pref="84" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="huePanel" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="hueLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="-2" pref="84" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="brightnessLabel" min="-2" max="-2" attributes="0"/>
-                          <Component id="brightnessPanel" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="0" pref="250" max="32767" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="pumpsAllTitleLabel1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      <EmptySpace min="-2" pref="169" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <Group type="103" groupAlignment="1" attributes="0">
-                          <Group type="102" alignment="1" attributes="0">
-                              <EmptySpace max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
                               <Component id="sensorTitle" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="lightSensorTitleLabel" pref="44" max="32767" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="3" attributes="0">
-                                          <Component id="colorSensorTitleLabel" alignment="3" pref="42" max="32767" attributes="0"/>
-                                          <Component id="colorStringLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Group type="103" groupAlignment="1" attributes="0">
-                                          <Component id="lightNumLabel" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
-                                          <Component id="hueLabel" min="-2" max="-2" attributes="0"/>
-                                          <Component id="brightnessLabel" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="1" attributes="0">
-                                          <Component id="huePanel" min="-2" max="-2" attributes="0"/>
-                                          <Component id="colorPanel" min="-2" max="-2" attributes="0"/>
-                                          <Component id="brightnessPanel" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <EmptySpace min="0" pref="11" max="32767" attributes="0"/>
-                                  </Group>
-                              </Group>
-                              <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="tempSensorTitleLabel" alignment="3" pref="35" max="32767" attributes="0"/>
-                                  <Component id="tempNumLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lightNumLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lightSensorTitleLabel" linkSize="2" alignment="3" min="-2" pref="41" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="turbiditySensorTitleLabel" alignment="3" pref="38" max="32767" attributes="0"/>
-                                  <Component id="turbidityNumLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="humidityNumLabel" min="-2" max="-2" attributes="0"/>
-                                  <Component id="humidityTilteLabel" alignment="1" pref="36" max="32767" attributes="0"/>
-                              </Group>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="pumpsAllTitleLabel1" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="1" attributes="0">
-                                  <Group type="103" alignment="1" groupAlignment="3" attributes="0">
-                                      <Component id="pump1TitleLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="fluid1Label" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="volume1Label" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Component id="pumpBar1" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="pump2TitleLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="fluid2Label" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="volume2Label" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="pumpBar2" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="pump3TitleLabel" min="-2" max="-2" attributes="0"/>
-                                  <Group type="103" alignment="0" groupAlignment="1" attributes="0">
-                                      <Component id="pumpBar3" min="-2" max="-2" attributes="0"/>
-                                      <Group type="103" alignment="1" groupAlignment="3" attributes="0">
-                                          <Component id="fluid3Label" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="volume3Label" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                  </Group>
-                              </Group>
-                              <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                              <Component id="recordingButton" min="-2" pref="50" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="buttonExit" min="-2" pref="50" max="-2" attributes="0"/>
+                              <Component id="pumpsAllTitleLabel1" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="pump1TitleLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="fluid1Label" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="volume1Label" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="pumpBar1" alignment="0" min="-2" pref="30" max="-2" attributes="0"/>
+                              </Group>
                           </Group>
                       </Group>
-                      <EmptySpace min="-2" pref="105" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="103" alignment="0" groupAlignment="3" attributes="0">
+                              <Component id="colorSensorTitleLabel" linkSize="2" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
+                              <Component id="colorStringLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="pumpBar2" min="-2" pref="30" max="-2" attributes="0"/>
+                          <Group type="103" alignment="0" groupAlignment="3" attributes="0">
+                              <Component id="pump2TitleLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="fluid2Label" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="volume2Label" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="pumpBar3" min="-2" pref="30" max="-2" attributes="0"/>
+                          <Group type="103" alignment="0" groupAlignment="3" attributes="0">
+                              <Component id="pump3TitleLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="fluid3Label" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="volume3Label" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="103" groupAlignment="1" attributes="0">
+                              <Group type="102" alignment="1" attributes="0">
+                                  <Group type="103" groupAlignment="1" attributes="0">
+                                      <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
+                                      <Component id="hueLabel" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="huePanel" alignment="1" min="-2" max="-2" attributes="0"/>
+                                      <Component id="colorPanel" alignment="1" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <Group type="102" alignment="1" attributes="0">
+                                  <Component id="brightnessLabel" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
+                                  <Component id="brightnessPanel" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                      <EmptySpace pref="10" max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="tempSensorTitleLabel" linkSize="2" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
+                          <Component id="tempNumLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="recordingButton" alignment="3" min="-2" pref="120" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="turbiditySensorTitleLabel" linkSize="2" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
+                                  <Component id="turbidityNumLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="humidityTilteLabel" linkSize="2" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
+                                  <Component id="humidityNumLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="buttonExit" min="-2" pref="120" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace min="-2" pref="64" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -270,6 +278,9 @@
             <Component class="javax.swing.JButton" name="buttonExit">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Exit"/>
+                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[119, 32]"/>
+                </Property>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonExitActionPerformed"/>
@@ -278,7 +289,7 @@
             <Component class="javax.swing.JLabel" name="lightSensorTitleLabel">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Tahoma" size="11" style="1"/>
+                  <Font name="Tahoma" size="18" style="1"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Light:"/>
                 <Property name="verticalAlignment" type="int" value="1"/>
@@ -293,7 +304,7 @@
             <Component class="javax.swing.JLabel" name="colorSensorTitleLabel">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Tahoma" size="11" style="1"/>
+                  <Font name="Tahoma" size="18" style="1"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Color:"/>
                 <Property name="verticalAlignment" type="int" value="1"/>
@@ -308,7 +319,7 @@
             <Component class="javax.swing.JLabel" name="tempSensorTitleLabel">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Tahoma" size="11" style="1"/>
+                  <Font name="Tahoma" size="18" style="1"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Temperature:"/>
                 <Property name="verticalAlignment" type="int" value="1"/>
@@ -323,9 +334,9 @@
             <Component class="javax.swing.JLabel" name="turbiditySensorTitleLabel">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Tahoma" size="11" style="1"/>
+                  <Font name="Tahoma" size="18" style="1"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Turbidity"/>
+                <Property name="text" type="java.lang.String" value="Turbidity:"/>
                 <Property name="verticalAlignment" type="int" value="1"/>
                 <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                   <Dimension value="[50, 20]"/>
@@ -337,6 +348,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="lightNumLabel">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Dialog" size="18" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="lightNum"/>
                 <Property name="verticalAlignment" type="int" value="1"/>
                 <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
@@ -349,6 +363,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="colorStringLabel">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Dialog" size="18" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="colorString"/>
                 <Property name="verticalAlignment" type="int" value="1"/>
                 <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
@@ -361,6 +378,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="turbidityNumLabel">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Dialog" size="18" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="turbidityNum"/>
                 <Property name="verticalAlignment" type="int" value="1"/>
                 <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
@@ -373,6 +393,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="tempNumLabel">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Dialog" size="18" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="tempNum"/>
                 <Property name="verticalAlignment" type="int" value="1"/>
                 <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
@@ -414,7 +437,7 @@
             <Component class="javax.swing.JLabel" name="sensorTitle">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Tahoma" size="14" style="1"/>
+                  <Font name="Tahoma" size="24" style="1"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Sensors:"/>
               </Properties>
@@ -422,7 +445,7 @@
             <Component class="javax.swing.JLabel" name="pump1TitleLabel">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Tahoma" size="11" style="1"/>
+                  <Font name="Tahoma" size="18" style="1"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Pump 1:"/>
                 <Property name="toolTipText" type="java.lang.String" value=""/>
@@ -431,7 +454,7 @@
             <Component class="javax.swing.JLabel" name="pump2TitleLabel">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Tahoma" size="11" style="1"/>
+                  <Font name="Tahoma" size="18" style="1"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Pump 2:"/>
               </Properties>
@@ -439,38 +462,56 @@
             <Component class="javax.swing.JLabel" name="pump3TitleLabel">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Tahoma" size="11" style="1"/>
+                  <Font name="Tahoma" size="18" style="1"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Pump 3:"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="fluid1Label">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Dialog" size="18" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="fluid1"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="fluid2Label">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Dialog" size="18" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="fluid2"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="fluid3Label">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Dialog" size="18" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="fluid3"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="volume1Label">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Dialog" size="18" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="volume 1"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="volume2Label">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Dialog" size="18" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="volume 2"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="volume3Label">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Dialog" size="18" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="volume 3"/>
               </Properties>
             </Component>
@@ -483,7 +524,7 @@
             <Component class="javax.swing.JLabel" name="humidityTilteLabel">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Tahoma" size="11" style="1"/>
+                  <Font name="Tahoma" size="18" style="1"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Humidity:"/>
                 <Property name="verticalAlignment" type="int" value="1"/>
@@ -497,6 +538,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="humidityNumLabel">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Dialog" size="18" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="humidityNum"/>
                 <Property name="verticalAlignment" type="int" value="1"/>
                 <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
@@ -565,16 +609,25 @@
             </Container>
             <Component class="javax.swing.JLabel" name="jLabel6">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Tahoma" size="18" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Color:"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="hueLabel">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Tahoma" size="18" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Hue:"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="brightnessLabel">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Tahoma" size="18" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Brightness:"/>
               </Properties>
             </Component>
@@ -589,281 +642,10 @@
             <Component class="javax.swing.JLabel" name="pumpsAllTitleLabel1">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Tahoma" size="14" style="1"/>
+                  <Font name="Tahoma" size="24" style="1"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Pumps:"/>
               </Properties>
-            </Component>
-          </SubComponents>
-        </Container>
-        <Container class="javax.swing.JPanel" name="callibratePanel">
-          <Constraints>
-            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-              <JTabbedPaneConstraints tabName="Calibration">
-                <Property name="tabTitle" type="java.lang.String" value="Calibration"/>
-              </JTabbedPaneConstraints>
-            </Constraint>
-          </Constraints>
-
-          <Layout>
-            <DimensionLayout dim="0">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <Component id="motor1CallibrateButton" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="motor1WorkingDoneLabel" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Component id="motor1FillButton" min="-2" max="-2" attributes="0"/>
-                          <Component id="motor1DispenseButton" min="-2" max="-2" attributes="0"/>
-                          <Group type="102" attributes="0">
-                              <Component id="motor1EmptyVolField" min="-2" pref="89" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="motor1EmptyVolLabel" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="motor1FullVolField" min="-2" pref="88" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="motor1FullVolLabel" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="motor2CallibrateButton" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="motor2WorkingDoneLabel" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Component id="motor2FillButton" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="motor2DispenseButton" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="motor2EmptyVolField" min="-2" pref="89" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="motor2EmptyVolLabel" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="motor2FullVolField" min="-2" pref="88" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="motor2FullVolLabel" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="motor3CallibrateButton" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="motor3WorkingDoneLabel" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Component id="motor3FillButton" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="motor3DispenseButton" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="motor3EmptyVolField" min="-2" pref="89" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="motor3EmptyVolLabel" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="motor3FullVolField" min="-2" pref="88" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="motor3FullVolLabel" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                      <EmptySpace max="32767" attributes="0"/>
-                  </Group>
-              </Group>
-            </DimensionLayout>
-            <DimensionLayout dim="1">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="1" attributes="0">
-                          <Group type="102" attributes="0">
-                              <Component id="motor3DispenseButton" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="motor3EmptyVolField" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="motor3EmptyVolLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="motor3FillButton" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="motor3FullVolField" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="motor3FullVolLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="motor3CallibrateButton" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="motor3WorkingDoneLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                          <Group type="102" attributes="0">
-                              <Component id="motor2DispenseButton" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="motor2EmptyVolField" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="motor2EmptyVolLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="motor2FillButton" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="motor2FullVolField" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="motor2FullVolLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="motor2CallibrateButton" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="motor2WorkingDoneLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                          <Group type="102" attributes="0">
-                              <Component id="motor1DispenseButton" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="motor1EmptyVolField" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="motor1EmptyVolLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="motor1FillButton" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="motor1FullVolField" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="motor1FullVolLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="motor1CallibrateButton" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="motor1WorkingDoneLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                      </Group>
-                      <EmptySpace pref="319" max="32767" attributes="0"/>
-                  </Group>
-              </Group>
-            </DimensionLayout>
-          </Layout>
-          <SubComponents>
-            <Component class="javax.swing.JButton" name="motor1DispenseButton">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Dispense Completely"/>
-              </Properties>
-              <Events>
-                <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="motor1DispenseButtonMousePressed"/>
-              </Events>
-            </Component>
-            <Component class="javax.swing.JTextField" name="motor1EmptyVolField">
-            </Component>
-            <Component class="javax.swing.JLabel" name="motor1EmptyVolLabel">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Volume at completion (ml)"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JButton" name="motor1FillButton">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Fill Completely"/>
-              </Properties>
-              <Events>
-                <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="motor1FillButtonMousePressed"/>
-              </Events>
-            </Component>
-            <Component class="javax.swing.JTextField" name="motor1FullVolField">
-            </Component>
-            <Component class="javax.swing.JLabel" name="motor1FullVolLabel">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Volume at full (ml)"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JButton" name="motor1CallibrateButton">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Calibrate Motor 1"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="motor1WorkingDoneLabel">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Working..."/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JTextField" name="motor2EmptyVolField">
-            </Component>
-            <Component class="javax.swing.JLabel" name="motor2EmptyVolLabel">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Volume at completion (ml)"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JButton" name="motor2CallibrateButton">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Calibrate Motor 2"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="motor2WorkingDoneLabel">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Working..."/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JButton" name="motor2FillButton">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Fill Completely"/>
-              </Properties>
-              <Events>
-                <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="motor2FillButtonMousePressed"/>
-              </Events>
-            </Component>
-            <Component class="javax.swing.JTextField" name="motor2FullVolField">
-            </Component>
-            <Component class="javax.swing.JLabel" name="motor2FullVolLabel">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Volume at full (ml)"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JButton" name="motor2DispenseButton">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Dispense Completely"/>
-              </Properties>
-              <Events>
-                <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="motor2DispenseButtonMousePressed"/>
-              </Events>
-            </Component>
-            <Component class="javax.swing.JTextField" name="motor3EmptyVolField">
-            </Component>
-            <Component class="javax.swing.JLabel" name="motor3EmptyVolLabel">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Volume at completion (ml)"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JButton" name="motor3CallibrateButton">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Calibrate Motor 3"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="motor3WorkingDoneLabel">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Working..."/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JButton" name="motor3FillButton">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Fill Completely"/>
-              </Properties>
-              <Events>
-                <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="motor3FillButtonMousePressed"/>
-              </Events>
-            </Component>
-            <Component class="javax.swing.JTextField" name="motor3FullVolField">
-            </Component>
-            <Component class="javax.swing.JLabel" name="motor3FullVolLabel">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Volume at full (ml)"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JButton" name="motor3DispenseButton">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Dispense Completely"/>
-              </Properties>
-              <Events>
-                <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="motor3DispenseButtonMousePressed"/>
-              </Events>
             </Component>
           </SubComponents>
         </Container>
@@ -1611,6 +1393,277 @@
                   <Dimension value="[63, 25]"/>
                 </Property>
               </Properties>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JPanel" name="callibratePanel">
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+              <JTabbedPaneConstraints tabName="Calibration">
+                <Property name="tabTitle" type="java.lang.String" value="Calibration"/>
+              </JTabbedPaneConstraints>
+            </Constraint>
+          </Constraints>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Component id="motor1CallibrateButton" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="motor1WorkingDoneLabel" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="motor1FillButton" min="-2" max="-2" attributes="0"/>
+                          <Component id="motor1DispenseButton" min="-2" max="-2" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <Component id="motor1EmptyVolField" min="-2" pref="89" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="motor1EmptyVolLabel" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="motor1FullVolField" min="-2" pref="88" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="motor1FullVolLabel" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="motor2CallibrateButton" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="motor2WorkingDoneLabel" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="motor2FillButton" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="motor2DispenseButton" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="motor2EmptyVolField" min="-2" pref="89" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="motor2EmptyVolLabel" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="motor2FullVolField" min="-2" pref="88" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="motor2FullVolLabel" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="motor3CallibrateButton" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="motor3WorkingDoneLabel" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="motor3FillButton" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="motor3DispenseButton" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="motor3EmptyVolField" min="-2" pref="89" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="motor3EmptyVolLabel" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="motor3FullVolField" min="-2" pref="88" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="motor3FullVolLabel" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Component id="motor3DispenseButton" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="motor3EmptyVolField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="motor3EmptyVolLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="motor3FillButton" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="motor3FullVolField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="motor3FullVolLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="motor3CallibrateButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="motor3WorkingDoneLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Group type="102" attributes="0">
+                              <Component id="motor2DispenseButton" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="motor2EmptyVolField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="motor2EmptyVolLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="motor2FillButton" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="motor2FullVolField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="motor2FullVolLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="motor2CallibrateButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="motor2WorkingDoneLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Group type="102" attributes="0">
+                              <Component id="motor1DispenseButton" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="motor1EmptyVolField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="motor1EmptyVolLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="motor1FillButton" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="motor1FullVolField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="motor1FullVolLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="motor1CallibrateButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="motor1WorkingDoneLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                      <EmptySpace pref="395" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JButton" name="motor1DispenseButton">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Dispense Completely"/>
+              </Properties>
+              <Events>
+                <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="motor1DispenseButtonMousePressed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JTextField" name="motor1EmptyVolField">
+            </Component>
+            <Component class="javax.swing.JLabel" name="motor1EmptyVolLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Volume at completion (ml)"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="motor1FillButton">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Fill Completely"/>
+              </Properties>
+              <Events>
+                <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="motor1FillButtonMousePressed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JTextField" name="motor1FullVolField">
+            </Component>
+            <Component class="javax.swing.JLabel" name="motor1FullVolLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Volume at full (ml)"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="motor1CallibrateButton">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Calibrate Motor 1"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="motor1WorkingDoneLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Working..."/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="motor2EmptyVolField">
+            </Component>
+            <Component class="javax.swing.JLabel" name="motor2EmptyVolLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Volume at completion (ml)"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="motor2CallibrateButton">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Calibrate Motor 2"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="motor2WorkingDoneLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Working..."/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="motor2FillButton">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Fill Completely"/>
+              </Properties>
+              <Events>
+                <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="motor2FillButtonMousePressed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JTextField" name="motor2FullVolField">
+            </Component>
+            <Component class="javax.swing.JLabel" name="motor2FullVolLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Volume at full (ml)"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="motor2DispenseButton">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Dispense Completely"/>
+              </Properties>
+              <Events>
+                <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="motor2DispenseButtonMousePressed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JTextField" name="motor3EmptyVolField">
+            </Component>
+            <Component class="javax.swing.JLabel" name="motor3EmptyVolLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Volume at completion (ml)"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="motor3CallibrateButton">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Calibrate Motor 3"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="motor3WorkingDoneLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Working..."/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="motor3FillButton">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Fill Completely"/>
+              </Properties>
+              <Events>
+                <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="motor3FillButtonMousePressed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JTextField" name="motor3FullVolField">
+            </Component>
+            <Component class="javax.swing.JLabel" name="motor3FullVolLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Volume at full (ml)"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="motor3DispenseButton">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Dispense Completely"/>
+              </Properties>
+              <Events>
+                <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="motor3DispenseButtonMousePressed"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>

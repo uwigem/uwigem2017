@@ -215,31 +215,6 @@ public class MainWindow extends javax.swing.JFrame {
         brightnessLabel = new javax.swing.JLabel();
         recordingButton = new javax.swing.JButton();
         pumpsAllTitleLabel1 = new javax.swing.JLabel();
-        callibratePanel = new javax.swing.JPanel();
-        motor1DispenseButton = new javax.swing.JButton();
-        motor1EmptyVolField = new javax.swing.JTextField();
-        motor1EmptyVolLabel = new javax.swing.JLabel();
-        motor1FillButton = new javax.swing.JButton();
-        motor1FullVolField = new javax.swing.JTextField();
-        motor1FullVolLabel = new javax.swing.JLabel();
-        motor1CallibrateButton = new javax.swing.JButton();
-        motor1WorkingDoneLabel = new javax.swing.JLabel();
-        motor2EmptyVolField = new javax.swing.JTextField();
-        motor2EmptyVolLabel = new javax.swing.JLabel();
-        motor2CallibrateButton = new javax.swing.JButton();
-        motor2WorkingDoneLabel = new javax.swing.JLabel();
-        motor2FillButton = new javax.swing.JButton();
-        motor2FullVolField = new javax.swing.JTextField();
-        motor2FullVolLabel = new javax.swing.JLabel();
-        motor2DispenseButton = new javax.swing.JButton();
-        motor3EmptyVolField = new javax.swing.JTextField();
-        motor3EmptyVolLabel = new javax.swing.JLabel();
-        motor3CallibrateButton = new javax.swing.JButton();
-        motor3WorkingDoneLabel = new javax.swing.JLabel();
-        motor3FillButton = new javax.swing.JButton();
-        motor3FullVolField = new javax.swing.JTextField();
-        motor3FullVolLabel = new javax.swing.JLabel();
-        motor3DispenseButton = new javax.swing.JButton();
         editValuesPanel = new javax.swing.JPanel();
         toggleTitle = new javax.swing.JLabel();
         stirrerLabel = new javax.swing.JLabel();
@@ -296,6 +271,31 @@ public class MainWindow extends javax.swing.JFrame {
         abortButton1 = new javax.swing.JButton();
         goButton2 = new javax.swing.JButton();
         goButton3 = new javax.swing.JButton();
+        callibratePanel = new javax.swing.JPanel();
+        motor1DispenseButton = new javax.swing.JButton();
+        motor1EmptyVolField = new javax.swing.JTextField();
+        motor1EmptyVolLabel = new javax.swing.JLabel();
+        motor1FillButton = new javax.swing.JButton();
+        motor1FullVolField = new javax.swing.JTextField();
+        motor1FullVolLabel = new javax.swing.JLabel();
+        motor1CallibrateButton = new javax.swing.JButton();
+        motor1WorkingDoneLabel = new javax.swing.JLabel();
+        motor2EmptyVolField = new javax.swing.JTextField();
+        motor2EmptyVolLabel = new javax.swing.JLabel();
+        motor2CallibrateButton = new javax.swing.JButton();
+        motor2WorkingDoneLabel = new javax.swing.JLabel();
+        motor2FillButton = new javax.swing.JButton();
+        motor2FullVolField = new javax.swing.JTextField();
+        motor2FullVolLabel = new javax.swing.JLabel();
+        motor2DispenseButton = new javax.swing.JButton();
+        motor3EmptyVolField = new javax.swing.JTextField();
+        motor3EmptyVolLabel = new javax.swing.JLabel();
+        motor3CallibrateButton = new javax.swing.JButton();
+        motor3WorkingDoneLabel = new javax.swing.JLabel();
+        motor3FillButton = new javax.swing.JButton();
+        motor3FullVolField = new javax.swing.JTextField();
+        motor3FullVolLabel = new javax.swing.JLabel();
+        motor3DispenseButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("\"Exit?\"");
@@ -308,51 +308,56 @@ public class MainWindow extends javax.swing.JFrame {
         tabPane.setPreferredSize(new java.awt.Dimension(799, 488));
 
         buttonExit.setText("Exit");
+        buttonExit.setPreferredSize(new java.awt.Dimension(119, 32));
         buttonExit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 buttonExitActionPerformed(evt);
             }
         });
 
-        lightSensorTitleLabel.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        lightSensorTitleLabel.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         lightSensorTitleLabel.setText("Light:");
         lightSensorTitleLabel.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         lightSensorTitleLabel.setMaximumSize(new java.awt.Dimension(50, 20));
         lightSensorTitleLabel.setMinimumSize(new java.awt.Dimension(50, 20));
 
-        colorSensorTitleLabel.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        colorSensorTitleLabel.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         colorSensorTitleLabel.setText("Color:");
         colorSensorTitleLabel.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         colorSensorTitleLabel.setMaximumSize(new java.awt.Dimension(50, 20));
         colorSensorTitleLabel.setMinimumSize(new java.awt.Dimension(50, 20));
 
-        tempSensorTitleLabel.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        tempSensorTitleLabel.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         tempSensorTitleLabel.setText("Temperature:");
         tempSensorTitleLabel.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         tempSensorTitleLabel.setMaximumSize(new java.awt.Dimension(50, 20));
         tempSensorTitleLabel.setMinimumSize(new java.awt.Dimension(50, 20));
 
-        turbiditySensorTitleLabel.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        turbiditySensorTitleLabel.setText("Turbidity");
+        turbiditySensorTitleLabel.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        turbiditySensorTitleLabel.setText("Turbidity:");
         turbiditySensorTitleLabel.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         turbiditySensorTitleLabel.setMaximumSize(new java.awt.Dimension(50, 20));
         turbiditySensorTitleLabel.setMinimumSize(new java.awt.Dimension(50, 20));
 
+        lightNumLabel.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         lightNumLabel.setText("lightNum");
         lightNumLabel.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         lightNumLabel.setMaximumSize(new java.awt.Dimension(50, 20));
         lightNumLabel.setMinimumSize(new java.awt.Dimension(50, 20));
 
+        colorStringLabel.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         colorStringLabel.setText("colorString");
         colorStringLabel.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         colorStringLabel.setMaximumSize(new java.awt.Dimension(50, 20));
         colorStringLabel.setMinimumSize(new java.awt.Dimension(50, 20));
 
+        turbidityNumLabel.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         turbidityNumLabel.setText("turbidityNum");
         turbidityNumLabel.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         turbidityNumLabel.setMaximumSize(new java.awt.Dimension(50, 20));
         turbidityNumLabel.setMinimumSize(new java.awt.Dimension(50, 20));
 
+        tempNumLabel.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         tempNumLabel.setText("tempNum");
         tempNumLabel.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         tempNumLabel.setMaximumSize(new java.awt.Dimension(50, 20));
@@ -373,37 +378,44 @@ public class MainWindow extends javax.swing.JFrame {
             .addGap(0, 48, Short.MAX_VALUE)
         );
 
-        sensorTitle.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        sensorTitle.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         sensorTitle.setText("Sensors:");
 
-        pump1TitleLabel.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        pump1TitleLabel.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         pump1TitleLabel.setText("Pump 1:");
         pump1TitleLabel.setToolTipText("");
 
-        pump2TitleLabel.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        pump2TitleLabel.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         pump2TitleLabel.setText("Pump 2:");
 
-        pump3TitleLabel.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        pump3TitleLabel.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         pump3TitleLabel.setText("Pump 3:");
 
+        fluid1Label.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         fluid1Label.setText("fluid1");
 
+        fluid2Label.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         fluid2Label.setText("fluid2");
 
+        fluid3Label.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         fluid3Label.setText("fluid3");
 
+        volume1Label.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         volume1Label.setText("volume 1");
 
+        volume2Label.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         volume2Label.setText("volume 2");
 
+        volume3Label.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         volume3Label.setText("volume 3");
 
-        humidityTilteLabel.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        humidityTilteLabel.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         humidityTilteLabel.setText("Humidity:");
         humidityTilteLabel.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         humidityTilteLabel.setMaximumSize(new java.awt.Dimension(50, 20));
         humidityTilteLabel.setMinimumSize(new java.awt.Dimension(50, 20));
 
+        humidityNumLabel.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         humidityNumLabel.setText("humidityNum");
         humidityNumLabel.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         humidityNumLabel.setMaximumSize(new java.awt.Dimension(50, 20));
@@ -439,10 +451,13 @@ public class MainWindow extends javax.swing.JFrame {
             .addGap(0, 48, Short.MAX_VALUE)
         );
 
+        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel6.setText("Color:");
 
+        hueLabel.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         hueLabel.setText("Hue:");
 
+        brightnessLabel.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         brightnessLabel.setText("Brightness:");
 
         recordingButton.setText("Start Recording");
@@ -452,337 +467,164 @@ public class MainWindow extends javax.swing.JFrame {
             }
         });
 
-        pumpsAllTitleLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        pumpsAllTitleLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         pumpsAllTitleLabel1.setText("Pumps:");
 
         javax.swing.GroupLayout colorLabelLayout = new javax.swing.GroupLayout(colorLabel);
         colorLabel.setLayout(colorLabelLayout);
         colorLabelLayout.setHorizontalGroup(
             colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(colorLabelLayout.createSequentialGroup()
-                .addGap(6, 6, 6)
-                .addGroup(colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(colorLabelLayout.createSequentialGroup()
-                        .addGroup(colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(pump1TitleLabel)
-                            .addComponent(pump2TitleLabel)
-                            .addComponent(pump3TitleLabel))
-                        .addGap(27, 27, 27)
-                        .addGroup(colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(fluid1Label)
-                            .addComponent(fluid2Label)
-                            .addComponent(fluid3Label))
-                        .addGap(32, 32, 32)
-                        .addGroup(colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(volume1Label)
-                            .addComponent(volume2Label)
-                            .addComponent(volume3Label))
-                        .addGap(33, 33, 33)
-                        .addGroup(colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(pumpBar1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(pumpBar2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(pumpBar3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(recordingButton, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(buttonExit, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(63, 63, 63))
-                    .addGroup(colorLabelLayout.createSequentialGroup()
-                        .addComponent(sensorTitle)
-                        .addContainerGap())))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, colorLabelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(colorLabelLayout.createSequentialGroup()
-                        .addComponent(humidityTilteLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 96, Short.MAX_VALUE)
-                        .addGap(24, 24, 24))
-                    .addGroup(colorLabelLayout.createSequentialGroup()
-                        .addComponent(turbiditySensorTitleLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(27, 27, 27))
-                    .addComponent(tempSensorTitleLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(colorLabelLayout.createSequentialGroup()
-                        .addComponent(colorSensorTitleLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(46, 46, 46))
-                    .addGroup(colorLabelLayout.createSequentialGroup()
-                        .addComponent(lightSensorTitleLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(47, 47, 47)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(colorStringLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lightNumLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(humidityNumLabel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(tempNumLabel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(turbidityNumLabel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addGap(47, 47, 47)
-                .addGroup(colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(colorPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel6))
-                .addGap(84, 84, 84)
-                .addGroup(colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(huePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(hueLabel))
-                .addGap(84, 84, 84)
-                .addGroup(colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(brightnessLabel)
-                    .addComponent(brightnessPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 250, Short.MAX_VALUE))
-            .addGroup(colorLabelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(pumpsAllTitleLabel1)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
-        colorLabelLayout.setVerticalGroup(
-            colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(colorLabelLayout.createSequentialGroup()
                 .addGroup(colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(colorLabelLayout.createSequentialGroup()
                         .addContainerGap()
+                        .addGroup(colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(humidityTilteLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(turbiditySensorTitleLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(colorLabelLayout.createSequentialGroup()
+                                .addComponent(tempSensorTitleLabel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addGroup(colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(turbidityNumLabel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(tempNumLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(humidityNumLabel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(colorLabelLayout.createSequentialGroup()
+                        .addGroup(colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(colorLabelLayout.createSequentialGroup()
+                                .addGap(6, 6, 6)
+                                .addComponent(sensorTitle))
+                            .addGroup(colorLabelLayout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(colorLabelLayout.createSequentialGroup()
+                                        .addGroup(colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(colorSensorTitleLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(lightSensorTitleLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGap(41, 41, 41)
+                                        .addGroup(colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(lightNumLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(colorStringLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addGroup(colorLabelLayout.createSequentialGroup()
+                                        .addGap(143, 143, 143)
+                                        .addGroup(colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(huePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(hueLabel))
+                                        .addGap(98, 98, 98)
+                                        .addGroup(colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(brightnessLabel)
+                                            .addComponent(brightnessPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addComponent(colorPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel6))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 115, Short.MAX_VALUE)
+                        .addGroup(colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(pumpsAllTitleLabel1)
+                            .addGroup(colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addGroup(colorLabelLayout.createSequentialGroup()
+                                    .addGroup(colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(colorLabelLayout.createSequentialGroup()
+                                            .addComponent(pump1TitleLabel)
+                                            .addGap(27, 27, 27)
+                                            .addComponent(fluid1Label)
+                                            .addGap(32, 32, 32)
+                                            .addComponent(volume1Label))
+                                        .addGroup(colorLabelLayout.createSequentialGroup()
+                                            .addComponent(pump2TitleLabel)
+                                            .addGap(27, 27, 27)
+                                            .addComponent(fluid2Label)
+                                            .addGap(32, 32, 32)
+                                            .addComponent(volume2Label))
+                                        .addComponent(pump3TitleLabel)
+                                        .addGroup(colorLabelLayout.createSequentialGroup()
+                                            .addGap(102, 102, 102)
+                                            .addComponent(fluid3Label)
+                                            .addGap(32, 32, 32)
+                                            .addComponent(volume3Label)))
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addGroup(colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(pumpBar3, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(pumpBar2, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(pumpBar1, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(recordingButton, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(buttonExit, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addGap(169, 169, 169))
+        );
+
+        colorLabelLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {humidityTilteLabel, turbiditySensorTitleLabel});
+
+        colorLabelLayout.setVerticalGroup(
+            colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(colorLabelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(colorLabelLayout.createSequentialGroup()
                         .addComponent(sensorTitle)
                         .addGap(8, 8, 8)
-                        .addGroup(colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(colorLabelLayout.createSequentialGroup()
-                                .addComponent(lightSensorTitleLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 44, Short.MAX_VALUE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(colorSensorTitleLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 42, Short.MAX_VALUE)
-                                    .addComponent(colorStringLabel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(colorLabelLayout.createSequentialGroup()
-                                .addGroup(colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(lightNumLabel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel6)
-                                    .addComponent(hueLabel)
-                                    .addComponent(brightnessLabel))
-                                .addGap(18, 18, 18)
-                                .addGroup(colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(huePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(colorPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(brightnessPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(0, 11, Short.MAX_VALUE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(tempSensorTitleLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 35, Short.MAX_VALUE)
-                            .addComponent(tempNumLabel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(turbiditySensorTitleLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 38, Short.MAX_VALUE)
-                            .addComponent(turbidityNumLabel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(humidityNumLabel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(humidityTilteLabel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 36, Short.MAX_VALUE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(lightNumLabel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lightSensorTitleLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(colorLabelLayout.createSequentialGroup()
                         .addComponent(pumpsAllTitleLabel1)
                         .addGap(14, 14, 14)
-                        .addGroup(colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(pump1TitleLabel)
-                                .addComponent(fluid1Label)
-                                .addComponent(volume1Label))
-                            .addComponent(pumpBar1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(28, 28, 28)
                         .addGroup(colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(pump2TitleLabel)
-                            .addComponent(fluid2Label)
-                            .addComponent(volume2Label)
-                            .addComponent(pumpBar2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(36, 36, 36)
-                        .addGroup(colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(pump3TitleLabel)
+                            .addComponent(pump1TitleLabel)
+                            .addComponent(fluid1Label)
+                            .addComponent(volume1Label)
+                            .addComponent(pumpBar1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(40, 40, 40)
+                .addGroup(colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(colorSensorTitleLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(colorStringLabel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(pumpBar2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(pump2TitleLabel)
+                        .addComponent(fluid2Label)
+                        .addComponent(volume2Label)))
+                .addGap(40, 40, 40)
+                .addGroup(colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(pumpBar3, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(pump3TitleLabel)
+                        .addComponent(fluid3Label)
+                        .addComponent(volume3Label))
+                    .addGroup(colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGroup(colorLabelLayout.createSequentialGroup()
                             .addGroup(colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(pumpBar3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGroup(colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(fluid3Label)
-                                    .addComponent(volume3Label))))
-                        .addGap(8, 8, 8))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, colorLabelLayout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(recordingButton, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jLabel6)
+                                .addComponent(hueLabel))
+                            .addGap(3, 3, 3)
+                            .addGroup(colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(huePanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(colorPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(colorLabelLayout.createSequentialGroup()
+                            .addComponent(brightnessLabel)
+                            .addGap(3, 3, 3)
+                            .addComponent(brightnessPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 10, Short.MAX_VALUE)
+                .addGroup(colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(tempSensorTitleLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tempNumLabel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(recordingButton, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(colorLabelLayout.createSequentialGroup()
+                        .addGap(27, 27, 27)
+                        .addGroup(colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(turbiditySensorTitleLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(turbidityNumLabel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(50, 50, 50)
+                        .addGroup(colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(humidityTilteLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(humidityNumLabel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(colorLabelLayout.createSequentialGroup()
                         .addGap(18, 18, 18)
-                        .addComponent(buttonExit, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(105, 105, 105))
+                        .addComponent(buttonExit, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(64, 64, 64))
         );
+
+        colorLabelLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {colorSensorTitleLabel, humidityTilteLabel, lightSensorTitleLabel, tempSensorTitleLabel, turbiditySensorTitleLabel});
 
         tabPane.addTab("Sensors", colorLabel);
-
-        motor1DispenseButton.setText("Dispense Completely");
-        motor1DispenseButton.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                motor1DispenseButtonMousePressed(evt);
-            }
-        });
-
-        motor1EmptyVolLabel.setText("Volume at completion (ml)");
-
-        motor1FillButton.setText("Fill Completely");
-        motor1FillButton.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                motor1FillButtonMousePressed(evt);
-            }
-        });
-
-        motor1FullVolLabel.setText("Volume at full (ml)");
-
-        motor1CallibrateButton.setText("Calibrate Motor 1");
-
-        motor1WorkingDoneLabel.setText("Working...");
-
-        motor2EmptyVolLabel.setText("Volume at completion (ml)");
-
-        motor2CallibrateButton.setText("Calibrate Motor 2");
-
-        motor2WorkingDoneLabel.setText("Working...");
-
-        motor2FillButton.setText("Fill Completely");
-        motor2FillButton.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                motor2FillButtonMousePressed(evt);
-            }
-        });
-
-        motor2FullVolLabel.setText("Volume at full (ml)");
-
-        motor2DispenseButton.setText("Dispense Completely");
-        motor2DispenseButton.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                motor2DispenseButtonMousePressed(evt);
-            }
-        });
-
-        motor3EmptyVolLabel.setText("Volume at completion (ml)");
-
-        motor3CallibrateButton.setText("Calibrate Motor 3");
-
-        motor3WorkingDoneLabel.setText("Working...");
-
-        motor3FillButton.setText("Fill Completely");
-        motor3FillButton.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                motor3FillButtonMousePressed(evt);
-            }
-        });
-
-        motor3FullVolLabel.setText("Volume at full (ml)");
-
-        motor3DispenseButton.setText("Dispense Completely");
-        motor3DispenseButton.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                motor3DispenseButtonMousePressed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout callibratePanelLayout = new javax.swing.GroupLayout(callibratePanel);
-        callibratePanel.setLayout(callibratePanelLayout);
-        callibratePanelLayout.setHorizontalGroup(
-            callibratePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(callibratePanelLayout.createSequentialGroup()
-                .addGap(32, 32, 32)
-                .addGroup(callibratePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(callibratePanelLayout.createSequentialGroup()
-                        .addComponent(motor1CallibrateButton)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(motor1WorkingDoneLabel))
-                    .addComponent(motor1FillButton)
-                    .addComponent(motor1DispenseButton)
-                    .addGroup(callibratePanelLayout.createSequentialGroup()
-                        .addComponent(motor1EmptyVolField, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(motor1EmptyVolLabel))
-                    .addGroup(callibratePanelLayout.createSequentialGroup()
-                        .addComponent(motor1FullVolField, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(motor1FullVolLabel)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(callibratePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(callibratePanelLayout.createSequentialGroup()
-                        .addComponent(motor2CallibrateButton)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(motor2WorkingDoneLabel))
-                    .addComponent(motor2FillButton)
-                    .addComponent(motor2DispenseButton)
-                    .addGroup(callibratePanelLayout.createSequentialGroup()
-                        .addComponent(motor2EmptyVolField, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(motor2EmptyVolLabel))
-                    .addGroup(callibratePanelLayout.createSequentialGroup()
-                        .addComponent(motor2FullVolField, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(motor2FullVolLabel)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(callibratePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(callibratePanelLayout.createSequentialGroup()
-                        .addComponent(motor3CallibrateButton)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(motor3WorkingDoneLabel))
-                    .addComponent(motor3FillButton)
-                    .addComponent(motor3DispenseButton)
-                    .addGroup(callibratePanelLayout.createSequentialGroup()
-                        .addComponent(motor3EmptyVolField, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(motor3EmptyVolLabel))
-                    .addGroup(callibratePanelLayout.createSequentialGroup()
-                        .addComponent(motor3FullVolField, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(motor3FullVolLabel)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        callibratePanelLayout.setVerticalGroup(
-            callibratePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(callibratePanelLayout.createSequentialGroup()
-                .addGap(26, 26, 26)
-                .addGroup(callibratePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(callibratePanelLayout.createSequentialGroup()
-                        .addComponent(motor3DispenseButton)
-                        .addGap(18, 18, 18)
-                        .addGroup(callibratePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(motor3EmptyVolField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(motor3EmptyVolLabel))
-                        .addGap(18, 18, 18)
-                        .addComponent(motor3FillButton)
-                        .addGap(18, 18, 18)
-                        .addGroup(callibratePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(motor3FullVolField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(motor3FullVolLabel))
-                        .addGap(18, 18, 18)
-                        .addGroup(callibratePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(motor3CallibrateButton)
-                            .addComponent(motor3WorkingDoneLabel)))
-                    .addGroup(callibratePanelLayout.createSequentialGroup()
-                        .addComponent(motor2DispenseButton)
-                        .addGap(18, 18, 18)
-                        .addGroup(callibratePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(motor2EmptyVolField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(motor2EmptyVolLabel))
-                        .addGap(18, 18, 18)
-                        .addComponent(motor2FillButton)
-                        .addGap(18, 18, 18)
-                        .addGroup(callibratePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(motor2FullVolField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(motor2FullVolLabel))
-                        .addGap(18, 18, 18)
-                        .addGroup(callibratePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(motor2CallibrateButton)
-                            .addComponent(motor2WorkingDoneLabel)))
-                    .addGroup(callibratePanelLayout.createSequentialGroup()
-                        .addComponent(motor1DispenseButton)
-                        .addGap(18, 18, 18)
-                        .addGroup(callibratePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(motor1EmptyVolField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(motor1EmptyVolLabel))
-                        .addGap(18, 18, 18)
-                        .addComponent(motor1FillButton)
-                        .addGap(18, 18, 18)
-                        .addGroup(callibratePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(motor1FullVolField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(motor1FullVolLabel))
-                        .addGap(18, 18, 18)
-                        .addGroup(callibratePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(motor1CallibrateButton)
-                            .addComponent(motor1WorkingDoneLabel))))
-                .addContainerGap(319, Short.MAX_VALUE))
-        );
-
-        tabPane.addTab("Calibration", callibratePanel);
 
         toggleTitle.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         toggleTitle.setText("Toggles");
@@ -1195,18 +1037,197 @@ public class MainWindow extends javax.swing.JFrame {
 
         tabPane.addTab("Control", editValuesPanel);
 
+        motor1DispenseButton.setText("Dispense Completely");
+        motor1DispenseButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                motor1DispenseButtonMousePressed(evt);
+            }
+        });
+
+        motor1EmptyVolLabel.setText("Volume at completion (ml)");
+
+        motor1FillButton.setText("Fill Completely");
+        motor1FillButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                motor1FillButtonMousePressed(evt);
+            }
+        });
+
+        motor1FullVolLabel.setText("Volume at full (ml)");
+
+        motor1CallibrateButton.setText("Calibrate Motor 1");
+
+        motor1WorkingDoneLabel.setText("Working...");
+
+        motor2EmptyVolLabel.setText("Volume at completion (ml)");
+
+        motor2CallibrateButton.setText("Calibrate Motor 2");
+
+        motor2WorkingDoneLabel.setText("Working...");
+
+        motor2FillButton.setText("Fill Completely");
+        motor2FillButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                motor2FillButtonMousePressed(evt);
+            }
+        });
+
+        motor2FullVolLabel.setText("Volume at full (ml)");
+
+        motor2DispenseButton.setText("Dispense Completely");
+        motor2DispenseButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                motor2DispenseButtonMousePressed(evt);
+            }
+        });
+
+        motor3EmptyVolLabel.setText("Volume at completion (ml)");
+
+        motor3CallibrateButton.setText("Calibrate Motor 3");
+
+        motor3WorkingDoneLabel.setText("Working...");
+
+        motor3FillButton.setText("Fill Completely");
+        motor3FillButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                motor3FillButtonMousePressed(evt);
+            }
+        });
+
+        motor3FullVolLabel.setText("Volume at full (ml)");
+
+        motor3DispenseButton.setText("Dispense Completely");
+        motor3DispenseButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                motor3DispenseButtonMousePressed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout callibratePanelLayout = new javax.swing.GroupLayout(callibratePanel);
+        callibratePanel.setLayout(callibratePanelLayout);
+        callibratePanelLayout.setHorizontalGroup(
+            callibratePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(callibratePanelLayout.createSequentialGroup()
+                .addGap(32, 32, 32)
+                .addGroup(callibratePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(callibratePanelLayout.createSequentialGroup()
+                        .addComponent(motor1CallibrateButton)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(motor1WorkingDoneLabel))
+                    .addComponent(motor1FillButton)
+                    .addComponent(motor1DispenseButton)
+                    .addGroup(callibratePanelLayout.createSequentialGroup()
+                        .addComponent(motor1EmptyVolField, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(motor1EmptyVolLabel))
+                    .addGroup(callibratePanelLayout.createSequentialGroup()
+                        .addComponent(motor1FullVolField, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(motor1FullVolLabel)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(callibratePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(callibratePanelLayout.createSequentialGroup()
+                        .addComponent(motor2CallibrateButton)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(motor2WorkingDoneLabel))
+                    .addComponent(motor2FillButton)
+                    .addComponent(motor2DispenseButton)
+                    .addGroup(callibratePanelLayout.createSequentialGroup()
+                        .addComponent(motor2EmptyVolField, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(motor2EmptyVolLabel))
+                    .addGroup(callibratePanelLayout.createSequentialGroup()
+                        .addComponent(motor2FullVolField, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(motor2FullVolLabel)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(callibratePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(callibratePanelLayout.createSequentialGroup()
+                        .addComponent(motor3CallibrateButton)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(motor3WorkingDoneLabel))
+                    .addComponent(motor3FillButton)
+                    .addComponent(motor3DispenseButton)
+                    .addGroup(callibratePanelLayout.createSequentialGroup()
+                        .addComponent(motor3EmptyVolField, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(motor3EmptyVolLabel))
+                    .addGroup(callibratePanelLayout.createSequentialGroup()
+                        .addComponent(motor3FullVolField, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(motor3FullVolLabel)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        callibratePanelLayout.setVerticalGroup(
+            callibratePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(callibratePanelLayout.createSequentialGroup()
+                .addGap(26, 26, 26)
+                .addGroup(callibratePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(callibratePanelLayout.createSequentialGroup()
+                        .addComponent(motor3DispenseButton)
+                        .addGap(18, 18, 18)
+                        .addGroup(callibratePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(motor3EmptyVolField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(motor3EmptyVolLabel))
+                        .addGap(18, 18, 18)
+                        .addComponent(motor3FillButton)
+                        .addGap(18, 18, 18)
+                        .addGroup(callibratePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(motor3FullVolField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(motor3FullVolLabel))
+                        .addGap(18, 18, 18)
+                        .addGroup(callibratePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(motor3CallibrateButton)
+                            .addComponent(motor3WorkingDoneLabel)))
+                    .addGroup(callibratePanelLayout.createSequentialGroup()
+                        .addComponent(motor2DispenseButton)
+                        .addGap(18, 18, 18)
+                        .addGroup(callibratePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(motor2EmptyVolField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(motor2EmptyVolLabel))
+                        .addGap(18, 18, 18)
+                        .addComponent(motor2FillButton)
+                        .addGap(18, 18, 18)
+                        .addGroup(callibratePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(motor2FullVolField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(motor2FullVolLabel))
+                        .addGap(18, 18, 18)
+                        .addGroup(callibratePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(motor2CallibrateButton)
+                            .addComponent(motor2WorkingDoneLabel)))
+                    .addGroup(callibratePanelLayout.createSequentialGroup()
+                        .addComponent(motor1DispenseButton)
+                        .addGap(18, 18, 18)
+                        .addGroup(callibratePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(motor1EmptyVolField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(motor1EmptyVolLabel))
+                        .addGap(18, 18, 18)
+                        .addComponent(motor1FillButton)
+                        .addGap(18, 18, 18)
+                        .addGroup(callibratePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(motor1FullVolField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(motor1FullVolLabel))
+                        .addGap(18, 18, 18)
+                        .addGroup(callibratePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(motor1CallibrateButton)
+                            .addComponent(motor1WorkingDoneLabel))))
+                .addContainerGap(395, Short.MAX_VALUE))
+        );
+
+        tabPane.addTab("Calibration", callibratePanel);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(tabPane, javax.swing.GroupLayout.DEFAULT_SIZE, 852, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(tabPane, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1169, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(tabPane, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 566, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(tabPane, javax.swing.GroupLayout.DEFAULT_SIZE, 663, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         pack();
