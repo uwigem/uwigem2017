@@ -59,8 +59,8 @@ public class MainWindow extends javax.swing.JFrame {
     private final GpioController gpio;
 
     // GPIO expander chips
-    private final MCP23017GpioProvider mcpProviderOne;
-    private final MCP23017GpioProvider mcpProviderTwo;
+    // private final MCP23017GpioProvider mcpProviderOne;
+    // private final MCP23017GpioProvider mcpProviderTwo;
 
     // Sensor controllers
     private final RgbSensor colorRead;
@@ -70,10 +70,14 @@ public class MainWindow extends javax.swing.JFrame {
     public MainWindow() throws IOException, I2CFactory.UnsupportedBusNumberException, InterruptedException {
         initComponents();
         gpio = GpioFactory.getInstance(); // Singleton instance
-        mcpProviderOne = new MCP23017GpioProvider(I2CBus.BUS_1, 0x27);
-        mcpProviderTwo = new MCP23017GpioProvider(I2CBus.BUS_1, 0x26);
+        
+        // We should put these instantiations and init in a try/catch
+        // block so that it doesn't crash the app when there's something
+        // wrong with the I/O hardware.
+        // mcpProviderOne = new MCP23017GpioProvider(I2CBus.BUS_1, 0x27);
+        // mcpProviderTwo = new MCP23017GpioProvider(I2CBus.BUS_1, 0x26);
         // Initialize syringe pumps
-        initPumps();
+        // initPumps();
 
         colorRead = new RgbSensor();
         tempRead = new TempSensor();
@@ -124,7 +128,7 @@ public class MainWindow extends javax.swing.JFrame {
         actionTime.start();
 
     }
-
+/*
     private void initPumps() {
 
         // Provision direction control pins as outputs
@@ -161,7 +165,7 @@ public class MainWindow extends javax.swing.JFrame {
         pump1 = new SyringePump(step1, dir1, enable1, min1, max1);
         pump2 = new SyringePump(step2, dir2, enable2, min2, max2);
         pump3 = new SyringePump(step3, dir3, enable3, min3, max3);
-    }
+    }*/
 
     /**
      * This method is called from within the constructor to initialize the form.
