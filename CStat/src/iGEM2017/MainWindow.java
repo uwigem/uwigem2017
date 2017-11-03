@@ -1315,7 +1315,7 @@ public class MainWindow extends javax.swing.JFrame {
             Date date = new Date();
            
             try {
-                csvFile = new File (dateFormat.format(date)+".csv");
+                csvFile = new File (dateFormat.format(date)+" CStatData.csv");
                 csvFileWrite = new FileWriter (csvFile);
                 csvFileWrite.write("Color , Light , Temp , Humidity");
                 csvFileWrite.write("\r\n");
