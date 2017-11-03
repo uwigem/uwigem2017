@@ -35,7 +35,10 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.text.DateFormat;
 import java.text.DecimalFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
@@ -68,7 +71,7 @@ public class MainWindow extends javax.swing.JFrame {
     private final TempSensor tempRead;
     private final LuxSensor lightRead;
     private static FileWriter csvFileWrite;
-    private static int fileNumber = 1;
+    
     private static File csvFile;
     public MainWindow() throws IOException, I2CFactory.UnsupportedBusNumberException, InterruptedException {
         initComponents();
@@ -1308,9 +1311,11 @@ public class MainWindow extends javax.swing.JFrame {
     private void recordingButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_recordingButtonMouseClicked
         if (isRecording == false) {
             isRecording = true;
-            
+            DateFormat dateFormat = new SimpleDateFormat("yyyy.MM.dd HH:mm:ss");
+            Date date = new Date();
+           
             try {
-                csvFile = new File ("csv"+fileNumber+".csv");
+                csvFile = new File (dateFormat.format(date)+".csv");
                 csvFileWrite = new FileWriter (csvFile);
                 csvFileWrite.write("Color , Light , Temp , Humidity");
                 csvFileWrite.write("\r\n");
@@ -1325,7 +1330,7 @@ public class MainWindow extends javax.swing.JFrame {
             } catch (IOException ex) {
                 Logger.getLogger(MainWindow.class.getName()).log(Level.SEVERE, null, ex);
             }
-                fileNumber++;
+                
             recordingButton.setText("Start Recording");
             
         }
