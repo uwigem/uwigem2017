@@ -35,7 +35,10 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.text.DateFormat;
 import java.text.DecimalFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
@@ -68,7 +71,7 @@ public class MainWindow extends javax.swing.JFrame {
     private final TempSensor tempRead;
     private final LuxSensor lightRead;
     private static FileWriter csvFileWrite;
-    private static int fileNumber = 1;
+    
     private static File csvFile;
     public MainWindow() throws IOException, I2CFactory.UnsupportedBusNumberException, InterruptedException {
         initComponents();
@@ -85,6 +88,10 @@ public class MainWindow extends javax.swing.JFrame {
         colorRead = new RgbSensor();
         tempRead = new TempSensor();
         lightRead = new LuxSensor();
+        instructionsLabel.setVisible(false);
+        calibrateStartButton.setVisible(false);
+        calibrateCancelButton.setVisible(false);
+        colorCalibrateConfirmLabel.setVisible(false);
         DecimalFormat d = new DecimalFormat("#.#######");
        
         
@@ -299,6 +306,11 @@ public class MainWindow extends javax.swing.JFrame {
         motor3FullVolField = new javax.swing.JTextField();
         motor3FullVolLabel = new javax.swing.JLabel();
         motor3DispenseButton = new javax.swing.JButton();
+        setWhitePointButton = new javax.swing.JButton();
+        instructionsLabel = new javax.swing.JLabel();
+        calibrateStartButton = new javax.swing.JButton();
+        calibrateCancelButton = new javax.swing.JButton();
+        colorCalibrateConfirmLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("\"Exit?\"");
@@ -570,11 +582,12 @@ public class MainWindow extends javax.swing.JFrame {
                     .addGroup(colorLabelLayout.createSequentialGroup()
                         .addComponent(pumpsAllTitleLabel1)
                         .addGap(14, 14, 14)
-                        .addGroup(colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(pump1TitleLabel)
-                            .addComponent(fluid1Label)
-                            .addComponent(volume1Label)
-                            .addComponent(pumpBar1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGroup(colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(pumpBar1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(pump1TitleLabel)
+                                .addComponent(fluid1Label)
+                                .addComponent(volume1Label)))))
                 .addGap(40, 40, 40)
                 .addGroup(colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -1107,6 +1120,36 @@ public class MainWindow extends javax.swing.JFrame {
             }
         });
 
+        setWhitePointButton.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        setWhitePointButton.setText("Calibrate Color: Set White Point");
+        setWhitePointButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                setWhitePointButtonMouseClicked(evt);
+            }
+        });
+
+        instructionsLabel.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        instructionsLabel.setText("Place White Balance Solution in tank holder. Are you ready?");
+
+        calibrateStartButton.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        calibrateStartButton.setText("Yes, Calibrate!");
+        calibrateStartButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                calibrateStartButtonMouseClicked(evt);
+            }
+        });
+
+        calibrateCancelButton.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        calibrateCancelButton.setText("Cancel");
+        calibrateCancelButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                calibrateCancelButtonMouseClicked(evt);
+            }
+        });
+
+        colorCalibrateConfirmLabel.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        colorCalibrateConfirmLabel.setText("Color Sensor Has Been Calibrated");
+
         javax.swing.GroupLayout callibratePanelLayout = new javax.swing.GroupLayout(callibratePanel);
         callibratePanel.setLayout(callibratePanelLayout);
         callibratePanelLayout.setHorizontalGroup(
@@ -1114,53 +1157,62 @@ public class MainWindow extends javax.swing.JFrame {
             .addGroup(callibratePanelLayout.createSequentialGroup()
                 .addGap(32, 32, 32)
                 .addGroup(callibratePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(colorCalibrateConfirmLabel)
+                    .addComponent(instructionsLabel)
                     .addGroup(callibratePanelLayout.createSequentialGroup()
-                        .addComponent(motor1CallibrateButton)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(motor1WorkingDoneLabel))
-                    .addComponent(motor1FillButton)
-                    .addComponent(motor1DispenseButton)
+                        .addComponent(calibrateStartButton)
+                        .addGap(80, 80, 80)
+                        .addComponent(calibrateCancelButton))
+                    .addComponent(setWhitePointButton, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(callibratePanelLayout.createSequentialGroup()
-                        .addComponent(motor1EmptyVolField, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(callibratePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(callibratePanelLayout.createSequentialGroup()
+                                .addComponent(motor1CallibrateButton)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(motor1WorkingDoneLabel))
+                            .addComponent(motor1FillButton)
+                            .addComponent(motor1DispenseButton)
+                            .addGroup(callibratePanelLayout.createSequentialGroup()
+                                .addComponent(motor1EmptyVolField, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(motor1EmptyVolLabel))
+                            .addGroup(callibratePanelLayout.createSequentialGroup()
+                                .addComponent(motor1FullVolField, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(motor1FullVolLabel)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(motor1EmptyVolLabel))
-                    .addGroup(callibratePanelLayout.createSequentialGroup()
-                        .addComponent(motor1FullVolField, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(callibratePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(callibratePanelLayout.createSequentialGroup()
+                                .addComponent(motor2CallibrateButton)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(motor2WorkingDoneLabel))
+                            .addComponent(motor2FillButton)
+                            .addComponent(motor2DispenseButton)
+                            .addGroup(callibratePanelLayout.createSequentialGroup()
+                                .addComponent(motor2EmptyVolField, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(motor2EmptyVolLabel))
+                            .addGroup(callibratePanelLayout.createSequentialGroup()
+                                .addComponent(motor2FullVolField, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(motor2FullVolLabel)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(motor1FullVolLabel)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(callibratePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(callibratePanelLayout.createSequentialGroup()
-                        .addComponent(motor2CallibrateButton)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(motor2WorkingDoneLabel))
-                    .addComponent(motor2FillButton)
-                    .addComponent(motor2DispenseButton)
-                    .addGroup(callibratePanelLayout.createSequentialGroup()
-                        .addComponent(motor2EmptyVolField, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(motor2EmptyVolLabel))
-                    .addGroup(callibratePanelLayout.createSequentialGroup()
-                        .addComponent(motor2FullVolField, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(motor2FullVolLabel)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(callibratePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(callibratePanelLayout.createSequentialGroup()
-                        .addComponent(motor3CallibrateButton)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(motor3WorkingDoneLabel))
-                    .addComponent(motor3FillButton)
-                    .addComponent(motor3DispenseButton)
-                    .addGroup(callibratePanelLayout.createSequentialGroup()
-                        .addComponent(motor3EmptyVolField, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(motor3EmptyVolLabel))
-                    .addGroup(callibratePanelLayout.createSequentialGroup()
-                        .addComponent(motor3FullVolField, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(motor3FullVolLabel)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGroup(callibratePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(callibratePanelLayout.createSequentialGroup()
+                                .addComponent(motor3CallibrateButton)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(motor3WorkingDoneLabel))
+                            .addComponent(motor3FillButton)
+                            .addComponent(motor3DispenseButton)
+                            .addGroup(callibratePanelLayout.createSequentialGroup()
+                                .addComponent(motor3EmptyVolField, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(motor3EmptyVolLabel))
+                            .addGroup(callibratePanelLayout.createSequentialGroup()
+                                .addComponent(motor3FullVolField, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(motor3FullVolLabel)))))
+                .addContainerGap(394, Short.MAX_VALUE))
         );
         callibratePanelLayout.setVerticalGroup(
             callibratePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1215,7 +1267,17 @@ public class MainWindow extends javax.swing.JFrame {
                         .addGroup(callibratePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(motor1CallibrateButton)
                             .addComponent(motor1WorkingDoneLabel))))
-                .addContainerGap(395, Short.MAX_VALUE))
+                .addGap(116, 116, 116)
+                .addComponent(setWhitePointButton, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(instructionsLabel)
+                .addGap(25, 25, 25)
+                .addGroup(callibratePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(calibrateStartButton)
+                    .addComponent(calibrateCancelButton))
+                .addGap(18, 18, 18)
+                .addComponent(colorCalibrateConfirmLabel)
+                .addContainerGap(39, Short.MAX_VALUE))
         );
 
         tabPane.addTab("Calibration", callibratePanel);
@@ -1249,9 +1311,11 @@ public class MainWindow extends javax.swing.JFrame {
     private void recordingButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_recordingButtonMouseClicked
         if (isRecording == false) {
             isRecording = true;
-            
+            DateFormat dateFormat = new SimpleDateFormat("yyyy.MM.dd HH:mm:ss");
+            Date date = new Date();
+           
             try {
-                csvFile = new File ("csv"+fileNumber+".csv");
+                csvFile = new File (dateFormat.format(date)+" CStatData.csv");
                 csvFileWrite = new FileWriter (csvFile);
                 csvFileWrite.write("Color , Light , Temp , Humidity");
                 csvFileWrite.write("\r\n");
@@ -1266,7 +1330,7 @@ public class MainWindow extends javax.swing.JFrame {
             } catch (IOException ex) {
                 Logger.getLogger(MainWindow.class.getName()).log(Level.SEVERE, null, ex);
             }
-                fileNumber++;
+                
             recordingButton.setText("Start Recording");
             
         }
@@ -1307,6 +1371,31 @@ public class MainWindow extends javax.swing.JFrame {
     private void motor3FillButtonMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_motor3FillButtonMousePressed
         //pump3.fillCompletely();
     }//GEN-LAST:event_motor3FillButtonMousePressed
+
+    private void calibrateCancelButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_calibrateCancelButtonMouseClicked
+        instructionsLabel.setVisible(false);
+        calibrateStartButton.setVisible(false);
+        calibrateCancelButton.setVisible(false);
+        colorCalibrateConfirmLabel.setVisible(false);
+    }//GEN-LAST:event_calibrateCancelButtonMouseClicked
+
+    private void setWhitePointButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_setWhitePointButtonMouseClicked
+        instructionsLabel.setVisible(true);
+        calibrateStartButton.setVisible(true);
+        calibrateCancelButton.setVisible(true);
+    }//GEN-LAST:event_setWhitePointButtonMouseClicked
+
+    private void calibrateStartButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_calibrateStartButtonMouseClicked
+        try {
+            colorRead.setWhitePoint();
+        } catch (Exception ex) {
+            Logger.getLogger(MainWindow.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        instructionsLabel.setVisible(false);
+        calibrateStartButton.setVisible(false);
+        calibrateCancelButton.setVisible(false);
+        colorCalibrateConfirmLabel.setVisible(true);
+    }//GEN-LAST:event_calibrateStartButtonMouseClicked
 
     /**
      * @param args the command line arguments
@@ -1362,8 +1451,11 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.ButtonGroup buttonGroup4;
     private javax.swing.ButtonGroup buttonGroup5;
     private javax.swing.ButtonGroup buttonGroup6;
+    private javax.swing.JButton calibrateCancelButton;
+    private javax.swing.JButton calibrateStartButton;
     private javax.swing.JPanel callibratePanel;
     private javax.swing.JRadioButton celciusRB;
+    private javax.swing.JLabel colorCalibrateConfirmLabel;
     private javax.swing.JPanel colorLabel;
     private javax.swing.JPanel colorPanel;
     private javax.swing.JLabel colorSensorTitleLabel;
@@ -1386,6 +1478,7 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JPanel huePanel;
     private javax.swing.JLabel humidityNumLabel;
     private javax.swing.JLabel humidityTilteLabel;
+    private javax.swing.JLabel instructionsLabel;
     private javax.swing.JLabel interiorLightingLabel;
     private javax.swing.JToggleButton interiorLightingToggle;
     private javax.swing.JLabel jLabel1;
@@ -1454,6 +1547,7 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JButton refillButton2;
     private javax.swing.JButton refillButton3;
     private javax.swing.JLabel sensorTitle;
+    private javax.swing.JButton setWhitePointButton;
     private javax.swing.JLabel stirrerLabel;
     private javax.swing.JToggleButton stirrerToggle;
     private javax.swing.JButton submitButton;
