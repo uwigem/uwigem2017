@@ -47,15 +47,6 @@ public class SyringePump {
     // Motor steps per mL dispensed as calculated from calibration information
     private double stepsPerMil = -1;
 
-    /**
-     * Create a new syringe pump controller with no I/O pins specified.
-     *
-     *
-     */
-    public SyringePump() {
-
-    }
-
     public SyringePump(GpioPinDigitalOutput step,
             GpioPinDigitalOutput dir, GpioPinDigitalOutput en,
             GpioPinDigitalInput min, GpioPinDigitalInput max) {
@@ -65,6 +56,7 @@ public class SyringePump {
         this.pinEnable = en;
         this.stopMax = max;
         this.stopMin = min;
+        this.pinEnable.low(); // Enable pin is inverted. This enables the pump.
     }
 
     public void dispenseCompletely() {
@@ -131,12 +123,12 @@ public class SyringePump {
      */
     public int takeSteps(int numSteps, SyringePump.Direction direction)
             throws InterruptedException {
-
         int i = 0;
-        for (; i < numSteps; i++) {
-            this.takeStep(direction);
+        if (canStep(direction)) {
+            for (; i < numSteps; i++) {
+                this.takeStep(direction);
+            }
         }
-
         return i;
     }
 
@@ -150,14 +142,15 @@ public class SyringePump {
 
         // TODO: We don't know which direction pin state corresponds to which direction.
         // This needs to be checked against the actual hardware behavior.
-        if (direction == SyringePump.Direction.FILL && this.stopMax.isLow()) {
+        if (direction == SyringePump.Direction.FILL && this.stopMax.isHigh()) {
             return true;
-        } else if (direction == SyringePump.Direction.DISPENSE && this.stopMin.isLow()) {
+        } else if (direction == SyringePump.Direction.DISPENSE && this.stopMin.isHigh()) {
             return true;
         }
-
+        System.out.println("Cannot take a step to " + direction.name() + " because an end stop is active");
         return false;
-    }    
+
+    }
 
     /**
      * Instructs the motor to take one step in the positive or negative
@@ -185,6 +178,11 @@ public class SyringePump {
         }
 
         // Take one step
+        System.out.println("Stepping");
+        Thread.sleep(this.stepDelay);
+        pinStep.high();
+        Thread.sleep(this.stepDelay);
+        pinStep.low();
         Thread.sleep(this.stepDelay);
         pinStep.high();
         Thread.sleep(this.stepDelay);

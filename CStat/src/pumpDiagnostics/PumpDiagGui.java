@@ -24,6 +24,7 @@ import com.pi4j.io.gpio.GpioPinDigitalInput;
 import com.pi4j.io.gpio.GpioPinDigitalOutput;
 import com.pi4j.io.gpio.PinPullResistance;
 import com.pi4j.io.gpio.PinState;
+import com.pi4j.io.gpio.RaspiPin;
 import com.pi4j.io.i2c.I2CBus;
 import com.pi4j.io.i2c.I2CFactory;
 import iGEM2017.SyringePump;
@@ -44,15 +45,17 @@ public class PumpDiagGui extends javax.swing.JFrame {
 
     // GPIO expander chips
     private final MCP23017GpioProvider mcpProviderOne;
-    private final MCP23017GpioProvider mcpProviderTwo;
+    //private final MCP23017GpioProvider mcpProviderTwo;
 
     /**
      * Creates new form MainWindow
+     * @throws com.pi4j.io.i2c.I2CFactory.UnsupportedBusNumberException
+     * @throws java.io.IOException
      */
     public PumpDiagGui() throws I2CFactory.UnsupportedBusNumberException, IOException, IOException {
         gpio = GpioFactory.getInstance(); // Singleton instance
         mcpProviderOne = new MCP23017GpioProvider(I2CBus.BUS_1, 0x27);
-        mcpProviderTwo = new MCP23017GpioProvider(I2CBus.BUS_1, 0x26);
+        //mcpProviderTwo = new MCP23017GpioProvider(I2CBus.BUS_1, 0x23);
 
         // Provision direction control pins as outputs
         GpioPinDigitalOutput dir1 = gpio.provisionDigitalOutputPin(mcpProviderOne, MCP23017Pin.GPIO_A7, "Pump 1 Direction", PinState.LOW);
@@ -74,24 +77,26 @@ public class PumpDiagGui extends javax.swing.JFrame {
         // Provision end-stop pins as inputs. 
         // These pins tell the pump when the syringe
         // is in its MINIMUM possible position (empty).
-        GpioPinDigitalInput min1 = gpio.provisionDigitalInputPin(this.mcpProviderTwo, MCP23017Pin.GPIO_B5, "Pump 1 Min", PinPullResistance.PULL_UP);
-        GpioPinDigitalInput min2 = gpio.provisionDigitalInputPin(this.mcpProviderTwo, MCP23017Pin.GPIO_B4, "Pump 2 Min", PinPullResistance.PULL_UP);
-        GpioPinDigitalInput min3 = gpio.provisionDigitalInputPin(this.mcpProviderTwo, MCP23017Pin.GPIO_B3, "Pump 3 Min", PinPullResistance.PULL_UP);
+        GpioPinDigitalInput min1 = gpio.provisionDigitalInputPin(RaspiPin.GPIO_07, "Pump 1 Min (BCM 4)", PinPullResistance.PULL_UP);
+        GpioPinDigitalInput min2 = gpio.provisionDigitalInputPin(RaspiPin.GPIO_00, "Pump 2 Min (BCM 17)", PinPullResistance.PULL_UP);
+        GpioPinDigitalInput min3 = gpio.provisionDigitalInputPin(RaspiPin.GPIO_02, "Pump 3 Min (BCM 27)", PinPullResistance.PULL_UP);
 
         // Provision end-stop pins as inputs.
         // These pins tell the pump when the syringe
         // is in its MAXIMUM possible position (full).
-        GpioPinDigitalInput max1 = gpio.provisionDigitalInputPin(this.mcpProviderTwo, MCP23017Pin.GPIO_B1, "Pump 1 Min", PinPullResistance.PULL_UP);
-        GpioPinDigitalInput max2 = gpio.provisionDigitalInputPin(this.mcpProviderTwo, MCP23017Pin.GPIO_B2, "Pump 2 Min", PinPullResistance.PULL_UP);
-        GpioPinDigitalInput max3 = gpio.provisionDigitalInputPin(this.mcpProviderTwo, MCP23017Pin.GPIO_B6, "Pump 3 Min", PinPullResistance.PULL_UP);
+        GpioPinDigitalInput max1 = gpio.provisionDigitalInputPin(RaspiPin.GPIO_27, "Pump 1 Max (BCM 16)", PinPullResistance.PULL_UP);
+        GpioPinDigitalInput max2 = gpio.provisionDigitalInputPin(RaspiPin.GPIO_28, "Pump 2 Max (BCM 20)", PinPullResistance.PULL_UP);
+        GpioPinDigitalInput max3 = gpio.provisionDigitalInputPin(RaspiPin.GPIO_29, "Pump 3 Max (BCM 21)", PinPullResistance.PULL_UP);
 
         pump1 = new SyringePump(step1, dir1, enable1, min1, max1);
         pump2 = new SyringePump(step2, dir2, enable2, min2, max2);
         pump3 = new SyringePump(step3, dir3, enable3, min3, max3);
 
-        pump1.setStepDelay(100);
-        pump2.setStepDelay(100);
-        pump3.setStepDelay(100);
+        pump1.setStepDelay(1);
+        pump2.setStepDelay(1);
+        pump3.setStepDelay(1);
+        
+       
         
         initComponents();
 
@@ -183,7 +188,7 @@ public class PumpDiagGui extends javax.swing.JFrame {
         });
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel5.setText("Pump 1");
+        jLabel5.setText("Pump 2");
 
         jButton6.setText("Fill");
         jButton6.setMaximumSize(new java.awt.Dimension(75, 23));
@@ -227,7 +232,7 @@ public class PumpDiagGui extends javax.swing.JFrame {
         });
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel6.setText("Pump 1");
+        jLabel6.setText("Pump 3");
 
         jButton8.setText("Fill");
         jButton8.setMaximumSize(new java.awt.Dimension(75, 23));
@@ -340,9 +345,10 @@ public class PumpDiagGui extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void buttonPressFillPump1(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonPressFillPump1
-        if (pump1.canStep(SyringePump.Direction.FILL)) {
+        if(pump1.canStep(SyringePump.Direction.FILL)) {
 
             try {
+                labelDiagnosticMessage.setText("Trying to fill a few steps steps on pump 1");
                 pump1.takeSteps(25, SyringePump.Direction.FILL);
             } catch (InterruptedException ex) {
                 Logger.getLogger(PumpDiagGui.class.getName()).log(Level.SEVERE, null, ex);
@@ -356,9 +362,10 @@ public class PumpDiagGui extends javax.swing.JFrame {
 
     private void buttonPressFillPump2(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonPressFillPump2
 
-        if (pump2.canStep(SyringePump.Direction.FILL)) {
+        if(pump2.canStep(SyringePump.Direction.FILL)) {
 
             try {
+                labelDiagnosticMessage.setText("Trying to fill a few steps steps on pump 2");
                 pump2.takeSteps(25, SyringePump.Direction.FILL);
             } catch (InterruptedException ex) {
                 Logger.getLogger(PumpDiagGui.class.getName()).log(Level.SEVERE, null, ex);
@@ -372,9 +379,10 @@ public class PumpDiagGui extends javax.swing.JFrame {
 
     private void buttonPressFillPump3(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonPressFillPump3
 
-        if (pump3.canStep(SyringePump.Direction.FILL)) {
+        if(pump3.canStep(SyringePump.Direction.FILL)) {
 
             try {
+                labelDiagnosticMessage.setText("Trying to fill a few steps steps on pump 3");
                 pump3.takeSteps(25, SyringePump.Direction.FILL);
             } catch (InterruptedException ex) {
                 Logger.getLogger(PumpDiagGui.class.getName()).log(Level.SEVERE, null, ex);
@@ -387,7 +395,7 @@ public class PumpDiagGui extends javax.swing.JFrame {
     }//GEN-LAST:event_buttonPressFillPump3
 
     private void buttonPressDispensePump1(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonPressDispensePump1
-        if (pump1.canStep(SyringePump.Direction.DISPENSE)) {
+        if(pump1.canStep(SyringePump.Direction.DISPENSE)) {
 
             try {
                 labelDiagnosticMessage.setText("Trying to dispense a few steps steps on pump 1");
@@ -403,7 +411,7 @@ public class PumpDiagGui extends javax.swing.JFrame {
     }//GEN-LAST:event_buttonPressDispensePump1
 
     private void buttonPressDispensePump2(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonPressDispensePump2
-        if (pump2.canStep(SyringePump.Direction.DISPENSE)) {
+        if(pump2.canStep(SyringePump.Direction.DISPENSE)) {
 
             try {
                 labelDiagnosticMessage.setText("Trying to dispense a few steps steps on pump 1");
@@ -419,7 +427,7 @@ public class PumpDiagGui extends javax.swing.JFrame {
     }//GEN-LAST:event_buttonPressDispensePump2
 
     private void buttonPressDispensePump3(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonPressDispensePump3
-        if (pump3.canStep(SyringePump.Direction.DISPENSE)) {
+        if(pump3.canStep(SyringePump.Direction.DISPENSE)) {
 
             try {
                 labelDiagnosticMessage.setText("Trying to dispense a few steps steps on pump 3");
@@ -479,8 +487,6 @@ public class PumpDiagGui extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
@@ -488,11 +494,9 @@ public class PumpDiagGui extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
