@@ -1,4 +1,4 @@
-![UW IGEM Logo](logo.png)
+![UW IGEM Logo](final_logo.png)
 
 Washington iGEM 2017 Project
 
