@@ -1,6 +1,6 @@
 ![UW IGEM Logo](final_logo.png)
 
-Washington iGEM 2017 Project
+[Washington iGEM 2017 Project](http://2017.igem.org/Team:Washington)
 
 # Table Of Contents
 
