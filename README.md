@@ -60,7 +60,7 @@ You can now remotely use the terminal on that Pi
 
 # Known Issues
 - Upon attempting to run Pi4J code following error occurs
-~~~~
+~~~
 Unable to determine hardware version. I see: Hardware   : BCM2835
 ,
  - expecting BCM2708 or BCM2709.
@@ -68,7 +68,7 @@ If this is a genuine Raspberry Pi then please report this
 to projects @drogon.net. If this is not a Raspberry Pi then you
 are on your own as wiringPi is designed to support the 
 Raspberry Pi ONLY.
-~~~~
+~~~
 Work Arounds
  - downgrade firmware using shell script under the Raspbian folder of the old repo (uwigem2017-old)
  - change Pi4J source cdoe and recompile (already done by Jase, not sure if the recompiled version has been uploaded to this repo)
