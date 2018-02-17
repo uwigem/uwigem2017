@@ -75,35 +75,18 @@ Work Arounds
 
 # Code Structure
 
-Once you have cloned the repository onto your development computer, open NetBeans, and open Tstat as a new project.
+Once you have cloned the repository onto your development computer, open NetBeans, and open Cstat as a new project.
 
 **Tip**: If you screw up creating a project and you get the wrong folder as a project, **do not** delete it. Instead, right click, `close`
 
-```
-Tstat (Netbeans project folder containing java code that will be run on the RPi)
-│
-└src (All of the code to be edited)
- │
- ├deprecated (Not being used anymore)
- │
- ├guiTests (Graphical User Interface)
- │
- ├I2C_Tests (I Squared C interface between the pi and other chips)
- │
- ├sensors
- │
- ├syringePump
- │
- ├tests (Only occasionally used by fluids to do tests on the syringe)
- │
- └tstat
-```
+# Style 
+
+[This is a link to our style guide](https://docs.google.com/document/d/1yj8CQqgwJOqUnpGy8NXgSrQa9QJvarw91EB4vhZKkh8/edit?usp=sharing)
 
 # TODO: 
-All Todo tasks are located at: https://trello.com/b/Mey7qSgL/drylab-turbidostat
+All Todo tasks are located at: https://trello.com/b/EpicXNJ9/drylab
 
-All following neede to be added to the README:
-- Add instructions to change the username for the main user as well as the system name for the different berries 
-- ^Ask Jase if this is necessary, if we were going to create a standard install 
+All following need to be added to the README:
+ - 
 
 README Example: https://github.com/rg3/youtube-dl
