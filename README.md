@@ -79,6 +79,8 @@ Once you have cloned the repository onto your development computer, open NetBean
 
 **Tip**: If you screw up creating a project and you get the wrong folder as a project, **do not** delete it. Instead, right click, `close`
 
+The "main" class right now is LauncherWindow. This opens a Swing GUI from which you can access the PumpDiagnostics and SensorGUI. There is a tester class PumpTest in Deprecated that we are basing our new testing class off of
+
 # Style 
 
 [This is a link to our style guide](https://docs.google.com/document/d/1yj8CQqgwJOqUnpGy8NXgSrQa9QJvarw91EB4vhZKkh8/edit?usp=sharing)
