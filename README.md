@@ -45,7 +45,8 @@
 
 1. [Download NetBeans IDE for Java SE](https://netbeans.org/downloads/start.html?platform=linux&lang=en&option=javase)
 2. [Refer to these instructions](https://netbeans.org/community/releases/36/install.html#unix)
-3. See explanation of [code structure](#code-structure)
+3. Set up the directories in project.properties
+4. See explanation of [code structure](#code-structure)
 
 # Using SSH
 
