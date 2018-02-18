@@ -91,6 +91,5 @@ The "main" class right now is LauncherWindow. This opens a Swing GUI from which 
 All Todo tasks are located at: https://trello.com/b/EpicXNJ9/drylab
 
 All following need to be added to the README:
- - 
 
 README Example: https://github.com/rg3/youtube-dl
