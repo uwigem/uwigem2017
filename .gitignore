@@ -6,9 +6,7 @@
 
 README.md
 
-build/
 nbbuild/
-dist/
 nbdist/
 nbproject/private/
 Deprecated/nbproject/private/
