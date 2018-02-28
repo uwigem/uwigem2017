@@ -44,7 +44,7 @@ import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import javax.swing.Timer;
 import javax.swing.UIManager;
-
+//GitHubTestComment
 /**
  * Constitutes the main graphical interface for the chromastat. The UI is build
  * on Java Swing for use on an ARM32 device (the Raspberry Pi).
