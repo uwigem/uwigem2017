@@ -321,6 +321,8 @@ public class MainWindow extends javax.swing.JFrame {
 
         tabPane.setPreferredSize(new java.awt.Dimension(799, 488));
 
+        colorLabel.setMaximumSize(new java.awt.Dimension(1100, 640));
+
         buttonExit.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         buttonExit.setText("Exit");
         buttonExit.setPreferredSize(new java.awt.Dimension(119, 32));
