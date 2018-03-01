@@ -1387,13 +1387,13 @@ public class MainWindow extends javax.swing.JFrame {
             recordingButton.setText("Start Recording");
 
         }
-        
+        */
         try {
         runProgram();
         } catch (Exception e) {
         
         }
-        */
+        
     }//GEN-LAST:event_recordingButtonMouseClicked
 
     private void buttonExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonExitActionPerformed
@@ -1581,7 +1581,7 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JLabel volume3Label;
     // End of variables declaration//GEN-END:variables
 
-    /*
+    
     //Hardcoded program for recordingButton
     private void runProgram() throws InterruptedException {
         pump1.fillCompletely();
@@ -1589,5 +1589,5 @@ public class MainWindow extends javax.swing.JFrame {
         pump1.dispenseCompletely();
         pump2.dispenseCompletely();
     }
-    */
+    
 }
