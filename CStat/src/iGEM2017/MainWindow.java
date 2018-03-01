@@ -336,49 +336,41 @@ public class MainWindow extends javax.swing.JFrame {
             }
         });
 
-        lightSensorTitleLabel.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         lightSensorTitleLabel.setText("Light:");
         lightSensorTitleLabel.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         lightSensorTitleLabel.setMaximumSize(new java.awt.Dimension(50, 20));
         lightSensorTitleLabel.setMinimumSize(new java.awt.Dimension(50, 20));
 
-        colorSensorTitleLabel.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         colorSensorTitleLabel.setText("Color:");
         colorSensorTitleLabel.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         colorSensorTitleLabel.setMaximumSize(new java.awt.Dimension(50, 20));
         colorSensorTitleLabel.setMinimumSize(new java.awt.Dimension(50, 20));
 
-        tempSensorTitleLabel.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         tempSensorTitleLabel.setText("Temperature:");
         tempSensorTitleLabel.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         tempSensorTitleLabel.setMaximumSize(new java.awt.Dimension(50, 20));
         tempSensorTitleLabel.setMinimumSize(new java.awt.Dimension(50, 20));
 
-        turbiditySensorTitleLabel.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         turbiditySensorTitleLabel.setText("Turbidity:");
         turbiditySensorTitleLabel.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         turbiditySensorTitleLabel.setMaximumSize(new java.awt.Dimension(50, 20));
         turbiditySensorTitleLabel.setMinimumSize(new java.awt.Dimension(50, 20));
 
-        lightNumLabel.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         lightNumLabel.setText("lightNum");
         lightNumLabel.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         lightNumLabel.setMaximumSize(new java.awt.Dimension(50, 20));
         lightNumLabel.setMinimumSize(new java.awt.Dimension(50, 20));
 
-        colorStringLabel.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         colorStringLabel.setText("colorString");
         colorStringLabel.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         colorStringLabel.setMaximumSize(new java.awt.Dimension(50, 20));
         colorStringLabel.setMinimumSize(new java.awt.Dimension(50, 20));
 
-        turbidityNumLabel.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         turbidityNumLabel.setText("turbidityNum");
         turbidityNumLabel.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         turbidityNumLabel.setMaximumSize(new java.awt.Dimension(50, 20));
         turbidityNumLabel.setMinimumSize(new java.awt.Dimension(50, 20));
 
-        tempNumLabel.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         tempNumLabel.setText("tempNum");
         tempNumLabel.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         tempNumLabel.setMaximumSize(new java.awt.Dimension(50, 20));
@@ -399,44 +391,32 @@ public class MainWindow extends javax.swing.JFrame {
             .addGap(0, 48, Short.MAX_VALUE)
         );
 
-        sensorTitle.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         sensorTitle.setText("Sensors:");
 
-        pump1TitleLabel.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         pump1TitleLabel.setText("Pump 1:");
         pump1TitleLabel.setToolTipText("");
 
-        pump2TitleLabel.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         pump2TitleLabel.setText("Pump 2:");
 
-        pump3TitleLabel.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         pump3TitleLabel.setText("Pump 3:");
 
-        fluid1Label.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         fluid1Label.setText("fluid1");
 
-        fluid2Label.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         fluid2Label.setText("fluid2");
 
-        fluid3Label.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         fluid3Label.setText("fluid3");
 
-        volume1Label.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         volume1Label.setText("volume 1");
 
-        volume2Label.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         volume2Label.setText("volume 2");
 
-        volume3Label.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         volume3Label.setText("volume 3");
 
-        humidityTilteLabel.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         humidityTilteLabel.setText("Humidity:");
         humidityTilteLabel.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         humidityTilteLabel.setMaximumSize(new java.awt.Dimension(50, 20));
         humidityTilteLabel.setMinimumSize(new java.awt.Dimension(50, 20));
 
-        humidityNumLabel.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         humidityNumLabel.setText("humidityNum");
         humidityNumLabel.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         humidityNumLabel.setMaximumSize(new java.awt.Dimension(50, 20));
@@ -472,13 +452,10 @@ public class MainWindow extends javax.swing.JFrame {
             .addGap(0, 48, Short.MAX_VALUE)
         );
 
-        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel6.setText("Color:");
 
-        hueLabel.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         hueLabel.setText("Hue:");
 
-        brightnessLabel.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         brightnessLabel.setText("Brightness:");
 
         recordingButton.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
@@ -489,7 +466,6 @@ public class MainWindow extends javax.swing.JFrame {
             }
         });
 
-        pumpsAllTitleLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         pumpsAllTitleLabel1.setText("Pumps:");
 
         javax.swing.GroupLayout colorLabelLayout = new javax.swing.GroupLayout(colorLabel);
@@ -497,48 +473,51 @@ public class MainWindow extends javax.swing.JFrame {
         colorLabelLayout.setHorizontalGroup(
             colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, colorLabelLayout.createSequentialGroup()
-                .addContainerGap()
                 .addGroup(colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(colorLabelLayout.createSequentialGroup()
-                        .addGroup(colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(colorSensorTitleLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lightSensorTitleLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(29, 29, 29)
-                        .addGroup(colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lightNumLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(colorLabelLayout.createSequentialGroup()
-                                .addGap(6, 6, 6)
-                                .addComponent(colorStringLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addComponent(colorPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel6)
-                    .addComponent(turbiditySensorTitleLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(sensorTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(colorLabelLayout.createSequentialGroup()
-                        .addComponent(tempSensorTitleLabel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addGroup(colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(turbidityNumLabel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(tempNumLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(sensorTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(humidityTilteLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(colorLabelLayout.createSequentialGroup()
-                        .addGap(143, 143, 143)
+                        .addContainerGap()
                         .addGroup(colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(colorLabelLayout.createSequentialGroup()
                                 .addGroup(colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(huePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(hueLabel))
-                                .addGap(98, 98, 98)
+                                    .addComponent(colorPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel6)
+                                    .addGroup(colorLabelLayout.createSequentialGroup()
+                                        .addGap(69, 69, 69)
+                                        .addGroup(colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(huePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(hueLabel))
+                                        .addGap(18, 18, 18)
+                                        .addGroup(colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(brightnessLabel)
+                                            .addComponent(brightnessPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addGroup(colorLabelLayout.createSequentialGroup()
+                                        .addComponent(colorSensorTitleLabel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(colorStringLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addGroup(colorLabelLayout.createSequentialGroup()
                                 .addGroup(colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(brightnessLabel)
-                                    .addComponent(brightnessPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addComponent(humidityNumLabel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addGroup(colorLabelLayout.createSequentialGroup()
+                                        .addComponent(lightSensorTitleLabel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(lightNumLabel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(turbiditySensorTitleLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(colorLabelLayout.createSequentialGroup()
+                                        .addComponent(tempSensorTitleLabel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(18, 18, 18)
+                                        .addGroup(colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(turbidityNumLabel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(tempNumLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addComponent(humidityTilteLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(colorLabelLayout.createSequentialGroup()
+                                        .addGap(69, 69, 69)
+                                        .addComponent(humidityNumLabel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
                 .addGroup(colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(pumpsAllTitleLabel1)
-                    .addGroup(colorLabelLayout.createSequentialGroup()
-                        .addComponent(buttonExit, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(40, 40, 40)
-                        .addComponent(recordingButton, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(colorLabelLayout.createSequentialGroup()
                         .addGroup(colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(colorLabelLayout.createSequentialGroup()
@@ -558,13 +537,15 @@ public class MainWindow extends javax.swing.JFrame {
                                 .addGap(102, 102, 102)
                                 .addComponent(fluid3Label)
                                 .addGap(32, 32, 32)
-                                .addComponent(volume3Label)))
+                                .addComponent(volume3Label))
+                            .addComponent(buttonExit, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(pumpBar3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 214, Short.MAX_VALUE)
+                            .addComponent(pumpBar3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(pumpBar2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(pumpBar1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                .addGap(169, 169, 169))
+                            .addComponent(pumpBar1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(recordingButton, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(41, Short.MAX_VALUE))
         );
 
         colorLabelLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {humidityTilteLabel, turbiditySensorTitleLabel});
@@ -575,41 +556,17 @@ public class MainWindow extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(colorLabelLayout.createSequentialGroup()
-                        .addComponent(sensorTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(sensorTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(colorLabelLayout.createSequentialGroup()
+                                .addGap(24, 24, 24)
+                                .addGroup(colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(lightSensorTitleLabel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(lightNumLabel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGap(11, 11, 11)
                         .addGroup(colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(lightNumLabel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lightSensorTitleLabel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(colorLabelLayout.createSequentialGroup()
-                        .addComponent(pumpsAllTitleLabel1)
-                        .addGap(14, 14, 14)
-                        .addGroup(colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(pumpBar1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(pump1TitleLabel)
-                                .addComponent(fluid1Label)
-                                .addComponent(volume1Label)))))
-                .addGroup(colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(colorLabelLayout.createSequentialGroup()
-                        .addGap(40, 40, 40)
-                        .addGroup(colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(pumpBar2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(pump2TitleLabel)
-                                .addComponent(fluid2Label)
-                                .addComponent(volume2Label)))
-                        .addGap(40, 40, 40)
-                        .addGroup(colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(pumpBar3, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(pump3TitleLabel)
-                                .addComponent(fluid3Label)
-                                .addComponent(volume3Label))))
-                    .addGroup(colorLabelLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(colorStringLabel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(colorSensorTitleLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(colorSensorTitleLabel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(colorStringLabel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(colorLabelLayout.createSequentialGroup()
@@ -623,28 +580,49 @@ public class MainWindow extends javax.swing.JFrame {
                             .addGroup(colorLabelLayout.createSequentialGroup()
                                 .addComponent(brightnessLabel)
                                 .addGap(3, 3, 3)
-                                .addComponent(brightnessPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addGroup(colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(brightnessPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(colorLabelLayout.createSequentialGroup()
-                        .addGap(38, 38, 38)
-                        .addGroup(colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(tempSensorTitleLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(tempNumLabel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(27, 27, 27)
-                        .addGroup(colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(turbiditySensorTitleLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(turbidityNumLabel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(humidityTilteLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(humidityNumLabel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, colorLabelLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(pumpsAllTitleLabel1)
+                        .addGap(9, 9, 9)
                         .addGroup(colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(recordingButton, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(buttonExit, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(328, 328, 328))))
+                            .addComponent(pumpBar1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(pump1TitleLabel)
+                                .addComponent(fluid1Label)
+                                .addComponent(volume1Label)))
+                        .addGap(40, 40, 40)
+                        .addGroup(colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(pumpBar2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(pump2TitleLabel)
+                                .addComponent(fluid2Label)
+                                .addComponent(volume2Label)))
+                        .addGap(40, 40, 40)
+                        .addGroup(colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(colorLabelLayout.createSequentialGroup()
+                                .addGroup(colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(pump3TitleLabel)
+                                    .addComponent(fluid3Label)
+                                    .addComponent(volume3Label))
+                                .addGap(31, 31, 31)
+                                .addGroup(colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(tempSensorTitleLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(tempNumLabel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(turbiditySensorTitleLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(turbidityNumLabel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(humidityTilteLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(humidityNumLabel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(colorLabelLayout.createSequentialGroup()
+                                .addComponent(pumpBar3, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(colorLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(recordingButton, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(buttonExit, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                .addContainerGap(287, Short.MAX_VALUE))
         );
 
         colorLabelLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {colorSensorTitleLabel, humidityTilteLabel, lightSensorTitleLabel, tempSensorTitleLabel, turbiditySensorTitleLabel});
@@ -654,25 +632,25 @@ public class MainWindow extends javax.swing.JFrame {
         editValuesPanel.setMaximumSize(new java.awt.Dimension(700, 400));
         editValuesPanel.setPreferredSize(new java.awt.Dimension(700, 400));
 
-        toggleTitle.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        toggleTitle.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         toggleTitle.setText("Toggles");
 
-        stirrerLabel.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        stirrerLabel.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         stirrerLabel.setText("Stirrer:");
 
-        interiorLightingLabel.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        interiorLightingLabel.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         interiorLightingLabel.setText("Interior Lighting:");
 
-        bubblerLabel.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        bubblerLabel.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         bubblerLabel.setText("Bubbler:");
 
-        laserLabel.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        laserLabel.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         laserLabel.setText("Laser:");
 
-        targetValuesTitle.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        targetValuesTitle.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         targetValuesTitle.setText("Target Values");
 
-        targetTempLabel.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        targetTempLabel.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         targetTempLabel.setText("Temperature:");
 
         buttonGroup1.add(celciusRB);
@@ -683,50 +661,50 @@ public class MainWindow extends javax.swing.JFrame {
         fahrenheitRB.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         fahrenheitRB.setText("F");
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel1.setText("Color:");
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel2.setText("Red");
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel3.setText("Green");
 
-        jLabel4.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel4.setText("Blue");
 
-        jLabel5.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel5.setText("Turbidity:");
 
-        pumpsLabel.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        pumpsLabel.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         pumpsLabel.setText("Pumps");
 
-        jLabel7.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel7.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel7.setText("Pump 1:");
 
-        jLabel8.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel8.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel8.setText("Pump 2:");
 
-        jLabel9.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel9.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel9.setText("Pump 3:");
         jLabel9.setToolTipText("");
 
-        dispenseLabel1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        dispenseLabel1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         dispenseLabel1.setText("Dispense:");
 
-        dispenseLabel2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        dispenseLabel2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         dispenseLabel2.setText("Dispense:");
 
-        dispenseLabel3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        dispenseLabel3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         dispenseLabel3.setText("Dispense:");
 
-        mlLabel1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        mlLabel1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         mlLabel1.setText("ml");
 
-        mlLabel2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        mlLabel2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         mlLabel2.setText("ml");
 
-        mlLabel3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        mlLabel3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         mlLabel3.setText("ml");
 
         goButton1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
@@ -782,22 +760,22 @@ public class MainWindow extends javax.swing.JFrame {
         laserToggle.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         laserToggle.setText("On");
 
-        jLabel10.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel10.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel10.setText("in");
 
-        jLabel11.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel11.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel11.setText("seconds");
 
-        jLabel12.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel12.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel12.setText("in");
 
-        jLabel13.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel13.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel13.setText("seconds");
 
-        jLabel14.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel14.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel14.setText("in");
 
-        jLabel15.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel15.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel15.setText("seconds");
 
         abortButton1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
@@ -817,26 +795,36 @@ public class MainWindow extends javax.swing.JFrame {
             editValuesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(editValuesPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(editValuesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGroup(editValuesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(editValuesPanelLayout.createSequentialGroup()
                         .addGroup(editValuesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, editValuesPanelLayout.createSequentialGroup()
-                                .addComponent(jLabel7)
-                                .addGap(143, 143, 143))
+                            .addGroup(editValuesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addGroup(editValuesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, editValuesPanelLayout.createSequentialGroup()
+                                        .addComponent(jLabel7)
+                                        .addGap(130, 130, 130))
+                                    .addGroup(editValuesPanelLayout.createSequentialGroup()
+                                        .addGap(59, 59, 59)
+                                        .addComponent(jLabel12)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jLabel13))
+                                    .addGroup(editValuesPanelLayout.createSequentialGroup()
+                                        .addComponent(dispenseLabel2)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(dispenseField2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(mlLabel2)))
+                                .addComponent(pumpsLabel, javax.swing.GroupLayout.Alignment.LEADING))
                             .addGroup(editValuesPanelLayout.createSequentialGroup()
-                                .addGap(59, 59, 59)
-                                .addComponent(jLabel12)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel13))
-                            .addGroup(editValuesPanelLayout.createSequentialGroup()
-                                .addComponent(dispenseLabel2)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(dispenseField2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(mlLabel2)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGap(63, 63, 63)
+                                .addGroup(editValuesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(abortButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(goButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(refillButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(16, 16, 16)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(editValuesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel8)
                             .addGroup(editValuesPanelLayout.createSequentialGroup()
@@ -857,7 +845,7 @@ public class MainWindow extends javax.swing.JFrame {
                                         .addComponent(jLabel11))
                                     .addComponent(abortButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(refillButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addGap(64, 64, 64)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(editValuesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel9)
                             .addGroup(editValuesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -877,108 +865,101 @@ public class MainWindow extends javax.swing.JFrame {
                                     .addComponent(dispenseField3, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                     .addComponent(mlLabel3)
-                                    .addGap(44, 44, 44))))
-                        .addGap(65, 65, 65))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, editValuesPanelLayout.createSequentialGroup()
-                        .addGroup(editValuesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(pumpsLabel, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, editValuesPanelLayout.createSequentialGroup()
-                                .addGroup(editValuesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(editValuesPanelLayout.createSequentialGroup()
-                                        .addGroup(editValuesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addGroup(editValuesPanelLayout.createSequentialGroup()
-                                                .addComponent(stirrerLabel)
-                                                .addGap(53, 53, 53))
-                                            .addComponent(interiorLightingLabel, javax.swing.GroupLayout.Alignment.TRAILING))
-                                        .addGap(18, 18, 18)
-                                        .addGroup(editValuesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addComponent(interiorLightingToggle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                            .addComponent(stirrerToggle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                        .addGap(46, 46, 46)
-                                        .addGroup(editValuesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addGroup(editValuesPanelLayout.createSequentialGroup()
-                                                .addComponent(laserLabel)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                .addComponent(laserToggle, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addGroup(editValuesPanelLayout.createSequentialGroup()
-                                                .addComponent(bubblerLabel)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(bubblerToggle, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                                    .addComponent(toggleTitle))
-                                .addGap(152, 152, 152)
-                                .addGroup(editValuesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(editValuesPanelLayout.createSequentialGroup()
-                                        .addComponent(targetTempLabel)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(targetTempField, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(celciusRB)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(fahrenheitRB))
-                                    .addGroup(editValuesPanelLayout.createSequentialGroup()
-                                        .addComponent(jLabel5)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(targetValuesTitle)
-                                    .addGroup(editValuesPanelLayout.createSequentialGroup()
-                                        .addGroup(editValuesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addGroup(editValuesPanelLayout.createSequentialGroup()
-                                                .addComponent(jLabel1)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(jLabel2)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(jLabel3)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(jLabel4))
-                                            .addGroup(editValuesPanelLayout.createSequentialGroup()
-                                                .addGap(98, 98, 98)
-                                                .addComponent(submitButton)))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                        .addGap(26, 26, 26))))
-            .addGroup(editValuesPanelLayout.createSequentialGroup()
-                .addGap(69, 69, 69)
-                .addGroup(editValuesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(abortButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(goButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(refillButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 0, Short.MAX_VALUE))
+                                    .addGap(44, 44, 44)))))
+                    .addGroup(editValuesPanelLayout.createSequentialGroup()
+                        .addGroup(editValuesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(editValuesPanelLayout.createSequentialGroup()
+                                .addComponent(stirrerLabel)
+                                .addGap(18, 18, 18)
+                                .addComponent(stirrerToggle, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(bubblerLabel)
+                                .addGap(4, 4, 4)
+                                .addComponent(bubblerToggle))
+                            .addComponent(toggleTitle)
+                            .addGroup(editValuesPanelLayout.createSequentialGroup()
+                                .addComponent(interiorLightingLabel)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(interiorLightingToggle, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(laserLabel)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(laserToggle, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(editValuesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(editValuesPanelLayout.createSequentialGroup()
+                                .addComponent(targetTempLabel)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(targetTempField, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(celciusRB)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(fahrenheitRB))
+                            .addComponent(targetValuesTitle)
+                            .addGroup(editValuesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, editValuesPanelLayout.createSequentialGroup()
+                                    .addComponent(jLabel5)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(submitButton))
+                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, editValuesPanelLayout.createSequentialGroup()
+                                    .addComponent(jLabel1)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(jLabel2)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(jLabel3)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(jLabel4)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                .addContainerGap(143, Short.MAX_VALUE))
         );
         editValuesPanelLayout.setVerticalGroup(
             editValuesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(editValuesPanelLayout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(editValuesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(editValuesPanelLayout.createSequentialGroup()
                         .addGroup(editValuesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(editValuesPanelLayout.createSequentialGroup()
-                                .addGap(25, 25, 25)
                                 .addComponent(toggleTitle)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(editValuesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(stirrerLabel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(bubblerToggle, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(bubblerLabel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(stirrerToggle, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(editValuesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(editValuesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, editValuesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                            .addComponent(bubblerLabel)
-                                            .addComponent(bubblerToggle, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGroup(editValuesPanelLayout.createSequentialGroup()
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                            .addGroup(editValuesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                                .addComponent(stirrerToggle, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(stirrerLabel))))
-                                    .addGroup(editValuesPanelLayout.createSequentialGroup()
-                                        .addGap(52, 52, 52)
-                                        .addGroup(editValuesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                            .addComponent(jLabel1)
-                                            .addComponent(jLabel2)
-                                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jLabel3)
-                                            .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jLabel4)
-                                            .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                    .addComponent(interiorLightingLabel)
+                                    .addGroup(editValuesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                        .addComponent(interiorLightingToggle, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                                        .addComponent(laserToggle, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                                        .addComponent(laserLabel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                             .addGroup(editValuesPanelLayout.createSequentialGroup()
-                                .addContainerGap()
+                                .addGap(141, 141, 141)
+                                .addGroup(editValuesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel5)
+                                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(editValuesPanelLayout.createSequentialGroup()
+                        .addGroup(editValuesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(editValuesPanelLayout.createSequentialGroup()
+                                .addGap(86, 86, 86)
+                                .addGroup(editValuesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel1)
+                                    .addComponent(jLabel2)
+                                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel3)
+                                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel4)
+                                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(editValuesPanelLayout.createSequentialGroup()
                                 .addComponent(targetValuesTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(editValuesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -986,54 +967,49 @@ public class MainWindow extends javax.swing.JFrame {
                                     .addComponent(targetTempField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(celciusRB)
                                     .addComponent(fahrenheitRB))))
-                        .addGap(27, 27, 27)
-                        .addGroup(editValuesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(laserLabel)
-                            .addComponent(interiorLightingLabel)
-                            .addComponent(laserToggle, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(interiorLightingToggle, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(editValuesPanelLayout.createSequentialGroup()
-                        .addGap(147, 147, 147)
-                        .addGroup(editValuesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel5)
-                            .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGap(18, 18, 18)
+                        .addComponent(submitButton, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(submitButton, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(1, 1, 1)
-                .addComponent(pumpsLabel)
-                .addGap(13, 13, 13)
                 .addGroup(editValuesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(editValuesPanelLayout.createSequentialGroup()
-                        .addGroup(editValuesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(editValuesPanelLayout.createSequentialGroup()
-                                .addComponent(jLabel7)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(editValuesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(dispenseLabel2)
-                                    .addComponent(dispenseField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(mlLabel2))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(editValuesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jLabel12)
-                                    .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel13)))
-                            .addGroup(editValuesPanelLayout.createSequentialGroup()
-                                .addComponent(jLabel8)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(editValuesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(dispenseLabel1)
-                                    .addComponent(dispenseField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(mlLabel1))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(editValuesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jLabel10)
-                                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel11))))
+                        .addComponent(pumpsLabel)
+                        .addGap(13, 13, 13)
+                        .addComponent(jLabel7)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(editValuesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(goButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(goButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
+                            .addComponent(dispenseLabel2)
+                            .addComponent(dispenseField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(mlLabel2))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(editValuesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel12)
+                            .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel13))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(goButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(abortButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(7, 7, 7)
+                        .addComponent(refillButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(editValuesPanelLayout.createSequentialGroup()
+                        .addComponent(jLabel8)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(editValuesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(dispenseLabel1)
+                            .addComponent(dispenseField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(mlLabel1))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(editValuesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel10)
+                            .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel11))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(goButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(abortButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(7, 7, 7)
+                        .addComponent(refillButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(editValuesPanelLayout.createSequentialGroup()
                         .addComponent(jLabel9)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -1047,20 +1023,12 @@ public class MainWindow extends javax.swing.JFrame {
                             .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel15))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(goButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(4, 4, 4)))
-                .addGroup(editValuesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(abortButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(editValuesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(abortButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(abortButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(7, 7, 7)
-                .addGroup(editValuesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(refillButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(editValuesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(refillButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(refillButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap())
+                        .addComponent(goButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(4, 4, 4)
+                        .addComponent(abortButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(7, 7, 7)
+                        .addComponent(refillButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(252, 252, 252))
         );
 
         tabPane.addTab("Control", editValuesPanel);
@@ -1113,6 +1081,15 @@ public class MainWindow extends javax.swing.JFrame {
         });
 
         motor3EmptyVolLabel.setText("Volume at completion (ml)");
+        motor3EmptyVolLabel.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
+                motor3EmptyVolLabelAncestorAdded(evt);
+            }
+            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+            }
+        });
 
         motor3CallibrateButton.setText("Calibrate Motor 3");
 
@@ -1169,17 +1146,9 @@ public class MainWindow extends javax.swing.JFrame {
         callibratePanelLayout.setHorizontalGroup(
             callibratePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(callibratePanelLayout.createSequentialGroup()
-                .addGap(32, 32, 32)
                 .addGroup(callibratePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(colorCalibrateConfirmLabel)
-                    .addComponent(instructionsLabel)
                     .addGroup(callibratePanelLayout.createSequentialGroup()
-                        .addComponent(calibrateStartButton)
-                        .addGap(80, 80, 80)
-                        .addComponent(calibrateCancelButton))
-                    .addComponent(setWhitePointButton, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(callibratePanelLayout.createSequentialGroup()
-                        .addGroup(callibratePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(callibratePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(callibratePanelLayout.createSequentialGroup()
                                 .addComponent(motor1CallibrateButton)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -1187,14 +1156,14 @@ public class MainWindow extends javax.swing.JFrame {
                             .addComponent(motor1FillButton)
                             .addComponent(motor1DispenseButton)
                             .addGroup(callibratePanelLayout.createSequentialGroup()
-                                .addComponent(motor1EmptyVolField, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(motor1EmptyVolField, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(motor1EmptyVolLabel))
                             .addGroup(callibratePanelLayout.createSequentialGroup()
-                                .addComponent(motor1FullVolField, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(motor1FullVolField, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(motor1FullVolLabel)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(callibratePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(callibratePanelLayout.createSequentialGroup()
                                 .addComponent(motor2CallibrateButton)
@@ -1203,14 +1172,15 @@ public class MainWindow extends javax.swing.JFrame {
                             .addComponent(motor2FillButton)
                             .addComponent(motor2DispenseButton)
                             .addGroup(callibratePanelLayout.createSequentialGroup()
-                                .addComponent(motor2EmptyVolField, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(motor2FullVolField, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(motor2EmptyVolLabel))
+                                .addComponent(motor2FullVolLabel))
                             .addGroup(callibratePanelLayout.createSequentialGroup()
-                                .addComponent(motor2FullVolField, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(6, 6, 6)
+                                .addComponent(motor2EmptyVolField, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(motor2FullVolLabel)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(motor2EmptyVolLabel)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(callibratePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(callibratePanelLayout.createSequentialGroup()
                                 .addComponent(motor3CallibrateButton)
@@ -1219,19 +1189,29 @@ public class MainWindow extends javax.swing.JFrame {
                             .addComponent(motor3FillButton)
                             .addComponent(motor3DispenseButton)
                             .addGroup(callibratePanelLayout.createSequentialGroup()
-                                .addComponent(motor3EmptyVolField, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(motor3EmptyVolField, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(motor3EmptyVolLabel))
                             .addGroup(callibratePanelLayout.createSequentialGroup()
-                                .addComponent(motor3FullVolField, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(motor3FullVolField, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(motor3FullVolLabel)))))
-                .addContainerGap(285, Short.MAX_VALUE))
+                                .addComponent(motor3FullVolLabel))))
+                    .addGroup(callibratePanelLayout.createSequentialGroup()
+                        .addGroup(callibratePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addGroup(callibratePanelLayout.createSequentialGroup()
+                                .addComponent(setWhitePointButton, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(calibrateStartButton))
+                            .addComponent(instructionsLabel))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(calibrateCancelButton))
+                    .addComponent(colorCalibrateConfirmLabel))
+                .addContainerGap(71, Short.MAX_VALUE))
         );
         callibratePanelLayout.setVerticalGroup(
             callibratePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(callibratePanelLayout.createSequentialGroup()
-                .addGap(26, 26, 26)
+                .addContainerGap()
                 .addGroup(callibratePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(callibratePanelLayout.createSequentialGroup()
                         .addComponent(motor3DispenseButton)
@@ -1253,8 +1233,8 @@ public class MainWindow extends javax.swing.JFrame {
                         .addComponent(motor2DispenseButton)
                         .addGap(18, 18, 18)
                         .addGroup(callibratePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(motor2EmptyVolField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(motor2EmptyVolLabel))
+                            .addComponent(motor2EmptyVolLabel)
+                            .addComponent(motor2EmptyVolField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addComponent(motor2FillButton)
                         .addGap(18, 18, 18)
@@ -1281,17 +1261,16 @@ public class MainWindow extends javax.swing.JFrame {
                         .addGroup(callibratePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(motor1CallibrateButton)
                             .addComponent(motor1WorkingDoneLabel))))
-                .addGap(116, 116, 116)
-                .addComponent(setWhitePointButton, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(instructionsLabel)
-                .addGap(25, 25, 25)
                 .addGroup(callibratePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(setWhitePointButton)
                     .addComponent(calibrateStartButton)
                     .addComponent(calibrateCancelButton))
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(instructionsLabel)
+                .addGap(7, 7, 7)
                 .addComponent(colorCalibrateConfirmLabel)
-                .addContainerGap(75, Short.MAX_VALUE))
+                .addGap(0, 273, Short.MAX_VALUE))
         );
 
         tabPane.addTab("Calibration", callibratePanel);
@@ -1300,14 +1279,14 @@ public class MainWindow extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(tabPane, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1060, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(tabPane, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(tabPane, javax.swing.GroupLayout.DEFAULT_SIZE, 699, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(tabPane, javax.swing.GroupLayout.DEFAULT_SIZE, 640, Short.MAX_VALUE)
         );
 
         pack();
@@ -1416,6 +1395,10 @@ public class MainWindow extends javax.swing.JFrame {
             System.exit(0);
         }
     }//GEN-LAST:event_buttonExitActionPerformed
+
+    private void motor3EmptyVolLabelAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_motor3EmptyVolLabelAncestorAdded
+        // TODO add your handling code here:
+    }//GEN-LAST:event_motor3EmptyVolLabelAncestorAdded
 
     /**
      * @param args the command line arguments
