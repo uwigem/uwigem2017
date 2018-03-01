@@ -20,17 +20,17 @@
       <Rectangle value="[0, 0, 800, 480]"/>
     </Property>
     <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-      <Dimension value="[400, 750]"/>
+      <Dimension value="[700, 400]"/>
     </Property>
     <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
       <Dimension value="[100, 100]"/>
     </Property>
     <Property name="name" type="java.lang.String" value="mainWindowFrame" noResource="true"/>
     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-      <Dimension value="[400, 750]"/>
+      <Dimension value="[700, 400]"/>
     </Property>
     <Property name="size" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-      <Dimension value="[400, 750]"/>
+      <Dimension value="[700, 400]"/>
     </Property>
   </Properties>
   <SyntheticProperties>
@@ -59,7 +59,7 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="1" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="tabPane" pref="738" max="32767" attributes="0"/>
+              <Component id="tabPane" pref="699" max="32767" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
@@ -68,8 +68,11 @@
   <SubComponents>
     <Container class="javax.swing.JTabbedPane" name="tabPane">
       <Properties>
+        <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[700, 400]"/>
+        </Property>
         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-          <Dimension value="[799, 488]"/>
+          <Dimension value="[700, 400]"/>
         </Property>
       </Properties>
 
@@ -78,10 +81,10 @@
         <Container class="javax.swing.JPanel" name="colorLabel">
           <Properties>
             <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-              <Dimension value="[450, 700]"/>
+              <Dimension value="[700, 400]"/>
             </Property>
             <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-              <Dimension value="[450, 700]"/>
+              <Dimension value="[700, 400]"/>
             </Property>
           </Properties>
           <Constraints>
@@ -677,10 +680,10 @@
         <Container class="javax.swing.JPanel" name="editValuesPanel">
           <Properties>
             <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-              <Dimension value="[400, 750]"/>
+              <Dimension value="[700, 400]"/>
             </Property>
             <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-              <Dimension value="[400, 750]"/>
+              <Dimension value="[700, 400]"/>
             </Property>
           </Properties>
           <Constraints>
@@ -1432,10 +1435,10 @@
         <Container class="javax.swing.JPanel" name="callibratePanel">
           <Properties>
             <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-              <Dimension value="[400, 750]"/>
+              <Dimension value="[700, 400]"/>
             </Property>
             <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-              <Dimension value="[400, 750]"/>
+              <Dimension value="[700, 400]"/>
             </Property>
           </Properties>
           <Constraints>
@@ -1522,7 +1525,7 @@
                               </Group>
                           </Group>
                       </Group>
-                      <EmptySpace pref="284" max="32767" attributes="0"/>
+                      <EmptySpace pref="285" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -1603,7 +1606,7 @@
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="colorCalibrateConfirmLabel" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="114" max="32767" attributes="0"/>
+                      <EmptySpace pref="75" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
