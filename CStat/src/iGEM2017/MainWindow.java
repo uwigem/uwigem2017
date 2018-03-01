@@ -313,18 +313,18 @@ public class MainWindow extends javax.swing.JFrame {
         colorCalibrateConfirmLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("\"Exit?\"");
+        setTitle("Main Window\n");
         setBounds(new java.awt.Rectangle(0, 0, 800, 480));
-        setMaximumSize(new java.awt.Dimension(400, 400));
+        setMaximumSize(new java.awt.Dimension(400, 750));
         setMinimumSize(new java.awt.Dimension(100, 100));
         setName("mainWindowFrame"); // NOI18N
-        setUndecorated(true);
-        setPreferredSize(new java.awt.Dimension(400, 400));
+        setPreferredSize(new java.awt.Dimension(400, 750));
+        setSize(new java.awt.Dimension(400, 750));
 
         tabPane.setPreferredSize(new java.awt.Dimension(799, 488));
 
-        colorLabel.setMaximumSize(new java.awt.Dimension(1100, 640));
-        colorLabel.setPreferredSize(new java.awt.Dimension(400, 400));
+        colorLabel.setMaximumSize(new java.awt.Dimension(450, 700));
+        colorLabel.setPreferredSize(new java.awt.Dimension(450, 700));
 
         buttonExit.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         buttonExit.setText("Exit");
@@ -650,8 +650,8 @@ public class MainWindow extends javax.swing.JFrame {
 
         tabPane.addTab("Sensors", colorLabel);
 
-        editValuesPanel.setMaximumSize(new java.awt.Dimension(400, 400));
-        editValuesPanel.setPreferredSize(new java.awt.Dimension(400, 400));
+        editValuesPanel.setMaximumSize(new java.awt.Dimension(400, 750));
+        editValuesPanel.setPreferredSize(new java.awt.Dimension(400, 750));
 
         toggleTitle.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         toggleTitle.setText("Toggles");
@@ -1064,8 +1064,8 @@ public class MainWindow extends javax.swing.JFrame {
 
         tabPane.addTab("Control", editValuesPanel);
 
-        callibratePanel.setMaximumSize(new java.awt.Dimension(400, 400));
-        callibratePanel.setPreferredSize(new java.awt.Dimension(400, 400));
+        callibratePanel.setMaximumSize(new java.awt.Dimension(400, 750));
+        callibratePanel.setPreferredSize(new java.awt.Dimension(400, 750));
 
         motor1DispenseButton.setText("Dispense Completely");
         motor1DispenseButton.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -1290,7 +1290,7 @@ public class MainWindow extends javax.swing.JFrame {
                     .addComponent(calibrateCancelButton))
                 .addGap(18, 18, 18)
                 .addComponent(colorCalibrateConfirmLabel)
-                .addContainerGap(115, Short.MAX_VALUE))
+                .addContainerGap(114, Short.MAX_VALUE))
         );
 
         tabPane.addTab("Calibration", callibratePanel);
@@ -1303,9 +1303,9 @@ public class MainWindow extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(tabPane, javax.swing.GroupLayout.DEFAULT_SIZE, 699, Short.MAX_VALUE)
+                .addComponent(tabPane, javax.swing.GroupLayout.DEFAULT_SIZE, 738, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
