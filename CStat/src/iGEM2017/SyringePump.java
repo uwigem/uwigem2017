@@ -58,13 +58,15 @@ public class SyringePump {
         this.stopMin = min;
         this.pinEnable.low(); // Enable pin is inverted. This enables the pump.
     }
-
+    
+    // Currently dispenses 2 ml's of fluid
     public void dispenseCompletely() throws InterruptedException {
         takeSteps(440, SyringePump.Direction.DISPENSE);
     }
 
-    public void fillCompletely() {
-        // TODO fill until endstop is reached
+    // Currently fills 2 ml's of fluid
+    public void fillCompletely()  throws InterruptedException {
+        takeSteps(440, SyringePump.Direction.FILL);
     }
 
     public void setMinSyringeVolume(double reading) {
