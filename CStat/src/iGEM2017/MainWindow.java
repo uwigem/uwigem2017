@@ -1400,7 +1400,11 @@ public class MainWindow extends javax.swing.JFrame {
 
         }
         */
+        try {
         runProgram();
+        } catch (Exception e) {
+        
+        }
     }//GEN-LAST:event_recordingButtonMouseClicked
 
     private void buttonExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonExitActionPerformed
