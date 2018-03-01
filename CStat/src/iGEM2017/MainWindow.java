@@ -315,15 +315,16 @@ public class MainWindow extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("\"Exit?\"");
         setBounds(new java.awt.Rectangle(0, 0, 800, 480));
-        setMaximumSize(new java.awt.Dimension(1169, 1095));
+        setMaximumSize(new java.awt.Dimension(400, 400));
         setMinimumSize(new java.awt.Dimension(100, 100));
         setName("mainWindowFrame"); // NOI18N
         setUndecorated(true);
-        setPreferredSize(new java.awt.Dimension(10, 10));
+        setPreferredSize(new java.awt.Dimension(400, 400));
 
         tabPane.setPreferredSize(new java.awt.Dimension(799, 488));
 
         colorLabel.setMaximumSize(new java.awt.Dimension(1100, 640));
+        colorLabel.setPreferredSize(new java.awt.Dimension(400, 400));
 
         buttonExit.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         buttonExit.setText("Exit");
@@ -648,6 +649,9 @@ public class MainWindow extends javax.swing.JFrame {
         colorLabelLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {colorSensorTitleLabel, humidityTilteLabel, lightSensorTitleLabel, tempSensorTitleLabel, turbiditySensorTitleLabel});
 
         tabPane.addTab("Sensors", colorLabel);
+
+        editValuesPanel.setMaximumSize(new java.awt.Dimension(400, 400));
+        editValuesPanel.setPreferredSize(new java.awt.Dimension(400, 400));
 
         toggleTitle.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         toggleTitle.setText("Toggles");
@@ -1060,6 +1064,9 @@ public class MainWindow extends javax.swing.JFrame {
 
         tabPane.addTab("Control", editValuesPanel);
 
+        callibratePanel.setMaximumSize(new java.awt.Dimension(400, 400));
+        callibratePanel.setPreferredSize(new java.awt.Dimension(400, 400));
+
         motor1DispenseButton.setText("Dispense Completely");
         motor1DispenseButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
@@ -1292,13 +1299,13 @@ public class MainWindow extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(tabPane, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 1060, Short.MAX_VALUE)
+            .addComponent(tabPane, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1060, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(tabPane, javax.swing.GroupLayout.PREFERRED_SIZE, 699, Short.MAX_VALUE)
+                .addComponent(tabPane, javax.swing.GroupLayout.DEFAULT_SIZE, 699, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
