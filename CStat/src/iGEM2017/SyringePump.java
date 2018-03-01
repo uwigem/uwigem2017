@@ -41,8 +41,8 @@ public class SyringePump {
     private int stepDelay = 1;    // Milliseconds between motor steps
     private double minVolume = 2.5; // Volume reading of syringe at max position
     private double maxVolume = .5; // Volume reading of syringe at min position
-    private double minSyringeVolume = .5;
-    private double maxSyringeVolume = 2.5;
+    // private double minSyringeVolume = .5;
+    // private double maxSyringeVolume = 2.5;
 
     // Motor steps per mL dispensed as calculated from calibration information
     private double stepsPerMil = 2200;
