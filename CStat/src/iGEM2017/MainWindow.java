@@ -138,7 +138,7 @@ public class MainWindow extends javax.swing.JFrame {
         actionTime.start();
 
     }
-    
+   /*
     private void initPumps() {
 
         // Provision direction control pins as outputs
@@ -176,7 +176,7 @@ public class MainWindow extends javax.swing.JFrame {
         pump2 = new SyringePump(step2, dir2, enable2, min2, max2);
         pump3 = new SyringePump(step3, dir3, enable3, min3, max3);
     }
-
+    */
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
