@@ -1581,7 +1581,10 @@ public class MainWindow extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
 
     //Hardcoded program for recordingButton
-    private void runProgram() {
-    
+    private void runProgram() throws InterruptedException {
+        pump1.fillCompletely();
+        pump2.fillCompletely();
+        pump1.dispenseCompletely();
+        pump2.dispenseCompletely();
     }
 }
