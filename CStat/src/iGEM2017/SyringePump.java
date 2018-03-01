@@ -219,9 +219,9 @@ public class SyringePump {
         // Current location must be established (relies on having max position)
         return (this.maxVolume != -1
                 && this.minVolume != -1
-                && this.currentPosition != -1
-                && this.minSyringeVolume != -1
-                && this.maxSyringeVolume != -1);
+                && this.currentPosition != -1);
+                // && this.minSyringeVolume != -1
+                // && this.maxSyringeVolume != -1);
 
     }
 
