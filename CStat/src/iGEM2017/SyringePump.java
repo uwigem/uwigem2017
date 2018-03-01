@@ -45,7 +45,7 @@ public class SyringePump {
     // private double maxSyringeVolume = 2.5;
 
     // Motor steps per mL dispensed as calculated from calibration information
-    private double stepsPerMil = 2200;
+    private double stepsPerMil = 220;
 
     public SyringePump(GpioPinDigitalOutput step,
             GpioPinDigitalOutput dir, GpioPinDigitalOutput en,
@@ -59,8 +59,8 @@ public class SyringePump {
         this.pinEnable.low(); // Enable pin is inverted. This enables the pump.
     }
 
-    public void dispenseCompletely() {
-        //TODO dispense until endstop is reached
+    public void dispenseCompletely() throws InterruptedException {
+        takeSteps(440, SyringePump.Direction.DISPENSE);
     }
 
     public void fillCompletely() {
