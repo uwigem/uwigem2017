@@ -75,6 +75,7 @@ public class MainWindow extends javax.swing.JFrame {
     private static File csvFile;
     public MainWindow() throws IOException, I2CFactory.UnsupportedBusNumberException, InterruptedException {
         initComponents();
+        /*
         gpio = GpioFactory.getInstance(); // Singleton instance
         
         // We should put these instantiations and init in a try/catch
@@ -83,7 +84,7 @@ public class MainWindow extends javax.swing.JFrame {
         mcpProviderOne = new MCP23017GpioProvider(I2CBus.BUS_1, 0x20);
         mcpProviderTwo = new MCP23017GpioProvider(I2CBus.BUS_1, 0x21);
         // Initialize syringe pumps
-        initPumps();
+        */
         
         colorRead = new RgbSensor();
         tempRead = new TempSensor();
@@ -1362,7 +1363,7 @@ public class MainWindow extends javax.swing.JFrame {
     }//GEN-LAST:event_calibrateStartButtonMouseClicked
 
     private void recordingButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_recordingButtonMouseClicked
-        /*if (isRecording == false) {
+        *if (isRecording == false) {
             isRecording = true;
             DateFormat dateFormat = new SimpleDateFormat("yyyy.MM.dd HH:mm:ss");
             Date date = new Date();
@@ -1387,7 +1388,7 @@ public class MainWindow extends javax.swing.JFrame {
             recordingButton.setText("Start Recording");
 
         }
-        */
+        
         try {
         runProgram();
         } catch (Exception e) {
