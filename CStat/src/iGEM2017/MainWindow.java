@@ -1351,15 +1351,15 @@ public class MainWindow extends javax.swing.JFrame {
     }//GEN-LAST:event_recordingButtonMouseClicked
 
     private void refillButton1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_refillButton1MousePressed
-        pump1.fillCompletely();
+        //pump1.fillCompletely();
     }//GEN-LAST:event_refillButton1MousePressed
 
     private void refillButton2MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_refillButton2MousePressed
-        pump2.fillCompletely();
+        //pump2.fillCompletely();
     }//GEN-LAST:event_refillButton2MousePressed
 
     private void refillButton3MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_refillButton3MousePressed
-        pump3.fillCompletely();
+        //pump3.fillCompletely();
     }//GEN-LAST:event_refillButton3MousePressed
 
     private void motor1DispenseButtonMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_motor1DispenseButtonMousePressed
