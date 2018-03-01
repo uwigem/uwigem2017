@@ -1309,7 +1309,7 @@ public class MainWindow extends javax.swing.JFrame {
     }//GEN-LAST:event_buttonExitActionPerformed
 
     private void recordingButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_recordingButtonMouseClicked
-        if (isRecording == false) {
+        /*if (isRecording == false) {
             isRecording = true;
             DateFormat dateFormat = new SimpleDateFormat("yyyy.MM.dd HH:mm:ss");
             Date date = new Date();
@@ -1334,6 +1334,8 @@ public class MainWindow extends javax.swing.JFrame {
             recordingButton.setText("Start Recording");
             
         }
+        */
+        runProgram();
     }//GEN-LAST:event_recordingButtonMouseClicked
 
     private void refillButton1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_refillButton1MousePressed
@@ -1565,4 +1567,8 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JLabel volume3Label;
     // End of variables declaration//GEN-END:variables
 
+    //Hardcoded program for recordingButton
+    private void runProgram() {
+    
+    }
 }
