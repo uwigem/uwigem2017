@@ -315,11 +315,11 @@ public class MainWindow extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("\"Exit?\"");
         setBounds(new java.awt.Rectangle(0, 0, 800, 480));
-        setMaximumSize(new java.awt.Dimension(1000, 600));
-        setMinimumSize(new java.awt.Dimension(800, 480));
+        setMaximumSize(new java.awt.Dimension(10, 10));
+        setMinimumSize(new java.awt.Dimension(10, 10));
         setName("mainWindowFrame"); // NOI18N
         setUndecorated(true);
-        setPreferredSize(new java.awt.Dimension(900, 800));
+        setPreferredSize(new java.awt.Dimension(10, 10));
 
         tabPane.setPreferredSize(new java.awt.Dimension(799, 488));
 

@@ -20,15 +20,15 @@
       <Rectangle value="[0, 0, 800, 480]"/>
     </Property>
     <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-      <Dimension value="[1000, 600]"/>
+      <Dimension value="[10, 10]"/>
     </Property>
     <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-      <Dimension value="[800, 480]"/>
+      <Dimension value="[10, 10]"/>
     </Property>
     <Property name="name" type="java.lang.String" value="mainWindowFrame" noResource="true"/>
     <Property name="undecorated" type="boolean" value="true"/>
     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-      <Dimension value="[900, 800]"/>
+      <Dimension value="[10, 10]"/>
     </Property>
   </Properties>
   <SyntheticProperties>
