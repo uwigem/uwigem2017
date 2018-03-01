@@ -61,12 +61,12 @@ public class SyringePump {
     
     // Currently dispenses 2 ml's of fluid
     public void dispenseCompletely() throws InterruptedException {
-        takeSteps(440, SyringePump.Direction.DISPENSE);
+        takeSteps(220, SyringePump.Direction.DISPENSE);
     }
 
     // Currently fills 2 ml's of fluid
     public void fillCompletely()  throws InterruptedException {
-        takeSteps(440, SyringePump.Direction.FILL);
+        takeSteps(220, SyringePump.Direction.FILL);
     }
 
     public void setMinSyringeVolume(double reading) {
