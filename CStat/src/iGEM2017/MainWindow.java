@@ -16,8 +16,9 @@
  */
 package iGEM2017;
 
-import com.pi4j.gpio.extension.mcp.MCP23017GpioProvider;
-import com.pi4j.gpio.extension.mcp.MCP23017Pin;
+
+//import com.pi4j.gpio.extension.mcp.MCP23017GpioProvider;
+//import com.pi4j.gpio.extension.mcp.MCP23017Pin;
 import com.pi4j.io.gpio.GpioController;
 import com.pi4j.io.gpio.GpioFactory;
 import com.pi4j.io.gpio.GpioPinDigitalInput;
@@ -57,14 +58,14 @@ public class MainWindow extends javax.swing.JFrame {
      * Creates new form MainWindow
      */
     private boolean isRecording = false;
-    private SyringePump pump1, pump2, pump3;
+    //private SyringePump pump1, pump2, pump3;
 
     // GPIO Controller for Raspberry Pi pins
-    private final GpioController gpio;
+    //private final GpioController gpio;
 
     // GPIO expander chips
-    private final MCP23017GpioProvider mcpProviderOne;
-    private final MCP23017GpioProvider mcpProviderTwo;
+    //private final MCP23017GpioProvider mcpProviderOne;
+    //private final MCP23017GpioProvider mcpProviderTwo;
 
     // Sensor controllers
     private final RgbSensor colorRead;
@@ -1363,7 +1364,7 @@ public class MainWindow extends javax.swing.JFrame {
     }//GEN-LAST:event_calibrateStartButtonMouseClicked
 
     private void recordingButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_recordingButtonMouseClicked
-        *if (isRecording == false) {
+        if (isRecording == false) {
             isRecording = true;
             DateFormat dateFormat = new SimpleDateFormat("yyyy.MM.dd HH:mm:ss");
             Date date = new Date();
