@@ -38,7 +38,7 @@ public class SyringePump {
     // Min position == pump is maximally dispensed. THIS IS ALWAYS ZERO.
     private final int minPosition = 0;
 
-    private int stepDelay = 5;    // Milliseconds between motor steps
+    private int stepDelay = 2;    // Milliseconds between motor steps
     private double minVolume = 2.5; // Volume reading of syringe at max position
     private double maxVolume = .5; // Volume reading of syringe at min position
     // private double minSyringeVolume = .5;

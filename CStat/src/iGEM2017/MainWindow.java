@@ -80,8 +80,8 @@ public class MainWindow extends javax.swing.JFrame {
         // We should put these instantiations and init in a try/catch
         // block so that it doesn't crash the app when there's something
         // wrong with the I/O hardware.
-        mcpProviderOne = new MCP23017GpioProvider(I2CBus.BUS_1, 0x27);
-        mcpProviderTwo = new MCP23017GpioProvider(I2CBus.BUS_1, 0x26);
+        mcpProviderOne = new MCP23017GpioProvider(I2CBus.BUS_1, 0x2);
+        mcpProviderTwo = new MCP23017GpioProvider(I2CBus.BUS_1, 0x20);
         // Initialize syringe pumps
         initPumps();
         
